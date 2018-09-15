@@ -13,17 +13,17 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 Jekyll also offers powerful support for code snippets:
 
 
-[Layer 1]("javascript:hideLayer('testL1')"){: .btn .btn--warning}
+{% capture context1 %}
+"For test!"
+{% endcapture %}
 
-<div markdown="1" id='testL1' class=Layer1>
-# test1
-[Layer 2]("javascript:hideLayer('testL2')"){: .btn .btn--danger}
+{% capture context2 %}
+"For test2!"
+$$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$
+{% endcapture %}
 
-<div markdown="1" id='testL1' class=Layer2>
-asdf
-# test2
-</div>
-</div>
+{% include blocks.html context1=context1 context2=context2 %}
+
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 

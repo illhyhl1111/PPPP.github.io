@@ -1,11 +1,33 @@
-<a href="#" class="btn btn--warning" onclick="hideLayer({{ include.topic | default: 'none' | append: '_DIV1'}})">Layer 1</a>
+<!-- code from http://tomnorian.com/toggle-code-display-jekyll.html -->
 
-<p>
-    <div id='{{ include.topic | default: "none" | append: "_DIV1"}}' class=Layer1>
-        {{ include.content1 | default: "X" }}
-        <a href="#" class="btn btn--danger" onclick="hideLayer({{ include.topic | default: 'none' | append: '_DIV2'}})">Layer 2</a>
-        <div id='{{ include.topic | default: "none" | append: "_DIV2" }}' class=Layer2>
-            {{ include.content2 | default: "X" }}
-        </div>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading" style="background-color: #ffd699">
+      <h4 class="panel-title">
+        <a class="btn btn--warning" data-toggle="collapse" data-target="#Layer1">
+          {% if include.button1-text %} {{include.button1-text}} {% else %} Open Layer1 {% endif %}
+        </a>
+      </h4>
     </div>
-</p>
+    <div id="Layer1" class="panel-collapse collapse">
+      <div class="panel-body" style="padding: 20px 20px">
+        {{include.context1 | markdownify }}
+      </div>
+      <div class="panel-footer" style="background-color: #ff9999">
+        <a class="btn btn--danger" data-toggle="collapse" data-target="#Layer2" >
+          {% if include.button2-text %} {{include.button2-text}} {% else %} Open Layer2 {% endif %}
+        </a>
+      </div>
+      <div id="Layer2" class="panel-collapse collapse">
+        <div class="panel-body" style="padding: 20px 30px">
+          {{include.context2 | markdownify }}
+        </div>
+        <div class="panel-footer" style="background-color: #99ff99">
+          <a class="btn btn--success" data-toggle="collapse" data-target="#Layer1" >
+            Close!
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
