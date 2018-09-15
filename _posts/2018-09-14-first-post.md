@@ -23,6 +23,7 @@ author_profile: true
 많이 배웠는데
 ### 막상 기억나는게 없다
 ![Alt text](/pictures/망했어요.png)
+<br/>
 
 ## 어째서
 내용이 너무 어려워서 배운걸 전혀 이해 못했다는건 아니다. 학점은 그럭저럭 잘 받아갔다. <br/> 
@@ -45,7 +46,7 @@ PS(Problem solving)는 내 인생에 별로 도움이 안될거같다는 생각�
 게다가 정해진 교과과정이 없어서, 항상 무슨무슨 과목을 안들은 학생들을 배려하는 수업 덕분에 머릿속을 다 비우고 와도 수업을 듣는데는 거의 지장이 없었으니 <br/>
 결론적으로 배우고 종강하고 잊어버리는 사이클을 7번 굴리고 학문적인 성취 없이 코딩만 는 채로 졸업을 앞둔 현재에 다다르게 된 것이다....... <br/>
 (물론 물리학과는 좀 달라서 학기 초에 좀 고생한다...지만 결국 끝나면 잊어먹는건 똑같았다) <br/>
-
+<br/>
 
 ## 그래서
 
@@ -67,7 +68,7 @@ PS(Problem solving)는 내 인생에 별로 도움이 안될거같다는 생각�
 여기선 증명이나 기타등등 상세하게 설명할 예정이다.
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 %}
+{% include blocks.html context1=context1 context2=context2 topic="first"%}
 
 ### 목표는
 분야마다 한페이지에 모든 개념을 다 기록하는 것
@@ -80,7 +81,8 @@ PS(Problem solving)는 내 인생에 별로 도움이 안될거같다는 생각�
 이후 새로 배우는 내용이 있을때마다 유사하게 정리해서 쌓아나갈 예정이다.
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 %}
+{% include blocks.html context1=context1 context2=context2 topic="second"
+button1-text="우선" button2-text="그리고" %}
 
 
 버튼은 가물가물할때만 눌러보면 되는거고, 보통 한줄로 정리된 내용만 읽으면 되리라 생각하고 <br/>   
@@ -93,10 +95,10 @@ PS(Problem solving)는 내 인생에 별로 도움이 안될거같다는 생각�
 
 --------------
 
-블로그는 Github Pages와 jekyll[jekyll-docs] 을 이용하여 구성하였고, [minimal mistakes][minimal-mistakes] Theme을 사용하였다.
+블로그는 Github Pages와 jekyll[jekyll-docs] 을 이용하여 구성하였고, [minimal mistakes][minimal-mistakes] Theme을 사용하였다. <br/>
 글은 마크다운으로 쓸 예정이며, 수식은 [Mathjax][Mathjax]을 사용하여 latex 문법의 html로 쓸 예정이다.
 
-```markdown
+```html
   <p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
 ```
 <p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
