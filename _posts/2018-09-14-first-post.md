@@ -13,13 +13,13 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 Jekyll also offers powerful support for code snippets:
 
 
-[Layer 1]("javascript:hideLayer(testL1)"){: .btn .btn--warning}
+[Layer 1]("javascript:hideLayer('testL1')"){: .btn .btn--warning}
 
-<div id='testL1' class=Layer1>
+<div markdown="1" id='testL1' class=Layer1>
 # test1
-[Layer 2]("javascript:hideLayer(testL2)"){: .btn .btn--danger}
+[Layer 2]("javascript:hideLayer('testL2')"){: .btn .btn--danger}
 
-<div id='testL1' class=Layer2>
+<div markdown="1" id='testL1' class=Layer2>
 asdf
 # test2
 </div>
