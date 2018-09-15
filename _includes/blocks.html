@@ -2,28 +2,28 @@
 
 <div class="panel-group">
   <div class="panel panel-default">
-    <div class="panel-heading" style="background-color: #ffd699">
-      <h4 class="panel-title">
-        <a class="btn btn--warning" data-toggle="collapse" data-target="#Layer1">
+    <div class="panel-heading" style="background-color: #ffd699" markdown="0">
+      <h4 class="panel-title" markdown="0">
+        <a class="btn btn--warning" data-toggle="collapse" data-target="#Layer1" markdown="0">
           {% if include.button1-text %} {{include.button1-text}} {% else %} Open Layer1 {% endif %}
         </a>
       </h4>
     </div>
-    <div id="Layer1" class="panel-collapse collapse">
-      <div class="panel-body" style="padding: 20px 20px">
+    <div id="Layer1" class="panel-collapse collapse" markdown="0">
+      <div class="panel-body" style="padding: 20px 20px" markdown="0">
         {{include.context1 | markdownify }}
       </div>
-      <div class="panel-footer" style="background-color: #ff9999">
-        <a class="btn btn--danger" data-toggle="collapse" data-target="#Layer2" >
+      <div class="panel-footer" style="background-color: #ff9999" markdown="0">
+        <a class="btn btn--danger" data-toggle="collapse" data-target="#Layer2" markdown="0">
           {% if include.button2-text %} {{include.button2-text}} {% else %} Open Layer2 {% endif %}
         </a>
       </div>
-      <div id="Layer2" class="panel-collapse collapse">
-        <div class="panel-body" style="padding: 20px 30px">
+      <div id="Layer2" class="panel-collapse collapse" markdown="0">
+        <div class="panel-body" style="padding: 20px 30px" markdown="0">
           {{include.context2 | markdownify }}
         </div>
-        <div class="panel-footer" style="background-color: #99ff99">
-          <a class="btn btn--success" data-toggle="collapse" data-target="#Layer1" >
+        <div class="panel-footer" style="background-color: #99ff99" markdown="0">
+          <a class="btn btn--success" data-toggle="collapse" data-target="#Layer1" markdown="0">
             Close!
           </a>
         </div>
