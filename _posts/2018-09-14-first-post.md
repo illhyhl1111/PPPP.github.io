@@ -1,33 +1,107 @@
 ---
-title: "Welcome to Jekyll!"
+title: "인간의 기억력은 짧더라"
 date: 2018-09-14 23:37:23 -0400
-categories: jekyll update
+categories: posts
+classes: wide
+layout: splash
+header:
+  overlay_color: "#333"
+author_profile: true
 ---
-test
-blahblah
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
+{% comment %}
+주석, 수식 예시
 <p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
+{% endcomment %} 
+
+# 대학에 입학한지 어언 5년
+대학에 입학해서 많은 것을 배워보겠다는 뜻이 있었다. <br/>
+좋은 환경에서 나름 수업도 많이 듣고 열심히 공부했다. <br/>
+하지만, 졸업을 앞둔 마지막 학기인 지금 돌이켜보면 참 허망하다. 
+
+분명 열심히 공부했는데 <br/>
+많이 배웠는데
+### 막상 기억나는게 없다
+![Alt text](../pictures/망했어요.png)
+
+## 어째서
+내용이 너무 어려워서 배운걸 전혀 이해 못했다는건 아니다. 학점은 그럭저럭 잘 받아갔다. <br/> 
+갑자기 학문에 회의감을 느껴서 생각하기 싫어진 것도 아니다. <br/>
+그냥.. 안쓰니까 기억이 안난다.
+
+고등학교 때를 돌이켜 보자. 물론 그때 더 열심히 공부했던 것은 맞지만, <br/> 
+그때 공부했던 지식들이 잊혀지지 않고 머리속에 고스란히 쌓이면서, 스스로 발전한다는 것을 느낄 수 있었던 이유는 
+1. 그놈의 대학입학시험에서 뭐가 튀어나올지 모른다는 것과
+2. 온갖걸 다 합쳐놓은 응용문제, 기초부터 시작해야하는 증명문제 등등을 계속 접했다는 것이라
+
+결국 정석 세트나 일반물리학 책 펴놓고 처음부터 끝까지 로테이션 돌려가며 몇십번씩 째려보니까 잊혀질래야 잊혀질 수가 없지.
+
+지금은 어떤가. <br/>
+미적분학이던 선형대수던 통계학이던 이산수학이던 물리수학이던 양자역학이던 <br/>
+과제 중간 기말 끝나고 종강 땡 치면 그걸 다시 사용해볼 기회라도 있었던가. <br/>
+코딩하면서 느는것이라곤 코딩기술 뿐이며, 그마저도 대학 입학 직전에야 헬로 월드 하던 일천한 기반덕분에 고오급진 무언가를 해볼 기회는 없었으며 <br/>
+PS(Problem solving)는 내 인생에 별로 도움이 안될거같다는 생각때문에 PS 문제마저 별로 안풀어봤다. <br/>
+
+게다가 정해진 교과과정이 없어서, 항상 무슨무슨 과목을 안들은 학생들을 배려하는 수업 덕분에 머릿속을 다 비우고 와도 수업을 듣는데는 거의 지장이 없었으니 <br/>
+결론적으로 배우고 종강하고 잊어버리는 사이클을 7번 굴리고 학문적인 성취 없이 코딩만 는 채로 졸업을 앞둔 현재에 다다르게 된 것이다....... <br/>
+(물론 물리학과는 좀 달라서 학기 초에 좀 고생한다...지만 결국 끝나면 잊어먹는건 똑같았다) <br/>
+
+
+## 그래서
+
+아무튼 그런고로 이제는 고등학교 수학마저 가물가물한 현 상황의 심각성을 느끼고 <br/>
+'아 수학공부 첨부터 다시해야겠네 ㅎㅎ' 하면서 노트를 폈다. <br/>
+물론 그냥 쓱 읽는거면 어차피 다시 까먹을거라, 개념위주로 쭉 정리해서 한군데에 모아두고 반복해서 보려했는데 <br/> 
+종이에다가 그렇게 하면 개판될거같아서 그냥 블로그를 팠다.
+
+정리는 아래와 같이 할 생각이다.
+
+### 각 개념에 대해서
+한두줄로 대충 설명하고 
 
 {% capture context1 %}
-"For test!"
+버튼 누르면 좀 더 상세하게 컨셉같은걸 설명하고
 {% endcapture %}
 
 {% capture context2 %}
-"For test2!"
-$$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$
+여기선 증명이나 기타등등 상세하게 설명할 예정이다.
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 %}
+
+### 목표는
+분야마다 한페이지에 모든 개념을 다 기록하는 것
+
+{% capture context1 %}
+우선 수학쪽에 먼저 집중할 예정  
+{% endcapture %}
+
+{% capture context2 %}
+이후 새로 배우는 내용이 있을때마다 유사하게 정리해서 쌓아나갈 예정이다.
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 %}
 
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+버튼은 가물가물할때만 눌러보면 되는거고, 보통 한줄로 정리된 내용만 읽으면 되리라 생각하고 <br/>   
+이렇게 정리해 놓은걸 매일?까지는 아니더라도 꾸준히 보면 좀 도움이 되지 않을까 싶다.<br/>
+이왕 블로그로 만들어놓은거 남들이 봐도 좋고. 그만한 퀄리티를 뽑을 수 있을지는 모르겠지만. <br/>
+  
 
+## 한줄요약
+개인 요약 노트이다. 
+
+--------------
+
+블로그는 Github Pages와 jekyll[jekyll-docs] 을 이용하여 구성하였고, [minimal mistakes][minimal-mistakes] Theme을 사용하였다.
+글은 마크다운으로 쓸 예정이며, 수식은 [Mathjax][Mathjax]을 사용하여 latex 문법의 html로 쓸 예정이다.
+
+```markdown
+  <p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
+```
+<p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
+
+  
 [jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+[minimal-mistakes]: https://github.com/mmistakes/minimal-mistakes
+[Mathjax]: http://docs.mathjax.org/en/latest/start.html
