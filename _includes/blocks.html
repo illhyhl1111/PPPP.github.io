@@ -1,36 +1,11 @@
-<style type="text/css">
-    .Layer1 {
-        background-color: #fdffff;
-        display: none;
-        padding: 10px;
-        margin: 10px;
-    }
-    .Layer2 {
-        background-color: #e6ffcc;
-        display: none;
-        padding: 10px;
-        margin: 10px;
-    }
-</style>
-
 <a href="#" class="btn btn--warning" onclick="hideLayer({{ include.topic | default: 'none' | append: '_DIV1'}})">Layer 1</a>
 
-<div id='{{ include.topic | default: "none" | append: "_DIV1"}}' class=Layer1>
-    {{ include.content1 | default: "X" }}
-    <a href="#" class="btn btn--danger" onclick="hideLayer({{ include.topic | default: 'none' | append: '_DIV2'}})">Layer 2</a>
-    <div id='{{ include.topic | default: "none" | append: "_DIV2" }}' class=Layer2>
-        {{ include.content2 | default: "X" }}
+<p>
+    <div id='{{ include.topic | default: "none" | append: "_DIV1"}}' class=Layer1>
+        {{ include.content1 | default: "X" }}
+        <a href="#" class="btn btn--danger" onclick="hideLayer({{ include.topic | default: 'none' | append: '_DIV2'}})">Layer 2</a>
+        <div id='{{ include.topic | default: "none" | append: "_DIV2" }}' class=Layer2>
+            {{ include.content2 | default: "X" }}
+        </div>
     </div>
-</div>
-
-<script>
-function hideLayer(id) {
-    var x = document.getElementById(id);
-    console.log(x.style.display);
-    if (x.style.display == "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-</script>
+</p>

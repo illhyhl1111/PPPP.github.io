@@ -3,4 +3,31 @@
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<style type="text/css">
+    .Layer1 {
+        background-color: #fdffff;
+        display: none;
+        padding: 10px;
+        margin: 10px;
+    }
+    .Layer2 {
+        background-color: #e6ffcc;
+        display: none;
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+
+<script>
+function hideLayer(id) {
+    var x = document.getElementById(id);
+    console.log(x.style.display);
+    if (x.style.display == "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+</script>
 <!-- end custom head snippets -->
