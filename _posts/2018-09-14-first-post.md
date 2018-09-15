@@ -3,7 +3,6 @@ title: "인간의 기억력은 짧더라"
 date: 2018-09-14 23:37:23 -0400
 categories: posts
 classes: wide
-layout: splash
 header:
   overlay_color: "#333"
 author_profile: true
@@ -95,7 +94,7 @@ button1-text="우선" button2-text="그리고" %}
 
 --------------
 
-블로그는 Github Pages와 jekyll[jekyll-docs] 을 이용하여 구성하였고, [minimal mistakes][minimal-mistakes] Theme을 사용하였다. <br/>
+블로그는 Github Pages와 [jekyll][jekyll-docs] 을 이용하여 구성하였고, [minimal mistakes][minimal-mistakes] Theme을 사용하였다. <br/>
 글은 마크다운으로 쓸 예정이며, 수식은 [Mathjax][Mathjax]을 사용하여 latex 문법의 html로 쓸 예정이다.
 
 ```html
