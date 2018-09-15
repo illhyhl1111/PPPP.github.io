@@ -22,7 +22,7 @@ author_profile: true
 분명 열심히 공부했는데 <br/>
 많이 배웠는데
 ### 막상 기억나는게 없다
-![Alt text](../pictures/망했어요.png)
+![Alt text](/pictures/망했어요.png)
 
 ## 어째서
 내용이 너무 어려워서 배운걸 전혀 이해 못했다는건 아니다. 학점은 그럭저럭 잘 받아갔다. <br/> 
