@@ -12,7 +12,6 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
-testest
 
 {% capture context1 %}
 "For test!"
@@ -23,6 +22,7 @@ testest
 $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$
 {% endcapture %}
 
+{::options parse_block_html="true" /}
 {% include blocks.html context1=context1 context2=context2 %}
 
 
