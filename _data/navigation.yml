@@ -13,23 +13,23 @@ main:
 
 sidebar-math:
   - title: "intro"
-    url: "#들어가기-앞서"
+    url: "/posts/mathematics/#들어가기-앞서"
 
   - title: "고등학교 수학"
-    url: "#고등학교-수학"
+    url: "/posts/mathematics/#고등학교-수학"
     children:
       - title: "고등수학"
-        url: "#고등수학"
+        url: "/posts/mathematics/#고등수학"
       - title: "수학 1"
-        url: "#수학-1"
+        url: "/posts/mathematics/#수학-1"
       - title: "수학 2"
-        url: "#수학-2"
+        url: "/posts/mathematics/#수학-2"
       - title: "적분과 통계"
-        url: "#적분과-통계"
+        url: "/posts/mathematics/#적분과-통계"
       - title: "기하와 벡터"
-        url: "#기하와-벡터"
+        url: "/posts/mathematics/#기하와-벡터"
 
   - title: "미적분학"
-    url: "미적분학"
+    url: "/posts/mathematics/#미적분학"
 
   - title: "TO BE DONE.."

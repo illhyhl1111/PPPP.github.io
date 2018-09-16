@@ -1,5 +1,5 @@
 ---
-title: "기억력이 나빠서 슬픈 생물"
+title: "기억력이 짧아서 슬픈 생물"
 date: 2018-09-14 23:37:23 -0400
 categories: posts
 classes: wide
