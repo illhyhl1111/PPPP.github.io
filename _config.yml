@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "ㅁㄴㅇㄹ"
+title                    : "노예는 노예노예하고 울어요"
 title_separator          : "-"
 name                     : "Hyundo Lee"
 description              : "정리용 블로그"
@@ -102,7 +102,7 @@ analytics:
 author:
   name             : "Hyundo Lee"
   avatar           : "/pictures/info.png"
-  bio              : "노예는 노예노예하고 울어요"
+  bio              : "집에가고싶다"
   location         : "#214-1, 138 Bldg.\n Seoul National University, Korea"
   email            : "illhyhl1111@snu.ac.kr"
   links:
