@@ -103,7 +103,7 @@ author:
   name             : "Hyundo Lee"
   avatar           : "/pictures/info.png"
   bio              : "노예는 노예노예하고 울어요"
-  location         : "#214-1, 138 Bldg. Seoul National University, Korea"
+  location         : "#214-1, 138 Bldg.\n Seoul National University, Korea"
   email            : "illhyhl1111@snu.ac.kr"
   links:
     - label: "Email"
