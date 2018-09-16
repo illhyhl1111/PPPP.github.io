@@ -11,7 +11,7 @@
     </div>
     <div id="{{include.topic | append: '_1'}}" class="panel-collapse collapse" markdown="0">
       <div class="panel-body" style="padding: 20px 20px" markdown="0">
-        {{include.context1 | markdownify }}
+        {{include.context1 | markdownify | default: "TODO"}}
       </div>
       <div class="panel-footer" style="background-color: #ff9999" markdown="0">
         <a class="btn btn--danger" data-toggle="collapse" data-target="#{{include.topic | append: '_2'}}" markdown="0">
@@ -20,7 +20,7 @@
       </div>
       <div id="{{include.topic | append: '_2'}}" class="panel-collapse collapse" markdown="0">
         <div class="panel-body" style="padding: 20px 30px" markdown="0">
-          {{include.context2 | markdownify }}
+          {{include.context2 | markdownify | default: "TODO" }}
         </div>
         <div class="panel-footer" style="background-color: #99ff99" markdown="0">
           <a class="btn btn--success" data-toggle="collapse" data-target="#{{include.topic | append: '_1'}}" markdown="0">
