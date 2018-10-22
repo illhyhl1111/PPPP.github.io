@@ -1,0 +1,7 @@
+{% capture context1 %}
+{% endcapture %}
+
+{% capture context2 %}
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="" %}
