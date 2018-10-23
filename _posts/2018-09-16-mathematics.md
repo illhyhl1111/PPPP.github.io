@@ -50,8 +50,8 @@ sidebar:
 <p> $$ \sim (\forall x, p(x)) \Leftrightarrow (\exists x, \sim p(x)), \sim (\exists x, p(x)) \Leftrightarrow (\forall x, \sim p(x))$$ </p>
 
 #### 진리집합
-* $p(x)$를 만족하는 $x$ 전체의 집합 $P$를 조건 $p(x)$의 진리집합이라고 한다.
-* $ P = \left\{ x \mid x \in U, p(x) \right\} $. 표기시 전체집합 $U$를 씹으려는 경향이 강하므로 $P=\left\{ x \mid p(x) \right\}$로도 표기.
+* $p(x)$를 만족하는 $x$ 전체의 집합 $P$를 조건 $p(x)$의 진리집합이라고 한다.<br/>
+* $P = \{ x \mid x \in U, p(x) \}$. 표기시 전체집합 $U$를 씹으려는 경향이 강하므로 $P=\{ x \mid p(x) \}$로도 표기.
 
 #### 조건과 집합
 * 집합 $P$, $Q$를 조건 $p$, $q$의 진리집합이라고 둘 때,
