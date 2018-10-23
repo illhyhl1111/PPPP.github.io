@@ -35,9 +35,7 @@ sidebar:
 
 ### 명제와 조건
 명제는 참/거짓을 내릴 수 있는 문장이며, 조건은 변수 $$ x $$에 값을 대입하면 명제가 되는 문장. <br/>
-$$p$$이면 $$q$$이다: $$p \rightarrow q$$,
-$$p \rightarrow q$$가 참이면 $$p \Rightarrow q$$,
-진리집합 $$P$$, $$Q$$에 대해 $$P \subset Q$$ 이면 $$p \Rightarrow q$$
+$$p \rightarrow q$$, $$p \Rightarrow q$$,\ $$P \subset Q \Rightarrow (p \Rightarrow q)$$
 
 {% capture context1 %}
 #### 조건
@@ -71,19 +69,20 @@ $$p \Leftrightarrow q$$ 면 서로 필요충분조건(동치). <br/>
 
 {% capture context2 %}
 
-두 **조건** $$p$$, $$q$$를 $$p \rightarrow q$$ 꼴로 연결하면 명제가 되어버림. <br/>
-'4의 약수는 8의 약수이다' 를 풀어서 '$$x$$가 4의 약수이면 $$x$$는 8의 약수이다' 로 명제와 같이 표현가능. <br/>
+* 두 **조건** $$p$$, $$q$$를 $$p \rightarrow q$$ 꼴로 연결하면 명제가 되어버림. <br/>
+ '4의 약수는 8의 약수이다' 를 풀어서 '$$x$$가 4의 약수이면 $$x$$는 8의 약수이다' 로 명제와 같이 표현가능. <br/>
 
-$$(P \subset Q) \Rightarrow (x \in P \Rightarrow x \in Q) \Rightarrow (p \Rightarrow q)$$ <br/>
+* $$(P \subset Q) \Rightarrow (x \in P \Rightarrow x \in Q) \Rightarrow (p \Rightarrow q)$$ <br/>
 
-<p> $$ \sim (p \vee q) \Rightarrow (P \cup Q)^c \Rightarrow P^c \cup Q^c \Rightarrow \sim p \wedge \sim q $$ </p>
-<p> $$ \sim (모든 x에 대하여 p(x)이다) \Rightarrow \sim (p(x1) and p(x2) and ... and p(xn)) \Rightarrow \sim p(x1) or \sim p(x2) or ... or \sim p(xn) \Rightarrow 어떤 x에 대하여 \sim p(x) $$ </p>
-비슷한 방법으로 모두 증명 가능 </br>
+* $$ \sim (p \vee q) \Rightarrow (P \cup Q)^c \Rightarrow P^c \cup Q^c \Rightarrow \sim p \wedge \sim q $$
+* $$ \sim$$ (모든 $$x$$에 대하여 $$p(x)$$이다) $$\Rightarrow \sim (p(x_1) \; and \; p(x_2) \; and \; ... \; and \; p(x_n))$$ <br/>
+  $$ \Rightarrow \sim p(x_1) \; or \; \sim \; p(x_2) \; or \; ... \; or \; \sim p(x_n) \Rightarrow$$ 어떤 $$x$$에 대하여 $$\sim p(x) $$ <br/>
+  비슷한 방법으로 모두 증명 가능
 
-귀류법이 옳다는 것을 증명하는 방법 : <br/>
-$$(p \rightarrow q) \Leftrightarrow (p \wegde \sim q) \rightarrow c$$ 임을 보이면 됨 ($$c$$는 항상 False) <br/>
-가장 쉬운 방법으로는 진리표가 있음 <br/>
-[귀류법 증명][https://m.blog.naver.com/PostView.nhn?blogId=da91love&logNo=220375037913&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F] 참조
+* 귀류법이 옳다는 것을 증명하는 방법 : <br/>
+  $$(p \rightarrow q) \Leftrightarrow (p \wegde \sim q) \rightarrow c$$ 임을 보이면 됨 ($$c$$는 항상 False) <br/>
+  가장 쉬운 방법으로는 진리표가 있음 <br/>
+  [귀류법 증명][https://m.blog.naver.com/PostView.nhn?blogId=da91love&logNo=220375037913&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F] 참조
 
 {% endcapture %}
 
