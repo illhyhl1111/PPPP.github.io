@@ -54,7 +54,7 @@ $$P = \left\{ x | x \in U, p(x) \right\}$$. 표기시 전체집합 $$U$$를 씹�
 
 #### 조건과 집합
 집합 $$P$$, $$Q$$를 조건 $$p$$, $$q$$의 진리집합이라고 둘 때, <br/>
-<p> $$ P \subset Q \Leftrightarrow (p \Rightarrow q), P \nsubset Q \Leftrightarrow (p \nLeftarrow q), \\
+<p> $$ P \subset Q \Leftrightarrow (p \Rightarrow q), P \nsubseteq Q \Leftrightarrow (p \nLeftarrow q), \\
 p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \Leftrightarrow P^c $$ </p>
 
 #### 필요 · 충분 조건
@@ -72,17 +72,18 @@ $$p \Leftrightarrow q$$ 면 서로 필요충분조건(동치). <br/>
 * 두 **조건** $$p$$, $$q$$를 $$p \rightarrow q$$ 꼴로 연결하면 명제가 되어버림. <br/>
  '4의 약수는 8의 약수이다' 를 풀어서 '$$x$$가 4의 약수이면 $$x$$는 8의 약수이다' 로 명제와 같이 표현가능. <br/>
 
-* $$(P \subset Q) \Rightarrow (x \in P \Rightarrow x \in Q) \Rightarrow (p \Rightarrow q)$$ <br/>
+* $$(P \subset Q) \Rightarrow (x \in P \Rightarrow x \in Q) \Rightarrow (p \Rightarrow q)$$
 
 * $$ \sim (p \vee q) \Rightarrow (P \cup Q)^c \Rightarrow P^c \cup Q^c \Rightarrow \sim p \wedge \sim q $$
+
 * $$ \sim$$ (모든 $$x$$에 대하여 $$p(x)$$이다) $$\Rightarrow \sim (p(x_1) \; and \; p(x_2) \; and \; ... \; and \; p(x_n))$$ <br/>
   $$ \Rightarrow \sim p(x_1) \; or \; \sim \; p(x_2) \; or \; ... \; or \; \sim p(x_n) \Rightarrow$$ 어떤 $$x$$에 대하여 $$\sim p(x) $$ <br/>
   비슷한 방법으로 모두 증명 가능
 
 * 귀류법이 옳다는 것을 증명하는 방법 : <br/>
-  $$(p \rightarrow q) \Leftrightarrow (p \wegde \sim q) \rightarrow c$$ 임을 보이면 됨 ($$c$$는 항상 False) <br/>
+  $$(p \rightarrow q) \Leftrightarrow (p \wedge \sim q) \rightarrow c$$ 임을 보이면 됨 ($$c$$는 항상 False) <br/>
   가장 쉬운 방법으로는 진리표가 있음 <br/>
-  [귀류법 증명][https://m.blog.naver.com/PostView.nhn?blogId=da91love&logNo=220375037913&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F] 참조
+  [귀류법 증명](https://m.blog.naver.com/PostView.nhn?blogId=da91love&logNo=220375037913&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F) 참조
 
 {% endcapture %}
 
