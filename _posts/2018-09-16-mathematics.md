@@ -35,7 +35,7 @@ sidebar:
 
 ### 명제와 조건
 * 명제는 참/거짓을 내릴 수 있는 문장이며, 조건은 변수 $$ x $$에 값을 대입하면 명제가 되는 문장.
-* $$p \rightarrow q$$, $$p \Rightarrow q$$,\ $$P \subset Q \Rightarrow (p \Rightarrow q)$$
+* $$p \rightarrow q$$, $$p \Rightarrow q$$, $$P \subset Q \Rightarrow (p \Rightarrow q)$$
 
 {% capture context1 %}
 #### 조건
@@ -123,11 +123,11 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 * 두 개 이상의 정수의 공통인 약수를 공약수라 하고, 그 중 가장 큰 수를 최대공약수라 함
 * 두 개 이상의 정수의 공통인 배수를 공배수라 하고, 그 중 가장 큰 수를 최소공배수라 함
 
-* $$\gcd(A, B) = G, \lcm(A, B) = L$$이라 두면, <br/>
+* $$\gcd(A, B) = G, \mathrm{lcm}(A, B) = L$$이라 두면, <br/>
   $$A = Ga, B = Gb$$ (단, $$\gcd(a, b) = 1$$) <br/>
   $$L = Gab, LG = AB$$ 를 만족함.
 
-### 다항식의 GCD, LCM
+#### 다항식의 GCD, LCM
 * 다항식 $$A$$, $$B$$, $$Q$$ 사이에 $$A=B \cdot Q$$이면 $$B$$를 $$A$$의 약수라고 표현한다.
 * 2개 다항식 사이 공통인 약수를 공약수, 가장 차수가 높은 것을 최대공약수라고 함.
 * 배수도 똑같
@@ -136,40 +136,40 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 #### 유클리드 호제법 (Euclidean algorithm)
 * 맨날까먹음
 * $$A > B$$인 임의의 자연수 $$A$$, $$B$$가 있을 때, $$A = B \cdot Q + R$$로 몫과 나머지를 분리하면 </br>
-  <p> $$\gcd(A, B) = \gcd(B, R)$$ </p> </br>
+  <p> $$\gcd(A, B) = \gcd(B, R)$$ </p>
   임이 성립한다는 것
 
-* 이를 확장한 Extended Euclidian Algorithm은 다음과 같다 </br>
-  <p> $$as + bt=\gcd(a,b) 인 정수쌍 s, t가 존재함 </p> <br/>
+* 이를 확장한 Extended Euclidian Algorithm은 다음과 같다 <br/>
+  <p> $$as + bt=\gcd(a,b)$$ 인 정수쌍 $$s$$, $$t$$가 존재함 </p>
   모듈러 연산의 역원을 구하는데 우려먹힌다.
 
 #### 기수법
-* 양의 정수 $$N_p = a_n p^n + a_n-1 p^n-1 + \cdots + a_1 p + a_0$$
+* 양의 정수 $$N_p = a_n p^n + a_{n-1} p^{n-1} + \cdots + a_1 p + a_0$$
 * 양의 소수 $$N_p = \frac{a_1}{p} + \frac{a_2}{p^2} + \cdots + \frac{a_n}{p^n}$$
 {% endcapture %}
 
 {% capture context2 %}
 #### Euclidean algorithm으로 gcd 찾기
 <p> $$r_0 \leftarrow a, r_1 \leftarrow b \\
-r_i+1=r_i−1−q_i r_i,  q_i=\frac{r_i−1}{r_i} $$ </p>
+r_{i+1}=r_{i−1}−q_i r_i, \quad q_i=\frac{r_{i−1}}{r_i} $$ </p>
 
-만약 $$r_i+1=0$$ 이라면 $$r_i$$ 가 바로 $$\gcd(a,b)$$ 이다.
+만약 $$r_{i+1}=0$$ 이라면 $$r_i$$ 가 바로 $$\gcd(a,b)$$ 이다.
 
 #### Euclidean algorithm 증명
 $$A=Ga, B=Gb$$ ($$a$$, $$b$$ 는 서로소) 를 $$A=BQ+R$$에 대입해보면
-<p> $$Ga=GbQ + R, R=G(a-Qb) $$ </p>
+<p> $$Ga=Gb \cdot Q + R, \quad R=G(a-Qb) $$ </p>
 이제 $$b$$와 $$a-Qb$$가 서로소임을 보이면 되는데, $$b=mk$$, $$a-bQ=mk'$$으로 두자($$k$$, $$k'$$는 서로소) <br/>
 $$a=bQ+mk'=m(kQ+k')$$이므로 $$m$$은 $$a$$, $$b$$의 공약수인데, 서로소이므로 1임 <br/>
 따라서 $$m=1$$이 되며 $$b$$와 $$a-Qb$$는 서로소가 되서 $$\gcd(B, R)=G$$가 되어버림
 
 #### Extended Euclidean algorithm 증명
 $$r_0 \leftarrow a, r_1 \leftarrow b$$ <br/>
-초기값들을 넣으면 $$as_i+bt_i=r_i \quad for i=0,1$$ <br/>
+초기값들을 넣으면 $$as_i+bt_i=r_i \quad for \; i=0,1$$ <br/>
 이제 $$i>1$$일 때 참이라고 가정하고 수학적 귀납법을 쓰면
 
-<p> $$r_i+1=r_i−1−r_i q_i=(as_i−1+bt_i−1)−(as_i+bt_i)q_i=a(s_i−1−s_i q_i)+b(t_i−1−t_i q_i)=as_i+1+bt_i+1 $$ </p>
+<p> $$r_{i+1}=r_{i−1}−r_i q_i=(as_{i−1}+bt_{i−1})−(as_i+bt_i)q_i=a(s_{i−1}−s_i q_i)+b(t_{i−1}−t_i q_i)=as_{i+1}+bt_{i+1} $$ </p>
 
-따라서 $$r_i+1=0$$ 일 때 $$as_i+bt_i=r_i$$ 는 $$as+bt=\gcd(a,b)$$ 가 된다. <br/>
+따라서 $$r_{i+1}=0$$ 일 때 $$as_i+bt_i=r_i$$ 는 $$as+bt=\gcd(a,b)$$ 가 된다. <br/>
 
 [Extended Euclidean algorithm 증명](https://codeonwort.tistory.com/295) 참조
 
