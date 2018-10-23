@@ -140,7 +140,7 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
   임이 성립한다는 것
 
 * 이를 확장한 Extended Euclidian Algorithm은 다음과 같다 <br/>
-  <p> $$as + bt=\gcd(a,b)$$ 인 정수쌍 $$s$$, $$t$$가 존재함 </p>
+  <p align="center"> $as + bt=\gcd(a,b)$ 인 정수쌍 $s$, $t$가 존재함 </p>
   모듈러 연산의 역원을 구하는데 우려먹힌다.
 
 #### 기수법
