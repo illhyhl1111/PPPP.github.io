@@ -106,6 +106,12 @@ gcd{A, B} = G, lcm{A, B} = L이라 두면,
 A = Ga, B = Gb (단, gcd{a, b} = 1)
 L = Gab, LG = AB 를 만족함.
 
+### 다항식의 GCD, LCM
+다항식 A, B, Q 사이에 A=BQ이면 B를 A의 약수라고 표현한다.
+2개 다항식 사이 공통인 약수를 공약수, 가장 차수가 높은 것을 최대공약수라고 함.
+배수도 똑같
+정수에서와 똑같은 성질을 가짐
+
 #### 유클리드 호제법 (Euclidean algorithm)
 맨날까먹음
 A > B인 임의의 자연수 A, B가 있을 때, A = BQ + R로 몫과 나머지를 분리하면
@@ -149,10 +155,10 @@ https://codeonwort.tistory.com/295 참조
 {% endcapture %}
 {% include blocks.html context1=context1 context2=context2 topic="" %}
 
-### 다항식의 사칙연산
-(a-b)(a^2+ab+b^2)=a^3-b^3같은 공식을 처음 십수개씩 마주하면서 패닉상태에 빠졌던 기억이 새록새록 난다.
+### 다항식의 사칙연산, 인수분해, 항등식과 미정계수법
+(a-b)(a^2+ab+b^2)=a^3-b^3같은 공식을 처음 수십개씩 마주하면서 패닉상태에 빠졌던 기억이 새록새록 난다.
 하지만 여기다 적을 의향은 없다
-조립제법은 x의 다항식 F(x)를 x-a로 나누었을 때 몫과 나머지로 분리하는 방법임. 진짜 5년만에 듣는거같다. 조립제법..
+조립제법은 x의 다항식 F(x)를 x-a로 나누었을 때 몫과 나머지로 분리하는 방법임.
 
 {% capture context1 %}
 #### 조립제법
@@ -164,3 +170,28 @@ https://codeonwort.tistory.com/295 참조
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="" %}
+
+### 나머지정리
+x의 다항식 f(x)를 x-a로 나누었을 때 나머지는 f(a)이다.
+
+{% capture context1 %}
+f(a)=0인 것과 f(x)가 x-a로 나누어떨어진다는 동치이다.
+보통 f(a)=0인 a를 찾아서 f(x)를 인수분해하려고 쓴다.
+f(x)=ax^n+ ... + b일 때, x= +-(b의 약수)/(a의 약수) 를 대입해본다.
+{% endcapture %}
+
+{% capture context2 %}
+f(x) = (x-a)Q(x) + R는 항등식이므로, R = f(a)
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="" %}
+
+### 유리수, 무리수, 복소수
+할말없음
+
+### 이차방정식
+ax^2 + bx + c = 0 => x = (-b +- root(b^2-4ac))/2a
+ax^2 + 2bx + c = 0 => x = (-b +- root(b^2-ac))/a
+D(Determinant) = B^2 -4ac
+가끔씩 가물가물해서 빡친다
+
