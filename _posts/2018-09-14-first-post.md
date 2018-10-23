@@ -3,6 +3,7 @@ title: "기억력이 짧아서 슬픈 생물"
 date: 2018-09-14 23:37:23 -0400
 categories: posts
 classes: wide
+use_math: true
 header:
   overlay_color: "#333"
 author_profile: true
@@ -118,14 +119,14 @@ button1-text="우선" button2-text="그리고" %}
 글은 마크다운으로 쓸 예정이며, 수식은 [Mathjax][Mathjax]을 사용하여 latex 문법의 html로 쓸 예정이다. <br/> 
 
 ```html
-  <p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
+  $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$
 ```
-<p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
+$$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$
 
 ```html
-  asdf $$ x = \xi $$ fdsa
+  asdf $ x = \xi $ fdsa
 ```
-asdf $$ x = \xi $$ fdsa
+asdf $ x = \xi $ fdsa
 
 
 2018년 9월 15일에 시작한 이 블로그가 꾸준히 자라나서 <br/>

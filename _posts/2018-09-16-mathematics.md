@@ -3,6 +3,7 @@ title: "고등학교 입학부터 대학교 졸업까지, 수학 압축서"
 date: 2018-09-16 16:05:25 -0400
 categories: posts
 classes: wide
+use_math: true
 excerpt: "!아직 작성이 완료되지 않았습니다"
 header:
   show_overlay_excerpt: true
@@ -13,7 +14,6 @@ author_profile: false
 sidebar:
   title: "목차"
   nav: sidebar-math
-
 ---
 
 # 들어가기 앞서
