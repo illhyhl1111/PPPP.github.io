@@ -120,7 +120,12 @@ button1-text="우선" button2-text="그리고" %}
 ```html
   <p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
 ```
-$$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$
+<p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
+
+```html
+  asdf $$ x = \xi $$ fdsa
+```
+asdf $$ x = \xi $$ fdsa
 
 
 2018년 9월 15일에 시작한 이 블로그가 꾸준히 자라나서 <br/>
