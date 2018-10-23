@@ -119,13 +119,9 @@ button1-text="우선" button2-text="그리고" %}
 글은 마크다운으로 쓸 예정이며, 수식은 [Mathjax][Mathjax]을 사용하여 latex 문법의 html로 쓸 예정이다. <br/> 
 
 ```html
-  $$ 
-    J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) 
-  $$
+  <p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
 ```
-$$ 
-  J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y)
-$$
+<p> $$ J(\theta) = \frac{1}{m} \sum^m_{i=1} Cost(h_\theta(x),y) $$ </p>
 
 ```html
   asdf $ x = \xi $ fdsa
