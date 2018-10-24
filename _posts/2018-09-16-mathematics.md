@@ -182,7 +182,7 @@ $(a-b)(a^2+ab+b^2)=a^3-b^3$같은 공식 수십개 - 응 안적어 <br/>
 
 {% capture context1 %}
 #### 조립제법
-$x$의 다항식 $F(x)$를 $x-a$로 나누었을 때 몫과 나머지로 분리하는 방법.
+$x$의 다항식 $F(x)$를 $x-a$로 나누었을 때 몫과 나머지로 분리하는 방법.<br/>
 ![Alt text](/pictures/mathematics/690b6a0d.png)
 {% endcapture %}
 
@@ -210,9 +210,9 @@ $f(x) = (x-a)Q(x) + R$는 항등식이므로, $R = f(a)$
 ### 이차방정식
 <p> $$
   \begin{align*}
-    ax^2 + bx + c =& 0 \Rightarrow x = \left(-b \pm \frac{\sqrt{b^2-4ac}}{2a}\right) \\
-    ax^2 + 2bx + c =& 0 \Rightarrow x = \left(-b \pm \frac{\sqrt{b^2-ac}}{a}\right) \\
-    D(\mathrm{Determinant}) =& B^2 -4ac
+    ax^2 + bx + c = 0 \Rightarrow & x = \left(-b \pm \frac{\sqrt{b^2-4ac}}{2a}\right) \\
+    ax^2 + 2bx + c = 0 \Rightarrow & x = \left(-b \pm \frac{\sqrt{b^2-ac}}{a}\right) \\
+    D(\mathrm{Determinant}) = & b^2 -4ac
   \end{align*}
 $$ </p>
 가끔씩 가물가물해서 빡친다
