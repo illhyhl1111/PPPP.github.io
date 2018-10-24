@@ -176,16 +176,14 @@ $r_0 \leftarrow a, r_1 \leftarrow b$ <br/>
 {% endcapture %}
 {% include blocks.html context1=context1 context2=context2 topic="유클리드" %}
 
-{% comment %}
-
 ### 다항식의 사칙연산, 인수분해, 항등식과 미정계수법
-(a-b)(a^2+ab+b^2)=a^3-b^3같은 공식을 처음 수십개씩 마주하면서 패닉상태에 빠졌던 기억이 새록새록 난다.
-하지만 여기다 적을 의향은 없다
-조립제법은 x의 다항식 F(x)를 x-a로 나누었을 때 몫과 나머지로 분리하는 방법임.
+$(a-b)(a^2+ab+b^2)=a^3-b^3$같은 공식 수십개 - 응 안적어 <br/>
+조립제법으로 다항식 인수분해
 
 {% capture context1 %}
 #### 조립제법
-그림
+$x$의 다항식 $F(x)$를 $x-a$로 나누었을 때 몫과 나머지로 분리하는 방법.
+![Alt text](/pictures/mathematics/690b6a0d.png)
 {% endcapture %}
 
 {% capture context2 %}
@@ -195,26 +193,29 @@ $r_0 \leftarrow a, r_1 \leftarrow b$ <br/>
 {% include blocks.html context1=context1 context2=context2 topic="" %}
 
 ### 나머지정리
-x의 다항식 f(x)를 x-a로 나누었을 때 나머지는 f(a)이다.
+$x$의 다항식 $f(x)$를 $x-a$로 나누었을 때 나머지는 $f(a)$이다.
 
 {% capture context1 %}
-f(a)=0인 것과 f(x)가 x-a로 나누어떨어진다는 동치이다.
-보통 f(a)=0인 a를 찾아서 f(x)를 인수분해하려고 쓴다.
-f(x)=ax^n+ ... + b일 때, x= +-(b의 약수)/(a의 약수) 를 대입해본다.
+$f(a)=0$인 것과 $f(x)$가 $x-a$로 나누어떨어진다는 동치이다.
+보통 $f(a)=0$인 $a$를 찾아서 $f(x)$를 인수분해하려고 쓴다.
+$f(x)=ax^n+ \cdots + b$일 때, $x= \pm \frac{b의 약수}{a의 약수}$ 를 대입해본다.
 {% endcapture %}
 
 {% capture context2 %}
-f(x) = (x-a)Q(x) + R는 항등식이므로, R = f(a)
+$f(x) = (x-a)Q(x) + R$는 항등식이므로, $R = f(a)$
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="" %}
 
 ### 이차방정식
-ax^2 + bx + c = 0 => x = (-b +- root(b^2-4ac))/2a
-ax^2 + 2bx + c = 0 => x = (-b +- root(b^2-ac))/a
-D(Determinant) = B^2 -4ac
+<p> $$
+  \begin{align*}
+    ax^2 + bx + c =& 0 \Rightarrow x = \left(-b \pm \frac{\sqrt{b^2-4ac}}{2a}\right) \\
+    ax^2 + 2bx + c =& 0 \Rightarrow x = \left(-b \pm \frac{\sqrt{b^2-ac}}{a}\right) \\
+    D(\mathrm{Determinant}) =& B^2 -4ac
+  \end{align*}
+$$ </p>
 가끔씩 가물가물해서 빡친다
-{% endcomment %}
 
 ## 수학 1
 TBD
