@@ -42,27 +42,32 @@ sidebar:
 * 조건에 포함된 변수 $x$는 $U \neq \varnothing$ 을 정의역으로 함.
 * 전체집합 $U$에서의 조건 $p(x)$를 간단히 조건 $p$라고 표기함.
 * $U$의 원소 $a$를 대입한 $p(a)$가 참인 명제라면, 명제 $p(a)$가 성립한다, $a$는 조건 $p(x)$를 만족한다 라고 함.
+<br/>
 
 #### 부정
 * 명제 $p$ 혹은 조건 $p(x)$에 대해 $p(x)$가 아니다 를 $p(x)$의 부정이라 하고, $\sim p(x)$$로 표기함.
 
 <p> $$ \sim (p \vee q) \Leftrightarrow (\sim p \wedge \sim q), \sim (p \wedge q) \Leftrightarrow (\sim p \vee \sim q) $$ </p>
 <p> $$ \sim (\forall x, p(x)) \Leftrightarrow (\exists x, \sim p(x)), \sim (\exists x, p(x)) \Leftrightarrow (\forall x, \sim p(x))$$ </p>
+<br/>
 
 #### 진리집합
 * $p(x)$를 만족하는 $x$ 전체의 집합 $P$를 조건 $p(x)$의 진리집합이라고 한다.
 * $P = \left\\{ x \mid x \in U, p(x) \right\\}$. 표기시 전체집합 $U$를 씹으려는 경향이 강하므로 $P=\left\\{ x \mid p(x) \right\\}$로도 표기.
+<br/>
 
 #### 조건과 집합
 * 집합 $P$, $Q$를 조건 $p$, $q$의 진리집합이라고 둘 때,
 
 <p> $$ P \subset Q \Leftrightarrow (p \Rightarrow q), P \nsubseteq Q \Leftrightarrow (p \nLeftarrow q), \\
 p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \Leftrightarrow P^c $$ </p>
+<br/>
 
 #### 필요 · 충분 조건
 * $p \Rightarrow q$일 때, $p$는 $q$이기 위한 충분조건이고 $q$는 $p$이기 위한 필요조건이 된다.
 * $p \Leftrightarrow q$ 면 서로 필요충분조건(동치).
 * 집합과의 관계는 $P \subset Q \Rightarrow (p \Rightarrow q) $
+<br/>
 
 #### 귀류법
 * 어떤 명제 $p \rightarrow q$임을 증명하려 할 때, 대우 $\sim q \rightarrow \sim p$를 증명하는 방법
@@ -98,10 +103,12 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 * 기호 $\circ$ 등을 써서 $a \circ b = c$ 등으로 표기.
 * 연산 $\circ$이 정의되어 있는 집합 $M$의 부분집합 $N$에 대하여, <br/>
   $a \in N, b \in N \Rightarrow a \circ b \in N$ 이면 $N$은 $\circ$에 관하여 닫혀 있다라고 함.
+<br/>
 
 #### 교환, 결합법칙
 * 교환법칙이 성립 $ \Leftrightarrow a \circ b = b \circ a $
 * 결합법칙이 성립 $ \Leftrightarrow (a \circ b) \circ c = a \circ (b \circ c) $
+<br/>
 
 #### 항등원, 역원
 * $\forall a \in N, \exists e \in N, a \circ e = e \circ a = a$ 일 때 $e$를 $\circ$에 대한 항등원이라고 함
@@ -126,12 +133,14 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 * $\gcd(A, B) = G, \mathrm{lcm}(A, B) = L$이라 두면, <br/>
   $A = Ga, B = Gb$ (단, $\gcd(a, b) = 1$) <br/>
   $L = Gab, LG = AB$ 를 만족함.
+<br/>
 
 #### 다항식의 GCD, LCM
 * 다항식 $A$, $B$, $Q$ 사이에 $A=B \cdot Q$이면 $B$를 $A$의 약수라고 표현한다.
 * 2개 다항식 사이 공통인 약수를 공약수, 가장 차수가 높은 것을 최대공약수라고 함.
 * 배수도 똑같
 * 정수에서와 똑같은 성질을 가짐
+<br/>
 
 #### 유클리드 호제법 (Euclidean algorithm)
 * 맨날까먹음
@@ -142,6 +151,7 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 * 이를 확장한 Extended Euclidian Algorithm은 다음과 같다 <br/>
   <p align="center"> $as + bt=\gcd(a,b)$ 인 정수쌍 $s$, $t$가 존재함 </p>
   모듈러 연산의 역원을 구하는데 우려먹힌다.
+<br/>
 
 #### 기수법
 * 양의 정수 $N_p = a_n p^n + a_{n-1} p^{n-1} + \cdots + a_1 p + a_0$
@@ -154,6 +164,7 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 r_{i+1}=r_{i−1}−q_i r_i, \quad q_i=\frac{r_{i−1}}{r_i} $$ </p>
 
 만약 $r_{i+1}=0$ 이라면 $r_i$ 가 바로 $\gcd(a,b)$ 이다.
+<br/>
 
 #### Euclidean algorithm 증명
 $A=Ga, B=Gb$ ($a$, $b$ 는 서로소) 를 $A=BQ+R$에 대입해보면
@@ -161,6 +172,7 @@ $A=Ga, B=Gb$ ($a$, $b$ 는 서로소) 를 $A=BQ+R$에 대입해보면
 이제 $b$와 $a-Qb$가 서로소임을 보이면 되는데, $b=mk$, $a-bQ=mk'$으로 두자($k$, $k'$는 서로소) <br/>
 $a=bQ+mk'=m(kQ+k')$이므로 $m$은 $a$, $b$의 공약수인데, 서로소이므로 1임 <br/>
 따라서 $m=1$이 되며 $b$와 $a-Qb$는 서로소가 되서 $\gcd(B, R)=G$가 되어버림
+<br/>
 
 #### Extended Euclidean algorithm 증명
 $r_0 \leftarrow a, r_1 \leftarrow b$ <br/>
@@ -227,6 +239,7 @@ Pappus의 정리, 삼각형의 무게중심 등등 잡다한 것들
 #### 선분의 내분점과 외분점
 \bar AB를 m:n으로 내분하는 점 P의 좌표는 \frac{mx_2+nx_1}{m+n} <br/>
 \bar AB를 m:n으로 외분하는 점 P의 좌표는 \frac{mx_2-nx_1}{m-n}
+<br/>
 
 #### 삼각형의 무게중심, Pappus의 정리
 A(x_1, y_1), B(x_2, y_2), C(x_3, y_3)인 세모ABC의 무게중심은
@@ -257,9 +270,11 @@ x y절편: \frac{x}{a}+\frac{y}{b}=1
 
 두 직선 ax+by+c=0, a'x+b'y+c'=0의 교점을 지나는 직선들의 방정식
 m(ax+by+c) + (a'x+b'y+c') = 0
+<br/>
 
 #### 수직인 직선
 y=ax+b, y=a'x+b'이 수직이라면, aa'=-1 
+<br/>
 
 #### 점과 직선 사이의 거리
 점(x_1, y_1)과 직선 ax+by+c=0 사이의 거리 d=\frac{|ax_1+by_1+c|}{\sqrt(a^2+b^2)}
@@ -292,6 +307,7 @@ P를 지나 l에 수직인 직선의 방정식은 y-y_1=\frac{b}{a}(x-x_1), b(x-
 중심(-\frac{A}{2}, -\frac{B}{2}), 반지름 \frac{\sqrt(A^2+B^2-4C)}{2}
 \rightarrow A^2+B^2-4C<0이면 허원 이라고도 한단다.
 세 점을 지나는 원: 일반형에 세 좌표 쑤셔넣고 연립
+<br/>
 
 #### 원과 직선의 관계
 직선은 y=mx+n이요 원은 f(x, y)=0이기 때문에,
@@ -302,6 +318,7 @@ y를 소거하여 f(x, mx+n)으로 해버리면 이차방정식이 되어버림.
 (x_1-a)(x-a)+(y_1-b)(y-b)=r^2
 기울기가 m인 접선의 방정식은
 y-b=m(x-a)\pm r \sqrt(m^2+1)
+<br/>
 
 #### 두 원의 관계
 두 원의 반지름과 중심거리를 통해서 상식적으로 구한다.
@@ -339,6 +356,7 @@ x^2+(mx+b)^2=r^2, D/4 = b^2 m^2-(m^2+1)(b^2-r^2)=0, b^2=(m^2+1)r^2
 x축으로 a, y축으로 b만큼 평행이동시킬 때, T: (x, y) \rightarrow (x+a, y+b)로 표기하고
 점 P(x, y) \rightarrow Q(x+a, y+b)
 도형의 방정식 f(x-a, y-b)=0 \rightarrow f(x-a, y-b)=0
+<br/>
 
 #### 대칭이동
 x축 - T: (x, y) \rightarrow (x, -y)
