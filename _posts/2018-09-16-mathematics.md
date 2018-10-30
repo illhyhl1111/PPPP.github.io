@@ -229,140 +229,142 @@ $f(x) = (x-a)Q(x) + R$는 항등식이므로, $R = f(a)$
 $$ </p>
 가끔씩 가물가물해서 빡친다
 
-{% comment %}
-
 ### 점과 좌표
-선분의 내분점과 외분점 \frac{mx_2 \pm nx_1}{m+n}
-Pappus의 정리, 삼각형의 무게중심 등등 잡다한 것들
+* 선분의 내분점과 외분점 $\frac{mx_2 \pm nx_1}{m+n}$
+* Pappus의 정리, 삼각형의 무게중심 등등 잡다한 것들
 
 {% capture context1 %}
 #### 선분의 내분점과 외분점
-\bar AB를 m:n으로 내분하는 점 P의 좌표는 \frac{mx_2+nx_1}{m+n} <br/>
-\bar AB를 m:n으로 외분하는 점 P의 좌표는 \frac{mx_2-nx_1}{m-n}
+* $\overline{AB}$를 $m:n$으로 내분하는 점 $P$의 좌표는 $\frac{mx_2+nx_1}{m+n}$
+* $\overline{AB}$를 $m:n$으로 외분하는 점 $P$의 좌표는 $\frac{mx_2-nx_1}{m-n}$
 <br/>
 
 #### 삼각형의 무게중심, Pappus의 정리
-A(x_1, y_1), B(x_2, y_2), C(x_3, y_3)인 세모ABC의 무게중심은
-\left\(\frac{x_1+x_2+x_3}{3}, \frac{y_1+y_2+y_3}{3})
+* $A(x_1, y_1), B(x_2, y_2), C(x_3, y_3)$인 $\triangle ABC$의 무게중심은
+<p> $$\left\(\frac{x_1+x_2+x_3}{3}, \frac{y_1+y_2+y_3}{3})$$ </p>
+<br/>
 ![Alt text](/pictures/mathematics/27755D4256A82ED122.png)
-세모ABC의 변 BC의 중점을 M이라 둘 때, \bar AB^2 + \bar BC^2 = 2(\bar AM^2 + \bar BM^2)
+* $\triangle ABC$ 의 변 $\overline{BC}$의 중점을 $M$이라 둘 때,
+$\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 {% endcapture %}
 
 {% capture context2 %}
-삼각형의 무게중심 G는 점 A(x_1, y_1)와 \bar BC의 중점 M(x_2+x_3/2, y_2+y_3/2)를 2:1로 내분하는 점.
-나머지 변에 대해서도 마찬가지.
-파푸스 정리는 그냥 위에 넣은 그림대로 좌표넣고 계산때려보면 2(a^2+b^2+c^2)로 같다.    
+* 삼각형의 무게중심 $G$는 점 $A(x_1, y_1)$와 $\overline{BC}$의 중점 $M\left(\frac{x_2+x_3}{2}, \frac{y_2+y_3}{2}\right)를 $2:1$로 내분하는 점. <br/>
+  나머지 변에 대해서도 마찬가지.
+
+* 파푸스 정리는 그냥 위에 넣은 그림대로 좌표넣고 계산때려보면 $2(a^2+b^2+c^2)$로 같다.
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_점과좌표" %}
 
 ### 직선의 방정식
-표준형 y=ax+b, 일반형 ax+by+c=0, 기울기+점, 두 점, x y절편이 주어졌을 때 식 등등
-점과 직선 사이의 거리 d=\frac{|ax_1+by_1+c|}{\sqrt(a^2+b^2)}
+* 표준형 $y=ax+b$, 일반형 $ax+by+c=0$, 기울기+점, 두 점, $x$ $y$절편이 주어졌을 때 식 등등
+* 점과 직선 사이의 거리 $d=\frac{\left|ax_1+by_1+c\right|}{\sqrt(a^2+b^2)}$
 
 {% capture context1 %}
 #### 방정식
-표준형: y=ax+b
-일반형: ax+by+c=0
-기울기+점: y-y_1=m(x-x_1)
-두 점:y-y_1=\frac{y_2-y_1}{x_2-x_1}(x-x_1)
-x y절편: \frac{x}{a}+\frac{y}{b}=1
-
-두 직선 ax+by+c=0, a'x+b'y+c'=0의 교점을 지나는 직선들의 방정식
-m(ax+by+c) + (a'x+b'y+c') = 0
+* 표준형: $y=ax+b$
+* 일반형: $ax+by+c=0$
+* 기울기+점: $y-y_1=m(x-x_1)$
+* 두 점: $y-y_1=\frac{y_2-y_1}{x_2-x_1}(x-x_1)
+* $x$ $y$절편: $\frac{x}{a}+\frac{y}{b}=1$ <br/>
+* 두 직선 $ax+by+c=0$, $a'x+b'y+c'=0$의 교점을 지나는 직선들의 방정식 <br/>
+  $m(ax+by+c) + (a'x+b'y+c') = 0$
 <br/>
 
 #### 수직인 직선
-y=ax+b, y=a'x+b'이 수직이라면, aa'=-1 
+* $y=ax+b$, $y=a'x+b'$이 수직이라면, $aa'=-1$
 <br/>
 
 #### 점과 직선 사이의 거리
-점(x_1, y_1)과 직선 ax+by+c=0 사이의 거리 d=\frac{|ax_1+by_1+c|}{\sqrt(a^2+b^2)}
+* 점$(x_1, y_1)$과 직선 $ax+by+c=0$ 사이의 거리 $d=\frac{\left|ax_1+by_1+c\right|}{\sqrt(a^2+b^2)}$
 {% endcapture %}
 
 {% capture context2 %}
-y=ax+b, y=a'x+b'이 수직이라면,
-\tan(\theta_1)=a, \tan(\theta_2)=\tan(\theta_1+\frac{\pi}{2})=-\frac{1}{\tan(\theta_1)}=a'
-\therefore a'=-\frac{1}{a}, aa'=1
+#### 서로 수직인 두 직선
+* $y=ax+b, y=a'x+b'이 수직이라면, <br/>
+  $\tan(\theta_1)=a, \tan(\theta_2)=\tan(\theta_1+\frac{\pi}{2})=-\frac{1}{\tan(\theta_1)}=a'$ <br/>
+  $ \therefore a'=-\frac{1}{a}, aa'=1 $
+<br/>
 
-점 P와 직선 l 사이의 거리는, P에서 l로 내린 수선의 발 Q(x', y')과 P 사이의 거리와 같음.
-d^2 = (x'-x_1)^2+(y'-y_1)^2
-P를 지나 l에 수직인 직선의 방정식은 y-y_1=\frac{b}{a}(x-x_1), b(x-x_1)-a(y-y_1)=0
-위 식과 ax+by+c=0에 x=x', y=y'을 대입하고 소거하여 x'-x_1, y'-y_1을 구하면 d^2을 구할 수 있다.
-하면된다
-넌 할수었어
+#### 점과 직선 사이의 거리
+* 점 $P$와 직선 $l$ 사이의 거리는, $P$에서 $l$로 내린 수선의 발 $Q(x', y')$과 $P$ 사이의 거리와 같음. <br/>
+  <p> $$d^2 = (x'-x_1)^2+(y'-y_1)^2$$ </p>
+* $P$를 지나 $l$에 수직인 직선의 방정식은 $y-y_1=\frac{b}{a}(x-x_1), b(x-x_1)-a(y-y_1)=0$ <br/>
+  위 식과 $ax+by+c=0$에 $x=x', y=y'$을 대입하고 소거하여 $x'-x_1, y'-y_1$을 구하면 $d^2$을 구할 수 있다.
+* 하면된다
+* 넌 할수었어
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_직선" %}
  
 ### 원의 방정식
-표준형 (x-a)^2+(y-b)^2=r^2, 일반형 x^2+y^2+Ax+By+C=0
-접선의 방정식 (x_1-a)(x-a)+(y_1-b)(y-b)=r^2, y-b=m(x-a)\pm r \sqrt(m^2+1)
-원과 직선의 교차, 두 원의 교차판별 등등
+* 표준형 $(x-a)^2+(y-b)^2=r^2$, 일반형 $x^2+y^2+Ax+By+C=0$
+* 접선의 방정식 $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2, y-b=m(x-a)\pm r \sqrt(m^2+1)$
+* 원과 직선의 교차, 두 원의 교차판별 등등
 
 {% capture context1 %}
 #### 방정식
-표준형: (x-a)^2+(y-b)^2=r^2
-일반형: x^2+y^2+Ax+By+C \rightarrow 
-중심(-\frac{A}{2}, -\frac{B}{2}), 반지름 \frac{\sqrt(A^2+B^2-4C)}{2}
-\rightarrow A^2+B^2-4C<0이면 허원 이라고도 한단다.
-세 점을 지나는 원: 일반형에 세 좌표 쑤셔넣고 연립
+* 표준형: $(x-a)^2+(y-b)^2=r^2$
+* 일반형: x^2+y^2+Ax+By+C \rightarrow
+  * 중심(-\frac{A}{2}, -\frac{B}{2}), 반지름 $\frac{\sqrt(A^2+B^2-4C)}{2}$
+  * $\rightarrow A^2+B^2-4C<0$ 이면 허원 이라고도 한단다.
+* 세 점을 지나는 원: 일반형에 세 좌표 쑤셔넣고 연립
 <br/>
 
 #### 원과 직선의 관계
-직선은 y=mx+n이요 원은 f(x, y)=0이기 때문에,
-y를 소거하여 f(x, mx+n)으로 해버리면 이차방정식이 되어버림.
-이때 판별식 D에 따라서 두 실근, 중근, 두 허근으로 나뉜다.
+* 직선은 $y=mx+n$이요 원은 $f(x, y)=0$이기 때문에, <br/>
+  $y$를 소거하여 $f(x, mx+n)$으로 해버리면 이차방정식이 되어버림. <br/>
+  이때 판별식 $D$에 따라서 두 실근, 중근, 두 허근으로 나뉜다. <br/>
 
-표준형의 원 위의 점(x_1, y_1)에서의 접선의 방정식은
-(x_1-a)(x-a)+(y_1-b)(y-b)=r^2
-기울기가 m인 접선의 방정식은
-y-b=m(x-a)\pm r \sqrt(m^2+1)
+* 표준형의 원 위의 점$(x_1, y_1)$에서의 접선의 방정식은
+  <p> $$(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$$ </p>
+* 기울기가 $m$인 접선의 방정식은
+  <p> $$y-b=m(x-a)\pm r \sqrt(m^2+1)$$ </p>
 <br/>
 
 #### 두 원의 관계
-두 원의 반지름과 중심거리를 통해서 상식적으로 구한다.
-
-서로 만나는 두 원 x^2+y^2+Ax+By+C=0, x^2+y^2+A'x+B'y+C'=0 의 교점을 지나는 원의 방정식은
-(x^2+y^2+Ax+By+C)m + (x^2+y^2+A'x+B'y+C') = 0 이며
-m=-1이라서 이차항을 조져버리면 두 원의 공통현의 방정식이 되버린다. 
+* 서로 만나는 두 원 $x^2+y^2+Ax+By+C=0$, $x^2+y^2+A'x+B'y+C'=0$ 의 교점을 지나는 원의 방정식은 <br/>
+  $(x^2+y^2+Ax+By+C)m + (x^2+y^2+A'x+B'y+C') = 0$ 이며  <br/>
+  $m=-1$ 이라서 이차항을 조져버리면 두 원의 공통현의 방정식이 되버린다.
 {% endcapture %}
 
 {% capture context2 %}
-접선의 방정식 y=mx+n이 우선 x^2+y^2=r^2에 접한다고 치자.
-y에 mx+n을 집어넣고 판별식을 구하면
-D/4=m^2 n^2 -(m^2+1)(n^2-r^2)=0, \therefore r^2 m^2-n^2+r^2=0
-접하는 점의 좌표가 (x_1, y_1)이므로
-n=y-mx_1, x_1^2+y_1^2=r^2
-열심히 대입하면 y_1^2 m^2 + 2x_1 y_1 m + x_1^2=(y_1 m + x_1)^2 = 0, m=-\frac{x_1}{y}
-그래서 접선의 방정식은 y-y_1=-\frac{x}{y_1}(x-x_1), x_1x + y_1 y=r^2가 된당
+#### 접선의 방정식
+* 접선의 방정식 $y=mx+n$이 우선 $x^2+y^2=r^2$에 접한다고 치자.
+* $y$에 $mx+n$을 집어넣고 판별식을 구하면 <br/>
+  $\frac{D}{4}=m^2 n^2 -(m^2+1)(n^2-r^2)=0, \therefore r^2 m^2-n^2+r^2=0$
+* 접하는 점의 좌표가 $(x_1, y_1)$이므로 <br/>
+  $n=y-mx_1, x_1^2+y_1^2=r^2$
+* 열심히 대입하면 $y_1^2 m^2 + 2x_1 y_1 m + x_1^2=(y_1 m + x_1)^2 = 0, m=-\frac{x_1}{y}$
+* 그래서 접선의 방정식은 $y-y_1=-\frac{x}{y_1}(x-x_1), x_1x + y_1 y=r^2$가 된당  <br/>
 
-원의 방정식이 (x-a)^2+(y-b)^2=r^2로 바뀐다고 하면 (a, b)만큼 평행이동시키면
-접선의 방정식은 (x_1-a)(x-a)+(y_1-b)(y-b)=r^2  
+* 원의 방정식이 $(x-a)^2+(y-b)^2=r^2$로 바뀐다고 하면 $(a, b)$만큼 평행이동시키면 <br/>
+  접선의 방정식은 $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ <br/>
 
-x^2+y^2=r^2에서 기울기가 m인 접선을 구하면
-x^2+(mx+b)^2=r^2, D/4 = b^2 m^2-(m^2+1)(b^2-r^2)=0, b^2=(m^2+1)r^2
-\therefore b=\pm r \sqrt(m^2+1), y=mx \pm r\sqrt(m^2+1)
-(x-a)^2+(y-b)^2=r^2로 일반화하면 y-b=m(x-a)\pm r \sqrt(m^2+1)
+* $x^2+y^2=r^2$에서 기울기가 $m$인 접선을 구하면 <br/>
+  $x^2+(mx+b)^2=r^2, \frac{D}{4} = b^2 m^2-(m^2+1)(b^2-r^2)=0, b^2=(m^2+1)r^2$ <br/>
+  $\therefore b=\pm r \sqrt(m^2+1), y=mx \pm r\sqrt(m^2+1)$
+* $(x-a)^2+(y-b)^2=r^2$로 일반화하면 $y-b=m(x-a)\pm r \sqrt(m^2+1)$
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_원" %}
 
 ### 도형의 이동
-점과 도형의 평행이동, 대칭이동
+* 점과 도형의 평행이동, 대칭이동
 
 {% capture context1 %}
 #### 평행이동
-x축으로 a, y축으로 b만큼 평행이동시킬 때, T: (x, y) \rightarrow (x+a, y+b)로 표기하고
-점 P(x, y) \rightarrow Q(x+a, y+b)
-도형의 방정식 f(x-a, y-b)=0 \rightarrow f(x-a, y-b)=0
+* $x$축으로 $a$, $y$축으로 $b$만큼 평행이동시킬 때, $T: (x, y) \rightarrow (x+a, y+b)$로 표기하고
+* 점 $P(x, y) \rightarrow Q(x+a, y+b)$
+* 도형의 방정식 $f(x-a, y-b)=0 \rightarrow f(x-a, y-b)=0$
 <br/>
 
 #### 대칭이동
-x축 - T: (x, y) \rightarrow (x, -y)
-y축 - T: (x, y) \rightarrow (-x, y)
-원점 - T: (x, y) \rightarrow (-x, -y)
-y=x - T: (x, y) \rightarrow (y, x)
+* $x$축 - T: $(x, y) \rightarrow (x, -y)$
+* $y$축 - T: $(x, y) \rightarrow (-x, y)$
+* 원점 - T: $(x, y) \rightarrow (-x, -y)$
+* $y=x$ - $T: (x, y) \rightarrow (y, x)$
 
 {% endcapture %}
 
@@ -370,6 +372,8 @@ y=x - T: (x, y) \rightarrow (y, x)
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_이동" %}
+
+{% comment %}
 
 ### 함수
 함수의 정의, 정의역, 공역, 치역
