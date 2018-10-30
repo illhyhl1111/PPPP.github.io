@@ -29,7 +29,10 @@ sidebar:
 
 # 고등학교 수학
 2년간 매일같이 쳐다보던 고등학교 수학도 안쓰다보면 결국 까먹는다. 하느님 <br/>
-본인이 12년도 고등학교 입학이라 그 당시 교육과정을 따른다. 책이 그거밖에 없음
+본인이 12년도 고등학교 입학이라 그 당시 교육과정을 따른다. 책이 그거밖에 없음 <br/>
+<br/>
+내용 구분은 보통 개념 단위로 정리할 예정이지만, 예외로 고등학교 수학과정은 단원 단위로 정리한다. <br/>
+내맘임 <br/>
 
 ## 고등수학
 
@@ -116,7 +119,14 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 {% endcapture %}
 
 {% capture context2 %}
-할말없워요
+* 이후에 다루겠지만, 어떤 집합 $M$에 포함된 원소들이 어떤 연산 $\circ$에 대하여 교환, 결합법칙이 성립하고 항등원, 역원이 존재하면,
+$M$은 $\circ$에 대하여 군(Group)을 이룬다고 한다. <br/>
+  여기까지 내용이 넘어가려면 얼마나 걸리려나
+
+{% comment %}
+https://m.blog.naver.com/PostView.nhn?blogId=obrigadu&logNo=50098477517&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F
+{% endcomment %}
+
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_실수체계" %}
