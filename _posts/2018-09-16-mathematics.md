@@ -259,7 +259,7 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 
 ### 직선의 방정식
 * 표준형 $y=ax+b$, 일반형 $ax+by+c=0$, 기울기+점, 두 점, $x$ $y$절편이 주어졌을 때 식 등등
-* 점과 직선 사이의 거리 $d=\frac{\left\|ax_1+by_1+c\right\|}{\sqrt(a^2+b^2)}$
+* 점과 직선 사이의 거리 $d=\frac{\left\|ax_1+by_1+c\right\|}{\sqrt{a^2+b^2}}$
 
 {% capture context1 %}
 #### 방정식
@@ -277,7 +277,7 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 <br/>
 
 #### 점과 직선 사이의 거리
-* 점$(x_1, y_1)$과 직선 $ax+by+c=0$ 사이의 거리 $d=\frac{\left|ax_1+by_1+c\right|}{\sqrt(a^2+b^2)}$
+* 점$(x_1, y_1)$과 직선 $ax+by+c=0$ 사이의 거리 $d=\frac{\left\|ax_1+by_1+c\right\|}{\sqrt(a^2+b^2)}$
 {% endcapture %}
 
 {% capture context2 %}
@@ -332,19 +332,20 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 {% capture context2 %}
 #### 접선의 방정식
 * 접선의 방정식 $y=mx+n$이 우선 $x^2+y^2=r^2$에 접한다고 치자. <br/>
-  $y$에 $mx+n$을 집어넣고 판별식을 구하면 <br/>
-  $\frac{D}{4}=m^2 n^2 -(m^2+1)(n^2-r^2)=0, \therefore r^2 m^2-n^2+r^2=0$ <br/>
-  접하는 점의 좌표가 $(x_1, y_1)$이므로 <br/>
-  $n=y-mx_1, x_1^2+y_1^2=r^2$ <br/>
-  열심히 대입하면 $y_1^2 m^2 + 2x_1 y_1 m + x_1^2=(y_1 m + x_1)^2 = 0, m=-\frac{x_1}{y}$ <br/>
-  그래서 접선의 방정식은 $y-y_1=-\frac{x}{y_1}(x-x_1), x_1x + y_1 y=r^2$가 된당  <br/>
+  * $y$에 $mx+n$을 집어넣고 판별식을 구하면 <br/>
+    $\frac{D}{4}=m^2 n^2 -(m^2+1)(n^2-r^2)=0, \therefore r^2 m^2-n^2+r^2=0$
+  * 접하는 점의 좌표가 $(x_1, y_1)$이므로 <br/>
+    $n=y-mx_1, x_1^2+y_1^2=r^2$
+  * 열심히 대입하면 $y_1^2 m^2 + 2x_1 y_1 m + x_1^2=(y_1 m + x_1)^2 = 0, m=-\frac{x_1}{y}$ <br/>
+  * 그래서 접선의 방정식은 $y-y_1=-\frac{x}{y_1}(x-x_1), x_1x + y_1 y=r^2$가 된당  <br/>
 
 * 원의 방정식이 $(x-a)^2+(y-b)^2=r^2$로 바뀐다고 하면 $(a, b)$만큼 평행이동시키면 <br/>
   접선의 방정식은 $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ <br/>
 
 * $x^2+y^2=r^2$에서 기울기가 $m$인 접선을 구하면 <br/>
-  $x^2+(mx+b)^2=r^2, \frac{D}{4} = b^2 m^2-(m^2+1)(b^2-r^2)=0, b^2=(m^2+1)r^2$ <br/>
-  $\therefore b=\pm r \sqrt{m^2+1}, y=mx \pm r\sqrt{m^2+1}$ <br/>
+  * $x^2+(mx+b)^2=r^2, \frac{D}{4} = b^2 m^2-(m^2+1)(b^2-r^2)=0, b^2=(m^2+1)r^2$ <br/>
+    $\therefore b=\pm r \sqrt{m^2+1}, y=mx \pm r\sqrt{m^2+1}$ <br/>
+
 * $(x-a)^2+(y-b)^2=r^2$로 일반화하면 $y-b=m(x-a)\pm r \sqrt{m^2+1}$
 {% endcapture %}
 
