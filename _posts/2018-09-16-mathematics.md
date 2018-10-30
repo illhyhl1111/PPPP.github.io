@@ -381,9 +381,43 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 일대일 함수, 일대일 대응, 항등함수, 상수함수, 합성함수 등등 잡다한 정의들
 
 {% capture context1 %}
+#### 함수의 정의
+두 집합 X, Y \neq \varnothing 이 있을 때, X의 각 원소에서 Y의 원소로의 대응을 X에서 Y로 가는 함수라고 정의하고 f: X->Y로 표기함
+이때 함수 f에 대하여 x \in X에 y \in Y가 대응되는 것을 f: x -> y, y=f(x) 등으로 나타냄.
+x를 독립변수, y를 종속변수라고도 한단다.
+아무튼 하나의 x에 대해서 반드시 하나의 y가 대응되어야 한다는게 중요함
+<br/>
+
+#### 정의역, 공역, 치역
+![Alt text](/pictures/mathematics/250F12365368EBE529.jpg)
+<br/>
+
+#### 함수의 종류
+* 일대일 함수
+  * \any x_1, x_2 \in X, x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)
+* 일대일 대응
+  * 치역과 공역이 같고
+  * \any x_1, x_2 \in X, x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)
+  * 역함수가 존재함
+* 항등함수
+  * X=Y
+  * \any x \in X, f(x)=x
+  * I_x로 표기
+* 상수함수
+  * 치역의 원소가 하나뿐임
+<br/>
+
+#### 합성함수
+두 함수 f: X->Y, g: Y->Z일 때, g(f(x))는 정의역이 X이고 공역이 Z가 된다.
+함성함수 g \circ f는 g \circ f : x->g(f(x)), (g \circ f)(x) = g(f(x))
+
 {% endcapture %}
 
 {% capture context2 %}
+교환법칙: g \circ f \neq f \circ g,
+결합법칙: h \circ (g circ f) = (h \circ g) \circ f
+항등원: f \circ I = I \circ f = f
+물론 역원도 존재하며, 뒤에 역함수로 나옴.
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_함수" %}
