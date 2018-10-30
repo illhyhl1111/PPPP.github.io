@@ -282,7 +282,7 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 
 {% capture context2 %}
 #### 서로 수직인 두 직선
-* $y=ax+b, y=a'x+b'이 수직이라면, <br/>
+* $y=ax+b, y=a'x+b'$이 수직이라면, <br/>
   $\tan(\theta_1)=a, \tan(\theta_2)=\tan(\theta_1+\frac{\pi}{2})=-\frac{1}{\tan(\theta_1)}=a'$ <br/>
   $ \therefore a'=-\frac{1}{a}, aa'=1 $
 <br/>
