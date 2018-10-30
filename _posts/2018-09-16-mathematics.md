@@ -241,7 +241,7 @@ $$ </p>
 
 #### 삼각형의 무게중심, Pappus의 정리
 * $A(x_1, y_1), B(x_2, y_2), C(x_3, y_3)$인 $\triangle ABC$의 무게중심은
-<p> $$\left\(\frac{x_1+x_2+x_3}{3}, \frac{y_1+y_2+y_3}{3})$$ </p>
+<p> $$\left(\frac{x_1+x_2+x_3}{3}, \frac{y_1+y_2+y_3}{3}\right)$$ </p>
 <br/>
 ![Alt text](/pictures/mathematics/27755D4256A82ED122.png)
 * $\triangle ABC$ 의 변 $\overline{BC}$의 중점을 $M$이라 둘 때,
@@ -259,14 +259,14 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 
 ### 직선의 방정식
 * 표준형 $y=ax+b$, 일반형 $ax+by+c=0$, 기울기+점, 두 점, $x$ $y$절편이 주어졌을 때 식 등등
-* 점과 직선 사이의 거리 $d=\frac{\left|ax_1+by_1+c\right|}{\sqrt(a^2+b^2)}$
+* 점과 직선 사이의 거리 $d=\frac{\left\|ax_1+by_1+c\right\|}{\sqrt(a^2+b^2)}$
 
 {% capture context1 %}
 #### 방정식
 * 표준형: $y=ax+b$
 * 일반형: $ax+by+c=0$
 * 기울기+점: $y-y_1=m(x-x_1)$
-* 두 점: $y-y_1=\frac{y_2-y_1}{x_2-x_1}(x-x_1)
+* 두 점: $y-y_1=\frac{y_2-y_1}{x_2-x_1}(x-x_1)$
 * $x$ $y$절편: $\frac{x}{a}+\frac{y}{b}=1$ <br/>
 * 두 직선 $ax+by+c=0$, $a'x+b'y+c'=0$의 교점을 지나는 직선들의 방정식 <br/>
   $m(ax+by+c) + (a'x+b'y+c') = 0$
@@ -300,15 +300,15 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
  
 ### 원의 방정식
 * 표준형 $(x-a)^2+(y-b)^2=r^2$, 일반형 $x^2+y^2+Ax+By+C=0$
-* 접선의 방정식 $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2, y-b=m(x-a)\pm r \sqrt(m^2+1)$
+* 접선의 방정식 $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2, y-b=m(x-a)\pm r \sqrt{m^2+1}$
 * 원과 직선의 교차, 두 원의 교차판별 등등
 
 {% capture context1 %}
 #### 방정식
 * 표준형: $(x-a)^2+(y-b)^2=r^2$
-* 일반형: x^2+y^2+Ax+By+C \rightarrow
-  * 중심(-\frac{A}{2}, -\frac{B}{2}), 반지름 $\frac{\sqrt(A^2+B^2-4C)}{2}$
-  * $\rightarrow A^2+B^2-4C<0$ 이면 허원 이라고도 한단다.
+* 일반형: $x^2+y^2+Ax+By+C \rightarrow$
+  * 중심$\left(-\frac{A}{2}, -\frac{B}{2}\right)$, 반지름 $\frac{\sqrt{A^2+B^2-4C}}{2}$
+  * $A^2+B^2-4C<0$ 이면 허원 이라고도 한단다.
 * 세 점을 지나는 원: 일반형에 세 좌표 쑤셔넣고 연립
 <br/>
 
@@ -320,7 +320,7 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 * 표준형의 원 위의 점$(x_1, y_1)$에서의 접선의 방정식은
   <p> $$(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$$ </p>
 * 기울기가 $m$인 접선의 방정식은
-  <p> $$y-b=m(x-a)\pm r \sqrt(m^2+1)$$ </p>
+  <p> $$y-b=m(x-a)\pm r \sqrt{m^2+1}$$ </p>
 <br/>
 
 #### 두 원의 관계
@@ -331,21 +331,21 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 
 {% capture context2 %}
 #### 접선의 방정식
-* 접선의 방정식 $y=mx+n$이 우선 $x^2+y^2=r^2$에 접한다고 치자.
-* $y$에 $mx+n$을 집어넣고 판별식을 구하면 <br/>
-  $\frac{D}{4}=m^2 n^2 -(m^2+1)(n^2-r^2)=0, \therefore r^2 m^2-n^2+r^2=0$
-* 접하는 점의 좌표가 $(x_1, y_1)$이므로 <br/>
-  $n=y-mx_1, x_1^2+y_1^2=r^2$
-* 열심히 대입하면 $y_1^2 m^2 + 2x_1 y_1 m + x_1^2=(y_1 m + x_1)^2 = 0, m=-\frac{x_1}{y}$
-* 그래서 접선의 방정식은 $y-y_1=-\frac{x}{y_1}(x-x_1), x_1x + y_1 y=r^2$가 된당  <br/>
+* 접선의 방정식 $y=mx+n$이 우선 $x^2+y^2=r^2$에 접한다고 치자. <br/>
+  $y$에 $mx+n$을 집어넣고 판별식을 구하면 <br/>
+  $\frac{D}{4}=m^2 n^2 -(m^2+1)(n^2-r^2)=0, \therefore r^2 m^2-n^2+r^2=0$ <br/>
+  접하는 점의 좌표가 $(x_1, y_1)$이므로 <br/>
+  $n=y-mx_1, x_1^2+y_1^2=r^2$ <br/>
+  열심히 대입하면 $y_1^2 m^2 + 2x_1 y_1 m + x_1^2=(y_1 m + x_1)^2 = 0, m=-\frac{x_1}{y}$ <br/>
+  그래서 접선의 방정식은 $y-y_1=-\frac{x}{y_1}(x-x_1), x_1x + y_1 y=r^2$가 된당  <br/>
 
 * 원의 방정식이 $(x-a)^2+(y-b)^2=r^2$로 바뀐다고 하면 $(a, b)$만큼 평행이동시키면 <br/>
   접선의 방정식은 $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ <br/>
 
 * $x^2+y^2=r^2$에서 기울기가 $m$인 접선을 구하면 <br/>
   $x^2+(mx+b)^2=r^2, \frac{D}{4} = b^2 m^2-(m^2+1)(b^2-r^2)=0, b^2=(m^2+1)r^2$ <br/>
-  $\therefore b=\pm r \sqrt(m^2+1), y=mx \pm r\sqrt(m^2+1)$
-* $(x-a)^2+(y-b)^2=r^2$로 일반화하면 $y-b=m(x-a)\pm r \sqrt(m^2+1)$
+  $\therefore b=\pm r \sqrt{m^2+1}, y=mx \pm r\sqrt{m^2+1}$ <br/>
+* $(x-a)^2+(y-b)^2=r^2$로 일반화하면 $y-b=m(x-a)\pm r \sqrt{m^2+1}$
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_원" %}
@@ -361,9 +361,9 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 <br/>
 
 #### 대칭이동
-* $x$축 - T: $(x, y) \rightarrow (x, -y)$
-* $y$축 - T: $(x, y) \rightarrow (-x, y)$
-* 원점 - T: $(x, y) \rightarrow (-x, -y)$
+* $x$축 - $T: (x, y) \rightarrow (x, -y)$
+* $y$축 - $T: (x, y) \rightarrow (-x, y)$
+* 원점 - $T: (x, y) \rightarrow (-x, -y)$
 * $y=x$ - $T: (x, y) \rightarrow (y, x)$
 
 {% endcapture %}
