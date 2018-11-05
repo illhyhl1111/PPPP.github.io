@@ -432,7 +432,194 @@ x를 독립변수, y를 종속변수라고도 한단다.
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_함수" %}
 
+### 유리, 무리함수와 역함수
+y=\frac{k}{x}, y=\frac{k}{x-m}+n, y=k'x+\frac{k}{x}, y^2=ax의 그래프
+일대일 대응인 함수 f:X->Y 에 대하여 역함수 f^{-1}: Y->X
 
+{% capture context1 %}
+#### 유리수
+* k에 따른 y=\frac{k}{x}
+![Alt text](/pictures/mathematics/캡처2.JPG)
+
+* n, m이 주어진 y=\frac{k}{x-m}+n
+![Alt text](/pictures/mathematics/캡처3.JPG)
+
+* k에 따른 y=k'x+\frac{k}{x}
+![Alt text](/pictures/mathematics/캡처3.JPG)
+
+킹갓구글에서 그래프까지 그려주는줄은 몰랐읍니다 충성충성
+
+#### 무리함수
+* y^2=ax, y=\pm \sqrt{\pm ax}
+![Alt text](/pictures/mathematics/캡처4.JPG)
+  정의역과 치역을 좀 생각해야된다.
+
+#### 역함수
+역함수의 정의를 위해선, f:X->Y에서 Y의 임의의 한 원소에 X의 원소가 하나씩만 대응되어야 하기 때문에 일대일 대응이어야 함.
+y=f(x) <=> x=f^{-1}(y)
+함수 f가 일대일 대응이면 역함수 f^{-1}은 존재한다 (존재성)
+
+#### 역함수의 성질
+(f^{-1})^{-1} = f
+f^{-1}(f(x))=x (f^{-1} \circ f = I_x)
+f(f^{-1}(y))=y (f \circ f^{-1} = I_y)
+f:X->Y, g:Y->X에서 g \circ f = I_x, f \circ g = I_y \Leftrightarrow g=f^{-1} (유일성)
+일대일 대응 f:X->Y, g:Y->Z에 대하여  (g \circ f)^{-1} = f^{-1} \circ g^{-1}
+
+{% endcapture %}
+
+{% capture context2 %}
+#### 역함수 증명
+존재성, 유일성 - TODO
+(g \circ f)^{-1} = f^{-1} \circ g^{-1} :
+(f^{-1} \circ g^{-1}) \circ (g \circ f) = f^{-1} \circ (g^{-1} \circ g) \circ f = f^{-1} \circ I \circ f = f^{-1} \circ f = I
+(g \circ f) \circ (f^{-1} \circ g^{-1}) = g \circ (f \circ f^{-1}) \circ g^{-1} = g \circ I \circ g^{-1} = g \circ g^{-1} = I
+\therefore (g \circ f)^{-1} = f^{-1} \circ g^{-1}
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="고등수학_유리함수" %}
+
+### 최대와 최소
+y=ax^2+bx+c에서 y의 범위는 0=ax^2+bx+(c-y)에서 D>=0를 사용해도 됨
+산술평균>=기하평균>=조화평균 (\frac{a+b}{2} >= \sqrt{ab} >= \frac{2}{\frac{1}{a}+\frac{1}{b}}, 등호는 a=b)
+코시-슈바르츠 부등식 (a^2+b^2)(x^2+y^2)>=(ax+by)^2, 등호는 \frac{a}{x}=\frac{b}{y}
+
+{% capture context1 %}
+#### 산술기하조화
+일반적인 형태로,
+\frac{x_1 + x_2 + \cdots + x_n}{n} >= \sqrt[n]{x_1 x_2 \cdots x_n} >= \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+ \cdots + \frac{1}{x_n}}
+n=2일 때 증명은 쉽다. 하지만 n항으로 일반화하면...
+
+![Alt text](/pictures/mathematics/산술기하조화.jpg)
+n=2일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것도 있다.
+
+#### 가중 산술-기하 평균 부등식
+\frac{\alpha_1 x_1 + \cdots + \alpha_n x_n}{\alpha} >= \sqrt[\alpha]{x_1^{\alpha_1} \cdots x_n^{\alpha_n}}
+(x_i>0, \alpha_i>0)
+
+#### 코시-슈바르츠 부등식
+역시 일반식은
+(a_1^2+a_2^2+\cdots+a_n^2)(x_1^2+x_2^2+\cdots+x_n^2)>=(a_1x_1+a_2x_2+\cdots+a_nx_n)^2
+아예 제곱항도 p로 일반화시키면 [횔더 부등식](http://mathseodang.com/220450030140)이 된다
+(\sigma i=1 to n a_i^p)^{1/p}(\sigma i=1 to n b_i^q)^{1/q} >= \sigma i=1 to n a_i b_i
+p>1, q>1, \frac{1}{p}+\frac{1}{q}=1, equality iff a_i^p=\lambda b_i^q
+
+{% endcapture %}
+
+{% capture context2 %}
+#### 젠센 부등식
+
+##### 볼록 함수(convex function)
+함수 f:X->R가 다음을 만족하면 볼록 함수로 부름
+![Alt text](/pictures/mathematics/볼록.png)
+\any x_1, x_2 \in X, \any t \in [0, 1]: f(tx_1+(1-t)x_2)<=tf(x_1)+(1-t)f(x_2)
+등호를 빼면 strictly convex이다.
+
+머암튼 f:(a,b)->R가 연속인 볼록 함수라면, 젠센 부등식은
+\any x_i \in (a, b), p_i > 0, \sigma i=1 to n p_i = 1 일 때 f(\sigma i=1 to n p_i x_i) <= \sigma i=1 to n p_i f(x_i)
+증명은 [수학적 귀납법](http://suhak.tistory.com/221)으로.
+
+#### (가중) 산술기화조화 증명
+산술-기화-조화 평균 부등식도 사실 귀납법으로 증명이 된다. 하지만 가중치까지 넣어서 바로 젠센부등식으로 증명해보면
+위로 볼록한 만만한 함수 f(x)=-lnx 로 두고
+\alpha_1 + \alpha_2 + \cdots + \alpha_n = \alpha, w_i = \frac{\alpha_i}{alpha}
+f(w_1 x_1 + \cdots + w_n x_n) <= w_1 f(x_1) + \cdots + w_n f(x_n)
+ln(w_1 x_1 + \cdots + w_n x_n) >= w_1 ln(x_1) + \cdots + w_n ln(x_n) = ln(x_1^{w_1} \cdots x_n^{w_n}}
+\therefore w_1 x_1 + w_2 x_2 + \cdots + w_n x_n >= x_1^{w_1} x_2^{w_2} \cdots x_n^{w_n}
+\frac{\alpha_1 x_1 + \alpha_2 x_2 + \cdots + \alpha_n x_n}{\alpha} >= \sqrt[\alpha]{x_1^{\alpha_1} x_2^{\alpha_2} \cdots x_n^{\alpha_n}}
+
+기하-조화평균은
+f(\frac{w_1}{x_1} + \cdots + \frac{w_n}{x_n}) <= w_1 f(\frac{1}{x_1}) + \cdots + w_n f(\frac{1}{x_n}) 으로 똑같이 증명됨
+꺌룰랭
+
+#### 코시-슈바르츠 부등식 증명
+[별별 증명법](https://m.blog.naver.com/yh6613/220458975310)이 다 있다.
+귀찮은 기념으로 간단하게만 설명하면
+A=\sqrt(a_1^2+a_2^2+\cdots+\a_n^2), B=\sqrt(b_1^2+b_2^2+\cdots+\b_n^2)
+산술 기화평균 부둥식에 따라
+\sqrt{\frac{a_i^2}{A^2} \frac{b_i^2}{B^2}} <= \frac{1}{2}\left(\frac{a_i^2}{A^2}+\frac{b_i^2}{B^2}\right)
+이걸 i=1 부터 n에 대한 부등식을 모두 더하면 우변은 1이 되고, 결국 \sigma i=1 to n \sqrt{a_i^2 b_i^2} <= AB로 증명된다.
+
+[재배열 부등식](http://mathseodang.com/220455558272) 도 볼만한거같다
+
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="고등수학_최대와최소" %}
+
+### 삼각함수의 정의
+호도(radian)법: l=r\theta, S=\frac{1}{2}r^2\theta=\frac{1}{2}rl, 1rad = \frac{180도}{\pi}
+이 때 P(x,y)와 \theta=각xOP에 대하여, sin\theta=\frac{y}{r}, cos\theta=\frac{x}{r}, tan\theta=\frac{y}{x}이라 정의함
+
+{% capture context1 %}
+#### 부채꼴의 넓이
+l=r\theta인건 \theta의 radian 정의임 (\frac{l}{2\pi r}=\frac{\theta}{2\pi})
+이 때 \frac{S}{\pi r^2} = \frac{\theta}{2\pi}에서 S=\frac{1}{2}r^2\theta
+
+#### 웃겨서 넣어봤다
+![Alt text](/pictures/mathematics/8177-2-7693.gif)
+얼싸안코
+
+{% endcapture %}
+
+{% capture context2 %}
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="고등수학_삼각함수" %}
+
+### ☆★☆★☆★☆★진돗개 둘 발령☆★☆★☆★☆★
+아래 내용은 더럽게 기억이 나지 않습니다
+자라나라 머리머리
+
+### 삼각함수 잡다한 공식(1)
+tan\theta = \frac{sin\theta}{cos\theta}
+tan^2\theta + 1 = \frac{1}{cos^2 \theta}
+sin(\pi-\theta)=sin\theta, cos(\pi-\theta)=-cos\theta, tan(\pi-\theta)=-tan\theta
+sin(\frac{\pi}{2}-\theta)=cos\theta, cos(\frac{\pi}{2}-\theta)=sin\theta, tan(\frac{\pi}{2}-\theta)=\frac{1}{tan\theta}
+![Alt text](/pictures/mathematics/사인법칙.jpg)
+사인법칙 \frac{a}{sinA}=\frac{b}{sinB}=\frac{c}{sinC}=2R
+제1 코사인법칙 a=b cosC + c cosB
+제2 코사인법칙 a^2=b^2+c^2-2bc cosA
+삼각형ABC의 넓이 S=\frac{1}{2}bc sin A = \sqrt{s(s-a)(s-b)(s-c)} (2s=a+b+c)
+
+{% capture context1 %}
+증명법은 아래에
+{% endcapture %}
+
+{% capture context2 %}
+#### 사인법칙
+
+##### 원주각
+![Alt text](/pictures/mathematics/원주각.png)
+원 위의 세 점을 잡아서 만드는 각. 저기서 각 APB
+같은 원 위의 원주각은 모두 동일하다. [링크](https://mathbang.net/186) 참조
+이건 중학교 수학이다. 물론 기억안났음
+엌ㅋㅋㅋ
+
+![Alt text](/pictures/mathematics/사인법칙.png)
+아무튼 점 B와 O를 잇는 선분과 원이 만나는 점 A'를 두면 증명이 된다.
+자세한건 [링크](https://www.mathfactory.net/10678) 참조
+
+#### 코사인 법칙
+![Alt text](/pictures/mathematics/제1코사인법칙.png)
+a = b cosC + c cos B
+제1 코사인법칙은 매우 직관적이다
+제1 코사인법칙으로부터
+a^2 = ab cosC + ca cosB, b^2 = bc cosA + ab cosC, c^2 = ca cosB + bc cosA
+a^2-b^2-c^2 = -2bc cosA
+a^2=b^2+c^2 -2bc cosA
+수식놀음이다.
+
+#### 헤론의 공식
+이걸 증명해야하나 싶긴한데
+S=\frac{1}{2}bc sinA인데
+sin^2 A = 1-cos^2 A = (1+cosA)(1-cosA)이고 cosA=\frac{b^2+c^2-a^2}{2bc}이다.
+쑤셔넣고 정리하면 sinA=\frac{2}{bc}\sqrt{s(s-a)(s-b)(s-c)} (2s=a+b+c)라서 증명된다.
+
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="고등수학_삼각함수공식" %}
+
+순열과 조합은 확통 가서 다시 정리함
 
 {% endcomment %}
 
