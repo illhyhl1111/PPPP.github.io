@@ -177,23 +177,23 @@ r_{i+1}=r_{i−1}−q_i r_i, \quad q_i=\frac{r_{i−1}}{r_i} $$ </p>
 <br/>
 
 #### Euclidean algorithm 증명
-$A=Ga, B=Gb$ ($a$, $b$ 는 서로소) 를 $A=BQ+R$에 대입해보면
+* $A=Ga, B=Gb$ ($a$, $b$ 는 서로소) 를 $A=BQ+R$에 대입해보면
 <p> $$Ga=Gb \cdot Q + R, \quad R=G(a-Qb) $$ </p>
-이제 $b$와 $a-Qb$가 서로소임을 보이면 되는데, $b=mk$, $a-bQ=mk'$으로 두자($k$, $k'$는 서로소) <br/>
-$a=bQ+mk'=m(kQ+k')$이므로 $m$은 $a$, $b$의 공약수인데, 서로소이므로 1임 <br/>
-따라서 $m=1$이 되며 $b$와 $a-Qb$는 서로소가 되서 $\gcd(B, R)=G$가 되어버림
+* 이제 $b$와 $a-Qb$가 서로소임을 보이면 되는데, $b=mk$, $a-bQ=mk'$으로 두자($k$, $k'$는 서로소)
+* $a=bQ+mk'=m(kQ+k')$이므로 $m$은 $a$, $b$의 공약수인데, 서로소이므로 1임
+* 따라서 $m=1$이 되며 $b$와 $a-Qb$는 서로소가 되서 $\gcd(B, R)=G$가 되어버림
 <br/>
 
 #### Extended Euclidean algorithm 증명
-$r_0 \leftarrow a, r_1 \leftarrow b$ <br/>
-초기값들을 넣으면 $as_i+bt_i=r_i \quad for \; i=0,1$ <br/>
-이제 $i>1$일 때 참이라고 가정하고 수학적 귀납법을 쓰면
+* $r_0 \leftarrow a, r_1 \leftarrow b$
+* 초기값들을 넣으면 $as_i+bt_i=r_i \quad for \; i=0,1$
+* 이제 $i>1$일 때 참이라고 가정하고 수학적 귀납법을 쓰면
 
 <p> $$r_{i+1}=r_{i−1}−r_i q_i=(as_{i−1}+bt_{i−1})−(as_i+bt_i)q_i=a(s_{i−1}−s_i q_i)+b(t_{i−1}−t_i q_i)=as_{i+1}+bt_{i+1} $$ </p>
 
-따라서 $r_{i+1}=0$ 일 때 $as_i+bt_i=r_i$ 는 $as+bt=\gcd(a,b)$ 가 된다. <br/>
+* 따라서 $r_{i+1}=0$ 일 때 $as_i+bt_i=r_i$ 는 $as+bt=\gcd(a,b)$ 가 된다.
 
-[Extended Euclidean algorithm 증명](https://codeonwort.tistory.com/295) 참조
+* [Extended Euclidean algorithm 증명](https://codeonwort.tistory.com/295) 참조
 
 {% endcapture %}
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_Euclidean_alg" %}
@@ -218,9 +218,9 @@ $x$의 다항식 $F(x)$를 $x-a$로 나누었을 때 몫과 나머지로 분리�
 $x$의 다항식 $f(x)$를 $x-a$로 나누었을 때 나머지는 $f(a)$이다.
 
 {% capture context1 %}
-$f(a)=0$인 것과 $f(x)$가 $x-a$로 나누어떨어진다는 동치이다.
-보통 $f(a)=0$인 $a$를 찾아서 $f(x)$를 인수분해하려고 쓴다.
-$f(x)=ax^n+ \cdots + b$일 때, $x= \pm \frac{b의 약수}{a의 약수}$ 를 대입해본다.
+* $f(a)=0$인 것과 $f(x)$가 $x-a$로 나누어떨어진다는 동치이다.
+* 보통 $f(a)=0$인 $a$를 찾아서 $f(x)$를 인수분해하려고 쓴다.
+* $f(x)=ax^n+ \cdots + b$꼴일 때에는 $x= \pm \frac{b의 약수}{a의 약수}$ 를 대입해본다.
 {% endcapture %}
 
 {% capture context2 %}
@@ -240,13 +240,13 @@ $$ </p>
 가끔씩 가물가물해서 빡친다
 
 ### 점과 좌표
-* 선분의 내분점과 외분점 $\frac{mx_2 \pm nx_1}{m+n}$
+* 선분의 내분점과 외분점 $\dfrac{mx_2 \pm nx_1}{m+n}$
 * Pappus의 정리, 삼각형의 무게중심 등등 잡다한 것들
 
 {% capture context1 %}
 #### 선분의 내분점과 외분점
-* $\overline{AB}$를 $m:n$으로 내분하는 점 $P$의 좌표는 $\frac{mx_2+nx_1}{m+n}$
-* $\overline{AB}$를 $m:n$으로 외분하는 점 $P$의 좌표는 $\frac{mx_2-nx_1}{m-n}$
+* $\overline{AB}$를 $m:n$으로 내분하는 점 $P$의 좌표는 $\dfrac{mx_2+nx_1}{m+n}$
+* $\overline{AB}$를 $m:n$으로 외분하는 점 $P$의 좌표는 $\dfrac{mx_2-nx_1}{m-n}$
 <br/>
 
 #### 삼각형의 무게중심, Pappus의 정리
@@ -259,7 +259,7 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 {% endcapture %}
 
 {% capture context2 %}
-* 삼각형의 무게중심 $G$는 점 $A(x_1, y_1)$와 $\overline{BC}$의 중점 $M\left(\frac{x_2+x_3}{2}, \frac{y_2+y_3}{2}\right)를 $2:1$로 내분하는 점. <br/>
+* 삼각형의 무게중심 $G$는 점 $A(x_1, y_1)$와 $\overline{BC}$의 중점 $M\left(\frac{x_2+x_3}{2}, \frac{y_2+y_3}{2}\right)$를 $2:1$로 내분하는 점. <br/>
   나머지 변에 대해서도 마찬가지.
 
 * 파푸스 정리는 그냥 위에 넣은 그림대로 좌표넣고 계산때려보면 $2(a^2+b^2+c^2)$로 같다.
@@ -336,7 +336,7 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 #### 두 원의 관계
 * 서로 만나는 두 원 $x^2+y^2+Ax+By+C=0$, $x^2+y^2+A'x+B'y+C'=0$ 의 교점을 지나는 원의 방정식은 <br/>
   $(x^2+y^2+Ax+By+C)m + (x^2+y^2+A'x+B'y+C') = 0$ 이며  <br/>
-  $m=-1$ 이라서 이차항을 조져버리면 두 원의 공통현의 방정식이 되버린다.
+* $m=-1$ 이라서 이차항을 조져버리면 두 원의 공통현의 방정식이 되버린다.
 {% endcapture %}
 
 {% capture context2 %}
@@ -497,7 +497,7 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 <p> $$ \frac{x_1 + x_2 + \cdots + x_n}{n} \geq \sqrt[n]{x_1 x_2 \cdots x_n} \geq \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+ \cdots + \frac{1}{x_n}} $$ </p>
 * $n=2$일 때 증명은 쉽다. 하지만 $n$항으로 일반화하면...
 
-![Alt text](/pictures/mathematics/산술기하조화.jpg){: width="50%" height="50%"}  <br/>
+![Alt text](/pictures/mathematics/산술기하조화.jpg){: width="40%" height="40%"}  <br/>
 $n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것도 있다...
 <br/>
 
@@ -529,11 +529,11 @@ $n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것�
 * 등호를 빼면 strictly convex function 이다.
 
 ----------------
-<br/>
 
 * 머암튼 $f:(a,b) \longrightarrow R$가 연속인 볼록 함수라면, 젠센 부등식은
   <p> $$ \forall x_i \in (a, b), p_i > 0, \sum_{i=1}^{n} {p_i} = 1 \; 일 \, 때 \; f\left(\sum_{i=1}^{n} {p_i x_i}\right) \leq \sum_{i=1}^{n} {p_i f(x_i)} $$
 * 증명은 [수학적 귀납법](http://suhak.tistory.com/221)으로.
+
 <br/>
 
 #### (가중) 산술기화조화 증명
@@ -559,13 +559,13 @@ $$ </p>
 #### 코시-슈바르츠 부등식 증명
 * [별별 증명법](https://m.blog.naver.com/yh6613/220458975310)이 다 있다.
 * 귀찮은 기념으로 간단하게만 설명하면
-  * $let A=\sqrt{a_1^2+a_2^2+\cdots+a_n^2}, B=\sqrt{b_1^2+b_2^2+\cdots+b_n^2}$
+  * $let \; A=\sqrt{a_1^2+a_2^2+\cdots+a_n^2}, \; B=\sqrt{b_1^2+b_2^2+\cdots+b_n^2}$
   * 산술 기화평균 부둥식에 따라 <br/>
     $\sqrt{\dfrac{a_i^2}{A^2} \dfrac{b_i^2}{B^2}} \leq \dfrac{1}{2}\left(\dfrac{a_i^2}{A^2}+\dfrac{b_i^2}{B^2}\right)$
   * 이걸 $i=1$ 부터 $n$에 대한 부등식을 모두 더하면 우변은 1이 되고, 결국 $\sum_{i=1}^{n} {\sqrt{a_i^2 b_i^2}} \leq AB$로 증명된다. <br/>
 
 <br/>
-* [재배열 부등식](http://mathseodang.com/220455558272) 도 볼만함
+* [재배열 부등식](https://namu.wiki/w/%EC%9E%AC%EB%B0%B0%EC%97%B4%20%EB%B6%80%EB%93%B1%EC%8B%9D) 도 볼만함
 
 {% endcapture %}
 
