@@ -445,7 +445,7 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 ![Alt text](/pictures/mathematics/캡처3.JPG)
 
 * $k, k'$에 따른 $y=k'x+\frac{k}{x}$ <br/>
-![Alt text](/pictures/mathematics/캡처.JPG)
+![Alt text](/pictures/mathematics/캡처1.JPG)
 
 킹갓구글에서 그래프까지 그려주는줄은 몰랐읍니다 충성충성
 <br/>
@@ -497,7 +497,7 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 <p> $$ \frac{x_1 + x_2 + \cdots + x_n}{n} \geq \sqrt[n]{x_1 x_2 \cdots x_n} \geq \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+ \cdots + \frac{1}{x_n}} $$ </p>
 * $n=2$일 때 증명은 쉽다. 하지만 $n$항으로 일반화하면...
 
-![Alt text](/pictures/mathematics/산술기하조화.jpg) {: width="50%" height="50%"}
+![Alt text](/pictures/mathematics/산술기하조화.jpg){: width="50%" height="50%"}  <br/>
 $n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것도 있다...
 <br/>
 
@@ -513,7 +513,7 @@ $n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것�
   <p> $$ (a_1^2+a_2^2+\cdots+a_n^2)(x_1^2+x_2^2+\cdots+x_n^2) \geq (a_1x_1+a_2x_2+\cdots+a_nx_n)^2 $$ </p>
 * 아예 제곱항도 $p$로 일반화시키면 [횔더 부등식](http://mathseodang.com/220450030140)이 된다
   <p> $$ \left(\sum_{i=1}^{n} {a_i^p}\right)^{1/p}\left(\sum_{i=1}^{n} {b_i^q}\right)^{1/q} \geq \sum_{i=1}^{n} {a_i b_i} \\
-         p>1, q>1, \frac{1}{p}+\frac{1}{q}=1, \; equality \; iff \; a_i^p=\lambda b_i^q $$ </p>
+         p>1, q>1, \frac{1}{p}+\frac{1}{q}=1, \; equality \quad iff \quad a_i^p=\lambda b_i^q $$ </p>
 
 {% endcapture %}
 
@@ -582,7 +582,7 @@ $$ </p>
 
 <br/>
 #### 웃겨서 넣어봤다
-![Alt text](/pictures/mathematics/8177-2-7693.gif)  {: width="40%" height="40%"} <br/>
+![Alt text](/pictures/mathematics/8177-2-7693.gif){: width="40%" height="40%"} <br/>
 얼싸안코
 
 {% endcapture %}
@@ -641,14 +641,14 @@ $$ </p>
 * 제1 코사인법칙으로부터
   <p> $$
     \begin{align*}
-      a^2 = ab \cos C + ca \cos B, b^2 = bc \cos A + ab \cos C, c^2 = ca \cos B + bc \cos A \\
+      a^2 = ab \cos C + ca \cos B, b^2 &= bc \cos A + ab \cos C, c^2 = ca \cos B + bc \cos A \\
       a^2-b^2-c^2 &= -2bc \cos A \\
       a^2&=b^2+c^2 -2bc \cos A
     \end{align*}
   $$ </p> <br/>
 
   수식놀음이다.
-  
+
 <br/>
 #### 헤론의 공식
 이걸 증명해야하나 싶긴한데
