@@ -196,7 +196,7 @@ $r_0 \leftarrow a, r_1 \leftarrow b$ <br/>
 [Extended Euclidean algorithm 증명](https://codeonwort.tistory.com/295) 참조
 
 {% endcapture %}
-{% include blocks.html context1=context1 context2=context2 topic="고등수학_Euclidean alg" %}
+{% include blocks.html context1=context1 context2=context2 topic="고등수학_Euclidean_alg" %}
 
 ### 다항식의 사칙연산, 인수분해, 항등식과 미정계수법
 $(a-b)(a^2+ab+b^2)=a^3-b^3$같은 공식 수십개 - 응 안적어 <br/>
@@ -227,7 +227,7 @@ $f(x)=ax^n+ \cdots + b$일 때, $x= \pm \frac{b의 약수}{a의 약수}$ 를 대
 $f(x) = (x-a)Q(x) + R$는 항등식이므로, $R = f(a)$
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 topic="고등수학_나머지 정리" %}
+{% include blocks.html context1=context1 context2=context2 topic="고등수학_나머지_정리" %}
 
 ### 이차방정식
 <p> $$
@@ -265,7 +265,7 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 * 파푸스 정리는 그냥 위에 넣은 그림대로 좌표넣고 계산때려보면 $2(a^2+b^2+c^2)$로 같다.
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 topic="고등수학_점과 좌표" %}
+{% include blocks.html context1=context1 context2=context2 topic="고등수학_점과_좌표" %}
 
 ### 직선의 방정식
 * 표준형 $y=ax+b$, 일반형 $ax+by+c=0$, 기울기+점, 두 점, $x$ $y$절편이 주어졌을 때 식 등등
@@ -569,7 +569,7 @@ $$ </p>
 
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 topic="고등수학_최대와 최소" %}
+{% include blocks.html context1=context1 context2=context2 topic="고등수학_최대와_최소" %}
 
 ### 삼각함수의 정의
 * 호도(radian)법: $l=r\theta, \; S=\frac{1}{2}r^2\theta=\frac{1}{2}rl, \; 1\,rad = \frac{180\degree}{\pi}$
@@ -658,7 +658,7 @@ $$ </p>
 
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 topic="고등수학_삼각함수 공식" %}
+{% include blocks.html context1=context1 context2=context2 topic="고등수학_삼각함수_공식" %}
 
 순열과 조합은 확통 가서 다시 정리함
 
