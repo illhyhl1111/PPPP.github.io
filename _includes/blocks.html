@@ -5,7 +5,15 @@
     <div class="panel-heading" style="background-color: #ffd699" markdown="0">
       <h4 class="panel-title" markdown="0">
         <a class="btn btn--warning" data-toggle="collapse" data-target="#{{include.topic | append: '_1'}}" markdown="0">
-          {% if include.button1-text %} {{include.button1-text}} {% else %} 모르겠으면 {% endif %}
+          {% if include.button1-text %}
+            {{include.button1-text}}
+          {% else %}
+            {% if include.topic %}
+              {{'extend ' | append: include.topic}}
+            {% else %}
+              모르겠습니다
+            {% endif %}
+          {% endif %}
         </a>
       </h4>
     </div>
@@ -15,7 +23,15 @@
       </div>
       <div class="panel-footer" style="background-color: #ff9999" markdown="0">
         <a class="btn btn--danger" data-toggle="collapse" data-target="#{{include.topic | append: '_2'}}" markdown="0">
-          {% if include.button2-text %} {{include.button2-text}} {% else %} 그래도 모르겠으면 {% endif %}
+          {% if include.button2-text %}
+            {{include.button2-text}}
+          {% else %}
+            {% if include.topic %}
+              {{'exextend' | append: include.topic}}
+            {% else %}
+              그래도 모르겠습니다
+            {% endif %}
+          {% endif %}
         </a>
       </div>
       <div id="{{include.topic | append: '_2'}}" class="panel-collapse collapse" markdown="0">
