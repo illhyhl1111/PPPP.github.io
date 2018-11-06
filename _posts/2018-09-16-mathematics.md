@@ -418,14 +418,14 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 
 #### 합성함수
 * 두 함수 $f: X \longrightarrow Y$, $g: Y \longrightarrow Z$일 때, $g(f(x))$는 정의역이 $X$이고 공역이 $Z$가 된다.
-* 함성함수 $g \circ f$는 $g \circ f: x \longrightarrow g(f(x)), (g \circ f)(x) = g(f(x))$
+* 함성함수 $g \circ f$는 $g \circ f: x \longrightarrow g(f(x)), \; (g \circ f)(x) = g(f(x))$
 
 {% endcapture %}
 
 {% capture context2 %}
 #### 합성함수와 Group의 성질
 * 교환법칙: $g \circ f \neq f \circ g$
-* 결합법칙: $h \circ (g circ f) = (h \circ g) \circ f$
+* 결합법칙: $h \circ (g \circ f) = (h \circ g) \circ f$
 * 항등원: $f \circ I = I \circ f = f$
 * 함수가 일대일 대응일 경우 역원도 존재하며, 뒤에 역함수로 나옴.
 {% endcapture %}
@@ -433,7 +433,7 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_함수" %}
 
 ### 유리, 무리함수와 역함수
-* $y=\frac{k}{x}, y=\frac{k}{x-m}+n, y=k'x+\frac{k}{x}, y^2=ax$의 그래프
+* $y=\frac{k}{x}, \; y=\frac{k}{x-m}+n, \; y=k'x+\frac{k}{x}, \; y^2=ax$의 그래프
 * 일대일 대응인 함수 $f:X \longrightarrow Y$ 에 대하여 역함수 $f^{-1}: Y \longrightarrow X$
 
 {% capture context1 %}
@@ -445,26 +445,27 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 ![Alt text](/pictures/mathematics/캡처3.JPG)
 
 * $k, k'$에 따른 $y=k'x+\frac{k}{x}$ <br/>
-![Alt text](/pictures/mathematics/캡처3.JPG)
+![Alt text](/pictures/mathematics/캡처.JPG)
 
 킹갓구글에서 그래프까지 그려주는줄은 몰랐읍니다 충성충성
 <br/>
+
 #### 무리함수
 * $y^2=ax, y=\pm \sqrt{\pm ax}$ <br/>
 ![Alt text](/pictures/mathematics/캡처4.JPG) <br/>
   정의역과 치역을 좀 생각해야된다.
-<br/>
 
+<br/>
 #### 역함수
-* 역함수의 정의를 위해선, $f:X \longrightarrow Y$에서 $Y$의 임의의 한 원소에 $X$의 원소가 하나씩만 대응되어야 하기 때문에 일대일 대응이어야 함.
-$y=f(x) \Leftrightarrow x=f^{-1}(y)$
-함수 $f$가 일대일 대응이면 역함수 $f^{-1}$은 존재한다 (존재성)
-<br/>
+* 역함수의 정의를 위해선, $f:X \longrightarrow Y$에서 $Y$의 임의의 한 원소에 $X$의 원소가 하나씩만 대응되어야 하기 때문에 일대일 대응이어야 함. <br/>
+* $y=f(x) \Leftrightarrow x=f^{-1}(y)$
+* 함수 $f$가 일대일 대응이면 역함수 $f^{-1}$은 존재한다 (존재성)
 
+<br/>
 #### 역함수의 성질
 * $(f^{-1})^{-1} = f$
-* $f^{-1}(f(x))=x (f^{-1} \circ f = I_x)$
-* $f(f^{-1}(y))=y (f \circ f^{-1} = I_y)$
+* $f^{-1}(f(x))=x \quad (f^{-1} \circ f = I_x)$
+* $f(f^{-1}(y))=y \quad (f \circ f^{-1} = I_y)$
 * $f:X \longrightarrow Y, g:Y \longrightarrow X$에서 $g \circ f = I_x, f \circ g = I_y \Leftrightarrow g=f^{-1}$ (유일성)
 * 일대일 대응 $f:X \longrightarrow Y, g:Y \longrightarrow Z$에 대하여  $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$
 
@@ -472,9 +473,9 @@ $y=f(x) \Leftrightarrow x=f^{-1}(y)$
 
 {% capture context2 %}
 #### 역함수 증명
-*존재성, 유일성 - TODO <br/>
+* 존재성, 유일성 - TODO <br/>
 
-* $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$
+* $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$ 증명
   <p> $$(f^{-1} \circ g^{-1}) \circ (g \circ f) = f^{-1} \circ (g^{-1} \circ g) \circ f = f^{-1} \circ I \circ f = f^{-1} \circ f = I \\
         (g \circ f) \circ (f^{-1} \circ g^{-1}) = g \circ (f \circ f^{-1}) \circ g^{-1} = g \circ I \circ g^{-1} = g \circ g^{-1} = I \\
         \therefore (g \circ f)^{-1} = f^{-1} \circ g^{-1}$$ </p>
@@ -483,7 +484,7 @@ $y=f(x) \Leftrightarrow x=f^{-1}(y)$
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_유리함수" %}
 
 ### 최대와 최소
-* 산술평균 $\geq$ 기하평균 $\geq$ 조화평균: $\frac{a+b}{2} \geq \sqrt{ab} \geq \frac{2}{\frac{1}{a}+\frac{1}{b}}$, 등호는 $a=b$
+* 산술평균 $\geq$ 기하평균 $\geq$ 조화평균 ==> $\frac{a+b}{2} \geq \sqrt{ab} \geq \frac{2}{\frac{1}{a}+\frac{1}{b}}$, 등호는 $a=b$
 * 코시-슈바르츠 부등식 $(a^2+b^2)(x^2+y^2) \geq (ax+by)^2$, 등호는 $\frac{a}{x}=\frac{b}{y}$
 
 {% capture context1 %}
@@ -496,21 +497,23 @@ $y=f(x) \Leftrightarrow x=f^{-1}(y)$
 <p> $$ \frac{x_1 + x_2 + \cdots + x_n}{n} \geq \sqrt[n]{x_1 x_2 \cdots x_n} \geq \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+ \cdots + \frac{1}{x_n}} $$ </p>
 * $n=2$일 때 증명은 쉽다. 하지만 $n$항으로 일반화하면...
 
-![Alt text](/pictures/mathematics/산술기하조화.jpg)
-$n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것도 있다.
+![Alt text](/pictures/mathematics/산술기하조화.jpg) {: width="50%" height="50%"}
+$n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것도 있다...
 <br/>
 
 #### 가중 산술-기하 평균 부등식
+* 각 항 앞에 가중치를 더한 부등식이다.
+* 가중 산술-기하 평균 부등식은
 <p> $$ \frac{\alpha_1 x_1 + \cdots + \alpha_n x_n}{\alpha} \geq \sqrt[\alpha]{x_1^{\alpha_1} \cdots x_n^{\alpha_n}} \\
        (x_i>0, \alpha_i>0) $$ </p>
 <br/>
 
 #### 코시-슈바르츠 부등식
-* 역시 일반식은
+* 일반식은
   <p> $$ (a_1^2+a_2^2+\cdots+a_n^2)(x_1^2+x_2^2+\cdots+x_n^2) \geq (a_1x_1+a_2x_2+\cdots+a_nx_n)^2 $$ </p>
 * 아예 제곱항도 $p$로 일반화시키면 [횔더 부등식](http://mathseodang.com/220450030140)이 된다
   <p> $$ \left(\sum_{i=1}^{n} {a_i^p}\right)^{1/p}\left(\sum_{i=1}^{n} {b_i^q}\right)^{1/q} \geq \sum_{i=1}^{n} {a_i b_i} \\
-         p>1, q>1, \frac{1}{p}+\frac{1}{q}=1, equality iff a_i^p=\lambda b_i^q $$ </p>
+         p>1, q>1, \frac{1}{p}+\frac{1}{q}=1, \; equality \; iff \; a_i^p=\lambda b_i^q $$ </p>
 
 {% endcapture %}
 
@@ -520,15 +523,16 @@ $n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것�
 <br/>
 
 ##### 볼록 함수(convex function)
-* 함수 f:X->R가 다음을 만족하면 볼록 함수로 부름 <br/>
+* 함수 $f:X\longrightarrow R$가 다음을 만족하면 볼록 함수로 부름 <br/>
   ![Alt text](/pictures/mathematics/볼록.png)
-  <p> $$ \forall x_1, x_2 \in X, \any t \in [0, 1]: f(tx_1+(1-t)x_2) \leq tf(x_1)+(1-t)f(x_2) $$ </p>
+  <p> $$ \forall x_1, x_2 \in X, \forall t \in [0, 1]: f(tx_1+(1-t)x_2) \leq tf(x_1)+(1-t)f(x_2) $$ </p>
 * 등호를 빼면 strictly convex function 이다.
+
 ----------------
 <br/>
 
 * 머암튼 $f:(a,b) \longrightarrow R$가 연속인 볼록 함수라면, 젠센 부등식은
-  <p> $$ \forall x_i \in (a, b), p_i > 0, \sum_{i=1}^{n} {p_i} = 1 일 때 f\left(\sum_{i=1}^{n} {p_i x_i}\right) \leq \sum_{i=1}^{n} {p_i f(x_i)} $$
+  <p> $$ \forall x_i \in (a, b), p_i > 0, \sum_{i=1}^{n} {p_i} = 1 \; 일 \, 때 \; f\left(\sum_{i=1}^{n} {p_i x_i}\right) \leq \sum_{i=1}^{n} {p_i f(x_i)} $$
 * 증명은 [수학적 귀납법](http://suhak.tistory.com/221)으로.
 <br/>
 
@@ -537,7 +541,7 @@ $n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것�
   * 위로 볼록한 만만한 함수 $f(x)=-\ln(x)$ 로 두고
 <p> $$
   \begin{align*}
-    $$ \alpha_1 + \alpha_2 + \cdots + \alpha_n = \alpha, & w_i = \frac{\alpha_i}{\alpha} \\
+    \alpha_1 + \alpha_2 + \cdots + \alpha_n = \alpha, & w_i = \frac{\alpha_i}{\alpha} \\
     f(w_1 x_1 + \cdots + w_n x_n) & \leq w_1 f(x_1) + \cdots + w_n f(x_n) \\
     \ln(w_1 x_1 + \cdots + w_n x_n) & \geq w_1 \ln(x_1) + \cdots + w_n \ln(x_n) = \ln(x_1^{w_1} \cdots x_n^{w_n}) \\
     \therefore w_1 x_1 + w_2 x_2 + \cdots + w_n x_n & \geq x_1^{w_1} x_2^{w_2} \cdots x_n^{w_n} \\
@@ -547,35 +551,38 @@ $$ </p>
 
 * 기하-조화평균은 <br/>
   $f(\frac{w_1}{x_1} + \cdots + \frac{w_n}{x_n}) \leq w_1 f(\frac{1}{x_1}) + \cdots + w_n f(\frac{1}{x_n})$ 으로 똑같이 증명됨 <br/>
-  꺄륵
+
+꺄륵
+
 <br/>
 
 #### 코시-슈바르츠 부등식 증명
 * [별별 증명법](https://m.blog.naver.com/yh6613/220458975310)이 다 있다.
 * 귀찮은 기념으로 간단하게만 설명하면
-  * $let A=\sqrt(a_1^2+a_2^2+\cdots+\a_n^2), B=\sqrt(b_1^2+b_2^2+\cdots+\b_n^2)$
+  * $let A=\sqrt{a_1^2+a_2^2+\cdots+a_n^2}, B=\sqrt{b_1^2+b_2^2+\cdots+b_n^2}$
   * 산술 기화평균 부둥식에 따라 <br/>
-    $\sqrt{\frac{a_i^2}{A^2} \frac{b_i^2}{B^2}} \leq \frac{1}{2}\left(\frac{a_i^2}{A^2}+\frac{b_i^2}{B^2}\right)$
+    $\sqrt{\dfrac{a_i^2}{A^2} \dfrac{b_i^2}{B^2}} \leq \dfrac{1}{2}\left(\dfrac{a_i^2}{A^2}+\dfrac{b_i^2}{B^2}\right)$
   * 이걸 $i=1$ 부터 $n$에 대한 부등식을 모두 더하면 우변은 1이 되고, 결국 $\sum_{i=1}^{n} {\sqrt{a_i^2 b_i^2}} \leq AB$로 증명된다. <br/>
 
-* [재배열 부등식](http://mathseodang.com/220455558272) 도 볼만한거같다
+<br/>
+* [재배열 부등식](http://mathseodang.com/220455558272) 도 볼만함
 
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_최대와최소" %}
 
 ### 삼각함수의 정의
-* 호도(radian)법: $l=r\theta, S=\frac{1}{2}r^2\theta=\frac{1}{2}rl, 1rad = \frac{180\degree}{\pi}$
-* 이 때 $P(x,y)$와 $\theta=\angle xOP$에 대하여, $\sin\theta=\frac{y}{r}, \cos\theta=\frac{x}{r}, \tan\theta=\frac{y}{x}$이라 정의함
+* 호도(radian)법: $l=r\theta, \; S=\frac{1}{2}r^2\theta=\frac{1}{2}rl, \; 1\,rad = \frac{180\degree}{\pi}$
+* 이 때 $P(x,y)$와 $\theta=\angle xOP$에 대하여, $\sin\theta=\frac{y}{r}, \; \cos\theta=\frac{x}{r}, \; \tan\theta=\frac{y}{x}$이라 정의함
 
 {% capture context1 %}
 #### 부채꼴의 넓이
-* $l=r\theta$인건 $\theta$의 radian 정의임 $\left(\frac{l}{2\pi r}=\frac{\theta}{2\pi}\right)$
+* $l=r\theta$ 인건 $\theta$의 radian 정의임 $\left(\frac{l}{2\pi r}=\frac{\theta}{2\pi}\right)$
 * 이 때 $\frac{S}{\pi r^2} = \frac{\theta}{2\pi}$에서 $S=\frac{1}{2}r^2\theta$
-<br/>
 
+<br/>
 #### 웃겨서 넣어봤다
-![Alt text](/pictures/mathematics/8177-2-7693.gif)
+![Alt text](/pictures/mathematics/8177-2-7693.gif)  {: width="40%" height="40%"} <br/>
 얼싸안코
 
 {% endcapture %}
@@ -588,8 +595,8 @@ $$ </p>
 -------------------------------------
 
 ### 으악!
-아래 내용은 더럽게 기억이 나지 않습니다 <br/>
-자라나라 머리머리
+**아래 내용은 더럽게 기억이 나지 않습니다** <br/>
+**자라나라 머리머리**
 
 -------------------------------------
 
@@ -601,7 +608,7 @@ $$ </p>
 <br/>
 
 ![Alt text](/pictures/mathematics/사인법칙.jpg)
-* 사인법칙 $\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R$
+* 사인법칙 $\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}=2R$
 * 제1 코사인법칙 $a=b\cos C + c\cos B$
 * 제2 코사인법칙 $a^2=b^2+c^2-2bc\cos A$
 * $\vartriangle ABC$의 넓이 $S=\frac{1}{2}bc \sin A = \sqrt{s(s-a)(s-b)(s-c)} (2s=a+b+c)$
@@ -618,25 +625,31 @@ $$ </p>
 * 같은 원 위의 원주각은 모두 동일하다. [링크](https://mathbang.net/186) 참조
 * 이건 중학교 수학이다. 물론 기억안남 <br/>
   엌ㅋㅋㅋ
-<br/>
 
+<br/>
 ![Alt text](/pictures/mathematics/사인법칙.png)
 * 아무튼 점 $B$와 $O$를 잇는 선분과 원이 만나는 점 $A'$를 두면 증명이 된다.
 * 자세한건 [링크](https://www.mathfactory.net/10678) 참조
-<br/>
 
+<br/>
 #### 코사인 법칙
 ![Alt text](/pictures/mathematics/제1코사인법칙.png)
 * 제1 코사인법칙은 매우 직관적이다
   * $a = b\cos C + c\cos B$
 
-* 제1 코사인법칙으로부터
-  <p> $$ a^2 = ab \cos C + ca \cos B, b^2 = bc \cos A + ab \cos C, c^2 = ca \cos B + bc \cos A \\
-         a^2-b^2-c^2 = -2bc \cos A \\
-         a^2=b^2+c^2 -2bc \cos A $$ </p> <br/>
-  수식놀음이다.
 <br/>
+* 제1 코사인법칙으로부터
+  <p> $$
+    \begin{align*}
+      a^2 = ab \cos C + ca \cos B, b^2 = bc \cos A + ab \cos C, c^2 = ca \cos B + bc \cos A \\
+      a^2-b^2-c^2 &= -2bc \cos A \\
+      a^2&=b^2+c^2 -2bc \cos A
+    \end{align*}
+  $$ </p> <br/>
 
+  수식놀음이다.
+  
+<br/>
 #### 헤론의 공식
 이걸 증명해야하나 싶긴한데
 * $S=\frac{1}{2}bc \sin A$
