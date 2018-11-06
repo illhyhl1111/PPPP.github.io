@@ -9,7 +9,7 @@
             {{include.button1-text}}
           {% else %}
             {% if include.topic %}
-              {{'extend ' | append: include.topic}}
+              {{'- ' | append: include.topic}}
             {% else %}
               모르겠습니다
             {% endif %}
@@ -27,7 +27,7 @@
             {{include.button2-text}}
           {% else %}
             {% if include.topic %}
-              {{'exextend' | append: include.topic}}
+              {{'--- ' | append: include.topic}}
             {% else %}
               그래도 모르겠습니다
             {% endif %}
