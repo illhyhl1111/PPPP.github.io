@@ -384,18 +384,17 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_이동" %}
 
-{% comment %}
-
 ### 함수
-함수의 정의, 정의역, 공역, 치역
-일대일 함수, 일대일 대응, 항등함수, 상수함수, 합성함수 등등 잡다한 정의들
+* 함수의 정의, 정의역, 공역, 치역
+* 일대일 함수, 일대일 대응, 항등함수, 상수함수, 합성함수 등등 잡다한 정의들
 
 {% capture context1 %}
 #### 함수의 정의
-두 집합 X, Y \neq \varnothing 이 있을 때, X의 각 원소에서 Y의 원소로의 대응을 X에서 Y로 가는 함수라고 정의하고 f: X->Y로 표기함
-이때 함수 f에 대하여 x \in X에 y \in Y가 대응되는 것을 f: x -> y, y=f(x) 등으로 나타냄.
-x를 독립변수, y를 종속변수라고도 한단다.
-아무튼 하나의 x에 대해서 반드시 하나의 y가 대응되어야 한다는게 중요함
+* 두 집합 $X, Y \neq \varnothing$ 이 있을 때,
+$X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 함수라고 정의하고 $f: X \longrightarrow Y$로 표기함
+* 이때 함수 $f$에 대하여 $x \in X$에 $y \in Y$가 대응되는 것을 $f: x \longrightarrow y$, $y=f(x)$ 등으로 나타냄.
+* $x$를 독립변수, $y$를 종속변수라고도 한단다.
+* 아무튼 하나의 x에 대해서 반드시 하나의 y가 대응되어야 한다는게 중요함
 <br/>
 
 #### 정의역, 공역, 치역
@@ -404,156 +403,176 @@ x를 독립변수, y를 종속변수라고도 한단다.
 
 #### 함수의 종류
 * 일대일 함수
-  * \any x_1, x_2 \in X, x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)
+  * $\forall x_1, x_2 \in X, x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)$
 * 일대일 대응
   * 치역과 공역이 같고
-  * \any x_1, x_2 \in X, x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)
+  * $\forall x_1, x_2 \in X, x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)$
   * 역함수가 존재함
 * 항등함수
-  * X=Y
-  * \any x \in X, f(x)=x
-  * I_x로 표기
+  * $X=Y$
+  * $\forall x \in X, f(x)=x$
+  * $I_x$로 표기
 * 상수함수
   * 치역의 원소가 하나뿐임
 <br/>
 
 #### 합성함수
-두 함수 f: X->Y, g: Y->Z일 때, g(f(x))는 정의역이 X이고 공역이 Z가 된다.
-함성함수 g \circ f는 g \circ f : x->g(f(x)), (g \circ f)(x) = g(f(x))
+* 두 함수 $f: X \longrightarrow Y$, $g: Y \longrightarrow Z$일 때, $g(f(x))$는 정의역이 $X$이고 공역이 $Z$가 된다.
+* 함성함수 $g \circ f$는 $g \circ f: x \longrightarrow g(f(x)), (g \circ f)(x) = g(f(x))$
 
 {% endcapture %}
 
 {% capture context2 %}
-교환법칙: g \circ f \neq f \circ g,
-결합법칙: h \circ (g circ f) = (h \circ g) \circ f
-항등원: f \circ I = I \circ f = f
-물론 역원도 존재하며, 뒤에 역함수로 나옴.
+#### 합성함수와 Group의 성질
+* 교환법칙: $g \circ f \neq f \circ g$
+* 결합법칙: $h \circ (g circ f) = (h \circ g) \circ f$
+* 항등원: $f \circ I = I \circ f = f$
+* 함수가 일대일 대응일 경우 역원도 존재하며, 뒤에 역함수로 나옴.
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_함수" %}
 
 ### 유리, 무리함수와 역함수
-y=\frac{k}{x}, y=\frac{k}{x-m}+n, y=k'x+\frac{k}{x}, y^2=ax의 그래프
-일대일 대응인 함수 f:X->Y 에 대하여 역함수 f^{-1}: Y->X
+* $y=\frac{k}{x}, y=\frac{k}{x-m}+n, y=k'x+\frac{k}{x}, y^2=ax$의 그래프
+* 일대일 대응인 함수 $f:X \longrightarrow Y$ 에 대하여 역함수 $f^{-1}: Y \longrightarrow X$
 
 {% capture context1 %}
 #### 유리수
-* k에 따른 y=\frac{k}{x}
+* $k$에 따른 $y=\frac{k}{x}$ <br/>
 ![Alt text](/pictures/mathematics/캡처2.JPG)
 
-* n, m이 주어진 y=\frac{k}{x-m}+n
+* $n, m$이 주어진 $y=\frac{k}{x-m}+n$ <br/>
 ![Alt text](/pictures/mathematics/캡처3.JPG)
 
-* k에 따른 y=k'x+\frac{k}{x}
+* $k, k'$에 따른 $y=k'x+\frac{k}{x}$ <br/>
 ![Alt text](/pictures/mathematics/캡처3.JPG)
 
 킹갓구글에서 그래프까지 그려주는줄은 몰랐읍니다 충성충성
-
+<br/>
 #### 무리함수
-* y^2=ax, y=\pm \sqrt{\pm ax}
-![Alt text](/pictures/mathematics/캡처4.JPG)
+* $y^2=ax, y=\pm \sqrt{\pm ax}$ <br/>
+![Alt text](/pictures/mathematics/캡처4.JPG) <br/>
   정의역과 치역을 좀 생각해야된다.
+<br/>
 
 #### 역함수
-역함수의 정의를 위해선, f:X->Y에서 Y의 임의의 한 원소에 X의 원소가 하나씩만 대응되어야 하기 때문에 일대일 대응이어야 함.
-y=f(x) <=> x=f^{-1}(y)
-함수 f가 일대일 대응이면 역함수 f^{-1}은 존재한다 (존재성)
+* 역함수의 정의를 위해선, $f:X \longrightarrow Y$에서 $Y$의 임의의 한 원소에 $X$의 원소가 하나씩만 대응되어야 하기 때문에 일대일 대응이어야 함.
+$y=f(x) \Leftrightarrow x=f^{-1}(y)$
+함수 $f$가 일대일 대응이면 역함수 $f^{-1}$은 존재한다 (존재성)
+<br/>
 
 #### 역함수의 성질
-(f^{-1})^{-1} = f
-f^{-1}(f(x))=x (f^{-1} \circ f = I_x)
-f(f^{-1}(y))=y (f \circ f^{-1} = I_y)
-f:X->Y, g:Y->X에서 g \circ f = I_x, f \circ g = I_y \Leftrightarrow g=f^{-1} (유일성)
-일대일 대응 f:X->Y, g:Y->Z에 대하여  (g \circ f)^{-1} = f^{-1} \circ g^{-1}
+* $(f^{-1})^{-1} = f$
+* $f^{-1}(f(x))=x (f^{-1} \circ f = I_x)$
+* $f(f^{-1}(y))=y (f \circ f^{-1} = I_y)$
+* $f:X \longrightarrow Y, g:Y \longrightarrow X$에서 $g \circ f = I_x, f \circ g = I_y \Leftrightarrow g=f^{-1}$ (유일성)
+* 일대일 대응 $f:X \longrightarrow Y, g:Y \longrightarrow Z$에 대하여  $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$
 
 {% endcapture %}
 
 {% capture context2 %}
 #### 역함수 증명
-존재성, 유일성 - TODO
-(g \circ f)^{-1} = f^{-1} \circ g^{-1} :
-(f^{-1} \circ g^{-1}) \circ (g \circ f) = f^{-1} \circ (g^{-1} \circ g) \circ f = f^{-1} \circ I \circ f = f^{-1} \circ f = I
-(g \circ f) \circ (f^{-1} \circ g^{-1}) = g \circ (f \circ f^{-1}) \circ g^{-1} = g \circ I \circ g^{-1} = g \circ g^{-1} = I
-\therefore (g \circ f)^{-1} = f^{-1} \circ g^{-1}
+*존재성, 유일성 - TODO <br/>
+
+* $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$
+  <p> $$(f^{-1} \circ g^{-1}) \circ (g \circ f) = f^{-1} \circ (g^{-1} \circ g) \circ f = f^{-1} \circ I \circ f = f^{-1} \circ f = I \\
+        (g \circ f) \circ (f^{-1} \circ g^{-1}) = g \circ (f \circ f^{-1}) \circ g^{-1} = g \circ I \circ g^{-1} = g \circ g^{-1} = I \\
+        \therefore (g \circ f)^{-1} = f^{-1} \circ g^{-1}$$ </p>
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_유리함수" %}
 
 ### 최대와 최소
-y=ax^2+bx+c에서 y의 범위는 0=ax^2+bx+(c-y)에서 D>=0를 사용해도 됨
-산술평균>=기하평균>=조화평균 (\frac{a+b}{2} >= \sqrt{ab} >= \frac{2}{\frac{1}{a}+\frac{1}{b}}, 등호는 a=b)
-코시-슈바르츠 부등식 (a^2+b^2)(x^2+y^2)>=(ax+by)^2, 등호는 \frac{a}{x}=\frac{b}{y}
+* 산술평균 $\geq$ 기하평균 $\geq$ 조화평균: $\frac{a+b}{2} \geq \sqrt{ab} \geq \frac{2}{\frac{1}{a}+\frac{1}{b}}$, 등호는 $a=b$
+* 코시-슈바르츠 부등식 $(a^2+b^2)(x^2+y^2) \geq (ax+by)^2$, 등호는 $\frac{a}{x}=\frac{b}{y}$
 
 {% capture context1 %}
+#### 판별식을 이용한 최대, 최소
+* $y=ax^2+bx+c$에서 $y$의 범위는 $0=ax^2+bx+(c-y)$에서 $D>=0$를 사용해도 됨
+<br/>
+
 #### 산술기하조화
-일반적인 형태로,
-\frac{x_1 + x_2 + \cdots + x_n}{n} >= \sqrt[n]{x_1 x_2 \cdots x_n} >= \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+ \cdots + \frac{1}{x_n}}
-n=2일 때 증명은 쉽다. 하지만 n항으로 일반화하면...
+* 일반적인 형태로,
+<p> $$ \frac{x_1 + x_2 + \cdots + x_n}{n} \geq \sqrt[n]{x_1 x_2 \cdots x_n} \geq \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+ \cdots + \frac{1}{x_n}} $$ </p>
+* $n=2$일 때 증명은 쉽다. 하지만 $n$항으로 일반화하면...
 
 ![Alt text](/pictures/mathematics/산술기하조화.jpg)
-n=2일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것도 있다.
+$n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것도 있다.
+<br/>
 
 #### 가중 산술-기하 평균 부등식
-\frac{\alpha_1 x_1 + \cdots + \alpha_n x_n}{\alpha} >= \sqrt[\alpha]{x_1^{\alpha_1} \cdots x_n^{\alpha_n}}
-(x_i>0, \alpha_i>0)
+<p> $$ \frac{\alpha_1 x_1 + \cdots + \alpha_n x_n}{\alpha} \geq \sqrt[\alpha]{x_1^{\alpha_1} \cdots x_n^{\alpha_n}} \\
+       (x_i>0, \alpha_i>0) $$ </p>
+<br/>
 
 #### 코시-슈바르츠 부등식
-역시 일반식은
-(a_1^2+a_2^2+\cdots+a_n^2)(x_1^2+x_2^2+\cdots+x_n^2)>=(a_1x_1+a_2x_2+\cdots+a_nx_n)^2
-아예 제곱항도 p로 일반화시키면 [횔더 부등식](http://mathseodang.com/220450030140)이 된다
-(\sigma i=1 to n a_i^p)^{1/p}(\sigma i=1 to n b_i^q)^{1/q} >= \sigma i=1 to n a_i b_i
-p>1, q>1, \frac{1}{p}+\frac{1}{q}=1, equality iff a_i^p=\lambda b_i^q
+* 역시 일반식은
+  <p> $$ (a_1^2+a_2^2+\cdots+a_n^2)(x_1^2+x_2^2+\cdots+x_n^2) \geq (a_1x_1+a_2x_2+\cdots+a_nx_n)^2 $$ </p>
+* 아예 제곱항도 $p$로 일반화시키면 [횔더 부등식](http://mathseodang.com/220450030140)이 된다
+  <p> $$ \left(\sum_{i=1}^{n} {a_i^p}\right)^{1/p}\left(\sum_{i=1}^{n} {b_i^q}\right)^{1/q} \geq \sum_{i=1}^{n} {a_i b_i} \\
+         p>1, q>1, \frac{1}{p}+\frac{1}{q}=1, equality iff a_i^p=\lambda b_i^q $$ </p>
 
 {% endcapture %}
 
 {% capture context2 %}
 #### 젠센 부등식
+먼저 볼록 함수의 정의부터 살펴보자
+<br/>
 
 ##### 볼록 함수(convex function)
-함수 f:X->R가 다음을 만족하면 볼록 함수로 부름
-![Alt text](/pictures/mathematics/볼록.png)
-\any x_1, x_2 \in X, \any t \in [0, 1]: f(tx_1+(1-t)x_2)<=tf(x_1)+(1-t)f(x_2)
-등호를 빼면 strictly convex이다.
+* 함수 f:X->R가 다음을 만족하면 볼록 함수로 부름 <br/>
+  ![Alt text](/pictures/mathematics/볼록.png)
+  <p> $$ \forall x_1, x_2 \in X, \any t \in [0, 1]: f(tx_1+(1-t)x_2) \leq tf(x_1)+(1-t)f(x_2) $$ </p>
+* 등호를 빼면 strictly convex function 이다.
+----------------
+<br/>
 
-머암튼 f:(a,b)->R가 연속인 볼록 함수라면, 젠센 부등식은
-\any x_i \in (a, b), p_i > 0, \sigma i=1 to n p_i = 1 일 때 f(\sigma i=1 to n p_i x_i) <= \sigma i=1 to n p_i f(x_i)
-증명은 [수학적 귀납법](http://suhak.tistory.com/221)으로.
+* 머암튼 $f:(a,b) \longrightarrow R$가 연속인 볼록 함수라면, 젠센 부등식은
+  <p> $$ \forall x_i \in (a, b), p_i > 0, \sum_{i=1}^{n} {p_i} = 1 일 때 f\left(\sum_{i=1}^{n} {p_i x_i}\right) \leq \sum_{i=1}^{n} {p_i f(x_i)} $$
+* 증명은 [수학적 귀납법](http://suhak.tistory.com/221)으로.
+<br/>
 
 #### (가중) 산술기화조화 증명
-산술-기화-조화 평균 부등식도 사실 귀납법으로 증명이 된다. 하지만 가중치까지 넣어서 바로 젠센부등식으로 증명해보면
-위로 볼록한 만만한 함수 f(x)=-lnx 로 두고
-\alpha_1 + \alpha_2 + \cdots + \alpha_n = \alpha, w_i = \frac{\alpha_i}{alpha}
-f(w_1 x_1 + \cdots + w_n x_n) <= w_1 f(x_1) + \cdots + w_n f(x_n)
-ln(w_1 x_1 + \cdots + w_n x_n) >= w_1 ln(x_1) + \cdots + w_n ln(x_n) = ln(x_1^{w_1} \cdots x_n^{w_n}}
-\therefore w_1 x_1 + w_2 x_2 + \cdots + w_n x_n >= x_1^{w_1} x_2^{w_2} \cdots x_n^{w_n}
-\frac{\alpha_1 x_1 + \alpha_2 x_2 + \cdots + \alpha_n x_n}{\alpha} >= \sqrt[\alpha]{x_1^{\alpha_1} x_2^{\alpha_2} \cdots x_n^{\alpha_n}}
+* 산술-기화-조화 평균 부등식도 사실 귀납법으로 증명이 된다. 하지만 가중치까지 넣어서 바로 젠센부등식으로 증명해보면
+  * 위로 볼록한 만만한 함수 $f(x)=-\ln(x)$ 로 두고
+<p> $$
+  \begin{align*}
+    $$ \alpha_1 + \alpha_2 + \cdots + \alpha_n = \alpha, & w_i = \frac{\alpha_i}{\alpha} \\
+    f(w_1 x_1 + \cdots + w_n x_n) & \leq w_1 f(x_1) + \cdots + w_n f(x_n) \\
+    \ln(w_1 x_1 + \cdots + w_n x_n) & \geq w_1 \ln(x_1) + \cdots + w_n \ln(x_n) = \ln(x_1^{w_1} \cdots x_n^{w_n}) \\
+    \therefore w_1 x_1 + w_2 x_2 + \cdots + w_n x_n & \geq x_1^{w_1} x_2^{w_2} \cdots x_n^{w_n} \\
+    \frac{\alpha_1 x_1 + \alpha_2 x_2 + \cdots + \alpha_n x_n}{\alpha} & \geq \sqrt[\alpha]{x_1^{\alpha_1} x_2^{\alpha_2} \cdots x_n^{\alpha_n}}
+  \end{align*}
+$$ </p>
 
-기하-조화평균은
-f(\frac{w_1}{x_1} + \cdots + \frac{w_n}{x_n}) <= w_1 f(\frac{1}{x_1}) + \cdots + w_n f(\frac{1}{x_n}) 으로 똑같이 증명됨
-꺌룰랭
+* 기하-조화평균은 <br/>
+  $f(\frac{w_1}{x_1} + \cdots + \frac{w_n}{x_n}) \leq w_1 f(\frac{1}{x_1}) + \cdots + w_n f(\frac{1}{x_n})$ 으로 똑같이 증명됨 <br/>
+  꺄륵
+<br/>
 
 #### 코시-슈바르츠 부등식 증명
-[별별 증명법](https://m.blog.naver.com/yh6613/220458975310)이 다 있다.
-귀찮은 기념으로 간단하게만 설명하면
-A=\sqrt(a_1^2+a_2^2+\cdots+\a_n^2), B=\sqrt(b_1^2+b_2^2+\cdots+\b_n^2)
-산술 기화평균 부둥식에 따라
-\sqrt{\frac{a_i^2}{A^2} \frac{b_i^2}{B^2}} <= \frac{1}{2}\left(\frac{a_i^2}{A^2}+\frac{b_i^2}{B^2}\right)
-이걸 i=1 부터 n에 대한 부등식을 모두 더하면 우변은 1이 되고, 결국 \sigma i=1 to n \sqrt{a_i^2 b_i^2} <= AB로 증명된다.
+* [별별 증명법](https://m.blog.naver.com/yh6613/220458975310)이 다 있다.
+* 귀찮은 기념으로 간단하게만 설명하면
+  * $let A=\sqrt(a_1^2+a_2^2+\cdots+\a_n^2), B=\sqrt(b_1^2+b_2^2+\cdots+\b_n^2)$
+  * 산술 기화평균 부둥식에 따라 <br/>
+    $\sqrt{\frac{a_i^2}{A^2} \frac{b_i^2}{B^2}} \leq \frac{1}{2}\left(\frac{a_i^2}{A^2}+\frac{b_i^2}{B^2}\right)$
+  * 이걸 $i=1$ 부터 $n$에 대한 부등식을 모두 더하면 우변은 1이 되고, 결국 $\sum_{i=1}^{n} {\sqrt{a_i^2 b_i^2}} \leq AB$로 증명된다. <br/>
 
-[재배열 부등식](http://mathseodang.com/220455558272) 도 볼만한거같다
+* [재배열 부등식](http://mathseodang.com/220455558272) 도 볼만한거같다
 
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_최대와최소" %}
 
 ### 삼각함수의 정의
-호도(radian)법: l=r\theta, S=\frac{1}{2}r^2\theta=\frac{1}{2}rl, 1rad = \frac{180도}{\pi}
-이 때 P(x,y)와 \theta=각xOP에 대하여, sin\theta=\frac{y}{r}, cos\theta=\frac{x}{r}, tan\theta=\frac{y}{x}이라 정의함
+* 호도(radian)법: $l=r\theta, S=\frac{1}{2}r^2\theta=\frac{1}{2}rl, 1rad = \frac{180\degree}{\pi}$
+* 이 때 $P(x,y)$와 $\theta=\angle xOP$에 대하여, $\sin\theta=\frac{y}{r}, \cos\theta=\frac{x}{r}, \tan\theta=\frac{y}{x}$이라 정의함
 
 {% capture context1 %}
 #### 부채꼴의 넓이
-l=r\theta인건 \theta의 radian 정의임 (\frac{l}{2\pi r}=\frac{\theta}{2\pi})
-이 때 \frac{S}{\pi r^2} = \frac{\theta}{2\pi}에서 S=\frac{1}{2}r^2\theta
+* $l=r\theta$인건 $\theta$의 radian 정의임 $\left(\frac{l}{2\pi r}=\frac{\theta}{2\pi}\right)$
+* 이 때 $\frac{S}{\pi r^2} = \frac{\theta}{2\pi}$에서 $S=\frac{1}{2}r^2\theta$
+<br/>
 
 #### 웃겨서 넣어봤다
 ![Alt text](/pictures/mathematics/8177-2-7693.gif)
@@ -566,20 +585,26 @@ l=r\theta인건 \theta의 radian 정의임 (\frac{l}{2\pi r}=\frac{\theta}{2\pi}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_삼각함수" %}
 
-### ☆★☆★☆★☆★진돗개 둘 발령☆★☆★☆★☆★
-아래 내용은 더럽게 기억이 나지 않습니다
+-------------------------------------
+
+### 으악!
+아래 내용은 더럽게 기억이 나지 않습니다 <br/>
 자라나라 머리머리
 
+-------------------------------------
+
 ### 삼각함수 잡다한 공식(1)
-tan\theta = \frac{sin\theta}{cos\theta}
-tan^2\theta + 1 = \frac{1}{cos^2 \theta}
-sin(\pi-\theta)=sin\theta, cos(\pi-\theta)=-cos\theta, tan(\pi-\theta)=-tan\theta
-sin(\frac{\pi}{2}-\theta)=cos\theta, cos(\frac{\pi}{2}-\theta)=sin\theta, tan(\frac{\pi}{2}-\theta)=\frac{1}{tan\theta}
+* $\tan\theta = \frac{sin\theta}{\cos\theta}$
+* $\tan^2\theta + 1 = \frac{1}{\cos^2 \theta}$
+* $\sin(\pi-\theta)=\sin\theta, \cos(\pi-\theta)=-\cos\theta, \tan(\pi-\theta)=-\tan\theta$
+* $\sin(\frac{\pi}{2}-\theta)=\cos\theta, \cos(\frac{\pi}{2}-\theta)=\sin\theta, \tan(\frac{\pi}{2}-\theta)=\frac{1}{\tan\theta}$
+<br/>
+
 ![Alt text](/pictures/mathematics/사인법칙.jpg)
-사인법칙 \frac{a}{sinA}=\frac{b}{sinB}=\frac{c}{sinC}=2R
-제1 코사인법칙 a=b cosC + c cosB
-제2 코사인법칙 a^2=b^2+c^2-2bc cosA
-삼각형ABC의 넓이 S=\frac{1}{2}bc sin A = \sqrt{s(s-a)(s-b)(s-c)} (2s=a+b+c)
+* 사인법칙 $\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R$
+* 제1 코사인법칙 $a=b\cos C + c\cos B$
+* 제2 코사인법칙 $a^2=b^2+c^2-2bc\cos A$
+* $\vartriangle ABC$의 넓이 $S=\frac{1}{2}bc \sin A = \sqrt{s(s-a)(s-b)(s-c)} (2s=a+b+c)$
 
 {% capture context1 %}
 증명법은 아래에
@@ -587,39 +612,44 @@ sin(\frac{\pi}{2}-\theta)=cos\theta, cos(\frac{\pi}{2}-\theta)=sin\theta, tan(\f
 
 {% capture context2 %}
 #### 사인법칙
-
 ##### 원주각
 ![Alt text](/pictures/mathematics/원주각.png)
-원 위의 세 점을 잡아서 만드는 각. 저기서 각 APB
-같은 원 위의 원주각은 모두 동일하다. [링크](https://mathbang.net/186) 참조
-이건 중학교 수학이다. 물론 기억안났음
-엌ㅋㅋㅋ
+* 원 위의 세 점을 잡아서 만드는 각. 저기서 $\angle APB$
+* 같은 원 위의 원주각은 모두 동일하다. [링크](https://mathbang.net/186) 참조
+* 이건 중학교 수학이다. 물론 기억안남 <br/>
+  엌ㅋㅋㅋ
+<br/>
 
 ![Alt text](/pictures/mathematics/사인법칙.png)
-아무튼 점 B와 O를 잇는 선분과 원이 만나는 점 A'를 두면 증명이 된다.
-자세한건 [링크](https://www.mathfactory.net/10678) 참조
+* 아무튼 점 $B$와 $O$를 잇는 선분과 원이 만나는 점 $A'$를 두면 증명이 된다.
+* 자세한건 [링크](https://www.mathfactory.net/10678) 참조
+<br/>
 
 #### 코사인 법칙
 ![Alt text](/pictures/mathematics/제1코사인법칙.png)
-a = b cosC + c cos B
-제1 코사인법칙은 매우 직관적이다
-제1 코사인법칙으로부터
-a^2 = ab cosC + ca cosB, b^2 = bc cosA + ab cosC, c^2 = ca cosB + bc cosA
-a^2-b^2-c^2 = -2bc cosA
-a^2=b^2+c^2 -2bc cosA
-수식놀음이다.
+* 제1 코사인법칙은 매우 직관적이다
+  * $a = b\cos C + c\cos B$
+
+* 제1 코사인법칙으로부터
+  <p> $$ a^2 = ab \cos C + ca \cos B, b^2 = bc \cos A + ab \cos C, c^2 = ca \cos B + bc \cos A \\
+         a^2-b^2-c^2 = -2bc \cos A \\
+         a^2=b^2+c^2 -2bc \cos A $$ </p> <br/>
+  수식놀음이다.
+<br/>
 
 #### 헤론의 공식
 이걸 증명해야하나 싶긴한데
-S=\frac{1}{2}bc sinA인데
-sin^2 A = 1-cos^2 A = (1+cosA)(1-cosA)이고 cosA=\frac{b^2+c^2-a^2}{2bc}이다.
-쑤셔넣고 정리하면 sinA=\frac{2}{bc}\sqrt{s(s-a)(s-b)(s-c)} (2s=a+b+c)라서 증명된다.
+* $S=\frac{1}{2}bc \sin A$
+* $\sin^2 A = 1-\cos^2 A = (1+\cos A)(1-\cos A)이고 \cos A=\frac{b^2+c^2-a^2}{2bc}$이다.
+* 쑤셔넣고 정리하면 $\sin A=\frac{2}{bc}\sqrt{s(s-a)(s-b)(s-c)} (2s=a+b+c)$라서 증명된다.
 
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_삼각함수공식" %}
 
 순열과 조합은 확통 가서 다시 정리함
+
+{% comment %}
 
 {% endcomment %}
 
