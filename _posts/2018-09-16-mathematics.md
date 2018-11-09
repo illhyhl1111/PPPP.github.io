@@ -662,13 +662,155 @@ $$ </p>
 
 순열과 조합은 확통 가서 다시 정리함
 
+## 수학 1
 {% comment %}
 
+### 행렬
+A=(a_ij)=(a_{11} a_{12} \\ a_{21} a_{22})
+A x B = (a_{11}b_{11}+a_{12}b_{21} a_{11}b_{12}+a_{12}b_{22} \\ a_{21}b_{11}+a_{22}b_{21} a_{21}b_{12}+a_{22}b_{22}) 
+A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}(a_{22} -a_{12} \\ -a_{21} a_{11})
+
+{% capture context1 %}
+#### 행렬의 정의
+수 또는 문자를 직사각형 형태로 배열하여 괄호로 묶어낸 것.
+가로 줄을 행이라 하고, 세로 줄을 열이라 할 떄, m개 행, n개 열로 이루어진 행렬을 m x n 행렬이라 함
+n x n은 정사각행렬
+
+<br/>
+
+#### 행렬의 연산
+A=(a_{11} a_{12} \\ a_{21} a_{22}), B=(b_{11} b_{12} \\ b_{21} b_{22})일 때
+A=B \Leftrightarrow a_{ij} = b_{ij}
+A+B=(a_{11}+b_{11} a_{12}+b_{12} \\ a_{21}+b_{21} a_{22}+b_{22})
+A-B=(a_{11}-b_{11} a_{12}-b_{12} \\ a_{21}-b_{21} a_{22}-b_{22})
+kA=(ka_{11} ka_{12} \\ ka_{21} ka_{22})
+
+![Alt text](/pictures/mathematics/274D6B4152FB2FB105.png)
+A x B = (a_{11}b_{11}+a_{12}b_{21} a_{11}b_{12}+a_{12}b_{22} \\ a_{21}b_{11}+a_{22}b_{21} a_{21}b_{12}+a_{22}b_{22})
+  일반적으로, A x B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj})
+O: 모든 성분이 0인 행렬
+I_n = (I_{n,ij}), I_{n,ij}= 1 if i = j, 0 else 인 n차 정사각행렬
+
+<br/>
+
+#### 역행렬
+n차 정사각행렬 A에 대하여, XA=AX=I_n 인 행렬 X가 존재할 때, 행렬 X를 A의 역행렬이라 하고 A^{-1}로 나타냄
+XA=I \Leftrightarrow X=A^{-1}, AX=I \Leftrightarrow X=A^{-1}
+I^{-1} = I
+(A^{-1})^{-1}=A
+(AB)^{-1}=B^{-1}A^{-1}
+(kA)^{-1}=\frac{1}{k}A^{-1}
+(A^n)^{-1}=(A^{-1})^n
+
+이차 정사각행렬 A에 대해서 A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}(a_{22} -a_{12} \\ -a_{21} a_{11})
+일반항은.. 버튼누르세요
+
+<br/>
+
+#### 연립일차방정식과 행렬
+{ax+by=p, cx+dy=q \Leftrightarrow (a b \\ c d)(x \\ y) = (p \\ q) \Leftrightarrow AX=B
+이때 X=A^{-1}B
+A의 역행렬이 존재하지 않는다면, 해는 없거나(a:c=b:d \neq p:q) 무한함(a:c=b:d=p:q)
+
+<br/>
+
+#### 그래프와 행렬(Adjacency Matrix)
+![Alt text](/pictures/mathematics/2453_1.JPG)
+이 때 행렬 A^n의 성분 A^n_{ij}는 n번 이동하여 점 i에서 j로 이동할 수 있는 경로의 갯수
+
+{% endcapture %}
+
+{% capture context2 %}
+#### 행렬과 군
+행렬을 원소로 하는 집합에서 덧셈은 교환, 결합법칙을 만족하고, 항등원 O와 역원 -A가 존재하는 군이다.
+정사각행렬을 원소로 하는 집합에서 덧셈은 교환법칙을 만족하고, 항등원 I가 존재하지만, 결합법칙은 만족하지 않고 역행렬은 없을수도 있는 [모노이드](https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%85%B8%EC%9D%B4%EB%93%9C)이다.
+[증명??](https://proofwiki.org/wiki/Square_Matrices_forms_Monoid)
+<br/>
+
+#### 행렬의 곱셈은 대체 왜 저따구로 정의되었는가
+A x B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj})
+
+A+B=(a_{11}+b_{11} a_{12}+b_{12} \\ a_{21}+b_{21} a_{22}+b_{22})라고 해놨는데
+A x B=(a_{11}b_{11} a_{12}b_{12} \\ a_{21}b_{21} a_{22}b_{22})는 왜 아닌가
+행렬을 배우면서 이러한 의문이 생기지 않는다면 님한텐 문제가 있음
+
+일단 A x B=(a_{11}b_{11} a_{12}b_{12} \\ a_{21}b_{21} a_{22}b_{22})라고 생각해보자
+그럼 행렬의 존재 이유는? 그렇게 되면 여러 숫자를 하필이면 직사각형 형태로 엮어서 저장하는 쓰잘데기 없는 숫자묶음 말고 더 의미가 있는가?
+일단 수학 공부를 좀 하긴 한 사람이면 행렬이라는 표현의 존재 이유 자체가 이 곱셈연산의 방식에 있음을 여럼풋이 느낄 수 있을것이다.
+그렇긴 한데 그래서 왜 저렇게 곱하는거냐고
+
+일단 2차원 평면상의 점 (x, y)가 있다고 치자. 
+그럼 이 점을 어딘가로 선형사상(linear transform) 시켜버리는 함수 f:(x, y) \longrightarrow (ex+fy, gx+hy)는 종종 중요하게 쓰인다.
+아니 그런 함수가 하나 더 있다고 치자. g:(x, y) \longrightarrow (ax+by, cx+dy)
+
+그럼 점 (x, y)를 f로 한번 transform하고 g로 transform한 점 g(f(x, y))를 표현해보자.
+g(f(x,y)) = g(ex+fy, gx+hy) = ((ae+bg)x+(af+bh)y, (ce+dg)x+(cf+dh)y)
+먼가 더럽다.
+
+또 이번엔 3차원 공간상의 점 (x, y, z)에 대한 선형사상을 생각해보자
+그럼 f:(x, y, z) \longrightarrow (ax+by+cz, dx+ey+fz, gx+hy+iz), g:(x, y, z) \longrightarrow ...
+g(f(x, y, z)) = ......
+아 쓰기싫다.
+
+이렇게 선형사상을 함수로 써버리면 매우 꼴뵈기 싫은 부분이 몇개 생기는데,
+첫번째로는 f:(x, y) \longrightarrow (ex+fy, gx+hy), g:(x, y) \longrightarrow (ax+by, cx+dy) 등 
+선형사상의 성질을 결정하는 것은 a, b, c, d와 같은 상수항인데 계속 x, y항을 써줘야된다는거
+두번째로는 2차원 평면이면 4개의 항을, 3차원 공간이면 9개의 항을, n차원 초평면이면 n^2개의 항을
+무려 한 line에다 다 때려박아야된다는거
+이런 안타까운 상황에서 옛날옛적 수학자들은 저러한 표현을 쓰다가 손이 좀 아팠을 것이다.
+
+손이 아파서 화가 난 수학자들은 아래 수식을 뻘하게 쳐다본다
+f:(x, y, z) \longrightarrow (ax+by+cz, dx+ey+fz, gx+hy+iz)
+여기서 ax+by+cz, dx+ey+fz, gx+hy+iz는 f(x, y, z)의 x, y, z축 항을 분리해서 쓴거다.
+그럼 야 ax+by+cz도 x, y, z축 항을 분리해서 a, b, c로 쓰면 되지 않겠느냐? 하는 합리적 의심이 떠오른다
+
+아무튼 이제 f:(x, y) \longrightarrow (ex+fy, gx+hy), g:(x, y) \longrightarrow (ax+by, cx+dy)를 
+X=(x \\ y), F = (e f \\ g h), G = (a b \\ c d) 같이 써보자.
+어떻게 F와 X를 합쳐서 (ex+fy, gx+hy) 꼴이 나오게 할 것이고
+또 어떻게 G, F, X를 합쳐서 g(f(x,y)) = ((ae+bg)x+(af+bh)y, (ce+dg)x+(cf+dh)y) 꼴이 나오게 할 것인가
+
+여기서 수학자들은 뭔가 발견하는데
+X, F, G와 같은 점과 선형사상을 행렬이라고 정의하고,
+행렬의 곱셈 연산을 A x B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj}) 와 같이 정의한다면
+f(x)를 FX, g(f(x))를 GFX, g \circ f를 GF로 나타낼 수 있다는 것.
+더 나아가 이는 임의의 n차원의 점과 사상에 대해서도 성립한다.
+와 씐난다!
+[이것이 바로 선형대수학 제일의 철학, ‘선형사상(=함수)은 행렬과 같다’ 는 말이다.](http://wiki.mathnt.net/index.php?title=%EA%B3%A0%EA%B5%90%EC%83%9D%EB%8F%84_%EC%9D%B4%ED%95%B4%ED%95%A0_%EC%88%98_%EC%9E%88%EB%8A%94_%EA%B5%B0%EB%A1%A0_%EC%9E%85%EB%AC%B8)
+
+아무튼, AB_{ij} = \sum_{k} {a_{ik}b_{kj}같은 정의에 과연 어떤 해석이 가능하길래 점과 사상의 곱, 사상과 사상의 곱 모두에 적용이 되는가?
+솔직히 잘 모르겠다. 나중에 알게되면 적어야지
+
+그 밖에도, 그래프를 행렬로 표현하는 Adjacency matrix에서 곱셈의 의미 등 행렬의 곱셈 정의에는 기타 심오한 의미가 담긴 것으로 보인다.
+아니면 선형사상을 표현하려고 행렬을 정의했는데 side effect로 여러 분야에서 먹힌걸수도 있고
+더 공부해야됨
+
+<br/>
+
+#### 일반적 역행렬
+A^{-1} = \frac{1}{|A|} adj(A)
+where adj(A) = [\bar{A_ij}]^t, \bar{A_ij} = (-1)^{i+j}|M_{ij}|, 
+
+어... 난감하다
+하나씩 보자
+
+adj(A): Adjoint Matrix로써 위 정의 adj(A) = [\bar{A_ij}]^t 를 따른다.
+
+M_{ij}: Minor matrix
+![Alt text](/pictures/mathematics/4.jpg)
+원래 행렬에서 i행 j열을 제거한 행렬.
+
+|A|: determinant
+|A| = \sum_{j=1}{n} {(-1)^{k+j}a_{kj}|M_{kj}|}
+여기서 k는 아무 행이나 상관없다.
+
+뭐.. 역행렬의 선형대수학적 의미(역사상) 등 심오한 파트는 일단 [링크](https://m.blog.naver.com/PostView.nhn?blogId=at3650&logNo=221057878162&categoryNo=3)만 남긴다
+선형대수 할때 자세히 다룰..예정..
+
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="수학1_행렬" %}
+
 {% endcomment %}
-
-## 수학 1
-TBD
-
 ## 수학 2
 TBD
 
