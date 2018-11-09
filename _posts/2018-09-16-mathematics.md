@@ -467,7 +467,10 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 * $f^{-1}(f(x))=x \quad (f^{-1} \circ f = I_x)$
 * $f(f^{-1}(y))=y \quad (f \circ f^{-1} = I_y)$
 * $f:X \longrightarrow Y, g:Y \longrightarrow X$에서 $g \circ f = I_x, f \circ g = I_y \Leftrightarrow g=f^{-1}$ (유일성)
-* 일대일 대응 $f:X \longrightarrow Y, g:Y \longrightarrow Z$에 대하여  $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$
+* 일대일 대응 $f:X \longrightarrow Y, g:Y \longrightarrow Z$에 대하여  $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$ <br/>
+
+* 역함수의 기하학적 성질로, y=f(x) 그래프와 y=f^{-1}(x)는 y=x에 대하여 대칭이다. <br/>
+![Alt text](/pictures/mathematics/역함수.JPG)
 
 {% endcapture %}
 
@@ -667,14 +670,14 @@ $$ </p>
 
 ### 행렬
 A=(a_ij)=(a_{11} a_{12} \\ a_{21} a_{22})
-A x B = (a_{11}b_{11}+a_{12}b_{21} a_{11}b_{12}+a_{12}b_{22} \\ a_{21}b_{11}+a_{22}b_{21} a_{21}b_{12}+a_{22}b_{22}) 
+A \times B = (a_{11}b_{11}+a_{12}b_{21} a_{11}b_{12}+a_{12}b_{22} \\ a_{21}b_{11}+a_{22}b_{21} a_{21}b_{12}+a_{22}b_{22})
 A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}(a_{22} -a_{12} \\ -a_{21} a_{11})
 
 {% capture context1 %}
 #### 행렬의 정의
 수 또는 문자를 직사각형 형태로 배열하여 괄호로 묶어낸 것.
-가로 줄을 행이라 하고, 세로 줄을 열이라 할 떄, m개 행, n개 열로 이루어진 행렬을 m x n 행렬이라 함
-n x n은 정사각행렬
+가로 줄을 행이라 하고, 세로 줄을 열이라 할 떄, m개 행, n개 열로 이루어진 행렬을 m \times n 행렬이라 함
+n \times n은 정사각행렬
 
 <br/>
 
@@ -686,8 +689,8 @@ A-B=(a_{11}-b_{11} a_{12}-b_{12} \\ a_{21}-b_{21} a_{22}-b_{22})
 kA=(ka_{11} ka_{12} \\ ka_{21} ka_{22})
 
 ![Alt text](/pictures/mathematics/274D6B4152FB2FB105.png)
-A x B = (a_{11}b_{11}+a_{12}b_{21} a_{11}b_{12}+a_{12}b_{22} \\ a_{21}b_{11}+a_{22}b_{21} a_{21}b_{12}+a_{22}b_{22})
-  일반적으로, A x B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj})
+A \times B = (a_{11}b_{11}+a_{12}b_{21} a_{11}b_{12}+a_{12}b_{22} \\ a_{21}b_{11}+a_{22}b_{21} a_{21}b_{12}+a_{22}b_{22})
+  일반적으로, A \times B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj})
 O: 모든 성분이 0인 행렬
 I_n = (I_{n,ij}), I_{n,ij}= 1 if i = j, 0 else 인 n차 정사각행렬
 
@@ -728,10 +731,10 @@ A의 역행렬이 존재하지 않는다면, 해는 없거나(a:c=b:d \neq p:q) 
 <br/>
 
 #### 행렬의 곱셈은 대체 왜 저따구로 정의되었는가
-A x B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj})
+A \times B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj})
 
 A+B=(a_{11}+b_{11} a_{12}+b_{12} \\ a_{21}+b_{21} a_{22}+b_{22})라고 해놨는데
-A x B=(a_{11}b_{11} a_{12}b_{12} \\ a_{21}b_{21} a_{22}b_{22})는 왜 아닌가
+A \times B=(a_{11}b_{11} a_{12}b_{12} \\ a_{21}b_{21} a_{22}b_{22})는 왜 아닌가
 행렬을 배우면서 이러한 의문이 생기지 않는다면 님한텐 문제가 있음
 
 일단 A x B=(a_{11}b_{11} a_{12}b_{12} \\ a_{21}b_{21} a_{22}b_{22})라고 생각해보자
@@ -764,14 +767,14 @@ f:(x, y, z) \longrightarrow (ax+by+cz, dx+ey+fz, gx+hy+iz)
 여기서 ax+by+cz, dx+ey+fz, gx+hy+iz는 f(x, y, z)의 x, y, z축 항을 분리해서 쓴거다.
 그럼 야 ax+by+cz도 x, y, z축 항을 분리해서 a, b, c로 쓰면 되지 않겠느냐? 하는 합리적 의심이 떠오른다
 
-아무튼 이제 f:(x, y) \longrightarrow (ex+fy, gx+hy), g:(x, y) \longrightarrow (ax+by, cx+dy)를 
+아무튼 이제 f:(x, y) \longrightarrow (ex+fy, gx+hy), g:(x, y) \longrightarrow (ax+by, cx+dy)를
 X=(x \\ y), F = (e f \\ g h), G = (a b \\ c d) 같이 써보자.
 어떻게 F와 X를 합쳐서 (ex+fy, gx+hy) 꼴이 나오게 할 것이고
 또 어떻게 G, F, X를 합쳐서 g(f(x,y)) = ((ae+bg)x+(af+bh)y, (ce+dg)x+(cf+dh)y) 꼴이 나오게 할 것인가
 
 여기서 수학자들은 뭔가 발견하는데
 X, F, G와 같은 점과 선형사상을 행렬이라고 정의하고,
-행렬의 곱셈 연산을 A x B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj}) 와 같이 정의한다면
+행렬의 곱셈 연산을 A \times B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj}) 와 같이 정의한다면
 f(x)를 FX, g(f(x))를 GFX, g \circ f를 GF로 나타낼 수 있다는 것.
 더 나아가 이는 임의의 n차원의 점과 사상에 대해서도 성립한다.
 와 씐난다!
@@ -788,7 +791,7 @@ f(x)를 FX, g(f(x))를 GFX, g \circ f를 GF로 나타낼 수 있다는 것.
 
 #### 일반적 역행렬
 A^{-1} = \frac{1}{|A|} adj(A)
-where adj(A) = [\bar{A_ij}]^t, \bar{A_ij} = (-1)^{i+j}|M_{ij}|, 
+where adj(A) = [\bar{A_ij}]^t, \bar{A_ij} = (-1)^{i+j}|M_{ij}|,
 
 어... 난감하다
 하나씩 보자
@@ -809,6 +812,131 @@ M_{ij}: Minor matrix
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="수학1_행렬" %}
+
+### 지수, 로그
+x^n=a인 수 x를 a의 n제곱근이라 함. 이때 a^{\frac{1}{n}}=x
+a>0, a\neq 1일 때, 임의의 양수 b=a^x \Leftrightarrow x=\log_{a}{b}
+![Alt text](/pictures/mathematics/로그함수.JPG)
+![Alt text](/pictures/mathematics/로그함수2.JPG)
+
+{% capture context1 %}
+
+#### 지수의 확장
+1. 정수 범위로 확장
+  * 0이 아닌 실수 a에 대하여 a^0=1, a^{-n}=\frac{1}{a^n}
+
+2. 유리수 범위로 확장
+  * a>0에 대하여 a^{\frac{m}{n}}=\sqrt[n]{m}
+
+3. 실수 범위로 확장
+  * a>0, b>0에 대하여 a^x a^y=a^{x+y}, a^x/a^y = a^{x-y}, (a^x)^y=a^{xy}, (ab)^x=a^x b^x
+
+<br/>
+
+#### 로그의 성질
+a>0, a\neq 1, x>0, y>0일 때
+\log_a{1}=0, \log_a{a}=1
+\log_a{xy}=\log_a{x}+log_a{y}, \log_a{\frac{x}{y}}=log_a{x}-log_a{y}
+\log_a{x^n}=n\log_a{x}
+\log_a{b}=\frac{\log_c{b}}{\log_c{a}}, \log_a{b}=\dfrac{1}{\log_b{a}}
+
+#### 지수함수와 로그함수
+y=log_a{x}의 역함수는 y=a^x이기 때문에 둘은 y=x에 대칭임
+딱히 할말이 없네..
+
+{% endcapture %}
+
+{% capture context2 %}
+
+#### 로그 성질 증명
+\log_a{xy}=\log_a{x}+log_a{y}
+\log_a{x}=m, \log_a{y}=n이라 하면, x=a^m, y=a^n, xy=a^{m+n}에서 \log_a{x}+\log_a{y}=m+n=\log_a{xy}
+
+\log_a{b}=\frac{\log_c{b}}{\log_c{a}}
+\log_a{b}=x라 하면 b=a^x, \log_c{b}=log_c{a^x}=x\log_c{a}, \log_a{b}=x=\dfrac{\log_c{b}}{\log_c{a}}
+
+<br/>
+
+#### 실수 범위로 지수의 확장
+자연수에서만 정의되던 지수의 성질을 유지하면서 이를 확장해 나가보자.
+기존의 연산 법칙을 유지시키면서 수 체계를 확장시키는 것을 대수적 형식 불역의 원리라고 한단다.
+
+기존의 연산 법칙이 뭐냐 그럼
+책에서 나오는 논리를 쌩까고 또 Group Theory를 가져와보자.
+
+##### Group isomorphism
+
+Group isomorphism이란, (G, \circ), (H, *)의 2개의 군이 있으면
+forall a, b \in G에 대하여, \pi(a \circ b) = \pi(a) * \pi(b) 를 만족하는 \pi:G \longrightarrow H,
+즉 G의 원소를 H의 원소로 보내버리는 \pi를 (group) homomorphism이라 한다.
+
+
+이때 \pi가 일대일 대응이면 \pi를 group isomorphism이라고 한다.
+[링크](https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)/Group_Isomorphism)
+
+[Isomorphism](https://ko.wikipedia.org/wiki/%EB%8F%99%ED%98%95_%EC%82%AC%EC%83%81)(동형 사상)이란, 서로 구조가 같은 두 대상 사이에, 모든 구조를 보존하는 사상이라고 한다.
+그러니까 어떤 구조 X를 함수 f:X \longrightarrow Y 에 넣어서 Y가 됬어도, Y 안에 X의 모든 정보가 담겨있다는 것이며
+달리 말하자면 f^{-1}:Y \longrightarrow X가 존재하며 f는 일대일 대응이다.
+
+-------------------
+
+일단 자연수로 시작한 지수의 정의에서, 지수함수 \exp는 다음 성질이 있다. (밑을 우선 e로 두었지만, 임의의 밑에 대해서 성립함)
+\forall x,y \in \mathbb{R}: exp(x+y) = \exp(x) \cdot \exp(y)
+이 기존 연산법칙을 유지하면서, 대수적 형식 불역의 원리에 맞춰 수 체계를 실수까지 확장해보자!
+
+(\mathbb{R}, +)의 additive group of real numbers와,
+(\mathbb{R}_{>0}, \times)의 multiplicative group of positive real numbers의 두 group을 생각해 보면,
+함수 \exp는 누가 봐도 Group homomorphism이다.
+다시 말하자면, 지수함수는 실수의 덧셈군을 양의 실수의 곱셈군으로 매칭시키는 함수가 된다.
+
+이때, \exp가 단조증가함수라는 성질에 따라 \exp는 [일대일 대응함수가 되며](https://proofwiki.org/wiki/Strictly_Monotone_Function_is_Bijective)
+y=\exp(x)의 그 역함수는 바로바로 y=\ln(y)가 된다.
+그래서 \exp는 뭐다? group isomorphism이다. (역으로, \ln 함수도 group isomorphism이 된다. 아마?)
+
+
+이딴 얘기를 왜 하는가? Group isomorphism인데 뭐 어쩌라고
+일단 자연수 범위에서 지수함수 a^n이란 어떤 수 a를 n번 반복해서 곱하는거였다.
+근데 이 정의만으론 a^{\sqrt{2}} 같은걸 해석할 엄두가 안나는 것임.
+
+그래서 어떻게 이걸 해석했느냐? 하면
+자연수 범위에서 얻어낸 지수함수의 성질 f(x+y) = f(x) \cdot f(y)을 실수 범위에서는 오히려 지수함수의 정의로 바꿔버린 것
+그러니까 지수함수란 f(x+y) = f(x) \cdot f(y)을 만족하는 함수가 되도록 정의해버림.
+그리고 위에서 정의한 Group isomorphism에 따라, **지수함수는 (실수 덧셈식)을 (양의 실수 곱셈식)으로 매핑시키는 함수가 된다.**
+예를 들면, \exp는 (1+3=4)을 (2.718*20.086=54.598)로 매핑시키는 함수이다
+
+그런데 실수 덧셈식을 양의 실수 곱셈식으로 매핑하는 함수라니, 뭔가 너무 제한이 없다.
+일단 한가지 조건 f(x+y) = f(x) \cdot f(y)이 있긴 한데, 이걸로는 부족하다.
+그래서 여러 지수함수 중, f(x)=2^x를 f(1)=2을 만족하는 자수함수, f(x)=3^x을 f(1)=3을 만족하는 지수함수,
+그리고 f(x)=\exp(x)=e^x를 f(1)=e을 만족하는 지수함수로 부른다.
+그러면 \exp(2)=\exp(1+1)=\exp(1) * \exp(1)=e*e, \exp(3)=\exp(2+1)=\exp(2) * \exp(1)=(e * e) *e, \cdots 가 되겠지?
+
+그리고 \exp는 additive group of **real** numbers의 집합을 정의역으로 하기 때문에, 당연히 2+(-1) 같은 꼴도 허용이 되며,
+\exp(2+(-1))=\exp(1)= e는 \exp(2) * \exp(-1) = e*e * \exp(-1) 와 같으므로
+\exp(-1)=\frac{1}{e}가 되고, \exp(0)=\exp(1) \cdot \exp(-1)=1이 된다.
+
+\frac{1}{3}+(\frac{1}{3}+\frac{1}{3})도 \exp의 정의역으로 허용이 되기 때문에
+\exp(\frac{1}{3}+(\frac{1}{3}+\frac{1}{3})) = \exp(1)=e 는 \exp(\frac{1}{3}) * (\exp(\frac{1}{3}) * \exp(\frac{1}{3}))와 같으므로
+\exp(\frac{1}{3}) = \sqrt[3]{e}가 된다.
+
+\exp(\sqrt{2}) 역시 어떤 양의 실수 곱셈식으로 매핑될 것이며, 그 결과는 당연히 양의 실수이다.
+
+아무튼 설명이 길었는데, 요약하자면
+정의역 X=\mathbb{R}, 치역 Y=\mathbb{R}_{>0}을 가지는 지수함수 f(x)=a^x는,
+f(x+y)=f(x) \cdot f(y)을 만족하고 f(1)=a을 만족하는 함수로 정의된다. 
+(이러한 조건을 만족하는 f(x)의 값은 유일하다!
+  - 증명 아이디어:
+    일단 유리수 지수까진 f(x)가 유일함을 보일 수 있다.
+    그럼 무리수 x에 대해 위 조건을 만족하는 f(x)=\alpha, \beta=\alpha+\epsilon(\neq 0) 2개의 값이 존재한다고 가정하자
+    그럼 임의의 유리수 p에 대하여,
+    f(x-p)=\alpha / f(p) < f(x) = \beta = \alpha+\epsilon < f(x+p) = \alpha * f(p)
+    근데 \epsilon > 0이라고 가정하면, \alpha+\epsilon < \alpha * f(p), 1+\frac{\epsilon}{\alpha} < f(p)
+    여기서 식은 임의의 유리수 p에 대해서 성립해야 하므로, p를 미친놈마냥 작게 두면 그딴 \epsilon은 존재하지 않음
+    \epsilon < 0일때도 마찬가지로 하면 된다. 아무튼 모순임.
+)
+
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="수학1_지수_로그" %}
 
 {% endcomment %}
 ## 수학 2
