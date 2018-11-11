@@ -668,9 +668,9 @@ $$ </p>
 ## 수학 1
 
 ### 행렬
-* $A=(a_ij)=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}$
-* $A \times B = \begin{pmatrix} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22} \\ a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}\end{pmatrix}$
-* $A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}{\begin{pmatrix} a_{22} & -a_{12} \\ -a_{21} & a_{11} \end{pmatrix} }$
+* $A=(a_ij)=\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{pmatrix}$
+* $A \times B = \begin{pmatrix} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22} \\\\ a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}\end{pmatrix}$
+* $A^{-1}=\dfrac{1}{a_{11} a_{22}-a_{12} a_{21}}{\begin{pmatrix} a_{22} & -a_{12} \\\\ -a_{21} & a_{11} \end{pmatrix} }$
 
 {% capture context1 %}
 #### 행렬의 정의
@@ -681,15 +681,15 @@ $$ </p>
 <br/>
 
 #### 행렬의 연산
-* $A=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}, B=\begin{pmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{pmatrix}$일 때
+$A=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}, B=\begin{pmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{pmatrix}$일 때
 * $A=B \Leftrightarrow a_{ij} = b_{ij}$
 * $A+B=\begin{pmatrix} a_{11}+b_{11} & a_{12}+b_{12} \\ a_{21}+b_{21} & a_{22}+b_{22}\end{pmatrix}$
 * $A-B=\begin{pmatrix} a_{11}-b_{11} & a_{12}-b_{12} \\ a_{21}-b_{21} & a_{22}-b_{22}\end{pmatrix}$
 * $kA=\begin{pmatrix} ka_{11} & ka_{12} \\ ka_{21} & ka_{22}\end{pmatrix}$ <br/>
 
-![Alt text](/pictures/mathematics/274D6B4152FB2FB105.png) <br/>
+* ![Alt text](/pictures/mathematics/274D6B4152FB2FB105.png) <br/>
 * $A \times B = \begin{pmatrix} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22} \\ a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}\end{pmatrix}$
-* 일반적으로, $A \times B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj})$ <br/>
+* 일반적으로, $A \times B = (AB_{ij}) = \left(\sum_{k} {a_{ik}b_{kj}}\right)$ <br/>
 
 * $O$: 모든 성분이 0인 행렬
 * $I_n = (I_{n,ij})$, $I_{n,ij}= \begin{cases} 1 & \text{if }i = j \\ 0 & \text{else} \end{cases}$ 인 $n$차 정사각행렬
@@ -697,15 +697,15 @@ $$ </p>
 <br/>
 
 #### 역행렬
-* $n$차 정사각행렬 $A$에 대하여, $XA=AX=I_n$ 인 행렬 $X$가 존재할 때, 행렬 $X$를 $A$의 역행렬이라 하고 $A^{-1}$로 나타냄
-* $XA=I \Leftrightarrow X=A^{-1}, AX=I \Leftrightarrow X=A^{-1}$
+$n$차 정사각행렬 $A$에 대하여, $XA=AX=I_n$ 인 행렬 $X$가 존재할 때, 행렬 $X$를 $A$의 역행렬이라 하고 $A^{-1}$로 나타냄
+* $XA=I \Leftrightarrow X=A^{-1}, \; AX=I \Leftrightarrow X=A^{-1}$
 * $I^{-1} = I$
 * $(A^{-1})^{-1}=A$
 * $(AB)^{-1}=B^{-1}A^{-1}$
 * $(kA)^{-1}=\frac{1}{k}A^{-1}$
 * $(A^n)^{-1}=(A^{-1})^n$ <br/>
 
-* 이차 정사각행렬 $A$에 대해서 $A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}{\begin{pmatrix} a_{22} & -a_{12} \\ -a_{21} & a_{11} \end{pmatrix} }$
+* 이차 정사각행렬 $A$에 대해서 $A^{-1}=\dfrac{1}{a_{11} a_{22}-a_{12} a_{21}}{\begin{pmatrix} a_{22} & -a_{12} \\ -a_{21} & a_{11} \end{pmatrix} }$
 * 일반항은.. 다음 단계에
 
 <br/>
@@ -729,61 +729,67 @@ $$ </p>
 * 행렬을 원소로 하는 집합에서 덧셈은 교환, 결합법칙을 만족하고, 항등원 $O$와 역원 $-A$가 존재하는 군이다.
 * 정사각행렬을 원소로 하는 집합에서 덧셈은 교환법칙을 만족하고, 항등원 $I$가 존재하지만, 결합법칙은 만족하지 않고 역행렬은 없을수도 있는 [모노이드](https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%85%B8%EC%9D%B4%EB%93%9C)이다.
   * [증명??](https://proofwiki.org/wiki/Square_Matrices_forms_Monoid)
+
 <br/>
 
 #### 행렬의 곱셈은 대체 왜 저따구로 정의되었는가
-<p> $$A \times B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj}) $$ </p>
+<p> $$A \times B = (AB_{ij}) = \left(\sum_{k} {a_{ik}b_{kj}}\right) $$ </p>
 <br/>
 $A+B=\begin{pmatrix}a_{11}+b_{11} & a_{12}+b_{12} \\ a_{21}+b_{21} & a_{22}+b_{22} \end{pmatrix}$라고 해놨는데 <br/>
 $A \times B= \begin{pmatrix} a_{11}b_{11} & a_{12}b_{12} \\ a_{21}b_{21} & a_{22}b_{22} \end{pmatrix}$는 왜 아닌가 <br/>
+<br/>
 행렬을 배우면서 이러한 의문이 생기지 않는다면 공부를 매우 하기 싫었던 사람이었을것이다 <br/>
 <br/>
 일단 $A x B= \begin{pmatrix} a_{11}b_{11} & a_{12}b_{12} \\ a_{21}b_{21} & a_{22}b_{22} \end{pmatrix}$라고 생각해보자 <br/>
-그럼 행렬의 존재 이유는? 그렇게 되면 여러 숫자를 하필이면 직사각형 형태로 엮어서 저장하는 쓰잘데기 없는 숫자묶음 말고 더 의미가 있는가? <br/>
-일단 수학 공부를 좀 하긴 한 사람이면 행렬이라는 표현의 존재 이유 자체가 이 곱셈연산의 방식에 있음을 여럼풋이 느낄 수 있을것이다. <br/>
+그럼 행렬의 존재 이유는? <br/>
+그렇게 되면 여러 숫자를 하필이면 직사각형 형태로 엮어서 저장하는 쓰잘데기없는 숫자묶음 말고 더 의미가 있는가? <br/>
+일단 수학 공부를 좀 하긴 한 사람이면 행렬의 존재 이유 자체가 이 곱셈연산의 방식에 있음을 여럼풋이 느낄 수 있을것이다. <br/>
 그렇긴 한데 그래서 왜 저렇게 곱하는거냐고 <br/>
 <br/>
 일단 2차원 평면상의 점 $(x, y)$가 있다고 치자. <br/>
-그럼 이 점을 어딘가로 선형사상(linear transform) 시켜버리는 함수 $f:(x, y) \longrightarrow (ex+fy, gx+hy)$는 종종 중요하게 쓰인다. <br/>
-그런 함수가 하나 더 있다고 치자. $g:(x, y) \longrightarrow (ax+by, cx+dy)$ <br/>
+그럼 이 점을 어딘가로 선형사상(linear transform) 시켜버리는 함수 $f:(x, y) \longrightarrow (ex+fy,\, gx+hy)$는 종종 중요하게 쓰인다. <br/>
+그런 함수가 하나 더 있다고 치자. $g:(x, y) \longrightarrow (ax+by,\, cx+dy)$ <br/>
 <br/>
 그럼 점 $(x, y)$를 $f$로 한번 transform하고 $g$로 transform한 점 $g(f(x, y))$를 표현해보자.<br/>
-<p> $$g(f(x,y)) = g(ex+fy, gx+hy) = ((ae+bg)x+(af+bh)y, (ce+dg)x+(cf+dh)y)$$ </p>
+<p> $$g(f(x,y)) = g(ex+fy,\, gx+hy) = ((ae+bg)x+(af+bh)y,\, (ce+dg)x+(cf+dh)y)$$ </p>
 먼가 더럽다.<br/>
 <br/>
 또 이번엔 3차원 공간상의 점 $(x, y, z)$에 대한 선형사상을 생각해보자 <br/>
-그럼 $f:(x, y, z) \longrightarrow (ax+by+cz, dx+ey+fz, gx+hy+iz), g:(x, y, z) \longrightarrow ...$ <br/>
-$g(f(x, y, z)) = ......$ <br/>
+그럼 $f:(x, y, z) \longrightarrow (ax+by+cz,\, dx+ey+fz,\, gx+hy+iz), \quad g:(x,\, y,\, z) \longrightarrow ...$ <br/>
+$g(f(x,\, y,\, z)) = ......$ <br/>
 아 쓰기싫다. <br/>
 <br/>
 이렇게 선형사상을 함수로 써버리면 매우 꼴뵈기 싫은 부분이 몇개 생기는데,
-* 첫번째로는 $f:(x, y) \longrightarrow (ex+fy, gx+hy), g:(x, y) \longrightarrow (ax+by, cx+dy)$ 등<br/>
-  선형사상의 성질을 결정하는 것은 a, b, c, d와 같은 상수항인데 계속 x, y항을 써줘야된다는거
+* 첫번째로는 $f:(x,\, y) \longrightarrow (ex+fy,\, gx+hy), g:(x,\, y) \longrightarrow (ax+by,\, cx+dy)$ 등<br/>
+  선형사상의 성질을 결정하는 것은 $a,\, b,\, c,\, d$와 같은 상수항인데 계속 $x,\, y$항을 써줘야 된다는것
 * 두번째로는 2차원 평면이면 4개의 항을, 3차원 공간이면 9개의 항을, $n$차원 초평면이면 $n^2$개의 항을<br/>
-  무려 한 line에다 다 때려박아야된다는거<br/>
+  무려 한 line에다 다 때려박아야 된다는것
+
 이런 안타까운 상황에서 옛날옛적 수학자들은 저러한 표현을 쓰다가 손이 좀 아팠을 것이다.<br/>
 <br/>
 손이 아파서 화가 난 수학자들은 아래 수식을 뻘하게 쳐다본다 <br/>
-<p> $$f:(x, y, z) \longrightarrow (ax+by+cz, dx+ey+fz, gx+hy+iz)$$ </p>
-여기서 $ax+by+cz, dx+ey+fz, gx+hy+iz$는 $f(x, y, z)$의 $x, y, z$축 항을 분리해서 쓴거다. <br/>
-그럼 야 $ax+by+cz$도 $x, y, z$축 항을 분리해서 $a, b, c$로 쓰면 되지 않겠느냐? 하는 합리적 의심이 떠오른다<br/>
+<p> $$f:(x,\, y,\, z) \longrightarrow (ax+by+cz,\, dx+ey+fz,\, gx+hy+iz)$$ </p>
+여기서 $ax+by+cz,\, dx+ey+fz,\, gx+hy+iz$는 $f(x, y, z)$의 $x,\, y,\, z$축 항을 분리해서 쓴거다. <br/>
+'그럼 야 $ax+by+cz$도 $x,\, y,\, z$축 항을 분리해서 $a,\, b,\, c$로 쓰면 되지 않겠느냐?' 하는 합리적 의심이 떠오른다<br/>
 <br/>
-그럼 이제 $f:(x, y) \longrightarrow (ex+fy, gx+hy), g:(x, y) \longrightarrow (ax+by, cx+dy)$를<br/>
+그럼 이제 $f:(x, y) \longrightarrow (ex+fy,\, gx+hy), g:(x, y) \longrightarrow (ax+by,\, cx+dy)$를<br/>
 <p> $$X= \begin{pmatrix} x \\ y \end{pmatrix}, F = \begin{pmatrix} e & f \\ g & h \end{pmatrix}, G = \begin{pmatrix}a & b \\ c & d \end{pmatrix}$$ </p>
 와 같이 써보자. <br/>
-그럼 이제 어떻게 $F$와 $X$를 합쳐서 $(ex+fy, gx+hy)$ 꼴이 나오게 할 것이고<br/>
-또 어떻게 $G, F, X$를 합쳐서 $g(f(x,y)) = ((ae+bg)x+(af+bh)y, (ce+dg)x+(cf+dh)y)$ 꼴이 나오게 할 것인가<br/>
+그럼 이제 어떻게 $F$와 $X$를 합쳐서 $(ex+fy,\, gx+hy)$ 꼴이 나오게 할 것이고<br/>
+또 어떻게 $G, F, X$를 합쳐서 $g(f(x,y)) = ((ae+bg)x+(af+bh)y,\, (ce+dg)x+(cf+dh)y)$ 꼴이 나오게 할 것인가<br/>
 <br/>
 여기서 수학자들은 뭔가 발견하는데 <br/>
 $X, F, G$와 같은 점과 선형사상을 행렬이라고 정의하고, <br/>
-행렬의 곱셈 연산을 $A \times B = (AB_{ij}) = (\sum_{k} {a_{ik}b_{kj})$ 와 같이 정의한다면 <br/>
-$f(x)$를 $F \times X$, $g(f(x))$를 $G \times F \times X$, $g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
+행렬의 곱셈 연산을 $A \times B = (AB_{ij}) = \left(\sum_{k} {a_{ik}b_{kj}}\right)$ 와 같이 정의한다면 <br/>
+$f(x)$를 $F \times X$, <br/>
+$g(f(x))$를 $G \times F \times X$, <br/>
+$g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
 더 나아가 이는 임의의 $n$차원의 점과 사상에 대해서도 성립한다. <br/>
 와 씐난다! <br/>
 [이것이 바로 선형대수학 제일의 철학, ‘선형사상(=함수)은 행렬과 같다’ 는 말이다.](http://wiki.mathnt.net/index.php?title=%EA%B3%A0%EA%B5%90%EC%83%9D%EB%8F%84_%EC%9D%B4%ED%95%B4%ED%95%A0_%EC%88%98_%EC%9E%88%EB%8A%94_%EA%B5%B0%EB%A1%A0_%EC%9E%85%EB%AC%B8)<br/>
 <br/>
-아무튼, $AB_{ij} = \sum_{k} {a_{ik}b_{kj}$같은 정의에 과연 어떤 해석이 가능하길래 점과 사상의 곱, 사상과 사상의 곱 모두에 적용이 되는가? <br/>
-솔직히 잘 모르겠다. 나중에 알게되면 적어야지 <br/>
+아무튼, $AB_{ij} = \sum_{k} {a_{ik}b_{kj}}$같은 정의에 과연 어떤 해석이 가능하길래 점과 사상의 곱, 사상과 사상의 곱 모두에 적용이 되는가? <br/>
+솔직히 잘 모르겠다. 나중에 알게되면 적어봄 <br/>
 <br/>
 그 밖에도, 그래프를 행렬로 표현하는 Adjacency matrix에서 곱셈의 의미 등 행렬의 곱셈 정의에는 기타 심오한 의미가 담긴 것으로 보인다.<br/>
 아니면 선형사상을 표현하려고 행렬을 정의했는데 side effect로 여러 분야에서 먹힌걸수도 있고<br/>
@@ -792,8 +798,8 @@ $f(x)$를 $F \times X$, $g(f(x))$를 $G \times F \times X$, $g \circ f$를 $G \t
 <br/>
 
 #### 일반적 역행렬
-<p> $$A^{-1} = \frac{1}{|A|} adj(A) \\
-\text{where }adj(A) = [\bar{A_ij}]^t, \; \bar{A_ij} = (-1)^{i+j}|M_{ij}| $$ </p>
+<p> $$ \begin{align} A^{-1} &= \frac{1}{|A|} adj(A) \\
+\text{where }adj(A) &= [\bar{A_ij}]^t, \; \bar{A_ij} = (-1)^{i+j}|M_{ij}| \end{align}$$ </p>
 
 어... 난감하다 <br/>
 하나씩 보자
@@ -807,10 +813,10 @@ $f(x)$를 $F \times X$, $g(f(x))$를 $G \times F \times X$, $g \circ f$를 $G \t
     ![Alt text](/pictures/mathematics/4.jpg)
 <br/>
 
-* $|A|$
+* $\mid A \mid$
   * determinant
-  * $|A| = \sum_{j=1}^{n} {(-1)^{k+j}a_{kj}|M_{kj}|}$
-    * 여기서 k는 아무 행이나 상관없다.
+  * $\mid A \mid = \sum_{j=1}^{n} {(-1)^{k+j}a_{kj}\mid M_{kj} \mid}$
+    * 여기서 $k$는 아무 행이나 상관없다.
 <br/>
 
 뭐.. 역행렬의 선형대수학적 의미(역사상) 등 심오한 파트는 일단 [링크](https://m.blog.naver.com/PostView.nhn?blogId=at3650&logNo=221057878162&categoryNo=3)만 남긴다. <br/>
