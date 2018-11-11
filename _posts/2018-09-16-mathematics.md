@@ -706,7 +706,7 @@ $n$차 정사각행렬 $A$에 대하여, $XA=AX=I_n$ 인 행렬 $X$가 존재할
 * $(A^n)^{-1}=(A^{-1})^n$ <br/>
 
 * 이차 정사각행렬 $A$에 대해서 $A^{-1}=\dfrac{1}{a_{11} a_{22}-a_{12} a_{21}}{\begin{pmatrix} a_{22} & -a_{12} \\\\ -a_{21} & a_{11} \end{pmatrix} }$
-* 일반항은.. 다음 단계에
+* 일반항은 다음 단계에
 
 <br/>
 
@@ -781,7 +781,7 @@ $g(f(x,\, y,\, z)) = ......$ <br/>
 ------------------------
 
 그럼 이제 $f:(x, y) \longrightarrow (ex+fy,\, gx+hy), g:(x, y) \longrightarrow (ax+by,\, cx+dy)$를<br/>
-<p> $$X= \begin{pmatrix} x \\\\ y \end{pmatrix}, F = \begin{pmatrix} e & f \\\\ g & h \end{pmatrix}, G = \begin{pmatrix}a & b \\\\ c & d \end{pmatrix}$$ </p>
+<p> $$X= \begin{pmatrix} x \\ y \end{pmatrix}, F = \begin{pmatrix} e & f \\ g & h \end{pmatrix}, G = \begin{pmatrix}a & b \\ c & d \end{pmatrix}$$ </p>
 와 같이 써보자. <br/>
 그럼 이제 어떻게 $F$와 $X$를 합쳐서 $(ex+fy,\, gx+hy)$ 꼴이 나오게 할 것이고<br/>
 또 어떻게 $G, F, X$를 합쳐서 $g(f(x,y)) = ((ae+bg)x+(af+bh)y,\, (ce+dg)x+(cf+dh)y)$ 꼴이 나오게 할 것인가<br/>
@@ -836,130 +836,132 @@ $g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
 
 {% include blocks.html context1=context1 context2=context2 topic="수학1_행렬" %}
 
-{% comment %}
-
 ### 지수, 로그
-x^n=a인 수 x를 a의 n제곱근이라 함. 이때 a^{\frac{1}{n}}=x
-a>0, a\neq 1일 때, 임의의 양수 b=a^x \Leftrightarrow x=\log_{a}{b}
-![Alt text](/pictures/mathematics/로그함수.JPG)
+* x^n=a$인 수 $x$를 $a$의 $n$제곱근이라 함. 이때 $a^{\frac{1}{n}}=x$
+* $a>0$, $a\neq 1$일 때, 임의의 양수 $b=a^x \Leftrightarrow x=\log_{a}{b}$
+
+![Alt text](/pictures/mathematics/로그함수.JPG) <br/>
 ![Alt text](/pictures/mathematics/로그함수2.JPG)
 
 {% capture context1 %}
 
 #### 지수의 확장
 1. 정수 범위로 확장
-  * 0이 아닌 실수 a에 대하여 a^0=1, a^{-n}=\frac{1}{a^n}
+  * $0$이 아닌 실수 $a$에 대하여 $a^0=1$, $a^{-n}=\frac{1}{a^n}$
 
 2. 유리수 범위로 확장
-  * a>0에 대하여 a^{\frac{m}{n}}=\sqrt[n]{m}
+  * $a>0$에 대하여 $a^{\frac{m}{n}}=\sqrt[n]{m}$
 
 3. 실수 범위로 확장
-  * a>0, b>0에 대하여 a^x a^y=a^{x+y}, a^x/a^y = a^{x-y}, (a^x)^y=a^{xy}, (ab)^x=a^x b^x
+  * $a>0, b>0$에 대하여 $a^x a^y=a^{x+y}, a^x/a^y = a^{x-y}, (a^x)^y=a^{xy}, (ab)^x=a^x b^x$
 
 <br/>
 
 #### 로그의 성질
-a>0, a\neq 1, x>0, y>0일 때
-\log_a{1}=0, \log_a{a}=1
-\log_a{xy}=\log_a{x}+log_a{y}, \log_a{\frac{x}{y}}=log_a{x}-log_a{y}
-\log_a{x^n}=n\log_a{x}
-\log_a{b}=\frac{\log_c{b}}{\log_c{a}}, \log_a{b}=\dfrac{1}{\log_b{a}}
+$a>0$, $a\neq 1$, $x>0$, $y>0$일 때
+* $\log_a{1}=0, \log_a{a}=1$
+* $\log_a{xy}=\log_a{x}+log_a{y}, \log_a{\frac{x}{y}}=log_a{x}-log_a{y}$
+* $\log_a{x^n}=n\log_a{x}$
+* $\log_a{b}=\frac{\log_c{b}}{\log_c{a}}, \log_a{b}=\dfrac{1}{\log_b{a}}$
 
 #### 지수함수와 로그함수
-y=log_a{x}의 역함수는 y=a^x이기 때문에 둘은 y=x에 대칭임
-딱히 할말이 없네..
+* $y=log_a{x}$의 역함수는 $y=a^x$이기 때문에 둘은 $y=x$에 대칭임
 
 {% endcapture %}
 
 {% capture context2 %}
 
 #### 로그 성질 증명
-\log_a{xy}=\log_a{x}+log_a{y}
-\log_a{x}=m, \log_a{y}=n이라 하면, x=a^m, y=a^n, xy=a^{m+n}에서 \log_a{x}+\log_a{y}=m+n=\log_a{xy}
+$\log_a{xy}=\log_a{x}+log_a{y}$
+* $\log_a{x}=m,\; \log_a{y}=n$이라 하면, $x=a^m,\; y=a^n,\; xy=a^{m+n}$에서 $\log_a{x}+\log_a{y}=m+n=\log_a{xy}$
 
-\log_a{b}=\frac{\log_c{b}}{\log_c{a}}
-\log_a{b}=x라 하면 b=a^x, \log_c{b}=log_c{a^x}=x\log_c{a}, \log_a{b}=x=\dfrac{\log_c{b}}{\log_c{a}}
+$\log_a{b}=\frac{\log_c{b}}{\log_c{a}}$
+* $\log_a{b}=x$라 하면 $b=a^x, \; \log_c{b}=log_c{a^x}=x\log_c{a}, \; \log_a{b}=x=\dfrac{\log_c{b}}{\log_c{a}}$
 
 <br/>
 
 #### 실수 범위로 지수의 확장
-자연수에서만 정의되던 지수의 성질을 유지하면서 이를 확장해 나가보자.
+자연수에서만 정의되던 지수의 성질을 유지하면서 이를 확장해 나가보자.<br/>
 기존의 연산 법칙을 유지시키면서 수 체계를 확장시키는 것을 대수적 형식 불역의 원리라고 한단다.
 
-기존의 연산 법칙이 뭐냐 그럼
+기존의 연산 법칙이 뭐냐 그럼<br/>
 책에서 나오는 논리를 쌩까고 또 Group Theory를 가져와보자.
 
 ##### Group isomorphism
+Group isomorphism이란, $(G, \circ)$, $(H, *)$의 2개의 군이 있으면 <br/>
+$\forall a, b \in G$에 대하여, $\pi(a \circ b) = \pi(a) * \pi(b)$ 를 만족하는 $\pi:G \longrightarrow H$,<br/>
+즉 $G$의 원소를 $H$의 원소로 보내버리는 $\pi$를 (group) homomorphism이라 한다.
 
-Group isomorphism이란, (G, \circ), (H, *)의 2개의 군이 있으면
-forall a, b \in G에 대하여, \pi(a \circ b) = \pi(a) * \pi(b) 를 만족하는 \pi:G \longrightarrow H,
-즉 G의 원소를 H의 원소로 보내버리는 \pi를 (group) homomorphism이라 한다.
-
-
-이때 \pi가 일대일 대응이면 \pi를 group isomorphism이라고 한다.
+이때 $\pi$가 일대일 대응이면 $\pi$를 group isomorphism이라고 한다. <br/>
 [링크](https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)/Group_Isomorphism)
 
-[Isomorphism](https://ko.wikipedia.org/wiki/%EB%8F%99%ED%98%95_%EC%82%AC%EC%83%81)(동형 사상)이란, 서로 구조가 같은 두 대상 사이에, 모든 구조를 보존하는 사상이라고 한다.
-그러니까 어떤 구조 X를 함수 f:X \longrightarrow Y 에 넣어서 Y가 됬어도, Y 안에 X의 모든 정보가 담겨있다는 것이며
-달리 말하자면 f^{-1}:Y \longrightarrow X가 존재하며 f는 일대일 대응이다.
+참고로 [Isomorphism](https://ko.wikipedia.org/wiki/%EB%8F%99%ED%98%95_%EC%82%AC%EC%83%81)(동형 사상)이란, 서로 구조가 같은 두 대상 사이에, 모든 구조를 보존하는 사상이라고 한다. <br/>
+그러니까 어떤 구조 $X$를 함수 $f:X \longrightarrow Y$ 에 넣어서 $Y$가 됬어도, $Y$ 안에 $X$의 모든 정보가 담겨있다는 것이며 <br/>
+달리 말하자면 $f^{-1}:Y \longrightarrow X$가 존재하며 $f$는 일대일 대응이다.
 
 -------------------
 
-일단 자연수로 시작한 지수의 정의에서, 지수함수 \exp는 다음 성질이 있다. (밑을 우선 e로 두었지만, 임의의 밑에 대해서 성립함)
-\forall x,y \in \mathbb{R}: exp(x+y) = \exp(x) \cdot \exp(y)
+일단 자연수로 시작한 지수의 정의에서, 지수함수 $\exp$는 다음 성질이 있다. (밑을 우선 $e$로 두었지만, 임의의 밑에 대해서 성립함)
+<p> $$\forall x,y \in \mathbb{R}: exp(x+y) = \exp(x) \cdot \exp(y) $$ </p>
 이 기존 연산법칙을 유지하면서, 대수적 형식 불역의 원리에 맞춰 수 체계를 실수까지 확장해보자!
 
-(\mathbb{R}, +)의 additive group of real numbers와,
-(\mathbb{R}_{>0}, \times)의 multiplicative group of positive real numbers의 두 group을 생각해 보면,
-함수 \exp는 누가 봐도 Group homomorphism이다.
+$(\mathbb{R}, +)$의 **additive group of real numbers**와, <br/>
+$(\mathbb{R}_{>0}, \times)$의 **multiplicative group of positive real numbers**의 두 group을 생각해 보면, <br/>
+함수 $\exp$는 누가 봐도 Group homomorphism이다. <br/>
 다시 말하자면, 지수함수는 실수의 덧셈군을 양의 실수의 곱셈군으로 매칭시키는 함수가 된다.
 
-이때, \exp가 단조증가함수라는 성질에 따라 \exp는 [일대일 대응함수가 되며](https://proofwiki.org/wiki/Strictly_Monotone_Function_is_Bijective)
-y=\exp(x)의 그 역함수는 바로바로 y=\ln(y)가 된다.
-그래서 \exp는 뭐다? group isomorphism이다. (역으로, \ln 함수도 group isomorphism이 된다. 아마?)
+이때, $\exp$가 단조증가함수라는 성질에 따라 $\exp$는 [일대일 대응함수가 되며](https://proofwiki.org/wiki/Strictly_Monotone_Function_is_Bijective) <br/>
+$y=\exp(x)$의 그 역함수는 바로바로 $y=\ln(y)$가 된다. <br/>
+그래서 $\exp$는 뭐다? group isomorphism이다. (역으로, $\ln$ 함수도 group isomorphism이 된다. 아마?)
 
+------------------------
 
-이딴 얘기를 왜 하는가? Group isomorphism인데 뭐 어쩌라고
-일단 자연수 범위에서 지수함수 a^n이란 어떤 수 a를 n번 반복해서 곱하는거였다.
-근데 이 정의만으론 a^{\sqrt{2}} 같은걸 해석할 엄두가 안나는 것임.
+이딴 얘기를 왜 하는가? Group isomorphism인데 뭐 어쩌라고 <br/>
+일단 자연수 범위에서 지수함수 $a^n$이란 어떤 수 $a$를 $n$번 반복해서 곱하는거였다. <br/>
+근데 이 정의만으론 $a^{\sqrt{2}}$ 같은걸 해석할 엄두가 안나는 것임. <br/>
+결국 실수 범위에서도 납득이 가능한 정의를 찾고 싶은거다. <br/>
 
-그래서 어떻게 이걸 해석했느냐? 하면
-자연수 범위에서 얻어낸 지수함수의 성질 f(x+y) = f(x) \cdot f(y)을 실수 범위에서는 오히려 지수함수의 정의로 바꿔버린 것
-그러니까 지수함수란 f(x+y) = f(x) \cdot f(y)을 만족하는 함수가 되도록 정의해버림.
-그리고 위에서 정의한 Group isomorphism에 따라, **지수함수는 (실수 덧셈식)을 (양의 실수 곱셈식)으로 매핑시키는 함수가 된다.**
-예를 들면, \exp는 (1+3=4)을 (2.718*20.086=54.598)로 매핑시키는 함수이다
+그래서 어떻게 이걸 해석했느냐? 하면 <br/>
+자연수 범위에서 얻어낸 지수함수의 성질 $f(x+y) = f(x) \cdot f(y)$을 오히려 지수함수의 정의로 바꿔버린 것<br/>
+그러니까 지수함수란 $f(x+y) = f(x) \cdot f(y)$을 만족하는 함수가 되도록 정의해버림.<br/>
+그리고 위에서 정의한 Group isomorphism에 따라, **지수함수는 (실수 덧셈식)을 (양의 실수 곱셈식)으로 매핑시키는 함수가 된다.**<br/>
+예를 들면, $\exp$는 $(1+3=4)$을 $(2.718*20.086=54.598)$로 매핑시키는 함수이다
 
-그런데 실수 덧셈식을 양의 실수 곱셈식으로 매핑하는 함수라니, 뭔가 너무 제한이 없다.
-일단 한가지 조건 f(x+y) = f(x) \cdot f(y)이 있긴 한데, 이걸로는 부족하다.
-그래서 여러 지수함수 중, f(x)=2^x를 f(1)=2을 만족하는 자수함수, f(x)=3^x을 f(1)=3을 만족하는 지수함수,
-그리고 f(x)=\exp(x)=e^x를 f(1)=e을 만족하는 지수함수로 부른다.
-그러면 \exp(2)=\exp(1+1)=\exp(1) * \exp(1)=e*e, \exp(3)=\exp(2+1)=\exp(2) * \exp(1)=(e * e) *e, \cdots 가 되겠지?
+그런데 실수 덧셈식을 양의 실수 곱셈식으로 매핑하는 함수라니, 뭔가 너무 제한이 없다.<br/>
+일단 한가지 조건 $f(x+y) = f(x) \cdot f(y)$이 있긴 한데, 이것만으로 함수를 특정짓기엔 부족하다.<br/>
+그래서 여러 지수함수 중, $f(x)=2^x$를 $f(1)=2$을 만족하는 지수함수, $f(x)=3^x$을 $f(1)=3$을 만족하는 지수함수,<br/>
+그리고 $f(x)=\exp(x)=e^x$를 $f(1)=e$를 만족하는 지수함수로 부른다.<br/>
 
-그리고 \exp는 additive group of **real** numbers의 집합을 정의역으로 하기 때문에, 당연히 2+(-1) 같은 꼴도 허용이 되며,
-\exp(2+(-1))=\exp(1)= e는 \exp(2) * \exp(-1) = e*e * \exp(-1) 와 같으므로
-\exp(-1)=\frac{1}{e}가 되고, \exp(0)=\exp(1) \cdot \exp(-1)=1이 된다.
+이러한 조건을 만족하는 $f(x)$의 값은 유일하다!
+- 증명 아이디어:
+  * 일단 임의의 자연수 $n$에 대하여 $f\left(\frac{1}{n}\right)$이 유일함을 보일 수 있다 (아래의 $\exp(\frac{1}{3}) = \sqrt[3]{e}$ 부분과 같이)
+  * 그럼 임의의 실수 $x$에 대해 위 조건을 만족하는 $f(x)=\alpha, \; \beta=\alpha+\epsilon(\neq 0)$ 2개의 값이 존재한다고 가정하자
+  * 그럼 임의의 자연수 n에 대하여, <br/>
+    $f\left(x-\frac{1}{n}\right)=\alpha / f\left(\frac{1}{n}\right) < f(x) = \beta = \alpha+\epsilon < f\left(x+\frac{1}{n}\right) = \alpha * f\left(\frac{1}{n}\right)$
+  * 근데 $\epsilon > 0$이라고 가정하면, <br/>
+    $\alpha+\epsilon < \alpha * f\left(\frac{1}{n}\right), \; 1+\frac{\epsilon}{\alpha} < f\left(\frac{1}{n}\right)$ <br/>
+    여기서 식은 임의의 자연수 $n$에 대해서 성립해야 하므로, $n$를 미친놈마냥 크게 두면 그딴 $\epsilon$은 존재하지 않음
+  * $\epsilon < 0$일때도 마찬가지로 하면 된다. 아무튼 모순임.
 
-\frac{1}{3}+(\frac{1}{3}+\frac{1}{3})도 \exp의 정의역으로 허용이 되기 때문에
-\exp(\frac{1}{3}+(\frac{1}{3}+\frac{1}{3})) = \exp(1)=e 는 \exp(\frac{1}{3}) * (\exp(\frac{1}{3}) * \exp(\frac{1}{3}))와 같으므로
-\exp(\frac{1}{3}) = \sqrt[3]{e}가 된다.
+----------------------
 
-\exp(\sqrt{2}) 역시 어떤 양의 실수 곱셈식으로 매핑될 것이며, 그 결과는 당연히 양의 실수이다.
+그러면 우선 $\exp(2)=\exp(1+1)=\exp(1) * \exp(1)=e * e, \; \exp(3)=\exp(2+1)=\exp(2) * \exp(1)=(e * e) * e $ 가 되고 <br/>
+$\exp$는 additive group of **real** numbers의 집합을 정의역으로 하기 때문에, 당연히 $2+(-1)$ 같은 꼴도 허용이 되며,<br/>
+$\exp(2+(-1))=\exp(1)= e$는 $\exp(2) * \exp(-1) = e*e * \exp(-1)$ 와 같으므로<br/>
+$\exp(-1)=\frac{1}{e}$가 되고, $\exp(0)=\exp(1) \cdot \exp(-1)=1$이 된다.<br/>
+
+$\frac{1}{3}+(\frac{1}{3}+\frac{1}{3})$도 $\exp$의 정의역으로 허용이 되기 때문에<br/>
+$\exp(\frac{1}{3}+(\frac{1}{3}+\frac{1}{3})) = \exp(1)=e$ 는 $\exp(\frac{1}{3}) * (\exp(\frac{1}{3}) * \exp(\frac{1}{3}))$와 같으므로<br/>
+$\exp(\frac{1}{3}) = \sqrt[3]{e}$가 된다.
+
+$\exp(\sqrt{2})$ 역시 어떤 양의 실수 곱셈식으로 매핑될 것이며, 그 결과는 당연히 양의 실수이다.
+
+-----------------
 
 아무튼 설명이 길었는데, 요약하자면
-정의역 X=\mathbb{R}, 치역 Y=\mathbb{R}_{>0}을 가지는 지수함수 f(x)는,
-f(x+y)=f(x) \cdot f(y)을 만족하도록 정의된 (실수들의 덧셈) \longrightarrow (양의 실수들의 곱셈) 으로 매핑시키는 함수이고,
-그 중 f(x)=a^x는 f(1)=a을 만족하는 함수로 정의된다.
-
-(이러한 조건을 만족하는 f(x)의 값은 유일하다!
-  - 증명 아이디어:
-    일단 임의의 자연수 n에 대하여 f\left(\frac{1}{n}\right)이 유일함을 보일 수 있다.
-    그럼 임의의 실수 x에 대해 위 조건을 만족하는 f(x)=\alpha, \beta=\alpha+\epsilon(\neq 0) 2개의 값이 존재한다고 가정하자
-    그럼 임의의 자연수 n에 대하여,
-    f\left(x-\frac{1}{n}\right)=\alpha / f\left(\frac{1}{n}\right) < f(x) = \beta = \alpha+\epsilon < f\left(x+\frac{1}{n}\right) = \alpha * f\left(\frac{1}{n}\right)
-    근데 \epsilon > 0이라고 가정하면, \alpha+\epsilon < \alpha * f\left(\frac{1}{n}\right), 1+\frac{\epsilon}{\alpha} < f\left(\frac{1}{n}\right)
-    여기서 식은 임의의 자연수 n에 대해서 성립해야 하므로, n를 미친놈마냥 크게 두면 그딴 \epsilon은 존재하지 않음
-    \epsilon < 0일때도 마찬가지로 하면 된다. 아무튼 모순임.
-)
+1. 정의역 $X=\mathbb{R}$, 치역 $Y=\mathbb{R}_{>0}$을 가지는 지수함수 $f(x)$는,
+2. $f(x+y)=f(x) \cdot f(y)$을 만족하도록 정의된, (실수들의 덧셈) $\longrightarrow$ (양의 실수들의 곱셈) 으로 매핑시키는 함수이고,
+3. 그 중 $f(x)=a^x$는 $f(1)=a$을 만족하는 함수로 정의된다.
 
 - 혼자서 공부한거라 이상한 부분이 있을수 있음
 
@@ -968,11 +970,11 @@ f(x+y)=f(x) \cdot f(y)을 만족하도록 정의된 (실수들의 덧셈) \longr
 {% include blocks.html context1=context1 context2=context2 topic="수학1_지수_로그" %}
 
 ### 수열
-등차수열 a_n=a+(n-1)d, S_n=\dfrac{n\{2a+(n-1)d\}}{2}
-등비수열 a_n=ar^{n-1}, S_n=\dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1} (a\neq 1)
-\sum_{k=1}^{n} {k^2} = \dfrac{n(n+1)(2n+1)}{6}, \sum_{k=1}^{n} {k^3} = \left\{\dfrac{n(n+1)}{2}\right\}^2
-\sum_{k=1}^{n} {\dfrac{1}{k(k+1)}} = \sum_{k=1}^{n} {\dfrac{1}{k} - \dfrac{1}{k+1}} = 1-\dfrac{1}{n+1}
-\sum_{k=1}^{n} {\dfrac{1}{\sqrt{k} + \sqrt{k-1}} = \sum_{k=1}^{n} {\sqrt{k} - \sqrt{k-1}} = \sqrt{n}
+* 등차수열 $a_n=a+(n-1)d, S_n=\dfrac{n\{2a+(n-1)d\}}{2}$
+* 등비수열 $a_n=ar^{n-1}, S_n=\dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1} (a\neq 1)$
+* $\sum_{k=1}^{n} {k^2} = \dfrac{n(n+1)(2n+1)}{6}, \sum_{k=1}^{n} {k^3} = \left\{\dfrac{n(n+1)}{2}\right\}^2$
+* $\sum_{k=1}^{n} {\dfrac{1}{k(k+1)}} = \sum_{k=1}^{n} {\dfrac{1}{k} - \dfrac{1}{k+1}} = 1-\dfrac{1}{n+1}$
+* $\sum_{k=1}^{n} {\dfrac{1}{\sqrt{k} + \sqrt{k-1}} = \sum_{k=1}^{n} {\sqrt{k} - \sqrt{k-1}} = \sqrt{n}$
 
 {% capture context1 %}
 증명은 다음단계에
@@ -980,95 +982,118 @@ f(x+y)=f(x) \cdot f(y)을 만족하도록 정의된 (실수들의 덧셈) \longr
 
 {% capture context2 %}
 #### 등차수열의 합
-S_n = a + (a+d) + (a+2d) + \cdots + \{a+(n-1)d\}
-S_n = \{a+(n-1)d\} + \{a+(n-2)d\} + \{a+(n-3)d\} + \cdots + a
-2S_n = \{2a+(n-1)d\} \times n, S_n = \frac{n\{2a+(n-1)d\}}{2}
+* $S_n = a + (a+d) + (a+2d) + \cdots + \{a+(n-1)d\}$
+* $S_n = \{a+(n-1)d\} + \{a+(n-2)d\} + \{a+(n-3)d\} + \cdots + a$
+* $2S_n = \{2a+(n-1)d\} \times n, S_n = \frac{n\{2a+(n-1)d\}}{2}$
 
 <br/>
 
 #### 등비수열의 합
-S_n = a+ar+ar^2+\cdots\+ar^{n-1}
-rS_n= ar+ar^2+ar^3+\cdots\+ar^{n}
-(1-r)S_n=a-ar^n = a(1-r^n), S_n = \dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1} (a\neq 1)
+* $S_n = a+ar+ar^2+\cdots\+ar^{n-1}$
+* $rS_n= ar+ar^2+ar^3+\cdots\+ar^{n}$
+* $(1-r)S_n=a-ar^n = a(1-r^n), \; S_n = \dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1} (a\neq 1)$
+
+<br/>
 
 #### 자연수의 거듭제곱 합
-일단 \sum_{k=1}^{n} {k} = \frac{n(n+1}{2}이다.
-귀납적으로(더 정확히는 transfinite induction) 1부터 m-1까지의 거듭제곱의 합 \sum_{k=1}^{n} {k^{m-1}} = S_{m-1}(n)을 모두 알고 있다고 가정하자
+* 일단 $\sum_{k=1}^{n} {k} = \frac{n(n+1}{2}$이다.
+* 귀납적으로(더 정확히는 transfinite induction) $1$부터 $m-1$까지의 거듭제곱의 합 $\sum_{k=1}^{n} {k^{m-1}} = S_{m-1}(n)$을 모두 알고 있다고 가정하자
+<br/>
 
-a_x = (x+1)^{m+1} - x^{m+1} = \sum_{k=0}^{m} {_{m+1} C_k x^k} 으로 두면
-\sum_{x=1}^{n} {a_x} = (n+1)^m -1 = \sum_{x=1}^{n} {\sum_{k=0}^{m} {_{m+1} C_k x^k}}
-= \sum_{k=0}^{m} {_{m+1} C_k \left(\sum_{x=1}^{n} {x^k} \right) } = \sum_{k=0}^{m} {_{m+1} C_k S_k(n)}
-\therefore (m+1) S_m(n) = (n+1)^m -1 - \sum_{k=0}^{m-1} {_{m+1} C_k S_k(n)}
+* $a_x = (x+1)^{m+1} - x^{m+1} = \sum_{k=0}^{m} {_{m+1} C_k x^k}$ 으로 두면
+<p>$$ \begin{align}
+\sum_{x=1}^{n} {a_x} &= (n+1)^m -1 = \sum_{x=1}^{n} {\sum_{k=0}^{m} {_{m+1} C_k x^k}} \\
+&= \sum_{k=0}^{m} {_{m+1} C_k \left(\sum_{x=1}^{n} {x^k} \right) } \\
+&= \sum_{k=0}^{m} {_{m+1} C_k S_k(n)} \\
+\therefore (m+1) S_m(n) &= (n+1)^m -1 - \sum_{k=0}^{m-1} {_{m+1} C_k S_k(n)}
+\end{align} $$</p>
+
+<br/>
 
 #### 분수꼴 수열의 합
-수열이 \frac{1}{a_n a_{n+1}} (등차수열 a_n) 형태면 \frac{1}{a_n a_{n+1}} = \frac{1}{a_{n+1}-a_{n}}\left(\frac{1}{a_n} - \frac{1}{a_{n+1}} \right)로 바꾼다.
+수열이 $\frac{1}{a_n a_{n+1}}$ (등차수열 $a_n$) 형태면 <br/>
+$\frac{1}{a_n a_{n+1}} = \frac{1}{a_{n+1}-a_{n}}\left(\frac{1}{a_n} - \frac{1}{a_{n+1}} \right)$로 바꾼다.
 
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="수학1_수열" %}
 
 ### 수학적 귀납법
-자연수 n에 대한 명제 p(n)이 모든 자연수 n에 대하여 성립한다는 것을 증명하는 방법. 다음 2가지를 보이면 된다
-  1. n=1일 때, p(n)이 성립
-  2. n=k일 때, p(n)이 성립한다고 가정하면 n=k+1일 때에도 명제 p(n)이 성립
-귀납법을 통해 수열의 점화식을 a_{n+1} - a_n = d, a_1 = a와 같이 나타낸다.
+자연수 $n$에 대한 명제 $p(n)$이 모든 자연수 $n$에 대하여 성립한다는 것을 증명하는 방법. 다음 2가지를 보이면 된다
+  1. $n=1$일 때, $p(n)$이 성립
+  2. $n=k$일 때, $p(n)$이 성립한다고 가정하면 $n=k+1$일 때에도 명제 $p(n)$이 성립
+
+귀납법을 통해 수열의 점화식을 $a_{n+1} - a_n = d, a_1 = a$와 같이 나타낸다.
 
 {% capture context1 %}
 
 #### 초한귀납법(transfinite induction) (강한 수학적 귀납법)
-귀납법 p(k) \Rightarrow p(k+1)을 확장하여, p(1) \wedge p(2) \wedge \cdots \wedge p(k) \Rightarrow p(k+1)임을 보이는 정리.
-아예 자연수 \mathbb{N} = (1, 2, \cdots )가 아닌, 순서 관계가 정의된 임의의 집합(서수) A로 확장할 수도 있다.
-[한줄로 요약](https://namu.wiki/w/%EC%88%98%ED%95%99%EC%A0%81%20%EA%B7%80%EB%82%A9%EB%B2%95)하면 아래와 같다
-x \in A에 대하여, \forall y \in A, \left(y<x \Rightarrow p(y) \right) \Rightarrow p(x)
+* 귀납법 $p(k) \Rightarrow p(k+1)$을 확장하여, $p(1) \wedge p(2) \wedge \cdots \wedge p(k) \Rightarrow p(k+1)$임을 보이는 정리.
+* 아예 자연수 $\mathbb{N} = (1, 2, \cdots )$가 아닌, 순서 관계가 정의된 임의의 집합(서수) $A$로 확장할 수도 있다.
+* [한줄로 요약](https://namu.wiki/w/%EC%88%98%ED%95%99%EC%A0%81%20%EA%B7%80%EB%82%A9%EB%B2%95)하면 아래와 같다
+  * $x \in A$에 대하여, $\forall y \in A, \left(y<x \Rightarrow p(y) \right) \Rightarrow p(x)$
+
+<br/>
 
 #### 수열의 점화식과 일반항
-1. a_{n+1} = a_n + f(n)
-  * a_n = a_1 + \sum_{k=1}^{n-1} {f(k)}
+1. $a_{n+1} = a_n + f(n)$
+  * $a_n = a_1 + \sum_{k=1}^{n-1} {f(k)}$
 
-2. a_{n+1} = f(n)a_n
-  * a_n = a_1 \prod_{k=1}^{n-1} {f(k)}
+2. $a_{n+1} = f(n)a_n$
+  * $a_n = a_1 \prod_{k=1}^{n-1} {f(k)}$
 
-3. a_{n+1} = pa_n + q (p\neq 0, p\neq 1, q\neq 0)
-  * a_{n+1}-\alpha = p(a_n - \alpha) 꼴로 변형(\alpha=\frac{q}{p+1})하면 a_n=(a_1-\alpha)p^{n-1}+\alpha
+3. $a_{n+1} = pa_n + q (p\neq 0, p\neq 1, q\neq 0)$
+  * $a_{n+1}-\alpha = p(a_n - \alpha)$ 꼴로 변형$(\alpha=\frac{q}{p+1})$하면
+  * $a_n=(a_1-\alpha)p^{n-1}+\alpha$
 
 {% endcapture %}
 
 {% capture context2 %}
 #### 뻘소리1 - 귀납법의 증명
-수학적 귀납법을 어떻게 증명하느냐? 가 문득 궁금해졌다
+수학적 귀납법을 어떻게 증명하느냐? 가 문득 궁금해졌다 <br/>
 괜히 그랬다. 아 내 시간
 
-우선 [자연수의 정렬성](http://blog.daum.net/_blog/BlogTypeView.do?blogid=0RpSK&articleno=13&categoryId=3&regdt=20141126162353)이라는게 있는데,
+--------------------
+
+우선 [자연수의 정렬성](http://blog.daum.net/_blog/BlogTypeView.do?blogid=0RpSK&articleno=13&categoryId=3&regdt=20141126162353)이라는게 있는데, <br/>
 간단히 말해서 자연수 \mathbb{N}의 임의의 부분집합 S에는 최소항이 존재한다는 사실.
 
-페아노 공리계 안에서, 이 자연수의 정렬성은 초한귀납법과 [무한 강하법](https://ko.wikipedia.org/wiki/%EB%AC%B4%ED%95%9C%EA%B0%95%ED%95%98%EB%B2%95)과 모두 서로 동치이다.
-앞에서 다룬 바로는, 초한귀납법은 임의의 서수 A에 대해서 성립하는, 귀납법의 상위 개념이다.
-그러면 초한귀납법 (\Leftrightarrow 자연수의 정렬성) AND \mathbb{N} \backslash {0} \subseteq \mathbb{N} + 1(모든 0이 아닌 자연수는 어떤 자연수 +1이다)
-이 2개의 논리곱과 수학적 귀납법은 [동치가 된다](https://ko.wikipedia.org/wiki/%EC%88%98%ED%95%99%EC%A0%81_%EA%B7%80%EB%82%A9%EB%B2%95).
+페아노 공리계 안에서, 이 자연수의 정렬성은 초한귀납법과 [무한 강하법](https://ko.wikipedia.org/wiki/%EB%AC%B4%ED%95%9C%EA%B0%95%ED%95%98%EB%B2%95)과 모두 서로 동치이다.<br/>
+앞에서 다룬 바로는, 초한귀납법은 임의의 서수 $A$에 대해서 성립하는, 귀납법의 상위 개념이다.<br/>
+그러면 초한귀납법 ($\Leftrightarrow$ 자연수의 정렬성) AND $\mathbb{N} \backslash {0} \subseteq \mathbb{N} + 1$(모든 $0$이 아닌 자연수는 어떤 자연수 $+1$이다)<br/>
+이 2개의 논리곱과 수학적 귀납법은 [동치가 된다](https://ko.wikipedia.org/wiki/%EC%88%98%ED%95%99%EC%A0%81_%EA%B7%80%EB%82%A9%EB%B2%95).<br/>
 
 [증명](http://j1w2k3.tistory.com/1116)
 
-그럼 이제 서로 동치인건 알겠으니,
-자연수의 정렬성과 (모든 0이 아닌 자연수는 어떤 자연수 +1이다) 라는 사실이 먼저 증명되는가, 수학적 귀납법이 먼저 증명되는가 라는 문제가 있는데
+-------------------
+
+그럼 이제 서로 동치인건 알겠으니, <br/>
+자연수의 정렬성과 (모든 $0$이 아닌 자연수는 어떤 자연수 $+1$이다) 라는 사실이 먼저 증명되는가, 수학적 귀납법이 먼저 증명되는가 라는 문제가 있는데 <br/>
 자연수 체계를 묘사하는 5개의 공리을 모아놓은 [페아노 공리계](https://ko.wikipedia.org/wiki/%ED%8E%98%EC%95%84%EB%85%B8_%EA%B3%B5%EB%A6%AC%EA%B3%84) 에서는
-아무래도 자연수의 정렬성을 먼저 공리로 두고 귀납법을 증명하는거 같긴 한데
+아무래도 자연수의 정렬성을 먼저 공리로 두고 귀납법을 증명하는거 같긴 한데 <br/>
 솔직히 잘 모르겠다 뭐래는건지
 
 참고로 그 악명높은 1+1의 증명도 페아노 공리계를 좀 더 파고들면 가능한 것 같다.
 [링크](http://blog.naver.com/PostView.nhn?blogId=a4gkyum&logNo=220978355057&parentCategoryNo=60&categoryNo=&viewDate=&isShowPopularPosts=true&from=search)
 
 아 안해
+<br/>
 
 #### 뻘소리2 - 귀납법의 범위 확장
-자연수에서만 정의한 수학적 귀납법의 범위를 어디까지 확장할 수 있는가...
-일단 정수까진 가능할 것 같다. p(0)가 성립함을 보이고 p(-k) \Rightarrow p(-k-1)이 성립함을 보이면 될 것 같다...
-그렇다면 (\mathbb{Z}, \mathbb{Z})과 같은 두 정수 쌍은? p(n, m) \Rightarrow p(n, m\pm 1) \wedge p(n\pm 1, m)을 보이면 될 것 같다..
-임의의 유리수 \frac{p}{q} 는 결국 두 정수 쌍으로 나타낼 수 있다. 결국 유리수에 대해서도 성립하는 것 같다...
+자연수에서만 정의한 수학적 귀납법의 범위를 어디까지 확장할 수 있는가 <br/>
+두둥
 
-자연수, 정수, 유리수는 일단 모두 \aleph_0 에 속한다. 그러니까 [원소 갯수가 수학적으로 같다](https://terms.naver.com/entry.nhn?docId=3568639&cid=58944&categoryId=58970).
-근데 실수부턴 2^{\aleph_0}에 속하기 때문에 [안된다](https://terms.naver.com/entry.nhn?docId=3568763&cid=58944&categoryId=58970).
+일단 정수까진 가능할 것 같다. $p(0)$가 성립함을 보이고 $p(-k) \Rightarrow p(-k-1)$이 성립함을 보이면 될 것 같다...
 
-정수나 유리수에 대해서 적용이 됨을 엄밀하게 증명 가능한지는 모르겠다.
+그렇다면 $(\mathbb{Z}, \mathbb{Z})$과 같은 두 정수 쌍은? <br/>
+$p(n, m) \Rightarrow p(n, m\pm 1) \wedge p(n\pm 1, m)$을 보이면 될 것 같다 <br/>
+임의의 유리수 $\frac{p}{q}$ 는 결국 두 정수 쌍으로 나타낼 수 있다. <br/>
+결국 유리수에 대해서도 성립하는 것 같다...
+
+자연수, 정수, 유리수는 일단 모두 $\aleph_0$ 에 속한다. 그러니까 [원소 갯수가 수학적으로 같다](https://terms.naver.com/entry.nhn?docId=3568639&cid=58944&categoryId=58970). <br/>
+근데 실수부턴 $2^{\aleph_0}$에 속하기 때문에 [안된다](https://terms.naver.com/entry.nhn?docId=3568763&cid=58944&categoryId=58970). <br/>
+
+정수나 유리수에 대해서 적용이 됨을 엄밀하게 증명 가능한지는 모르겠다. <br/>
 아몰랑
 
 {% endcapture %}
@@ -1076,74 +1101,78 @@ x \in A에 대하여, \forall y \in A, \left(y<x \Rightarrow p(y) \right) \Right
 {% include blocks.html context1=context1 context2=context2 topic="수학1_귀납법" %}
 
 ### 극한
-무한수열 {a_n}에서, n \to \inf로 보낼 때
-  * 수렴: \lim_{n \to \inf} {a_n} = \alpha
-  * 발산: \lim_{n \to \inf} {a_n} = \pm \inf
+무한수열 ${a_n}$에서, $n \to \inf$로 보낼 때
+  * 수렴: $\lim_{n \to \inf} {a_n} = \alpha$
+  * 발산: $\lim_{n \to \inf} {a_n} = \pm \inf$
     * 진동: 발산하되 양이나 음의 무한대로 발산하지 않음
-무한수열 {a_n}의 n항까지의 부분합 S_n=\sum_{k=1}^{n} {a_k}가 n \to \inf: S_n \to S일 때 무한급수가 수렴한다고 함.
-무한급수 S=\sum_{n=1}^{\inf} {a_n}가 수렴 \Rightarrow \lim_{n \to \inf} {a_n}=0
+무한수열 ${a_n}$의 $n$항까지의 부분합 $S_n=\sum_{k=1}^{n} {a_k}가 n \to \inf: S_n \to S$일 때 무한급수가 수렴한다고 함.
+무한급수 $S=\sum_{n=1}^{\inf} {a_n}$가 수렴 $\Rightarrow \lim_{n \to \inf} {a_n}=0$
 
 {% capture context1 %}
 #### 극한의 정의(급식)
-무한수열 {a_n}에서 n이 한없이 커질 때 a_n이 일정한 값 \alpha에 한없이 가까워지면, 무한수열 {a_n}는 \alpha에 수렴한다고 정의하고 \alpha를 극한값이라 한다.
-\lim_{n \to \inf} {a_n}=\alpha, 또는 n \to \inf 일 때 a_n \to \alpha
-\lim_{n \to \inf} {a_n}=\pm \inf일 때 양의(음의) 무한대로 발산한다고 정의하고,
-{a_n}이 수렴하거나 양이나 음의 무한대로 발산하지 않으면 수열이 진동한다고 정의한다. (발산의 일종)
+* 무한수열 ${a_n}$에서 $n$이 한없이 커질 때 $a_n$이 일정한 값 $\alpha$에 한없이 가까워지면, <br/>
+  무한수열 ${a_n}$는 $\alpha$에 수렴한다고 정의하고 $\alpha$를 극한값이라 한다.
+  * $\lim_{n \to \inf} {a_n}=\alpha$, 또는 $n \to \inf$ 일 때 $a_n \to \alpha$ 로 표현한다
+* $\lim_{n \to \inf} {a_n}=\pm \inf$일 때 양의(음의) 무한대로 발산한다고 정의하고,
+* ${a_n}$이 수렴하거나 양이나 음의 무한대로 발산하지 않으면 수열이 진동한다고 정의한다. (발산의 일종)
 
 극한의 정의(학식)은 나중에 학식파트에서 자세히 다루도록 하자.
 
-#### 수열의 극한 기본성질
-\lim_{n \to \inf} {a_n} = \alpha, \lim_{n \to \inf} {b_n} = \beta 일 때,
-\lim_{n \to \inf} {a_n\pm b_n} = \alpha \pm \beta
-\lim_{n \to \inf} {ka_n} = k\alpha
-\lim_{n \to \inf} {a_n b_n} = \alpha \beta
-(b_n \neq 0, \beta \neq 0) \Rightarrow \lim {\frac{a_n}{b_n}} = \frac{\alpha}{\beta}
+<br/>
 
-무한급수 \sum_{n=1}^{\inf} {a_n}=S, \sum_{n=1}^{\inf} {b_n}=T 일 때,
-\sum_{n=1}^{\inf} {a_n\pm b_n}=S\pm T
-\sum_{n=1}^{\inf} {ca_n}=cS
+#### 수열의 극한 기본성질
+$\lim_{n \to \inf} {a_n} = \alpha, \; \lim_{n \to \inf} {b_n} = \beta$ 일 때,
+* $\lim_{n \to \inf} {a_n\pm b_n} = \alpha \pm \beta$
+* $\lim_{n \to \inf} {ka_n} = k\alpha$
+* $\lim_{n \to \inf} {a_n b_n} = \alpha \beta$
+* $(b_n \neq 0, \beta \neq 0) \Rightarrow \lim {\frac{a_n}{b_n}} = \frac{\alpha}{\beta}$
+
+무한급수 $\sum_{n=1}^{\inf} {a_n}=S, \; \sum_{n=1}^{\inf} {b_n}=T$ 일 때,
+* $\sum_{n=1}^{\inf} {a_n\pm b_n}=S\pm T$
+* $\sum_{n=1}^{\inf} {ca_n}=cS$
 
 #### 수열의 극한의 대소관계
-\lim_{n \to \inf} {a_n} = \alpha, \lim_{n \to \inf} {b_n} = \beta \; \wedge \; \forall n \in \mathbb{N}, a_n \leq b_n \Rightarrow \alpha \leq \beta
-\lim_{n \to \inf} {a_n} = \lim_{n \to \inf} {b_n} = \alpha \; \wedge \; \forall n \in \mathbb{N}, a_n \leq c_n \leq b_n \Rightarrow \lim_{n \to \inf} {c_n} = \alpha
+* $\lim_{n \to \inf} {a_n} = \alpha, \lim_{n \to \inf} {b_n} = \beta \; \wedge \; \forall n \in \mathbb{N}, a_n \leq b_n \Rightarrow \alpha \leq \beta$
+* $\lim_{n \to \inf} {a_n} = \lim_{n \to \inf} {b_n} = \alpha \; \wedge \; \forall n \in \mathbb{N}, a_n \leq c_n \leq b_n \Rightarrow \lim_{n \to \inf} {c_n} = \alpha$
+
 두번째는 샌드위치 정리라고도 불린다.
 
 #### 수열의 극한값 구하기
-분수꼴의 무한수열 \frac{a_n}{b_n}의 극한은 a_n과 b_n의 최고차항의 계수로 구한다.
-(분모 차수)<(분자 차수)이면 \pm \inf, (분모 차수)>(분자 차수)이면 0, 차수가 같으면 \dfrac{a_n 최고차항 계수}{b_n 최고차항 계수}
+* 분수꼴의 무한수열 $\frac{a_n}{b_n}$의 극한은 $a_n$과 $b_n$의 최고차항의 계수로 구한다.
+  * (분모 차수)<(분자 차수)이면 $\pm \inf$, (분모 차수)>(분자 차수)이면 $0$, 차수가 같으면 $\dfrac{a_n 최고차항 계수}{b_n 최고차항 계수}$
 
-수열 버전의 로피탈 정리인 Stolz-Cesaro Theorem이란게 있는데
-\lim_{n \to \inf} {\dfrac{a_{n+1}-a_n}{b_{n+1}-b{n}}} = L \Rightarrow \lim_{n \to \inf} {\frac{a_n}{b_n}} = L
-증명은.. 관심없어서 생략
+* 수열 버전의 로피탈 정리인 Stolz-Cesaro Theorem이란게 있는데
+<p> $$ \lim_{n \to \inf} {\dfrac{a_{n+1}-a_n}{b_{n+1}-b{n}}} = L \Rightarrow \lim_{n \to \inf} {\frac{a_n}{b_n}} = L $$ </p>
+  * 증명은.. 관심없어서 생략
 
-무한등비수열 a_n = ar^{n-1}에서, r>1일 때 발산, r=1일 때 수렴, |r| < 1일 때 0(수렴), r \leq -1일 때 진동한다.
+* 무한등비수열 $a_n = ar^{n-1}$에서, $r>1$일 때 발산, $r=1$일 때 수렴, $\bar r \bar < 1$일 때 $0$(수렴), $r \leq -1$일 때 진동한다.
 
 {% endcapture %}
 
 {% capture context2 %}
-수1 파트에서 여태껏 뻘소리 오지게 했는데
+수1 파트에서 여태껏 뻘소리 오지게 했는데 <br/>
 극한은 대학교 입학하면 미적분학에서 바로 다루니까 여기선 이지하게 가즈아
 
 #### 무한등비수열의 극한 증명
-1. r>1일 때
-  r=1+h(h>0), r^n=(1+h)^n \geq 1+nh. 테일러 급수 쓰면 되지만 귀납법써도 됨.
-  \lim_{n \to \inf} {r^n} = \lim_{n \to \inf} {1+nh} = \inf
-2. r=1일 때
-  뭐
-3. |r|<1일 때
-  r=0이면 0, r\neq 0이면 \frac{1}{|r|}>1, \lim_{n \to \inf} {\frac{1}{|r|}} = \inf
-  \therefore \lim_{n \to \inf} {|r^n|}=0, \lim_{n \to \inf} {r^n}=0
-4. r \leq -1일 때
-  r=-1이면 {r^n}은 진동하고, r<-1이면 \lim_{n \to \inf} {|r^n|}=\inf 이고 부호가 교대로 바뀌므로 진동함.
+1. $r>1$일 때
+  * $r=1+h(h>0), r^n=(1+h)^n \geq 1+nh$. 테일러 급수 쓰면 되지만 귀납법써도 증명 됨.
+  * $\lim_{n \to \inf} {r^n} = \lim_{n \to \inf} {1+nh} = \inf$
+2. $r=1$일 때
+  * 뭐
+3. $\bar r \bar <1$일 때
+  * $r=0$이면 $0$, $r\neq 0$이면 $\frac{1}{|r|}>1, \; \lim_{n \to \inf} {\frac{1}{|r|}} = \inf$
+  * $\therefore \lim_{n \to \inf} {|r^n|}=0, \; \lim_{n \to \inf} {r^n}=0$
+4. $r \leq -1$일 때
+  * $r=-1$이면 ${r^n}$은 진동하고, $r<-1$이면 $\lim_{n \to \inf} {\bar r^n \bar}=\inf$ 이고 부호가 교대로 바뀌므로 진동함.
 
 #### 샌드위치 정리 증명
-증명을 찾아봤더니 극한의 학식정의론 증명이 안된다
+증명을 찾아봤더니 극한의 학식정의론 증명이 안된다 <br/>
 미적분학 가서 해야지 ㅅㄱ
 
 #### 무한급수와 수열의 극한 사이의 관계 증명
-\lim_{n \to \inf} {a_n} = \lim_{n \to \inf} {b_n} = \alpha \; \wedge \; \forall n \in \mathbb{N}, a_n \leq c_n \leq b_n \Rightarrow \lim_{n \to \inf} {c_n} = \alpha
-a_n = S_n - S_n-1 (n \geq 2), \lim_{n \to \inf} {a_n} = \lim_{n \to \inf} {S_n - S_{n-1}} = S-S = 0.
-대우로, \lim_{n \to \inf} {a_n} \neq 0 이면 무한급수 \sum_{n=1}^{\inf} {a_n}은 발산함.
+<p> $$ \lim_{n \to \inf} {a_n} = \lim_{n \to \inf} {b_n} = \alpha \; \wedge \; \forall n \in \mathbb{N}, a_n \leq c_n \leq b_n \Rightarrow \lim_{n \to \inf} {c_n} = \alpha $$ </p>
+* $ a_n = S_n - S_n-1 (n \geq 2), \lim_{n \to \inf} {a_n} = \lim_{n \to \inf} {S_n - S_{n-1}} = S-S = 0 $
+* 대우로, $\lim_{n \to \inf} {a_n} \neq 0 이면 무한급수 \sum_{n=1}^{\inf} {a_n}$은 발산함.
 
 {% endcapture %}
 
