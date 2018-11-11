@@ -1174,10 +1174,10 @@ $\lim_{n \to \inf} {a_n} = \alpha, \; \lim_{n \to \inf} {b_n} = \beta$ 일 때,
 * $ a_n = S_n - S_n-1 (n \geq 2), \lim_{n \to \inf} {a_n} = \lim_{n \to \inf} {S_n - S_{n-1}} = S-S = 0 $
 * 대우로, $\lim_{n \to \inf} {a_n} \neq 0 이면 무한급수 \sum_{n=1}^{\inf} {a_n}$은 발산함.
 
+{% endcapture %}
+
 {% include blocks.html context1=context1 context2=context2 topic="수학1_극한" %}
 
-
-{% endcomment %}
 ## 수학 2
 TBD
 
