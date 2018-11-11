@@ -565,7 +565,7 @@ $$ </p>
   * $let \; A=\sqrt{a_1^2+a_2^2+\cdots+a_n^2}, \; B=\sqrt{b_1^2+b_2^2+\cdots+b_n^2}$
   * 산술 기화평균 부둥식에 따라 <br/>
     $\sqrt{\dfrac{a_i^2}{A^2} \dfrac{b_i^2}{B^2}} \leq \dfrac{1}{2}\left(\dfrac{a_i^2}{A^2}+\dfrac{b_i^2}{B^2}\right)$
-  * 이걸 $i=1$ 부터 $n$에 대한 부등식을 모두 더하면 우변은 1이 되고, 결국 $\sum\lim\limitsits_{i=1}^{n} {\sqrt{a_i^2 b_i^2}} \leq AB$로 증명된다. <br/>
+  * 이걸 $i=1$ 부터 $n$에 대한 부등식을 모두 더하면 우변은 1이 되고, 결국 $\sum\limits_{i=1}^{n} {\sqrt{a_i^2 b_i^2}} \leq AB$로 증명된다. <br/>
 
 <br/>
 * [재배열 부등식](https://namu.wiki/w/%EC%9E%AC%EB%B0%B0%EC%97%B4%20%EB%B6%80%EB%93%B1%EC%8B%9D) 도 볼만함
@@ -689,7 +689,7 @@ $A=\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{pmatrix}, B=\begin{
 
 * ![Alt text](/pictures/mathematics/274D6B4152FB2FB105.png) <br/>
 * $A \times B = \begin{pmatrix} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22} \\\\ a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}\end{pmatrix}$
-* 일반적으로, $A \times B = (AB_{ij}) = \left(\sum\lim\limitsits_{k} {a_{ik}b_{kj}}\right)$ <br/>
+* 일반적으로, $A \times B = (AB_{ij}) = \left(\sum\limits_{k} {a_{ik}b_{kj}}\right)$ <br/>
 
 * $O$: 모든 성분이 0인 행렬
 * $I_n = (I_{n,ij})$, $I_{n,ij}= \begin{cases} 1 & \text{if }i = j \\\\ 0 & \text{else} \end{cases}$ 인 $n$차 정사각행렬
@@ -733,7 +733,7 @@ $n$차 정사각행렬 $A$에 대하여, $XA=AX=I_n$ 인 행렬 $X$가 존재할
 <br/>
 
 #### 행렬의 곱셈은 대체 왜 저따구로 정의되었는가
-<p> $$A \times B = (AB_{ij}) = \left(\sum\lim\limitsits_{k} {a_{ik}b_{kj}}\right) $$ </p>
+<p> $$A \times B = (AB_{ij}) = \left(\sum\limits_{k} {a_{ik}b_{kj}}\right) $$ </p>
 <br/>
 $A+B=\begin{pmatrix}a_{11}+b_{11} & a_{12}+b_{12} \\\\ a_{21}+b_{21} & a_{22}+b_{22} \end{pmatrix}$라고 해놨는데 <br/>
 $A \times B= \begin{pmatrix} a_{11}b_{11} & a_{12}b_{12} \\\\ a_{21}b_{21} & a_{22}b_{22} \end{pmatrix}$는 왜 아닌가 <br/>
@@ -788,7 +788,7 @@ $g(f(x,\, y,\, z)) = ......$ <br/>
 <br/>
 여기서 수학자들은 뭔가 발견하는데 <br/>
 $X, F, G$와 같은 점과 선형사상을 행렬이라고 정의하고, <br/>
-행렬의 곱셈 연산을 $A \times B = (AB_{ij}) = \left(\sum\lim\limitsits_{k} {a_{ik}b_{kj}}\right)$ 와 같이 정의한다면 <br/>
+행렬의 곱셈 연산을 $A \times B = (AB_{ij}) = \left(\sum\limits_{k} {a_{ik}b_{kj}}\right)$ 와 같이 정의한다면 <br/>
 $f(x)$를 $F \times X$, <br/>
 $g(f(x))$를 $G \times F \times X$, <br/>
 $g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
@@ -798,7 +798,7 @@ $g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
 
 ------------------------
 
-아무튼, $AB_{ij} = \sum\lim\limitsits_{k} {a_{ik}b_{kj}}$같은 정의에 과연 어떤 해석이 가능하길래 점과 사상의 곱, 사상과 사상의 곱 모두에 적용이 되는가? <br/>
+아무튼, $AB_{ij} = \sum\limits_{k} {a_{ik}b_{kj}}$같은 정의에 과연 어떤 해석이 가능하길래 점과 사상의 곱, 사상과 사상의 곱 모두에 적용이 되는가? <br/>
 솔직히 잘 모르겠다. 나중에 알게되면 적어봄 <br/>
 <br/>
 그 밖에도, 그래프를 행렬로 표현하는 Adjacency matrix에서 곱셈의 의미 등 행렬의 곱셈 정의에는 기타 심오한 의미가 담긴 것으로 보인다.<br/>
@@ -825,7 +825,7 @@ $g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
 
 * $\left\|A \right\|$
   * determinant
-  * $\left\| A \right\| = \sum\lim\limitsits_{j=1}^{n} {(-1)^{k+j}a_{kj}\left\| M_{kj} \right\|}$
+  * $\left\| A \right\| = \sum\limits_{j=1}^{n} {(-1)^{k+j}a_{kj}\left\| M_{kj} \right\|}$
     * 여기서 $k$는 아무 행이나 상관없다.
 <br/>
 
@@ -980,9 +980,9 @@ $\exp(\sqrt{2})$ 역시 어떤 양의 실수 곱셈식으로 매핑될 것이며
 ### 수열
 * 등차수열 $a_n=a+(n-1)d, S_n=\dfrac{n\{2a+(n-1)d\}}{2}$
 * 등비수열 $a_n=ar^{n-1}, S_n=\dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1} (a\neq 1)$
-* $\sum\lim\limitsits_{k=1}^{n} {k^2} = \dfrac{n(n+1)(2n+1)}{6}, \quad \sum\lim\limitsits_{k=1}^{n} {k^3} = \left\\{\dfrac{n(n+1)}{2}\right\\}^2$
-* $\sum\lim\limitsits_{k=1}^{n} {\dfrac{1}{k(k+1)}} = \sum\lim\limitsits_{k=1}^{n} {\dfrac{1}{k} - \dfrac{1}{k+1}} = 1-\dfrac{1}{n+1}$
-* $\sum\lim\limitsits_{k=1}^{n} {\dfrac{1}{\sqrt{k} + \sqrt{k-1}}} = \sum\lim\limitsits_{k=1}^{n} {\sqrt{k} - \sqrt{k-1}} = \sqrt{n}$
+* $\sum\limits_{k=1}^{n} {k^2} = \dfrac{n(n+1)(2n+1)}{6}, \quad \sum\limits_{k=1}^{n} {k^3} = \left\\{\dfrac{n(n+1)}{2}\right\\}^2$
+* $\sum\limits_{k=1}^{n} {\dfrac{1}{k(k+1)}} = \sum\limits_{k=1}^{n} {\dfrac{1}{k} - \dfrac{1}{k+1}} = 1-\dfrac{1}{n+1}$
+* $\sum\limits_{k=1}^{n} {\dfrac{1}{\sqrt{k} + \sqrt{k-1}}} = \sum\limits_{k=1}^{n} {\sqrt{k} - \sqrt{k-1}} = \sqrt{n}$
 
 {% capture context1 %}
 증명은 다음단계에
@@ -1004,16 +1004,16 @@ $\exp(\sqrt{2})$ 역시 어떤 양의 실수 곱셈식으로 매핑될 것이며
 <br/>
 
 #### 자연수의 거듭제곱 합
-* 일단 $\sum\lim\limitsits_{k=1}^{n} {k} = \frac{n(n+1)}{2}$이다.
-* 귀납적으로(더 정확히는 transfinite induction) $1$부터 $m-1$까지의 거듭제곱의 합 $\sum\lim\limitsits_{k=1}^{n} {k^{m-1}} = S_{m-1}(n)$을 모두 알고 있다고 가정하자
+* 일단 $\sum\limits_{k=1}^{n} {k} = \frac{n(n+1)}{2}$이다.
+* 귀납적으로(더 정확히는 transfinite induction) $1$부터 $m-1$까지의 거듭제곱의 합 $\sum\limits_{k=1}^{n} {k^{m-1}} = S_{m-1}(n)$을 모두 알고 있다고 가정하자
 <br/>
 
-* $a_x = (x+1)^{m+1} - x^{m+1} = \sum\lim\limitsits_{k=0}^{m} {_{m+1} C_k x^k}$ 으로 두면
+* $a_x = (x+1)^{m+1} - x^{m+1} = \sum\limits_{k=0}^{m} {_{m+1} C_k x^k}$ 으로 두면
 <p>$$ \begin{align}
-\sum\lim\limitsits_{x=1}^{n} {a_x} &= (n+1)^m -1 = \sum\lim\limitsits_{x=1}^{n} {\sum\lim\limitsits_{k=0}^{m} {_{m+1} C_k x^k}} \\
-&= \sum\lim\limitsits_{k=0}^{m} {_{m+1} C_k \left(\sum\lim\limitsits_{x=1}^{n} {x^k} \right) } \\
-&= \sum\lim\limitsits_{k=0}^{m} {_{m+1} C_k S_k(n)} \\
-\therefore (m+1) S_m(n) &= (n+1)^m -1 - \sum\lim\limitsits_{k=0}^{m-1} {_{m+1} C_k S_k(n)}
+\sum\limits_{x=1}^{n} {a_x} &= (n+1)^m -1 = \sum\limits_{x=1}^{n} {\sum\limits_{k=0}^{m} {_{m+1} C_k x^k}} \\
+&= \sum\limits_{k=0}^{m} {_{m+1} C_k \left(\sum\limits_{x=1}^{n} {x^k} \right) } \\
+&= \sum\limits_{k=0}^{m} {_{m+1} C_k S_k(n)} \\
+\therefore (m+1) S_m(n) &= (n+1)^m -1 - \sum\limits_{k=0}^{m-1} {_{m+1} C_k S_k(n)}
 \end{align} $$</p>
 
 <br/>
@@ -1045,7 +1045,7 @@ $\dfrac{1}{a_n a_{n+1}} = \dfrac{1}{a_{n+1}-a_{n}}\left(\dfrac{1}{a_n} - \dfrac{
 
 #### 수열의 점화식과 일반항
 1. $a_{n+1} = a_n + f(n)$
-  * $a_n = a_1 + \sum\lim\limitsits_{k=1}^{n-1} {f(k)}$
+  * $a_n = a_1 + \sum\limits_{k=1}^{n-1} {f(k)}$
 
 2. $a_{n+1} = f(n)a_n$
   * $a_n = a_1 \prod_{k=1}^{n-1} {f(k)}$
@@ -1121,8 +1121,8 @@ $p(n, m) \Rightarrow p(n, m\pm 1) \wedge p(n\pm 1, m)$을 보이면 될 것 같�
   * 발산: $\lim\limits_{n \to \infty} {a_n} = \pm \infty$
     * 진동: 발산하되 양이나 음의 무한대로 발산하지 않음
 
-* 무한수열 ${a_n}$의 $n$항까지의 부분합 $S_n=\sum\lim\limitsits_{k=1}^{n} {a_k}$가 $n \to \infty: S_n \to S$일 때 무한급수가 수렴한다고 함.
-* 무한급수 $S=\sum\lim\limitsits_{n=1}^{\infty} {a_n}$가 수렴 $\Rightarrow \lim\limits_{n \to \infty} {a_n}=0$
+* 무한수열 ${a_n}$의 $n$항까지의 부분합 $S_n=\sum_{k=1}^{n} {a_k}$가 $n \to \infty: S_n \to S$일 때 무한급수가 수렴한다고 함.
+* 무한급수 $S=\sum_{n=1}^{\infty} {a_n}$가 수렴 $\Rightarrow \lim\limits_{n \to \infty} {a_n}=0$
 
 {% capture context1 %}
 #### 극한의 정의(급식)
@@ -1141,11 +1141,11 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 * $\lim\limits_{n \to \infty} {a_n\pm b_n} = \alpha \pm \beta$
 * $\lim\limits_{n \to \infty} {ka_n} = k\alpha$
 * $\lim\limits_{n \to \infty} {a_n b_n} = \alpha \beta$
-* $(b_n \neq 0, \beta \neq 0) \Rightarrow \lim\limits {\frac{a_n}{b_n}} = \frac{\alpha}{\beta}$
+* $(b_n \neq 0, \beta \neq 0) \Rightarrow \lim {\frac{a_n}{b_n}} = \frac{\alpha}{\beta}$
 
-무한급수 $\sum\lim\limitsits_{n=1}^{\infty} {a_n}=S, \; \sum\lim\limitsits_{n=1}^{\infty} {b_n}=T$ 일 때,
-* $\sum\lim\limitsits_{n=1}^{\infty} {a_n\pm b_n}=S\pm T$
-* $\sum\lim\limitsits_{n=1}^{\infty} {ca_n}=cS$
+무한급수 $\sum_{n=1}^{\infty} {a_n}=S, \; \sum_{n=1}^{\infty} {b_n}=T$ 일 때,
+* $\sum_{n=1}^{\infty} {a_n\pm b_n}=S\pm T$
+* $\sum_{n=1}^{\infty} {ca_n}=cS$
 
 <br/>
 
@@ -1198,7 +1198,7 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 #### 무한급수와 수열의 극한 사이의 관계 증명
 <p> $$ \left(\lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {b_n} = \alpha \right) \; \wedge \; \left(\forall n \in \mathbb{N} \right), a_n \leq c_n \leq b_n \Rightarrow \lim\limits_{n \to \infty} {c_n} = \alpha $$ </p>
 * $ a_n = S_n - S_n-1 (n \geq 2), \lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {S_n - S_{n-1}} = S-S = 0 $
-* 대우로, $\lim\limits_{n \to \infty} {a_n} \neq 0$ 이면 무한급수 $\sum\lim\limitsits_{n=1}^{\infty} {a_n}$은 발산함.
+* 대우로, $\lim\limits_{n \to \infty} {a_n} \neq 0$ 이면 무한급수 $\sum\limits_{n=1}^{\infty} {a_n}$은 발산함.
 
 {% endcapture %}
 
