@@ -877,7 +877,7 @@ $\log_a{xy}=\log_a{x}+log_a{y}$
 
 <br/>
 
-$\log_a{b}=\frac{\log_c{b}}{\log_c{a}}$
+$\log_a{b}=\dfrac{\log_c{b}}{\log_c{a}}$
 * $\log_a{b}=x$라 하면 $b=a^x, \; \log_c{b}=log_c{a^x}=x\log_c{a}, \; \log_a{b}=x=\dfrac{\log_c{b}}{\log_c{a}}$
 
 <br/>
@@ -893,10 +893,10 @@ $\log_a{b}=\frac{\log_c{b}}{\log_c{a}}$
 
 ##### Group isomorphism
 Group isomorphism이란, $(G, \circ)$, $(H, *)$의 2개의 군이 있으면 <br/>
-$\forall a, b \in G$에 대하여, $\phi(a \circ b) = \pi(a) * \pi(b)$ 를 만족하는 $\phi:G \longrightarrow H$,<br/>
+$\forall a, b \in G$에 대하여, $\phi(a \circ b) = \phi(a) * \phi(b)$ 를 만족하는 $\phi:G \longrightarrow H$,<br/>
 즉 $G$의 원소를 $H$의 원소로 보내버리는 $\phi$를 (group) homomorphism이라 한다.
 
-이때 $\pi$가 일대일 대응이면 $\pi$를 group isomorphism이라고 한다.
+이때 $\phi$가 일대일 대응이면 $\phi$를 group isomorphism이라고 한다.
 [링크](https://proofwiki.org/wiki/Definition:Isomorphism_(Abstract_Algebra)/Group_Isomorphism)
 
 참고로 [Isomorphism](https://ko.wikipedia.org/wiki/%EB%8F%99%ED%98%95_%EC%82%AC%EC%83%81)(동형 사상)이란, <br/>
@@ -1048,9 +1048,9 @@ $\dfrac{1}{a_n a_{n+1}} = \dfrac{1}{a_{n+1}-a_{n}}\left(\dfrac{1}{a_n} - \dfrac{
   * $a_n = a_1 + \sum\limits_{k=1}^{n-1} {f(k)}$
 
 2. $a_{n+1} = f(n)a_n$
-  * $a_n = a_1 \prod_{k=1}^{n-1} {f(k)}$
+  * $a_n = a_1 \prod\limits_{k=1}^{n-1} {f(k)}$
 
-3. $a_{n+1} = pa_n + q (p\neq 0, p\neq 1, q\neq 0)$
+3. $a_{n+1} = pa_n + q \; (p\neq 0, p\neq 1, q\neq 0)$
   * $a_{n+1}-\alpha = p(a_n - \alpha)$ 꼴로 변형$(\alpha=\frac{q}{p+1})$하면
   * $a_n=(a_1-\alpha)p^{n-1}+\alpha$
 
@@ -1121,8 +1121,8 @@ $p(n, m) \Rightarrow p(n, m\pm 1) \wedge p(n\pm 1, m)$을 보이면 될 것 같�
   * 발산: $\lim\limits_{n \to \infty} {a_n} = \pm \infty$
     * 진동: 발산하되 양이나 음의 무한대로 발산하지 않음
 
-* 무한수열 ${a_n}$의 $n$항까지의 부분합 $S_n=\sum_{k=1}^{n} {a_k}$가 $n \to \infty: S_n \to S$일 때 무한급수가 수렴한다고 함.
-* 무한급수 $S=\sum_{n=1}^{\infty} {a_n}$가 수렴 $\Rightarrow \lim\limits_{n \to \infty} {a_n}=0$
+* 무한수열 ${a_n}$의 $n$항까지의 부분합 $S_n=\sum\limits_{k=1}^{n} {a_k}$가 $n \to \infty: S_n \to S$일 때 무한급수가 수렴한다고 함.
+* 무한급수 $S=\sum\limits_{n=1}^{\infty} {a_n}$가 수렴 $\Rightarrow \lim\limits_{n \to \infty} {a_n}=0$
 
 {% capture context1 %}
 #### 극한의 정의(급식)
@@ -1143,15 +1143,17 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 * $\lim\limits_{n \to \infty} {a_n b_n} = \alpha \beta$
 * $(b_n \neq 0, \beta \neq 0) \Rightarrow \lim {\frac{a_n}{b_n}} = \frac{\alpha}{\beta}$
 
-무한급수 $\sum_{n=1}^{\infty} {a_n}=S, \; \sum_{n=1}^{\infty} {b_n}=T$ 일 때,
-* $\sum_{n=1}^{\infty} {a_n\pm b_n}=S\pm T$
-* $\sum_{n=1}^{\infty} {ca_n}=cS$
+무한급수 $\sum\limits_{n=1}^{\infty} {a_n}=S, \; \sum\limits_{n=1}^{\infty} {b_n}=T$ 일 때,
+* $\sum\limits_{n=1}^{\infty} {a_n\pm b_n}=S\pm T$
+* $\sum\limits_{n=1}^{\infty} {ca_n}=cS$
 
 <br/>
 
 #### 수열의 극한의 대소관계
-* $\lim\limits_{n \to \infty} {a_n} = \alpha, \lim\limits_{n \to \infty} {b_n} = \beta \; \wedge \; \forall n \in \mathbb{N}, a_n \leq b_n \Rightarrow \alpha \leq \beta$
-* $\lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {b_n} = \alpha \; \wedge \; \forall n \in \mathbb{N}, a_n \leq c_n \leq b_n \Rightarrow \lim\limits_{n \to \infty} {c_n} = \alpha$
+* $\left(\lim\limits_{n \to \infty} {a_n} = \alpha, \lim\limits_{n \to \infty} {b_n} = \beta \right) \;
+  \wedge \; \left( \forall n \in \mathbb{N}, a_n \leq b_n \right) \Rightarrow \alpha \leq \beta$
+* $\left(\lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {b_n} = \alpha \right) \;
+  \wedge \; \left( \forall n \in \mathbb{N}, a_n \leq c_n \leq b_n \right) \Rightarrow \lim\limits_{n \to \infty} {c_n} = \alpha$
 
 두번째는 샌드위치 정리라고도 불린다.
 
@@ -1181,8 +1183,8 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
   * $\lim\limits_{n \to \infty} {r^n} = \lim\limits_{n \to \infty} {1+nh} = \infty$
 2. $r=1$일 때
   * 뭐
-3. \left| r \right| <1$일 때
-  * $r=0$이면 $0$, $r\neq 0$이면 $\frac{1}{\left\| r\right\|}>1, \; \lim\limits_{n \to \infty} {\frac{1}{\left\| r\right\|}} = \infty$
+3. \left\| r \right\| <1$일 때
+  * $r=0$이면 $0$, $r\neq 0$이면 $\dfrac{1}{\left\| r\right\|}>1, \; \lim\limits_{n \to \infty} {\dfrac{1}{\left\| r\right\|}} = \infty$
   * $\therefore \lim\limits_{n \to \infty} {\left\|r^n \right\|}=0, \; \lim\limits_{n \to \infty} {r^n}=0$
 4. $r \leq -1$일 때
   * $r=-1$이면 ${r^n}$은 진동하고, $r<-1$이면 $\lim\limits_{n \to \infty} {\left\|r^n \right\|}=\infty$ 이고 부호가 교대로 바뀌므로 진동함.
@@ -1196,7 +1198,7 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 <br/>
 
 #### 무한급수와 수열의 극한 사이의 관계 증명
-<p> $$ \left(\lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {b_n} = \alpha \right) \; \wedge \; \left(\forall n \in \mathbb{N} \right), a_n \leq c_n \leq b_n \Rightarrow \lim\limits_{n \to \infty} {c_n} = \alpha $$ </p>
+<p> $$ \left(\lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {b_n} = \alpha \right) \; \wedge \; \left(\forall n \in \mathbb{N}, \; a_n \leq c_n \leq b_n \right) \Rightarrow \lim\limits_{n \to \infty} {c_n} = \alpha $$ </p>
 * $ a_n = S_n - S_n-1 (n \geq 2), \lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {S_n - S_{n-1}} = S-S = 0 $
 * 대우로, $\lim\limits_{n \to \infty} {a_n} \neq 0$ 이면 무한급수 $\sum\limits_{n=1}^{\infty} {a_n}$은 발산함.
 
