@@ -604,7 +604,7 @@ $$ </p>
 -------------------------------------
 
 ### 삼각함수 잡다한 공식(1)
-* $\tan\theta = \frac{sin\theta}{\cos\theta}$
+* $\tan\theta = \dfrac{sin\theta}{\cos\theta}$
 * $\tan^2\theta + 1 = \frac{1}{\cos^2 \theta}$
 * $\sin(\pi-\theta)=\sin\theta, \cos(\pi-\theta)=-\cos\theta, \tan(\pi-\theta)=-\tan\theta$
 * $\sin(\frac{\pi}{2}-\theta)=\cos\theta, \cos(\frac{\pi}{2}-\theta)=\sin\theta, \tan(\frac{\pi}{2}-\theta)=\frac{1}{\tan\theta}$
@@ -1173,8 +1173,6 @@ $\lim_{n \to \inf} {a_n} = \alpha, \; \lim_{n \to \inf} {b_n} = \beta$ 일 때,
 <p> $$ \lim_{n \to \inf} {a_n} = \lim_{n \to \inf} {b_n} = \alpha \; \wedge \; \forall n \in \mathbb{N}, a_n \leq c_n \leq b_n \Rightarrow \lim_{n \to \inf} {c_n} = \alpha $$ </p>
 * $ a_n = S_n - S_n-1 (n \geq 2), \lim_{n \to \inf} {a_n} = \lim_{n \to \inf} {S_n - S_{n-1}} = S-S = 0 $
 * 대우로, $\lim_{n \to \inf} {a_n} \neq 0 이면 무한급수 \sum_{n=1}^{\inf} {a_n}$은 발산함.
-
-{% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="수학1_극한" %}
 
