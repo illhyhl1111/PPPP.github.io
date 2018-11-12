@@ -1246,20 +1246,20 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 -------------------------------------
 
 ### 삼각함수 잡다한 공식(2)
-* $1+\tan^2\theta = \sec^2\theta$, $1+cot^2\theta = cosec^2 \theta$
+* $1+\tan^2\theta = \sec^2\theta$, $1+\cot^2\theta = \text{cosec}^2 \theta$
 * $\sin(\alpha\pm\beta) = \sin\alpha \cos\beta \pm \cos\alpha \sin\beta$,
   $\cos(\alpha\pm\beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta$,
   $\tan(\alpha\pm\beta) = \dfrac{\tan\alpha\pm\tan\beta}{1\mp\tan\alpha\tan\beta}$
 * $a\sin\theta+b\cos\theta = \sqrt{a^2+b^2}\sin(\theta+\alpha) = \sqrt{a^2+b^2}\cos(\theta-\beta)$
-  (단, $\cos\alpha=\dfrac{a}{\sqrt{a^2+b^2}$, $\cos\beta=\dfrac{b}{\sqrt{a^2+b^2}$)
+  (단, $\cos\alpha=\dfrac{a}{\sqrt{a^2+b^2}}$, $\cos\beta=\dfrac{b}{\sqrt{a^2+b^2}}$)
 * $\sin 2\alpha = 2\sin\alpha\cos\beta$, $\cos 2\alpha=\cos^2\alpha-\sin^2\alpha$,
   $\tan 2\alpha = \dfrac{2\tan\alpha}{1-\tan^2\alpha}$
-* $\sin^2\frac{\alpha}{2}=\frac{1-\cos\alpha}{2}$, $\cos^2\frac{\alpha}{2}=\frac{1+\cos\alpha}{2}$, 
-  $\tan^2\frac{\alpha}{2}=\frac{1-\cos\alpha}{1+\cos\alpha}$
-* $\sin\alpha\cos\beta=\frac{1}{2}\left\{\sin(\alpha+\beta)+\sin(\alpha-\beta)\right\}$,
-  $\cos\alpha\sin\beta=\frac{1}{2}\left\{\sin(\alpha+\beta)-\sin(\alpha-\beta)\right\}$  
-  $\cos\alpha\cos\beta=\frac{1}{2}\left\{\cos(\alpha+\beta)+\cos(\alpha-\beta)\right\}$,
-  $\sin\alpha\sin\beta=-\frac{1}{2}\left\{\cos(\alpha+\beta)-\cos(\alpha-\beta)\right\}$
+* $\sin^2\dfrac{\alpha}{2}=\dfrac{1-\cos\alpha}{2}$, $\cos^2\dfrac{\alpha}{2}=\dfrac{1+\cos\alpha}{2}$, 
+  $\tan^2\dfrac{\alpha}{2}=\dfrac{1-\cos\alpha}{1+\cos\alpha}$
+* $\sin\alpha\cos\beta=\frac{1}{2}\left\\{\sin(\alpha+\beta)+\sin(\alpha-\beta)\right\\}$,
+  $\cos\alpha\sin\beta=\frac{1}{2}\left\\{\sin(\alpha+\beta)-\sin(\alpha-\beta)\right\\}$  
+  $\cos\alpha\cos\beta=\frac{1}{2}\left\\{\cos(\alpha+\beta)+\cos(\alpha-\beta)\right\\}$,
+  $\sin\alpha\sin\beta=-\frac{1}{2}\left\\{\cos(\alpha+\beta)-\cos(\alpha-\beta)\right\\}$
 * $\sin A+\sin B=2\sin\frac{A+B}{2}\cos\frac{A-B}{2}$,
   $\sin A-\sin B=2\cos\frac{A+B}{2}\sin\frac{A-B}{2}$  
   $\cos A+\cos B=2\cos\frac{A+B}{2}\cos\frac{A-B}{2}$,
@@ -1278,7 +1278,7 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 {% endcapture %}
 
 {% capture context2 %}
-#### 덧셈정리 증명
+### 덧셈정리 증명
 ![Alt text](/pictures/mathematics/덧셈공식.PNG)
 * 두 각도 $\alpha$와 $\beta$를 단위원의 두 점 $P(cos\alpha, \sin\alpha), Q(\cos\beta, \sin\beta)$로 나타낸다.
 * 코사인 법칙에 의해 $\bar{PQ}^2=1^2+1^2-2\cdot 1 \cdot 1 \cdot \cos(\alpha - \beta) = 2-2\cos(\alpha-\beta)$
@@ -1288,41 +1288,40 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 * $\sin\theta=\cos\left(\frac{\pi}{2}-\theta\right)$를 $\sin(\alpha+\beta)$에 대입하면
   $\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta$
 
-#### 삼각함수 합성 증명
+### 삼각함수 합성 증명
 ![Alt text](/pictures/mathematics/삼각합성1.PNG) ![Alt text](/pictures/mathematics/삼각합성2.PNG)
 * $\sin\alpha = \dfrac{b}{\sqrt{a^2+b^2}},\; \cos\alpha=\dfrac{a}{\sqrt{a^2+b^2}}$
 * $\start{align}
-   a\sin\theta+b\cos\theta &= \sqrt{a^2+b^2}\left(\dfrac{b}{\sqrt{a^2+b^2}}\sin\theta+\dfrac{b}{\sqrt{a^2+b^2}}\cos\theta \right)
-                           &= \sqrt{a^2+b^2}(\cos\alpha\sin\theta+\sin\alpha\cos\theta)
+   a\sin\theta+b\cos\theta &= \sqrt{a^2+b^2}\left(\dfrac{b}{\sqrt{a^2+b^2}}\sin\theta+\dfrac{b}{\sqrt{a^2+b^2}}\cos\theta \right) \\\\
+                           &= \sqrt{a^2+b^2}(\cos\alpha\sin\theta+\sin\alpha\cos\theta) \\\\
                            &= \sqrt{a^2+b^2}\sin(\theta+\alpha)
   \end{align}$ 
-* $\beta=\frac{\pi}{2}-\alpha, \; $\sin\beta = \dfrac{a}{\sqrt{a^2+b^2}},\; \cos\beta=\dfrac{b}{\sqrt{a^2+b^2}}$ 
-{% endcapture %}
+* $\beta=\frac{\pi}{2}-\alpha, \; \sin\beta = \dfrac{a}{\sqrt{a^2+b^2}},\; \cos\beta=\dfrac{b}{\sqrt{a^2+b^2}}$ 
 * $\start{align}
-   a\sin\theta+b\cos\theta &= \sqrt{a^2+b^2}\left(\dfrac{b}{\sqrt{a^2+b^2}}\sin\theta+\dfrac{b}{\sqrt{a^2+b^2}}\cos\theta \right)
-                           &= \sqrt{a^2+b^2}(\sin\beta\sin\theta+\cos\beta\cos\theta)
+   a\sin\theta+b\cos\theta &= \sqrt{a^2+b^2}\left(\dfrac{b}{\sqrt{a^2+b^2}}\sin\theta+\dfrac{b}{\sqrt{a^2+b^2}}\cos\theta \right) \\\\
+                           &= \sqrt{a^2+b^2}(\sin\beta\sin\theta+\cos\beta\cos\theta) \\\\
                            &= \sqrt{a^2+b^2}\sin(\theta-\alpha)
   \end{align}$
 
-#### 배각공식 증명
+### 배각공식 증명
 덧셈공식의 특별한 케이스니 생략
 
-#### 반각공식 증명
+### 반각공식 증명
 * $\cos 2\alpha=1-2\sin^2\alpha, \; \sin^2\alpha=\dfrac{1-\cos 2\alpha}{2}, 
    \; \sin^2\dfrac{\alpha}{2} = \dfrac{1-\cos\alpha}{2}$
 * $\cos 2\alpha=2\cos^2\alpha-1, \; \cos^2\alpha=\dfrac{1+\cos 2\alpha}{2}, 
    \; \cos^2\dfrac{\alpha}{2} = \dfrac{1+\cos\alpha}{2}$
 
-#### 합 $\leftrightarrow$ 차
+### 합 $\leftrightarrow$ 차
 * $\sin(\alpha+\beta) = \sin\alpha\cos\beta+\cos\alpha\sin\beta$
 * $\sin(\alpha-\beta) = \sin\alpha\cos\beta-\cos\alpha\sin\beta$
-* $\therefore \sin\alpha\cos\beta = \frac{1}{2}\left\{\sin(\alpha+\beta)+\sin(\alpha-\beta)\right\}
+* $\therefore \sin\alpha\cos\beta = \frac{1}{2}\left\{\sin(\alpha+\beta)+\sin(\alpha-\beta)\right\}$
 
-* $2\sin\alpha\cos\beta = \sin(\alpha+\beta)+\sin(\alpha-\beta)
+* $2\sin\alpha\cos\beta = \sin(\alpha+\beta)+\sin(\alpha-\beta)$
 * $\text{let } \alpha+\beta=A, \alpha-\beta=B$
 * $\sin A+\sin B=2\sin\dfrac{A+B}{2}\cos\dfrac{A-B}{2}$
 
- 
+{% endcapture %}
 {% include blocks.html context1=context1 context2=context2 topic="수학2_삼각함수" %}
 
 ## 적분과 통계
