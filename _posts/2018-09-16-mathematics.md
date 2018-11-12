@@ -1293,17 +1293,17 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 ### 삼각함수 합성 증명
 ![Alt text](/pictures/mathematics/삼각합성1.PNG) ![Alt text](/pictures/mathematics/삼각합성2.PNG)
 * $\sin\alpha = \dfrac{b}{\sqrt{a^2+b^2}},\; \cos\alpha=\dfrac{a}{\sqrt{a^2+b^2}}$
-* $\begin{align}
-   a\sin\theta+b\cos\theta &= \sqrt{a^2+b^2}\left(\dfrac{b}{\sqrt{a^2+b^2}}\sin\theta+\dfrac{b}{\sqrt{a^2+b^2}}\cos\theta \right) \\\\
-                           &= \sqrt{a^2+b^2}(\cos\alpha\sin\theta+\sin\alpha\cos\theta) \\\\
+<p> $$\begin{align}
+   a\sin\theta+b\cos\theta &= \sqrt{a^2+b^2}\left(\dfrac{b}{\sqrt{a^2+b^2}}\sin\theta+\dfrac{b}{\sqrt{a^2+b^2}}\cos\theta \right) \\
+                           &= \sqrt{a^2+b^2}(\cos\alpha\sin\theta+\sin\alpha\cos\theta) \\
                            &= \sqrt{a^2+b^2}\sin(\theta+\alpha)
-  \end{align}$ 
+\end{align}$$</p> 
 * $\beta=\dfrac{\pi}{2}-\alpha, \; \sin\beta = \dfrac{a}{\sqrt{a^2+b^2}},\; \cos\beta=\dfrac{b}{\sqrt{a^2+b^2}}$ 
-* $\begin{align}
-   a\sin\theta+b\cos\theta &= \sqrt{a^2+b^2}\left(\dfrac{b}{\sqrt{a^2+b^2}}\sin\theta+\dfrac{b}{\sqrt{a^2+b^2}}\cos\theta \right) \\\\
-                           &= \sqrt{a^2+b^2}(\sin\beta\sin\theta+\cos\beta\cos\theta) \\\\
+<p> $$\begin{align}
+   a\sin\theta+b\cos\theta &= \sqrt{a^2+b^2}\left(\dfrac{b}{\sqrt{a^2+b^2}}\sin\theta+\dfrac{b}{\sqrt{a^2+b^2}}\cos\theta \right) \\
+                           &= \sqrt{a^2+b^2}(\sin\beta\sin\theta+\cos\beta\cos\theta) \\
                            &= \sqrt{a^2+b^2}\sin(\theta-\alpha)
-  \end{align}$
+\end{align}$$</p> 
 
 <br/>
 
