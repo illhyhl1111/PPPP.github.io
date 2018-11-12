@@ -17,12 +17,12 @@ sidebar:
 ---
 
 # 들어가기 앞서
-[머릿글](https://illhyhl1111.github.io/posts/first-post/)에서 설명했듯이, <br/>
-이 글은 읽는이가 해당 내용을 한번쯤은 공부해봤다는 가정 하에, 회고를 위하여 작성한 요약글입니다. <br/>
-모르는 부분은 '이런 개념이 있구나' 정도로만 이해하시고, 링크된 글을 읽으시거나 구글링하여 직접 찾아보십시오. <br/>
+[머릿글](https://illhyhl1111.github.io/posts/first-post/)에서 설명했듯이,
+이 글은 읽는이가 해당 내용을 한번쯤은 공부해봤다는 가정 하에, 회고를 위하여 작성한 요약글입니다.
+모르는 부분은 '이런 개념이 있구나' 정도로만 이해하시고, 링크된 글을 읽으시거나 구글링하여 직접 찾아보십시오.
 기본적으로 목차는 **책 기준**으로 분류됩니다. 책 밖에껀 싸그리 기타 항목에 넣을거임ㅎㅎ
 
-아직 작성이 많이많이많이많이매우많이 덜 되었습니다. <br/>
+아직 작성이 많이많이많이많이매우많이 덜 되었습니다.  
 과연 우리의 예비노예는 노예(대학원생)가 되기 전에 초본을 다 쓸 수 있을 것인가
 
 -----------------------------
@@ -46,21 +46,15 @@ sidebar:
 * 전체집합 $U$에서의 조건 $p(x)$를 간단히 조건 $p$라고 표기함.
 * $U$의 원소 $a$를 대입한 $p(a)$가 참인 명제라면, 명제 $p(a)$가 성립한다, $a$는 조건 $p(x)$를 만족한다 라고 함.
 
-<br/>
-
 ### 부정
 * 명제 $p$ 혹은 조건 $p(x)$에 대해 $p(x)$가 아니다 를 $p(x)$의 부정이라 하고, $\sim p(x)$$로 표기함.
 
 <p> $$ \sim (p \vee q) \Leftrightarrow (\sim p \wedge \sim q), \sim (p \wedge q) \Leftrightarrow (\sim p \vee \sim q) $$ </p>
 <p> $$ \sim (\forall x, p(x)) \Leftrightarrow (\exists x, \sim p(x)), \sim (\exists x, p(x)) \Leftrightarrow (\forall x, \sim p(x))$$ </p>
 
-<br/>
-
 ### 진리집합
 * $p(x)$를 만족하는 $x$ 전체의 집합 $P$를 조건 $p(x)$의 진리집합이라고 한다.
 * $P = \left\\{ x \mid x \in U, p(x) \right\\}$. 표기시 전체집합 $U$를 씹으려는 경향이 강하므로 $P=\left\\{ x \mid p(x) \right\\}$로도 표기.
-
-<br/>
 
 ### 조건과 집합
 * 집합 $P$, $Q$를 조건 $p$, $q$의 진리집합이라고 둘 때,
@@ -72,8 +66,6 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 * $p \Rightarrow q$일 때, $p$는 $q$이기 위한 충분조건이고 $q$는 $p$이기 위한 필요조건이 된다.
 * $p \Leftrightarrow q$ 면 서로 필요충분조건(동치).
 * 집합과의 관계는 $P \subset Q \Rightarrow (p \Rightarrow q) $
-
-<br/>
 
 ### 귀류법
 * 어떤 명제 $p \rightarrow q$임을 증명하려 할 때, 대우 $\sim q \rightarrow \sim p$를 증명하는 방법
@@ -110,13 +102,9 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 * 연산 $\circ$이 정의되어 있는 집합 $M$의 부분집합 $N$에 대하여, <br/>
   $a \in N, b \in N \Rightarrow a \circ b \in N$ 이면 $N$은 $\circ$에 관하여 닫혀 있다라고 함.
 
-<br/>
-
 ### 교환, 결합법칙
 * 교환법칙이 성립 $ \Leftrightarrow a \circ b = b \circ a $
 * 결합법칙이 성립 $ \Leftrightarrow (a \circ b) \circ c = a \circ (b \circ c) $
-
-<br/>
 
 ### 항등원, 역원
 * $\forall a \in N, \exists e \in N, a \circ e = e \circ a = a$ 일 때 $e$를 $\circ$에 대한 항등원이라고 함
@@ -149,15 +137,11 @@ https://m.blog.naver.com/PostView.nhn?blogId=obrigadu&logNo=50098477517&proxyRef
   $A = Ga, B = Gb$ (단, $\gcd(a, b) = 1$) <br/>
   $L = Gab, LG = AB$ 를 만족함.
 
-<br/>
-
 ### 다항식의 GCD, LCM
 * 다항식 $A$, $B$, $Q$ 사이에 $A=B \cdot Q$이면 $B$를 $A$의 약수라고 표현한다.
 * 2개 다항식 사이 공통인 약수를 공약수, 가장 차수가 높은 것을 최대공약수라고 함.
 * 배수도 똑같
 * 정수에서와 똑같은 성질을 가짐
-
-<br/>
 
 ### 유클리드 호제법 (Euclidean algorithm)
 * 맨날까먹음
@@ -168,8 +152,6 @@ https://m.blog.naver.com/PostView.nhn?blogId=obrigadu&logNo=50098477517&proxyRef
 * 이를 확장한 Extended Euclidian Algorithm은 다음과 같다 <br/>
   <p align="center"> $as + bt=\gcd(a,b)$ 인 정수쌍 $s$, $t$가 존재함 </p>
   모듈러 연산의 역원을 구하는데 우려먹힌다.
-
-<br/>
 
 ### 기수법
 * 양의 정수 $N_p = a_n p^n + a_{n-1} p^{n-1} + \cdots + a_1 p + a_0$
@@ -183,16 +165,12 @@ r_{i+1}=r_{i−1}−q_i r_i, \quad q_i=\frac{r_{i−1}}{r_i} $$ </p>
 
 만약 $r_{i+1}=0$ 이라면 $r_i$ 가 바로 $\gcd(a,b)$ 이다.
 
-<br/>
-
 ### Euclidean algorithm 증명
 * $A=Ga, B=Gb$ ($a$, $b$ 는 서로소) 를 $A=BQ+R$에 대입해보면
 <p> $$Ga=Gb \cdot Q + R, \quad R=G(a-Qb) $$ </p>
 * 이제 $b$와 $a-Qb$가 서로소임을 보이면 되는데, $b=mk$, $a-bQ=mk'$으로 두자($k$, $k'$는 서로소)
 * $a=bQ+mk'=m(kQ+k')$이므로 $m$은 $a$, $b$의 공약수인데, 서로소이므로 1임
 * 따라서 $m=1$이 되며 $b$와 $a-Qb$는 서로소가 되서 $\gcd(B, R)=G$가 되어버림
-
-<br/>
 
 ### Extended Euclidean algorithm 증명
 * $r_0 \leftarrow a, r_1 \leftarrow b$
@@ -256,8 +234,6 @@ $$ </p>
 * $\overline{AB}$를 $m:n$으로 내분하는 점 $P$의 좌표는 $\dfrac{mx_2+nx_1}{m+n}$
 * $\overline{AB}$를 $m:n$으로 외분하는 점 $P$의 좌표는 $\dfrac{mx_2-nx_1}{m-n}$
 
-<br/>
-
 ### 삼각형의 무게중심, Pappus의 정리
 * $A(x_1, y_1), B(x_2, y_2), C(x_3, y_3)$인 $\triangle ABC$의 무게중심은
 <p> $$\left(\frac{x_1+x_2+x_3}{3}, \frac{y_1+y_2+y_3}{3}\right)$$ </p>
@@ -291,12 +267,8 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 * 두 직선 $ax+by+c=0$, $a'x+b'y+c'=0$의 교점을 지나는 직선들의 방정식 <br/>
   $m(ax+by+c) + (a'x+b'y+c') = 0$
 
-<br/>
-
 ### 수직인 직선
 * $y=ax+b$, $y=a'x+b'$이 수직이라면, $aa'=-1$
-
-<br/>
 
 ### 점과 직선 사이의 거리
 * 점$(x_1, y_1)$과 직선 $ax+by+c=0$ 사이의 거리 $d=\frac{\left\|ax_1+by_1+c\right\|}{\sqrt(a^2+b^2)}$
@@ -307,8 +279,6 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 * $y=ax+b, y=a'x+b'$이 수직이라면, <br/>
   $\tan(\theta_1)=a, \tan(\theta_2)=\tan(\theta_1+\frac{\pi}{2})=-\frac{1}{\tan(\theta_1)}=a'$ <br/>
   $ \therefore a'=-\frac{1}{a}, aa'=1 $
-
-<br/>
 
 ### 점과 직선 사이의 거리
 * 점 $P$와 직선 $l$ 사이의 거리는, $P$에서 $l$로 내린 수선의 발 $Q(x', y')$과 $P$ 사이의 거리와 같음. <br/>
@@ -333,8 +303,6 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
   * $A^2+B^2-4C<0$ 이면 허원 이라고도 한단다.
 * 세 점을 지나는 원: 일반형에 세 좌표 쑤셔넣고 연립
 
-<br/>
-
 ### 원과 직선의 관계
 * 직선은 $y=mx+n$이요 원은 $f(x, y)=0$이기 때문에, <br/>
   $y$를 소거하여 $f(x, mx+n)$으로 해버리면 이차방정식이 되어버림. <br/>
@@ -344,8 +312,6 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
   <p> $$(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$$ </p>
 * 기울기가 $m$인 접선의 방정식은
   <p> $$y-b=m(x-a)\pm r \sqrt{m^2+1}$$ </p>
-
-<br/>
 
 ### 두 원의 관계
 * 서로 만나는 두 원 $x^2+y^2+Ax+By+C=0$, $x^2+y^2+A'x+B'y+C'=0$ 의 교점을 지나는 원의 방정식은 <br/>
@@ -384,8 +350,6 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 * 점 $P(x, y) \rightarrow Q(x+a, y+b)$
 * 도형의 방정식 $f(x-a, y-b)=0 \rightarrow f(x-a, y-b)=0$
 
-<br/>
-
 ### 대칭이동
 * $x$축 - $T: (x, y) \rightarrow (x, -y)$
 * $y$축 - $T: (x, y) \rightarrow (-x, y)$
@@ -411,12 +375,8 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 * $x$를 독립변수, $y$를 종속변수라고도 한단다.
 * 아무튼 하나의 x에 대해서 반드시 하나의 y가 대응되어야 한다는게 중요함
 
-<br/>
-
 ### 정의역, 공역, 치역
 ![Alt text](/pictures/mathematics/250F12365368EBE529.jpg)
-
-<br/>
 
 ### 함수의 종류
 * 일대일 함수
@@ -431,8 +391,6 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
   * $I_x$로 표기
 * 상수함수
   * 치역의 원소가 하나뿐임
-
-<br/>
 
 ### 합성함수
 * 두 함수 $f: X \longrightarrow Y$, $g: Y \longrightarrow Z$일 때, $g(f(x))$는 정의역이 $X$이고 공역이 $Z$가 된다.
@@ -467,21 +425,15 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 
 킹갓구글에서 그래프까지 그려주는줄은 몰랐읍니다 충성충성
 
-<br/>
-
 ### 무리함수
 * $y^2=ax, y=\pm \sqrt{\pm ax}$ <br/>
 ![Alt text](/pictures/mathematics/캡처4.JPG) <br/>
   정의역과 치역을 좀 생각해야된다.
 
-<br/>
-
 ### 역함수
 * 역함수의 정의를 위해선, $f:X \longrightarrow Y$에서 $Y$의 임의의 한 원소에 $X$의 원소가 하나씩만 대응되어야 하기 때문에 일대일 대응이어야 함. <br/>
 * $y=f(x) \Leftrightarrow x=f^{-1}(y)$
 * 함수 $f$가 일대일 대응이면 역함수 $f^{-1}$은 존재한다 (존재성)
-
-<br/>
 
 ### 역함수의 성질
 * $(f^{-1})^{-1} = f$
@@ -515,8 +467,6 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 ### 판별식을 이용한 최대, 최소
 * $y=ax^2+bx+c$에서 $y$의 범위는 $0=ax^2+bx+(c-y)$에서 $D>=0$를 사용해도 됨
 
-<br/>
-
 ### 산술기하조화
 * 일반적인 형태로,
 <p> $$ \frac{x_1 + x_2 + \cdots + x_n}{n} \geq \sqrt[n]{x_1 x_2 \cdots x_n} \geq \frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+ \cdots + \frac{1}{x_n}} $$ </p>
@@ -525,15 +475,11 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 ![Alt text](/pictures/mathematics/산술기하조화.jpg){: width="40%" height="40%"}  <br/>
 $n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것도 있다...
 
-<br/>
-
 ### 가중 산술-기하 평균 부등식
 * 각 항 앞에 가중치를 더한 부등식이다.
 * 가중 산술-기하 평균 부등식은
 <p> $$ \frac{\alpha_1 x_1 + \cdots + \alpha_n x_n}{\alpha} \geq \sqrt[\alpha]{x_1^{\alpha_1} \cdots x_n^{\alpha_n}} \\
        (x_i>0, \alpha_i>0) $$ </p>
-
-<br/>
 
 ### 코시-슈바르츠 부등식
 * 일반식은
@@ -560,8 +506,6 @@ $n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것�
   <p> $$ \forall x_i \in (a, b), p_i > 0, \sum_{i=1}^{n} {p_i} = 1 \; 일 \, 때 \; f\left(\sum_{i=1}^{n} {p_i x_i}\right) \leq \sum_{i=1}^{n} {p_i f(x_i)} $$
 * 증명은 [수학적 귀납법](http://suhak.tistory.com/221)으로.
 
-<br/>
-
 ### (가중) 산술기화조화 증명
 * 산술-기화-조화 평균 부등식도 사실 귀납법으로 증명이 된다. 하지만 가중치까지 넣어서 바로 젠센부등식으로 증명해보면
   * 위로 볼록한 만만한 함수 $f(x)=-\ln(x)$ 로 두고
@@ -580,8 +524,6 @@ $$ </p>
 
 꺄륵
 
-<br/>
-
 ### 코시-슈바르츠 부등식 증명
 * [별별 증명법](https://m.blog.naver.com/yh6613/220458975310)이 다 있다.
 * 귀찮은 기념으로 간단하게만 설명하면
@@ -590,7 +532,6 @@ $$ </p>
     $\sqrt{\dfrac{a_i^2}{A^2} \dfrac{b_i^2}{B^2}} \leq \dfrac{1}{2}\left(\dfrac{a_i^2}{A^2}+\dfrac{b_i^2}{B^2}\right)$
   * 이걸 $i=1$ 부터 $n$에 대한 부등식을 모두 더하면 우변은 1이 되고, 결국 $\sum\limits_{i=1}^{n} {\sqrt{a_i^2 b_i^2}} \leq AB$로 증명된다. <br/>
 
-<br/>
 * [재배열 부등식](https://namu.wiki/w/%EC%9E%AC%EB%B0%B0%EC%97%B4%20%EB%B6%80%EB%93%B1%EC%8B%9D) 도 볼만함
 
 {% endcapture %}
@@ -605,8 +546,6 @@ $$ </p>
 ### 부채꼴의 넓이
 * $l=r\theta$ 인건 $\theta$의 radian 정의임 $\left(\frac{l}{2\pi r}=\frac{\theta}{2\pi}\right)$
 * 이 때 $\frac{S}{\pi r^2} = \frac{\theta}{2\pi}$에서 $S=\frac{1}{2}r^2\theta$
-
-<br/>
 
 ### 웃겨서 넣어봤다
 ![Alt text](/pictures/mathematics/8177-2-7693.gif){: width="40%" height="40%"} <br/>
@@ -658,8 +597,6 @@ $$ </p>
 * 아무튼 점 $B$와 $O$를 잇는 선분과 원이 만나는 점 $A'$를 두면 증명이 된다.
 * 자세한건 [링크](https://www.mathfactory.net/10678) 참조
 
-<br/>
-
 ### 코사인 법칙
 ![Alt text](/pictures/mathematics/제1코사인법칙.png)
 * 제1 코사인법칙은 매우 직관적이다
@@ -676,8 +613,6 @@ $$ </p>
   $$ </p> <br/>
 
   수식놀음이다.
-
-<br/>
 
 ### 헤론의 공식
 이걸 증명해야하나 싶긴한데
@@ -704,8 +639,6 @@ $$ </p>
 * 가로 줄을 행이라 하고, 세로 줄을 열이라 할 떄, $m$개 행, $n$개 열로 이루어진 행렬을 $m \times n$ 행렬이라 함
 * $n \times n$은 정사각행렬
 
-<br/>
-
 ### 행렬의 연산
 $A=\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{pmatrix}, B=\begin{pmatrix} b_{11} & b_{12} \\\\ b_{21} & b_{22} \end{pmatrix}$일 때
 * $A=B \Leftrightarrow a_{ij} = b_{ij}$
@@ -720,8 +653,6 @@ $A=\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{pmatrix}, B=\begin{
 * $O$: 모든 성분이 0인 행렬
 * $I_n = (I_{n,ij})$, $I_{n,ij}= \begin{cases} 1 & \text{if }i = j \\\\ 0 & \text{else} \end{cases}$ 인 $n$차 정사각행렬
 
-<br/>
-
 ### 역행렬
 $n$차 정사각행렬 $A$에 대하여, $XA=AX=I_n$ 인 행렬 $X$가 존재할 때, 행렬 $X$를 $A$의 역행렬이라 하고 $A^{-1}$로 나타냄
 * $XA=I \Leftrightarrow X=A^{-1}, \; AX=I \Leftrightarrow X=A^{-1}$
@@ -734,15 +665,11 @@ $n$차 정사각행렬 $A$에 대하여, $XA=AX=I_n$ 인 행렬 $X$가 존재할
 * 이차 정사각행렬 $A$에 대해서 $A^{-1}=\dfrac{1}{a_{11} a_{22}-a_{12} a_{21}}{\begin{pmatrix} a_{22} & -a_{12} \\\\ -a_{21} & a_{11} \end{pmatrix} }$
 * 일반항은 다음 단계에
 
-<br/>
-
 ### 연립일차방정식과 행렬
 * $\begin{cases} ax+by=p \\\\ cx+dy=q \end{cases} \Leftrightarrow
    \begin{pmatrix} a & b \\\\ c & d \end{pmatrix} \begin{pmatrix} x \\\\ y\end{pmatrix} = \begin{pmatrix} p \\\\ q \end{pmatrix}  \Leftrightarrow AX=B$
 * 이때 $X=A^{-1}B$
 * $A$의 역행렬이 존재하지 않는다면, 해는 없거나($a:c=b:d \neq p:q$) 무한함($a:c=b:d=p:q$)
-
-<br/>
 
 ### 그래프와 행렬(Adjacency Matrix)
 ![Alt text](/pictures/mathematics/2453_1.JPG) <br/>
@@ -755,8 +682,6 @@ $n$차 정사각행렬 $A$에 대하여, $XA=AX=I_n$ 인 행렬 $X$가 존재할
 * 행렬을 원소로 하는 집합에서 덧셈은 교환, 결합법칙을 만족하고, 항등원 $O$와 역원 $-A$가 존재하는 군이다.
 * 정사각행렬을 원소로 하는 집합에서 덧셈은 교환법칙을 만족하고, 항등원 $I$가 존재하지만, 결합법칙은 만족하지 않고 역행렬은 없을수도 있는 [모노이드](https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%85%B8%EC%9D%B4%EB%93%9C)이다.
   * [증명??](https://proofwiki.org/wiki/Square_Matrices_forms_Monoid)
-
-<br/>
 
 ### 행렬의 곱셈은 대체 왜 저따구로 정의되었는가
 <p> $$A \times B = (AB_{ij}) = \left(\sum\limits_{k} {a_{ik}b_{kj}}\right) $$ </p>
@@ -825,13 +750,13 @@ $g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
 ------------------------
 
 아무튼, $AB_{ij} = \sum\limits_{k} {a_{ik}b_{kj}}$같은 정의에 과연 어떤 해석이 가능하길래 점과 사상의 곱, 사상과 사상의 곱 모두에 적용이 되는가? <br/>
-솔직히 잘 모르겠다. 나중에 알게되면 적어봄 <br/>
+솔직히 잘 모르겠다. 나중에 알게되면 적어봄
+
 <br/>
 그 밖에도, 그래프를 행렬로 표현하는 Adjacency matrix에서 곱셈의 의미 등 행렬의 곱셈 정의에는 기타 심오한 의미가 담긴 것으로 보인다.<br/>
 아니면 선형사상을 표현하려고 행렬을 정의했는데 side effect로 여러 분야에서 먹힌걸수도 있고<br/>
-더 공부해야됨<br/>
+더 공부해야됨
 
-<br/>
 
 ### 일반적 역행렬
 <p> $$ \begin{align} A^{-1} &= \frac{1}{\left|A\right|} adj(A) \\
@@ -881,16 +806,12 @@ $g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
 3. 실수 범위로 확장
   * $a>0, b>0$에 대하여 $a^x a^y=a^{x+y}, \dfrac{a^x}{a^y} = a^{x-y}, (a^x)^y=a^{xy}, (ab)^x=a^x b^x$
 
-<br/>
-
 ### 로그의 성질
 $a>0$, $a\neq 1$, $x>0$, $y>0$일 때
 * $\log_a{1}=0, \log_a{a}=1$
 * $\log_a{xy}=\log_a{x}+log_a{y}, \log_a{\dfrac{x}{y}}=\log_a{x}-\log_a{y}$
 * $\log_a{x^n}=n\log_a{x}$
 * $\log_a{b}=\dfrac{\log_c{b}}{\log_c{a}}, \log_a{b}=\dfrac{1}{\log_b{a}}$
-
-<br/>
 
 ### 지수함수와 로그함수
 * $y=\log_a{x}$의 역함수는 $y=a^x$이기 때문에 둘은 $y=x$에 대칭임
@@ -907,8 +828,6 @@ $\log_a{xy}=\log_a{x}+log_a{y}$
 
 $\log_a{b}=\dfrac{\log_c{b}}{\log_c{a}}$
 * $\log_a{b}=x$라 하면 $b=a^x, \; \log_c{b}=log_c{a^x}=x\log_c{a}, \; \log_a{b}=x=\dfrac{\log_c{b}}{\log_c{a}}$
-
-<br/>
 
 ### 실수 범위로 지수의 확장
 자연수에서만 정의되던 지수의 성질을 유지하면서 이를 확장해 나가보자.<br/>
@@ -1022,14 +941,10 @@ $\exp(\sqrt{2})$ 역시 어떤 양의 실수 곱셈식으로 매핑될 것이며
 * $S_n = \\{a+(n-1)d\\} + \\{a+(n-2)d\\} + \\{a+(n-3)d\\} + \cdots + a$
 * $2S_n = \\{2a+(n-1)d\\} \times n, S_n = \frac{n\\{2a+(n-1)d\\}}{2}$
 
-<br/>
-
 ### 등비수열의 합
 * $S_n = a+ar+ar^2+\cdots\+ar^{n-1}$
 * $rS_n= ar+ar^2+ar^3+\cdots\+ar^{n}$
 * $(1-r)S_n=a-ar^n = a(1-r^n), \; S_n = \dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1} (r\neq 1)$
-
-<br/>
 
 ### 자연수의 거듭제곱 합
 * 일단 $\sum\limits_{k=1}^{n} {k} = \frac{n(n+1)}{2}$이다.
@@ -1044,8 +959,6 @@ $\exp(\sqrt{2})$ 역시 어떤 양의 실수 곱셈식으로 매핑될 것이며
 &= \sum\limits_{k=0}^{m} {_{m+1} C_k S_k(n)} \\
 \therefore (m+1) S_m(n) &= (n+1)^m -1 - \sum\limits_{k=0}^{m-1} {_{m+1} C_k S_k(n)}
 \end{align} $$</p>
-
-<br/>
 
 ### 분수꼴 수열의 합
 수열이 $\dfrac{1}{a_n a_{n+1}}$ (등차수열 $a_n$) 형태면 <br/>
@@ -1069,8 +982,6 @@ $\dfrac{1}{a_n a_{n+1}} = \dfrac{1}{a_{n+1}-a_{n}}\left(\dfrac{1}{a_n} - \dfrac{
 * 아예 자연수 $\mathbb{N} = (1, 2, \cdots )$가 아닌, 순서 관계가 정의된 임의의 집합(서수) $A$로 확장할 수도 있다.
 * [한줄로 요약](https://namu.wiki/w/%EC%88%98%ED%95%99%EC%A0%81%20%EA%B7%80%EB%82%A9%EB%B2%95)하면 아래와 같다
   * $x \in A$에 대하여, $\forall y \in A, \left(y<x \Rightarrow p(y) \right) \Rightarrow p(x)$
-
-<br/>
 
 ### 수열의 점화식과 일반항
 1. $a_{n+1} = a_n + f(n)$
@@ -1163,8 +1074,6 @@ $p(n, m) \Rightarrow p(n, m\pm 1) \wedge p(n\pm 1, m)$을 보이면 될 것 같�
 
 극한의 정의(학식)은 나중에 학식파트에서 자세히 다루도록 하자.
 
-<br/>
-
 ### 수열의 극한 기본성질
 $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} = \beta$ 일 때,
 * $\lim\limits_{n \to \infty} {a_n\pm b_n} = \alpha \pm \beta$
@@ -1176,8 +1085,6 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 * $\sum\limits_{n=1}^{\infty} {a_n\pm b_n}=S\pm T$
 * $\sum\limits_{n=1}^{\infty} {ca_n}=cS$
 
-<br/>
-
 ### 수열의 극한의 대소관계
 * $\left(\lim\limits_{n \to \infty} {a_n} = \alpha, \lim\limits_{n \to \infty} {b_n} = \beta \right) \;
   \wedge \; \left( \forall n \in \mathbb{N}, a_n \leq b_n \right) \Rightarrow \alpha \leq \beta$
@@ -1185,8 +1092,6 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
   \wedge \; \left( \forall n \in \mathbb{N}, a_n \leq c_n \leq b_n \right) \Rightarrow \lim\limits_{n \to \infty} {c_n} = \alpha$
 
 두번째는 샌드위치 정리라고도 불린다.
-
-<br/>
 
 ### 수열의 극한값 구하기
 * 분수꼴의 무한수열 $\dfrac{a_n}{b_n}$의 극한은 $a_n$과 $b_n$의 최고차항의 계수로 구한다.
@@ -1218,13 +1123,9 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 4. $r \leq -1$일 때
   * $r=-1$이면 ${r^n}$은 진동하고, $r<-1$이면 $\lim\limits_{n \to \infty} {\left\|r^n \right\|}=\infty$ 이고 부호가 교대로 바뀌므로 진동함.
 
-<br/>
-
 ### 샌드위치 정리 증명
 증명을 찾아봤더니 극한의 학식정의론 증명이 안된다 <br/>
 미적분학 가서 해야지 ㅅㄱ
-
-<br/>
 
 ### 무한급수와 수열의 극한 사이의 관계 증명
 <p> $$ \left(\lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {b_n} = \alpha \right) \; \wedge \; \left(\forall n \in \mathbb{N}, \; a_n \leq c_n \leq b_n \right) \Rightarrow \lim\limits_{n \to \infty} {c_n} = \alpha $$ </p>
