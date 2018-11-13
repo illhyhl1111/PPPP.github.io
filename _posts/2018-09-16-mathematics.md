@@ -124,9 +124,9 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 {% endcapture %}
 
 {% capture context2 %}
-* 이후에 다루겠지만, 어떤 집합 $M$에 포함된 원소들이 어떤 연산 $\circ$에 대하여 교환, 결합법칙이 성립하고 항등원, 역원이 존재하면,
+* 이후에 다루겠지만, 어떤 집합 $M$에 포함된 원소들이 어떤 연산 $\circ$에 대하여 결합법칙이 성립하고 항등원, 역원이 존재하면,
 $M$은 $\circ$에 대하여 군(Group)을 이룬다고 한다. <br/>
-  여기까지 내용이 넘어가려면 얼마나 걸리려나
+* 교환법칙까지 성립하는 군을 아벨 군(abelian group), 혹은 가환군(commutative group)이라 한다.     
 
 {% comment %}
 https://m.blog.naver.com/PostView.nhn?blogId=obrigadu&logNo=50098477517&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F
@@ -752,7 +752,7 @@ $n$차 정사각행렬 $A$에 대하여, $XA=AX=I_n$ 인 행렬 $X$가 존재할
 
 {% capture context2 %}
 ### 행렬과 군
-* 행렬을 원소로 하는 집합에서 덧셈은 교환, 결합법칙을 만족하고, 항등원 $O$와 역원 $-A$가 존재하는 군이다.
+* 행렬을 원소로 하는 집합에서 덧셈은 교환, 결합법칙을 만족하고, 항등원 $O$와 역원 $-A$가 존재하므로 가환군이다.
 * 정사각행렬을 원소로 하는 집합에서 덧셈은 교환법칙을 만족하고, 항등원 $I$가 존재하지만, 결합법칙은 만족하지 않고 역행렬은 없을수도 있는 [모노이드](https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%85%B8%EC%9D%B4%EB%93%9C)이다.
   * [증명??](https://proofwiki.org/wiki/Square_Matrices_forms_Monoid)
 
@@ -1114,7 +1114,7 @@ $\dfrac{1}{a_n a_{n+1}} = \dfrac{1}{a_{n+1}-a_{n}}\left(\dfrac{1}{a_n} - \dfrac{
 아무래도 자연수의 정렬성을 먼저 공리로 두고 귀납법을 증명하는거 같긴 한데 <br/>
 솔직히 잘 모르겠다 뭐래는건지
 
-참고로 그 악명높은 1+1의 증명도 페아노 공리계를 좀 더 파고들면 가능한 것 같다.
+참고로 그 악명높은 1+1=2 의 증명도 페아노 공리계를 좀 더 파고들면 가능한 것 같다.
 [링크](http://blog.naver.com/PostView.nhn?blogId=a4gkyum&logNo=220978355057&parentCategoryNo=60&categoryNo=&viewDate=&isShowPopularPosts=true&from=search)
 
 아 안해
