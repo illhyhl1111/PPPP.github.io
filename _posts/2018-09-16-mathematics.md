@@ -1337,7 +1337,7 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 ### 함수의 극한
 함수 f(x)에서, $x \to a$로 보낼 때, \lim\limits_{x \to a} {f(x)}=\alpha 또는 x\to a \longrightarrow f(x)\to\alpha  
 \lim\limits_{x\to 0} {\dfrac{\sin x}{x}}=1, \lim\limits_{x\to 0} {1+x}^{\frac{1}{x}}=e, \lim\limits_{x\to \infty} {1+\dfrac{1}{x}}^x=e  
-\ln{x} := \log_{e}{x}, \lim\limits_{x\to 0} {dfrac{\log_{a}{1+x}}{x}}=\dfrac{1}{\ln{a}}, \lim\limits_{x\to 0} {\dfrac{a^x-1}{x}}=\ln{a}
+\ln{x} := \log_{e}{x}, \lim\limits_{x\to 0} {dfrac{\log_{a}(1+x)}{x}}=\dfrac{1}{\ln{a}}, \lim\limits_{x\to 0} {\dfrac{a^x-1}{x}}=\ln{a}
   
 함수 f(x)에서 \lim\limits_{x\to a} {f(x)} = f(a)일 때 f(x) 는 x=a에서 연속이라고 한다.  
 함수 f(x)가 닫힌 구간 [a, b]에서 연속이면 f(x)는 최대, 최소값을 가지며(최대, 최소의 정리),  
@@ -1530,7 +1530,7 @@ differential은 f(\mathbb{x})의 \mathbb{x}=\mathbb{a} 에서의 선형(L(a\math
 이 때 \mathbb{x}=\mathbb{a}에서 differential(미분)의 계수는 각 방향으로의 기울기값이 되며, 그렇기 때문에 기울기 == 미분'계수'가 된다  
 즉 dy=\frac{\partial y}{\partial x_1}dx_1+\frac{\partial y}{\partial x_1}dx_1+ \cdots + \frac{\partial y}{\partial x_n}dx_n 에서 dx_i의 계수: x_i방향으로의 기울기
 
-즉 미분은 도함수를 구하는 것(differentiation)이거나    
+즉 미분은 도함수(derivative)를 구하는 것(differentiation)이거나    
 혹은 선형근사함수를 구하는 것(differential)인데  
 기울기를 구하는 것은 선형근사함수를 구한 결과(미분)의 계수이기 때문에 미분계수.
 
@@ -1550,6 +1550,44 @@ differential은 f(\mathbb{x})의 \mathbb{x}=\mathbb{a} 에서의 선형(L(a\math
   (\cot x)'=-\text{cosec}^2 x,\; (\text{cosec}x)=-\text{cosec}x\cot x
 * (\log_a x)'=\dfrac{1}{x\ln{a}},\; (a^x)'=a^x \ln{a}
 
+{% capture context1 %}
+증명은 다음단계에
+{% endcapture %}
+
+{% capture context2 %}
+* \left\\{\dfrac{f(x)}{g(x)}} \right\\}' = \dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}
+  * y=\dfrac{1}{g(x)}, \delta y=\dfrac{1}{g(x+\delta x)}-\dfrac{1}{g(x)}= \dfrac{g(x)-g(x+\delta x)}{g(x+\delta x)g(x)}
+  * \left\\{\dfrac{1}{g(x)}\right\\}'=\lim\limits_{\delta x\to0} {\dfrac{\delta y}{\delta x}}
+    =-\lim\limits_{\delta x\to0} {\dfrac{g(x+\delta x)-g(x)}{\delta x}}\cots \lim\limits_{\delta x\to0} {\dfrac{1}{g(x+\delta x)g(x)}}=-\dfrac{g'(x)}{g^2(x)}
+  * \left\\{\dfrac{f(x)}{g(x)}\right\\}'=\dfrac{f'(x)}{g(x)}+\dfrac{f(x)}{g'(x)}=\dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}
+
+* y=f(u), u=g(x)의 도함수 \dfrac{dy}{dx}=\dfrac{dy}{du}\cdot \dfrac{du}{dx}
+  * \delta x\to 0이면 \delta u\to 0 
+  * \dfrac{dy}{dx}=\lim\limits_{\delta x\to 0} {\dfrac{\delta y}{\delta u}\cdot\dfrac{\delta u}{\delta x}} 
+    =\lim\limits_{\delta u\to 0} {\dfrac{\delta y}{\delta u} \lim\limits_{\delta x\to 0} \dfrac{\delta u}{\delta x}} = \dfrac{dy}{du}\cdot \dfrac{du}{dx}
+
+* y=f^{-1}(x)의 도함수 \dfrac{dy}{dx}=\dfrac{1}{\dfrac{dx}{dy}}
+  * x=f(y), \dfrac{dx}{dx}=1=\dfrac{df(y)}{dx}=\dfrac{df(y)}{dy}\cdot\dfrac{dy}{dx}
+  * \dfrac{dy}{dx}=\dfrac{1}{\dfrac{df(y)}{dy}}=\dfrac{1}{\dfrac{dx}{dy}}
+
+* (\sin x)'=\cos x
+  * (\sin x)'=\lim\limits_{h\to 0} {\dfrac{\sin(x+h)-\sin x}{h}}=\lim\limits_{h\to 0} {\dfrac{2\cos(x+h/2)\sin(h/2)}{h}}=
+    =\lim\limits_{h\to 0} cos(x+h/2)\cdot {\dfrac{\sin(h/2)}{h/2}}=\cos x \cdot 1=\cos x
+    
+* (\log_a x)'=\dfrac{1}{x\ln{a}}
+  * (\log_a x)'=\left\\{\dfrac{\log_e{x}}{\log_e{a}}\right\\}'=\dfrac{\ln'x}{\ln a}
+  * \ln'x = \lim\limits_{h\to 0}{\dfrac{\ln(x+h)-\ln x}{h}}=\lim\limits_{h\to 0} {\dfrac{1}{x}\left\\{\dfrac{x}{h}\ln\left(1+\dfrac{h}{x}\right)\right\\}}
+    = \dfrac{1}{x}\lim\limits_{h\to 0}{\ln\left(1+\dfrac{h}{x}\right)^{\dfrac{x}{h}}}=\dfrac{1}{x}\ln e=\dfrac{1}{x}
+    
+* (a^x)'=a^x \ln{a}
+  * (a^x)'=\lim\limits_{h\to 0} {\dfrac{a^{x+h}-a^x}{h}}=a^x\lim\limits_{h\to 0}{\dfrac{a^h-1}{h}}
+  * a^h=t+1,\; h=\log_a(t+1),\; \lim\limits_{h\to 0}{\dfrac{a^h-1}{h}}=\lim\limits_{t\to 0}{\dfrac{t}{\log_a(t+1)}}=\lim\limits_{t\to 0}{\dfrac{1}{\log_a(t+1)^{1/t}}}=\ln{a}
+
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="수학2_미분공식" %}
+
+
 ### 도함수의 활용
 * 함수의 접선의 방정식 y-f(a)=f'(a)(x-a), 접선에 수직인 방정식 y-f(a)=-\dfrac{1}{f'(a)}(x-a)
 * 평균값의 정리: [a, b]에서 연속이고 (a, b)에서 미분가능한 f(x)에서 \dfrac{f(b)-f(a)}{b-a}=f'(c)인 c가 [a, b] 안에 존재
@@ -1557,7 +1595,56 @@ differential은 f(\mathbb{x})의 \mathbb{x}=\mathbb{a} 에서의 선형(L(a\math
 * f'(a)=0일 때, f(x)는 f''(a)<0이면 x=a에서 극댓값, f''(a)>0이면 x=a에서 극솟값을 가진다.
 * 어떤 구간에서 f''(x)>0이면 f(x)는 아래로 볼록하고, f''(x)<0이면 위로 볼록하며, 곡선이 오목에서 볼록으로 바뀌는 지점을 변곡점이라 한다.  
 
+{% capture context1 %}
+### 평균값의 정리
+#### 롤의 정리
+![Alt text](/pictures/mathematics/롤의정리.JPG)
+함수 f(x)가 닫힌 구간 [a, b]에서 연속이고, (a, b)에서 미분가능하고, f(a)=f(b)이면 \exists c\in (a, b): f'(c)=0
+
+<br/> 
+
+-----------------------
+#### 롤의 정리로부터 평균값의 정리 유도
+![Alt text](/pictures/mathematics/평균값정리.JPG)
+* \bar{PQ}의 방정식: y-f(a)=\dfrac{f(b)-f(a)}{b-a}(x-a)
+* g(x)= f(x)-\left\\{f(a)+\dfrac{f(b)-f(a)}{b-a}(x-a) \right\\}로 두면, g(x)는 연속, 미분가능하며 g(a)=g(b)=0이다.
+* 롤의 정리에 의해, \exists c\in (a, b): g'(c)=0, f'(c)=\left. \dfrac{d}{dx}\left( g(x)+\dfrac{f(b)-f(a)}{b-a}(x-a)\right)\right|_{x=c} =\dfrac{f(b)-f(a)}{b-a}
+
+{% endcapture %}
+
+{% capture context2 %}
+### 롤의 정리 증명
+[a, b]에서 연속이고 (a, b)에서 미분가능한 f:[a, b] \longrightarrow \mathbb{R}에 대하여, 
+* 함수 f가 상수함수라면, \forall c\in(a, b): f'(c)=0
+* 상수함수가 아니라면, \exists x\in(a, b): f(x)\neq f(a)=f(b)
+  * WLOG, \exists x\in(a, b): f(x)>f(a)=f(b)
+* 최대, 최소의 정리에 의하여 f는 x=c\in(a, b)에서 최댓값을 가진다.
+  * \exists c\in(a,b): f(x)-f(c) \leq 0
+* \lim\limits_{x\to c+}{\dfrac{f(x)-f(c)}{x-c}} \leq 0, \lim\limits_{x\to c-}{\dfrac{f(x)-f(c)}{x-c}} \geq 0,
+* f는 x=c\in(a, b)에 대하여 미분가능하므로, \lim\limits_{x\to c+}{\dfrac{f(x)-f(c)}{x-c}}=\lim\limits_{x\to c-}{\dfrac{f(x)-f(c)}{x-c}}=f'(c)=0
+
 ### Fermat's Theorem for Extrema
+f:(a, b)\longrightarrow \mathbb{R}에서, f가 x_0\in (a, b)에서 미분가능하다면, x_0는 극점이다 \Rightarrow f'(x_0)=0
+* 어떠한 미분가능한 함수 f의 모든 극점(local extremum)은 stationary point이다 라는 정리.  
+* 여기서 stationary point이란 f의 도함수가 0인 지점을 뜻한다.
+  * 다변수 함수에 대해서, stationary point는 모든 편미분 계수가 0인 지점
+* 대우: f가 x_0\in (a, b)에서 미분가능하다면, f'(x_0)\neq 0 \Rightarrow x_0는 극점이 이다.
+ 
+<br/> 
+
+증명을 해보자. [원래 방향으로도 증명이 가능하지만](https://en.wikipedia.org/wiki/Fermat%27s_theorem_(stationary_points)) 대우를 증명해보자.  
+* WLOG, 미분가능한 점 x_0\in(a, b)에 대하여 f'(x_0)=K>0이라고 가정하자
+* 미분의 정의상 \lim\limits_{\varepsilon\to 0} {\dfrac{f(x_0+\varepsilon)-f(x_0)}{\varepsilon}}=K
+* \varepsilon에 대하여 극한을 취하지 않고, 충분히 작은 \varepsilon_0에 대하여 (x_0-\varepsilon_0, x_0+\varepsilon_0) 구간에 속하는 \varepsilon에 대해서 생각해 보면  
+  \varepsilon_0가 충분히 작다면 구간 안의 모든 \varepsilon는 평균변화율이 K/2보다 클 것이다.
+  * \varepsilon\in (x_0-\varepsilon_0, x_0+\varepsilon_0): \dfrac{f(x_0+\varepsilon)-f(x_0)}{\varepsilon}>\dfrac{K}{2}
+* \varepsilon>0일 때, f(x_0+\varepsilon)>f(x_0)+(K/2)\varepsilon>f(x_0)
+* \varepsilon<0일 때, f(x_0+\varepsilon)<f(x_0)+(K/2)\varepsilon<f(x_0)
+* 따라서, f(x_0)는 구간 (x_0-\varepsilon_0, x_0+\varepsilon_0)에 대하여 왼쪽에서는 f(x-\varepsilon)이 더 작고, 오른쪽에서는 f(x+\varepsilon)이 더 크기 때문에 극값이 아니다.
+
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="수학2_도함수활용" %}
 
 {% endcomment %}
 
