@@ -1690,6 +1690,8 @@ $x_0$는 극점 $\Rightarrow f'(x_0)=0$
 
 ## 적분과 통계
 
+{% comment %}
+
 ### 부정적분
 F'(x)=f(x)일 때 F(x)를 f(x)의 부정적분이라고 함. \int f(x)dx=F(x)+C, \int\left(\dfrac{d}{dx}f(x)dx\right)=f(x)+C  
 치환적분: \int f(g(x))g'(x)dx=\int \left(f(t)\dfrac{dt}{dx}\right)=\int f(t)dt  
@@ -1915,15 +1917,11 @@ F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right]\\
 즉 자연수보다 크기가 작거나 같은(\aleph_0) 집합이다.  
 실수의 크기는 \aleph_1=2^{\aleph_0}이므로, 불연속점의 크기가 \aleph_0 만큼 되어 봤자 씹을 수 있다는 뜻 ㅎ 
  
-<br/>
- 
-
-
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="적통_정적분" %}
 
-
+{% endcomment %}
 
 ## 기하와 벡터
 TBD
