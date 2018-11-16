@@ -1246,7 +1246,7 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 -------------------------------------
 
 ### 삼각함수 잡다한 공식(2)
-* $1+\tan^2\theta = \sec^2\theta$, $1+\cot^2\theta = \text{cosec}^2 \theta$
+* $1+\tan^2\theta = \sec^2\theta$, $1+\cot^2\theta = \csc^2 \theta$
 * $\sin(\alpha\pm\beta) = \sin\alpha \cos\beta \pm \cos\alpha \sin\beta$,
   $\cos(\alpha\pm\beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta$,
   $\tan(\alpha\pm\beta) = \dfrac{\tan\alpha\pm\tan\beta}{1\mp\tan\alpha\tan\beta}$
@@ -1574,7 +1574,7 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
   * $f(x,\,y)=x^2+y^2-4=0 \Rightarrow f'(x,\,y)=2x+2y\frac{dy}{dx}=0, \; \frac{dy}{dx}=-\frac{x}{y}$
 * $y=f^{-1}(x)$의 도함수 $\frac{dy}{dx}=\dfrac{1}{\frac{dx}{dy}}$ 
 * $(\sin x)'=\cos x,\; (\cos x)'=-\sin x,\; (\tan x)'=\sec^2 x,\; (\sec x)'=\sec x\tan x,$   
-  $(\cot x)'=-\text{cosec}^2 x,\; (\text{cosec}x)=-\text{cosec}x\cot x$
+  $(\cot x)'=-\csc^2 x,\; \csc x =-\csc x\cot x$
 * $(\log_a x)'=\frac{1}{x\ln{a}},\; (a^x)'=a^x \ln{a}$
 
 {% capture context1 %}
@@ -1689,7 +1689,241 @@ $x_0$는 극점 $\Rightarrow f'(x_0)=0$
 {% include blocks.html context1=context1 context2=context2 topic="수학2_도함수활용" %}
 
 ## 적분과 통계
-TBD
+
+### 부정적분
+F'(x)=f(x)일 때 F(x)를 f(x)의 부정적분이라고 함. \int f(x)dx=F(x)+C, \int\left(\dfrac{d}{dx}f(x)dx\right)=f(x)+C  
+치환적분: \int f(g(x))g'(x)dx=\int \left(f(t)\dfrac{dt}{dx}\right)=\int f(t)dt  
+부분적분: \int f'(x)g(x)dx=f(x)g(x)-\int f(x)g'(x)dx,\; \int u'vdx=uv-\int uv'dx
+
+{% capture context1 %}
+### 정의
+F'(x)=f(x)에서 F(x)로부터 f(x)를 구하는 연산을 미분(differentiation)이라고 하고 f(x)를 도함수(derivative)라고 한다면  
+f(x)로부터 F(x)을 구하는 연산을 부정적분이라고 하며  
+F(x)는 역도함수(antiderivative), 원함수, 원시함수(primitive function)이라고 부른다.
+
+<br/>
+
+### 부정적분의 계산
+1. \int kdx=kx+C
+2. \int x^n dx=\frac{1}{n+1}x^{n+1}+C (r\in\mathbb{R},\; n\neq 1)
+    * \int x^{-1} dx=\ln \|x\|+C 
+3. \int kf(x)dx=k\int f(x)dx
+4. \int \left(f(x)\pm g(x)\right)dx = \int f(x)dx \pm \int g(x)dx
+5. \int \sin x dx=-\cos x+C,\; \int \cos xdx=\sin x+C
+    * \int \sec^2 xdx=\tan x+C,\; \int \csc^2 xdx=-\cot x+C
+    * \int \sec x\tan xdx=\sec x+C,\; \int \csc x\cot xdx=-\csc x+C
+6. \int a^x dx=\dfrac{a^x}{\ln a}+C
+{% endcapture %}
+
+{% capture context2 %}
+### 잡소리
+부정적분은 미분의 역연산으로 정의된다.  
+적분은 원래 함수의 넓이를 구하려고 생긴 것인데, 그건 정적분이고  
+함수의 넓이를 구하는 정적분과 함수의 기울기를 구하는 미분과의 관계를 나타낸 것이 미적분학의 제 1 기본정리이며  
+정적분이 부정적분의 차로 계산됨을 나타낸 것이 미적분학의 제 2 기본정리이다.
+
+<br/>
+
+### 부정적분의 계산 증명
+\int \left(f(x)\pm g(x)\right)dx = \int f(x)dx \pm \int g(x)dx
+* \frac{d}{dx}\left(\int f(x)dx\pm \int g(x)dx\right)=\frac{d}{dx}\left(\int f(x)dx\right)\pm\frac{d}{dx}\left(\int g(x)dx\right)=f(x)\pm g(x)
+* \therefore \int f(x)dx \pm \int g(x)dx +C = \int \left(f(x)\pm g(x)\right)dx
+* 위 식은 임의의 f(x), g(x)에 대하여 성립하므로, f(x)=g(x)=0으로 두면 C=0
+
+
+나머지 식들도 위와 비슷하게 한다.
+
+<br/>
+
+### 치환적분 증명, infinitesimal differential
+y=\int f(t)dt라고 두자  
+chain rule에 의하여, \frac{dy}{dx}=\frac{dy}{dt}\cdot \frac{dt}{dx}=f(t)\frac{dt}{dx}=f(g(x))g'(x)  
+\therefore, y=\int f(t)dt =\int \left(f(t)\frac{dt}{dx}\right)= \int f(g(x))g'(x)dx
+  
+위 예시던, 미분의 chain rule에서던, 기타등등  
+dx, dy와 같은 미분소(differential)가 곱해지고 cancel out되고 등등 실제 변수마냥 취급되는 것을 확인할 수 있다.  
+미분소가 항상 분자/분모 형태로 묶여 나오던 미분파트와는 다르게, 적분에서는 미분소가 \int dx로 묶여 나오면서 dx라는 term이 따로 노는 형태가 처음 등장하는데,    
+이때 \left(\dfrac{dy}{dx}\right)dx가 어떻게 dy가 되는지, 그러니까 dx를 왜 실제 변수처럼 취급하여 cancel out할 수 있는지,  
+더 근본적으로는, 그래서 dx가 정확히 무엇인지 궁금했었다.   
+물론 위 식 \int f(t)dt =\int \left(f(t)\frac{dt}{dx}\right)에서 간접적으로 보여지긴 한다만, 그래도 직관적이진 않았다.
+
+여기에 대한 해답은 [위키 링크](https://en.wikipedia.org/wiki/Differential_(infinitesimal))로 일단 대체한다.  
+솔직히 아직 완전히 이해가 된건 아니고, 위 링크도 뭔가 속시원한 답을 주진 않는 것 같다. 
+
+미분의 여러 notations 들 중, 왜 하필이면 라이프니츠의 표기법이 승리했는지를 알 수 있다.  
+미분이라는 것을 ', dot, D와 같이 하나의 기본 연산자가 아니라, dy와 dx 두 미분소의 결합으로 두었기 때문에  
+\left(\dfrac{dy}{dx}\right)dx 이라는 직관적 표현이 다른 표기법으로는 죽었다 깨어나도 불가능하기 때문.  
+
+<br/>
+
+### 부분적분 증명
+곱의 미분법에 의하여, \left\\{f(x)g(x)\right\\}'=f'(x)g(x)+f(x)g'(x)  
+이걸 부정적분하면, f(x)g(x)+C =\int f'(x)g(x)dx + \int f(x)g'(x)dx  
+임의의 f(x), g(x)에 대하여 성립해야 하므로, f(x)=g(x)=0으로 두면 C=0  
+\therefore \int f'(x)g(x)dx=f(x)g(x)-\int f(x)g'(x)dx, \; \int u'vdx=uv-\int uv'dx
+
+부분적분에서는 함수를 적분될 놈(u)이랑 미분될 놈(v)으로 구분하는게 제일 중요한데,  
+미분 우선순위는 \ln x, x^n, \sin x, e^x 순서대로 좋다(미분해서 빨리 조질 수 있는 형태).
+
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="적통_부정적분" %}
+
+### 정적분
+구분구적법의 극한 \lim\limits_{n\to\infty}{\sum_{k=1}^{n} {f(x_k)\Delta x}}=\int_a^b {f(x)dx}  
+\int_a^b {f(x)dx}=\left[F(x)\right]_a^b=F(b)-F(a)  
+
+{% capture context1 %}
+### 구분구적법과 정적분
+![Alt text](/pictures/mathematics/정적분.jpg)  
+넓이를 구하는데 사용되는 적분이라는 개념의 시초  
+[a, b]에서 연속인 어떤 함수 f(x)를 n등분하여 각 분점의 x좌표를 x_0(=a), x_1, \cdots x_n(=b)로 두었을 때,  
+\Delta x=\frac{b-a}{n}으로 두면, [a, b] 구간에서 f(x) 그래프의 넓이를 다음과 같이 근사할 수 있다.
+<p> $$ S_n \simeq \sum\limits_{k=1}^n {f(x_k)\Delta x} $$</p>
+
+이때 n\to\infty로 보내버리면 S_n은 실제 넓이의 참값에 수렴하게 되는데, 이를
+<p> $$ S=\lim\limits_{n\to\infty} S_n = \lim\limits_{n\to\infty} {\sum\limits_{k=1}^n {f(x_k)\Delta x}} =\int_a^b f(x)dx $$</p>
+로 표현한다.
+
+<br/>
+
+### 정적분의 계산
+* \int_a^a f(x)dx=0
+* \int_a^b f(x)dx=-\int_b^a f(x)dx
+* \int_a^b kf(x)dx=k\int_a^b f(x)dx
+* \int_a^b \left\\{f(x)\pm g(x)\right\\}dx=\int_a^b f(x)dx \pm \int_a^b g(x)dx
+* \int_a^b f(x)dx=\int_a^c f(x)dx+\int_c^b f(x)dx
+
+<br/>
+
+* g(a)=\alpha, g(b)=\beta \Rightarrow \int_a^b f(g(x))g'(x)dx=\int_{\alpha}^{\beta} f(t)dt
+* \int_a^b f'(x)g(x)dx=\left[f(x)g(x)\right]_a^b-\int_a^b f(x)g'(x)dx
+* f(-x)=f(x) \Rightarrow \int_a^a f(x)dx=2\int_0^a f(x)dx
+* f(-x)=-f(x) \Rightarrow \int_a^a f(x)dx=0
+* \dfrac{d}{dx} \int_{h(x)}^{g(x) f(t)dt=f(g(x))g'(x)-f(h(x))h'(x)
+
+{% endcapture %}
+
+{% capture context2 %}
+### 미적분학의 기본정리
+위에서 잠깐 언급했지만, 미적분학의 기본정리는 
+* 함수의 기울기를 구하는 미분
+* 함수의 넓이를 구하는 적분
+
+이 관련없어 보이는 두 개념을 서로 연관시키는 2가지의 정리이다.
+
+<br/>
+
+#### 제1 기본정리
+함수 \f가 닫힌구간 [a,b]에서 연속이면, 함수 F(x)=\int _{a}^{x}f(t)\,dt 는 닫힌구간 [a,b]에서 연속이며 열린구간 (a,b)에서 미분이 가능하고,
+함수 F의 도함수는 f이다.
+
+x,x+h\in [a,b] 일 때,
+\begin{aligned}
+F'(x)&=\lim _{{h\to 0}}{\frac  {F(x+h)-F(x)}{h}}\\
+     &=\lim _{{h\to 0}}{\frac  {1}{h}}\left[\int _{{a}}^{{x+h}}f(t)\,dt-\int _{{a}}^{{x}}f(t)\,dt\right]\\
+     &=\lim _{{h\to 0}}{\frac  {1}{h}}\int _{{x}}^{{x+h}}f(t)\,dt
+\end{aligned}  
+이때, [적분의 평균값 정리](https://ko.wikipedia.org/wiki/%ED%8F%89%EA%B7%A0%EA%B0%92_%EC%A0%95%EB%A6%AC#%EC%A0%81%EB%B6%84_%ED%8F%89%EA%B7%A0%EA%B0%92_%EC%A0%95%EB%A6%AC)에 의해   
+c\in [x,x+h]:\; {\frac  {1}{h}}\int _{{x}}^{{x+h}}f(t)\,dt=f(c)  
+함수 f는 주어진 구간에서 연속이므로, [샌드위치 정리](https://en.wikipedia.org/wiki/Squeeze_theorem)에 의해 h가 작아짐에 따라 x+h는 x에 다가가고, 그러므로 c도 x에 다가간다.  
+\lim _{h\to 0}f(c)=f(x)  
+$\begin{aligned}
+F'(x)&=\lim _{{h\to 0}}{\frac  {1}{h}}\int _{{x}}^{{x+h}}f(t)\,dt\\
+     &=\lim _{{h\to 0}}f(c)\\
+     &=f(x)
+\end{aligned}$
+
+-------------------
+
+#### 제2 기본정리
+함수 f가 닫힌구간 [a,b]에서 연속이며, 함수 F가 f의 임의의 부정적분이면, \int _{a}^{b}f(t)dt=F(b)-F(a)
+
+함수 G를 G(x)=\int _{a}^{x}f(t)\,dt 으로 정의하면, 제1 기본정리에 의해 G(x)의 도함수는 f(x)가 되기 때문에 G(x)=\int f(x)dx +C' 이다. 
+또 함수 F는 f의 임의의 부정적분이랬으니 F(x)=\int f(x)dx+C''이며,  
+정리하면 F(x)=G(x)+C 가 된다.  
+F와, (제1 기본정리에 의해) G는 [a,b]에서 연속이므로,
+$\begin{aligned}
+F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right]\\
+         &=G(b)-G(a)\\
+         &=\int _{{a}}^{{b}}f(t)\,dt-\int _{{a}}^{{a}}f(t)\,dt\\
+         &=\int _{{a}}^{{b}}f(t)\,dt-0\\
+         &=\int _{{a}}^{{b}}f(t)\,dt
+\end{aligned}$
+
+<br/> 
+ 
+좀 더 엄밀한 증명은 [영어위키](https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus)를 참조하면 되는데 그렇게까지 살아야될거같진 않다. 
+
+<br/>
+
+### 리만 적분
+위에서, 구분구적법 $ S_n \simeq \sum\limits_{k=1}^n {f(x_k)\Delta x} $에서 n\to\infty로 보내버리면 S_n은 실제 넓이의 참값에 수렴한다고 했다.  
+진짜?  
+않이... 왜?
+
+좀 더 엄밀하게 다뤄보자. 하악  
+![Alt text](/pictures/mathematics/하악.JPG)
+
+일단 [리만 적분](http://mathnmath.tistory.com/95)이라는걸 정의해보자. 
+![Alt text](/pictures/mathematics/구분구적법.jpg)
+급식때에는 각 구간을 양심적으로 n등분하고, 함수값은 각 구간의 왼쪽(혹은 오른쪽) 구간을 선택했다.  
+이걸 일반화한게 리만 적분인데, 일반화한 부분은
+1. 구간을 균등하게 자르지 않고 내맘대로 자른다.
+    * partition \Gamma = \\{x_0=a, x_1, x_2, \cdots, x_{n-1}, x_n=b \\}
+    * 임의의 x_i는 [a, b] 구간 안에만 있음 된다. 심지어 x_i < x_{i+1}일 필요도 없이 내맘대로인데 편의상 x_i < x_{i+1}로 둔다.
+    * \Gamma의 norm을 \max_i \|x_i-x_{i-1}\|, 그러니까 모든 subinterval의 가장 큰 길이를 norm으로 정의한다.
+2. 각 구간에서, 함수값을 어느 것으로 선택할지 내맘대로 고른다.
+    * \min(x_{i-1}, x_i) \leq \xi_i \leq \max(x_{i-1}, x_i)
+    * \xi 를 태그(tag)라고 부른다.
+
+<br/>
+
+이렇게, 구간 [a, b]에서 함수의 넓이를 나타낸 급수는 다음과 같다  
+<p> $$ \sum_{i=1}^n {f(\xi)|x_i-x_{i-1}|} $$ </p>
+얘를 리만합(Riemann sum) 이라고 한다.  
+![Alt text](/pictures/mathematics/리만적분.jpg)
+
+<br/>
+
+이때 파티션의 최대 길이인 \Gamma의 norm을 0으로 보낼 때, 즉 모든 subinterval의 길이를 0으로 보낼 때,  
+\lim\limits_{\|\Gamma\|\to 0} {\sum_{i=1}^n {f(\xi)\|x_i-x_{i-1}\|}}가 어떠한 값으로 만약 수렴한다면? 이를 \int_a^b f(x)dx라고 정의한다.  
+<p> $$ \int_a^b f(x)dx = \lim\limits_{\|\Gamma\|\to 0} {\sum_{i=1}^n {f(\xi)|x_i-x_{i-1}|}} $$ </p>
+더 정확히는, 임의의 \Gamma, \xi 및 \epsilon에 대하여, \|\Gamma\| < \delta(\epsilon) 일 때 \|리만합-I\|<\epsilon인 \delta(\epsilon)이 존재한다면 리만 적분값 I가 정의된다.  
+
+다르부 적분이라는 개념도 있는데, 어떠한 분할 \Gamma 에 대하여,
+* 가장 넓이를 크게 태그를 고르는 상합 U(f, \Gamma)=\sum\limits_{i=1}^n \sup f([x_{i-1}, x_i])(x_i-x_{i-1})
+* 가장 넓이를 작게 태그를 고르는 하합 L(f, \Gamma)=\sum\limits_{i=1}^n \inf f([x_{i-1}, x_i])(x_i-x_{i-1})
+
+이 2가지를 정의하고, 상합에 대하여 \Gamma\to 0으로 보냈을 때 가장 큰 적분값인 상적분이 정의되며, 하합에 대해선 하적분이 정의된다.  
+상적분과 하적분 값이 I로 같으면 적분값이 정의된다.
+
+파티션 나누는거에 따라서 값이 달라지면 오또케요 라고 생각할 수 있는데  
+\|\Gamma\|\to 0으로만 보낸다면 파티션이랑은 관련없이 같은 값으로 수렴한다는게 증명된단다. 암튼 그렇다고 함.  
+고로 우리는 머리굴릴 필요 없이 가장 편한 균등분할로 나누면 된다.  
+
+
+<br/>
+
+결국, n\to\infty로 보내버리면 구분구적법의 넓이가 실제 넓이의 참값에 수렴한다는 사실은 리만 적분이 가능한 함수에 한정되는 것이다.  
+그럼 어떤 함수가 리만 적분 가능한가?  
+
+정답은, 적분 영역 내에서 불연속인 점을 모은 집합이 measure zero 집합인 경우라고 하는데,  
+좀 더 풀어 쓰면, 불연속인 점들을 모아서 집합을 만들면, 그게 유한 집합이거나 [가산 무한 집합](https://ko.wikipedia.org/wiki/%EA%B0%80%EC%82%B0_%EC%A7%91%ED%95%A9)인 경우에 해당된다.
+
+가산 무한 집합은, 그 집합을 자연수 집합으로 보내는 단사 함수가 존재하는 집합,  
+즉 자연수보다 크기가 작거나 같은(\aleph_0) 집합이다.  
+실수의 크기는 \aleph_1=2^{\aleph_0}이므로, 불연속점의 크기가 \aleph_0 만큼 되어 봤자 씹을 수 있다는 뜻 ㅎ 
+ 
+<br/>
+ 
+
+
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="적통_정적분" %}
+
+
 
 ## 기하와 벡터
 TBD
