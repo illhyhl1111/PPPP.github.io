@@ -1333,20 +1333,20 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 {% include blocks.html context1=context1 context2=context2 topic="수학2_삼각함수" %}
 
 ### 함수의 극한
-함수 $f(x)$에서, $x \to a$로 보낼 때, $\lim\limits_{x \to a} {f(x)}=\alpha$ 또는 $x\to a \longrightarrow f(x)\to\alpha$  
-$\lim\limits_{x\to 0} {\dfrac{\sin x}{x}}=1,\; \lim\limits_{x\to 0} {1+x}^{\frac{1}{x}}=e,\; \lim\limits_{x\to \infty} {1+\dfrac{1}{x}}^x=e$  
-$\ln{x} := \log_{e}{x},\; \lim\limits_{x\to 0} {dfrac{\log_{a}(1+x)}{x}}=\dfrac{1}{\ln{a}},\; \lim\limits_{x\to 0} {\dfrac{a^x-1}{x}}=\ln{a}$
+* 함수 $f(x)$에서, $x \to a$로 보낼 때, $\lim\limits_{x \to a} {f(x)}=\alpha$ 또는 $x\to a \longrightarrow f(x)\to\alpha$  
+* $\lim\limits_{x\to 0} {\frac{\sin x}{x}}=1,\; \lim\limits_{x\to 0} {(1+x)}^{\frac{1}{x}}=e,\; \lim\limits_{x\to \infty} {\left(1+\frac{1}{x}\right)}^x=e$  
+* $\ln{x} := \log_{e}{x},\; \lim\limits_{x\to 0} {\frac{\log_{a}(1+x)}{x}}=\frac{1}{\ln{a}},\; \lim\limits_{x\to 0} {\frac{a^x-1}{x}}=\ln{a}$
   
-함수 $f(x)$에서 $\lim\limits_{x\to a} {f(x)} = f(a)$일 때 $f(x)$ 는 $x=a$에서 연속이라고 한다.  
-함수 $f(x)$가 닫힌 구간 $[a, b]$에서 연속이면 $f(x)$는 최대, 최소값을 가지며(최대, 최소의 정리),  
-$f(a)\neq f(b)$일 때 $f(a),\; f(b)$ 사이의 임의의 실수 $k$에 대하여 $f(c)=k$인 $c$가 $(a, b)$에 존재한다. (중심값 정리)
+* 함수 $f(x)$에서 $\lim\limits_{x\to a} {f(x)} = f(a)$일 때 $f(x)$ 는 $x=a$에서 연속이라고 한다.  
+* 함수 $f(x)$가 닫힌 구간 $[a, b]$에서 연속이면 $f(x)$는 최대, 최소값을 가지며(최대, 최소의 정리),  
+* $f(a)\neq f(b)$일 때 $f(a),\; f(b)$ 사이의 임의의 실수 $k$에 대하여 $f(c)=k$인 $c$가 $(a, b)$에 존재한다. (중심값 정리)
 
 {% capture context1 %}
 ### 함수의 극한 정의(급식)
 * 함수 $f(x)$에서 $x\neq a$가 한없이 $a$에 가까워질 때,  
   $f(x)$의 값이 일정한 값 $\alpha$에 한없이 가까워지면 $f(x)$는 $\alpha$에 수렴한다고 한다.  
-* $\lim\limits_{x \to a} {f(x)}=\alpha$ 또는 $x\to a \longrightarrow f(x)\to\alpha$  
-* 이때 $g(x)=\frac{x^2-1}{x-1}$에서 $g(1)$은 정의되지 않지만, $\lim\limits_{x \to 1}{g(x)}$는 2로 정의된다.
+* $\lim\limits_{x \to a} {f(x)}=\alpha$ 또는 $(x\to a) \longrightarrow (f(x)\to\alpha)$  
+* $g(x)=\frac{x^2-1}{x-1}$에서 $g(1)$은 정의되지 않지만, $\lim\limits_{x \to 1}{g(x)}$는 2로 정의된다.
 
 <br/>
 
@@ -1354,7 +1354,7 @@ $f(a)\neq f(b)$일 때 $f(a),\; f(b)$ 사이의 임의의 실수 $k$에 대하�
   $f(x)$의 좌극한은 $\lim\limits_{x \to a-0}{f(x)}=\alpha$로 정의되고,  
 * $x>a$가 한없이 $a$에 가까워질 때 $f(x)$의 값이 일정한 값 $\beta$에 한없이 가까워지면  
   $f(x)$의 우극한은 $\lim\limits_{x \to a+0}{f(x)}=\beta$로 정의된다.
-* 이때 $\lim\limits_{x \to a-0}{f(x)}=\lim\limits_{x \to a+0}{f(x)}=\alpha \LeftRightarrow \lim\limits_{x \to a}{f(x)}=\alpha$ 로 극한값이 정의된다.
+* 이때 $\lim\limits_{x \to a-0}{f(x)}=\lim\limits_{x \to a+0}{f(x)}=\alpha \Leftrightarrow \lim\limits_{x \to a}{f(x)}=\alpha$ 로 극한값이 정의된다.
 
 <br/>
 
@@ -1363,7 +1363,7 @@ $\lim\limits_{x \to a}{f(x)}=\alpha,\; \lim\limits_{x \to a}{g(x)}=\beta$ 일 �
 * $\lim\limits_{x \to a}{cf(x)}=c\alpha$
 * $\lim\limits_{x \to a}{f(x)\pm g(x)}=\alpha\pm \beta$
 * $\lim\limits_{x \to a}{f(x)g(x)}=\alpha \beta$
-* $\lim\limits_{x \to a}{\frac{f(x)}{g(x)}}=\frac{\alpha}{\beta}$
+* $\lim\limits_{x \to a}{\dfrac{f(x)}{g(x)}}=\dfrac{\alpha}{\beta}$
 
 $a$에 가까운 모든 $x$에 대하여
 * $f(x) \leq g(x) \Rightarrow \alpha\leq\beta$
@@ -1380,8 +1380,8 @@ $a$에 가까운 모든 $x$에 대하여
 
 ### 무리수 e
 * $\ln{x} := \log_{e}{x}$  
-* $\lim\limits_{x\to 0} {1+x}^{\frac{1}{x}}=e (e=2.71828182845\cdots)$  
-* $x\to \dfrac{1}{x} \to \lim\limits_{x\to \infty} {1+\dfrac{1}{x}}^x=e$  
+* $\lim\limits_{x\to 0} {(1+x)}^{\frac{1}{x}}=e \quad (e=2.71828182845\cdots)$  
+* $x\to \frac{1}{x} \to \lim\limits_{x\to \infty} {\left(1+\frac{1}{x}\right)}^x=e$  
 
 <br/>
 
@@ -1392,9 +1392,9 @@ $a$에 가까운 모든 $x$에 대하여
 3. $\lim\limits_{x\to a} {f(x)} = f(a)$일 때
 
 이 때 $f(x)$가 구간 $(a, b)$의 모든 실수에 대하여 연속일 때, $f(x)$는 $(a, b)$에서 연속함수라고 한다.  
-닫힌 구간 $[a, b]$에 대해서는 추가로 $\lim\limits_{x\to a+0} {f(x)}=f(a),\; \lim\limits_{x\to b-0} {f(x)}=f(b)$를 만족해야 함
+* 닫힌 구간 $[a, b]$에 대해서는 추가로 $\lim\limits_{x\to a+0} {f(x)}=f(a),\; \lim\limits_{x\to b-0} {f(x)}=f(b)$를 만족해야 함
 
-$f(x), g(x)$가 $x=a$에서 연속이면, 아래는 모두 연속
+$f(x),\; g(x)$가 $x=a$에서 연속이면, 아래는 모두 연속
 * $cf(x),\; f(x)\pm g(x),\; f(x)g(x),\; \frac{f(x)}{g(x)}$
 
 {% endcapture %}
@@ -1404,35 +1404,36 @@ $f(x), g(x)$가 $x=a$에서 연속이면, 아래는 모두 연속
 ### 삼각함수의 극한 증명
 ![Alt text](/pictures/mathematics/삼각함수_극한.JPG)  
 $0<x<\frac{\pi}{2}$일 때, $\triangle OAB <$ 부채꼴 $OAB < \triangle OAT$  
-$$ <p>
+<p>$$ 
 \therefore \frac{1}{2}\sin x < \frac{1}{2}x < \frac{1}{2}\tan x, \\  
 1 < \dfrac{x}{\sin x} < \cos{x}, \; \cos{x} < \dfrac{\sin x}{x} < 1  \\
-\lim\limits_{x\to +0} {\cos{x}} = 1, \; \lim\limits_{x\to +0} {\dfrac{\sin x}{x}} = 1 
-</p>$$
+\lim\limits_{x\to +0} {\cos{x}} = 1, \; \lim\limits_{x\to +0} {\frac{\sin x}{x}} = 1 
+$$</p>
 
 <br/>
 
 ### 최대, 최소, 중간값의 정리
 증명은 기억상 미적분학에서 다룬다. 아니더라도 그때 가서 다시 함.
 
-다변수 함수에서 최대, 최소 정리를 일반화시키면  
+다변수 함수에서 최대, 최소 정리를 일반화시키면: 
+<p align="center">
 $f:\; \mathbb{R}^n \to \mathbb{R}$가 $A \subset \mathbb{R}^n$에서 연속이고, $A$가 [compact](https://ko.wikipedia.org/wiki/%EC%BD%A4%ED%8C%A9%ED%8A%B8_%EA%B3%B5%EA%B0%84)하면 $f$는 $A$에서 최대값과 최소값을 가진다.  
+</p>
 가 된다.
-
 <br/>
 
 ### 자연상수 e
 고등학교에서는 교육과정 순서때문에 $e$를 $\lim\limits_{x\to 0} {1+x}^{\frac{1}{x}}$로 정의하지만,  
 아무래도 갑툭튀 하는 감이 없지않아 있다.   
 
-엄밀한 증명 순서는 자연로그 $\ln{x}=\int_{1}^{x} {\dfrac{1}{t}dt}$를 먼저 정의한 이후 $\ln{x}=1$을 만족하는 $x$값을 $e$라고 정의하는게 가장 명확한 정의라고 한다.
+엄밀한 증명 순서는 자연로그 $\ln{x}=\int_{1}^{x} {\frac{1}{t}dt}$를 먼저 정의한 이후 $\ln{x}=1$을 만족하는 $x$값을 $e$라고 정의하는게 가장 명확한 정의라고 한다.
 [꺼라위키 나무](https://namu.wiki/w/%EC%9E%90%EC%97%B0%EC%83%81%EC%88%98)  
-하지만 역사적으로는 $\lim\limits_{x\to 0} {1+x}^{\frac{1}{x}}=e$ 가 먼저 나온게 맞다.
+하지만 역사적으로는 $\lim\limits_{x\to 0} {(1+x)}^{\frac{1}{x}}=e$ 가 먼저 나온게 맞다.
 
-자연로그의 정의로부터 $e=\lim\limits_{x\to 0} {1+x}^{\frac{1}{x}}$를 유도하는 순서로는
-1. $\ln{x}$로부터 $e$, 그리고 $e^x$를 정의, $\dfrac{de^x}{dx}=e^x$ 임을 유도
+자연로그의 정의로부터 $e=\lim\limits_{x\to 0} {(1+x)}^{\frac{1}{x}}$를 유도하는 순서로는
+1. $\ln{x}$로부터 $e$, 그리고 $e^x$를 정의, $\frac{de^x}{dx}=e^x$ 임을 유도
 2. 테일러 급수로부터 $e^x= \sum\limits_{n=0}^{\infty} {\dfrac{x^n}{n!}},\; e=\sum\limits_{n=0}^{\infty} {\dfrac{1}{n!}}$
-3. 이항정리로부터 $e=\sum\limits_{n=0}^{\infty} {\dfrac{1}{n!}}=\lim\limits_{x\to 0} {1+x}^{\frac{1}{x}}$ 임을 유도 
+3. 이항정리로부터 $e=\sum\limits_{n=0}^{\infty} {\dfrac{1}{n!}}=\lim\limits_{x\to 0} {(1+x)}^{\frac{1}{x}}$ 임을 유도 
 
 하면 된다.
 
@@ -1440,11 +1441,11 @@ $f:\; \mathbb{R}^n \to \mathbb{R}$가 $A \subset \mathbb{R}^n$에서 연속이�
 
 $e$는 매우 많은 성질을 가지고 있다. 몇가지만 나열해보자면
 1. [초월수](https://ko.wikipedia.org/wiki/%EC%B4%88%EC%9B%94%EC%88%98)이다. 모든 실수 초월수는 무리수라서 역시 무리수이다. [증명](https://ko.wikipedia.org/wiki/E_(%EC%83%81%EC%88%98)#%EB%AC%B4%EB%A6%AC%EC%88%98)
-2. $x=0$에서 지수함수 $f(x)=a^x$의 기울기가 0이 되는 $a$이며, 동시에 $ce^x는 \dfrac{df(x)}{dx}=f(x)$ 인 유일한 함수이다.
+2. $x=0$에서 지수함수 $f(x)=a^x$의 기울기가 0이 되는 $a$이며, 동시에 $ce^x$는 $\frac{df(x)}{dx}=f(x)$ 인 유일한 함수이다.
 3. 테일러 급수에 의해 $e=\sum\limits_{n=0}^{\infty} {\dfrac{1}{n!}}$
 4. 복소수 범위로 확장된 지수함수 $a^{i\theta}$에서, $a^{i\pi}=-1$ 로 매칭시키는 상수이다. 나중에 오일러 공식 할때 다룰 예정
-5. 확률이 $1\div n%$인 뽑기를 $n$번 뽑았을 때, 한번도 안 뽑힐 확률은 $n \to \infty$일 때 $1/e$로 수렴한다.  
-   동시에 이율을 $1\div n$, 횟수를 $n$으로 두는 복리계산의 합은 $n \to \infty$일 때 $e$로 수렴한다.
+5. 확률이 $1/n%$인 뽑기를 $n$번 뽑았을 때, 한번도 안 뽑힐 확률은 $n \to \infty$일 때 $1/e$로 수렴한다.  
+   동시에 이율을 $1/n$, 횟수를 $n$으로 두는 복리계산의 합은 $n \to \infty$일 때 $e$로 수렴한다.
 
 -----------------
 
@@ -1452,7 +1453,8 @@ $e$는 매우 많은 성질을 가지고 있다. 몇가지만 나열해보자면
 함수 $f(x)=a^x$의 $x$에서 기울기값은 원래 함수값 $a^x$에 특정한 상수 $C$가 곱해진 값으로 나타나는 성질이 있는데  
 $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한다.  
 근데 $a$가 증가함에 따라 $C$가 연속적으로 증가하니까, 자연스레 $C=1$이 되는 순간이 있을 것이고  
-그 때의 무리수 $a=2.71828182845\cdots$ 를 $e$로 정의한다.  
+그 때의 무리수 $a=2.71828182845\cdots$ 를 $e$로 정의한다.
+  
 이후 기타 $e$의 성질들은 차근차근 유도 가능함
 
 {% endcapture %}
@@ -1481,9 +1483,10 @@ $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한�
 
 
 * 미분가능성한 함수는 연속인 함수의 충분조건이다.  
-  * $f(x)$가 $x=a$에서 미분가능 $\Rightarrow f(x)$는 $x=a$에서 연속 
+  * $f(x)$가 $x=a$에서 미분가능 $\Rightarrow f(x)$는 $x=a$에서 연속  
   ![Alt text](/pictures/mathematics/미분가능성.JPG)  
   역의 반례
+
 
 * 기하학적으로는 곡선 $y=f(x)$ 위의 점 $(a, f(a))$에서의 접선의 기울기를 뜻함
  
@@ -1493,6 +1496,7 @@ $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한�
 * 정의역 $X$에서 미분가능한 함수 $y=f(x)$에 대하여 $\forall x\in X$를 $f'(x)$로 대응시키는 함수.  
 * $f':x \longrightarrow f'(x) = \lim\limits_{\Delta x\to 0} {\dfrac{f(x+\Delta x)-f(x)}{\Delta x}}$  
 * 이 함수를 구하는 것을 미분법이라고 한다.
+
 
 미분법의 매우 기본적인 공식으로는
 1. $f(x)=x^n \Rightarrow f'(x)=nx^{n-1}$
@@ -1506,8 +1510,8 @@ $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한�
 {% capture context2 %}
 ### 미분가능 $\Rightarrow$ 연속 증명
 * 미분가능 $\Rightarrow f'(a)=\lim\limits_{x\to a} {\dfrac{f(x)-f(a)}{x-a}}$가 존재, $f'(a)$ 존재  
-* $\lim\limits_{x\to a} {f(x)-f(a)} = \lim\limits_{x\to a} {\dfrac{f(x)-f(a)}{x-a}\cdot (x-a)} 
-= \lim\limits_{x\to a} {\dfrac{f(x)-f(a)}{x-a}}\cdot \lim\limits_{x\to a} {(x-a)}=f'(a)\cdot 0 = 0$  
+* $\lim\limits_{x\to a} {f(x)-f(a)} = \lim\limits_{x\to a} {\dfrac{f(x)-f(a)}{x-a}\cdot (x-a)} \\ 
+   = \lim\limits_{x\to a} {\dfrac{f(x)-f(a)}{x-a}}\cdot \lim\limits_{x\to a} {(x-a)}=f'(a)\cdot 0 = 0$  
 * $\therefore \lim\limits_{x\to a} {f(x)}=f(a), \quad y=f(x)$는 $x=a$에서 연속이다.
 
 <br/>
@@ -1515,11 +1519,11 @@ $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한�
 ### 미분 표기법들
 1. 라이프니츠(Leibniz) 표기법
     * $\dfrac{dy}{dx}=\dfrac{df(x)}{dx}=\dfrac{d}{dx}f(x)$
-    * $\left. \dfrac{df}{dx} \right|_{x=a} = \dfrac{df}{dx}(a) = \dfrac{d}{dx}f(a)$
+    * $\left. \dfrac{df}{dx} \right\|_{x=a} = \dfrac{df}{dx}(a) = \dfrac{d}{dx}f(a)$
     * $\dfrac{d^n y}{dx^n}= \dfrac{d^n f(x)}{dx^n}= \dfrac{d^n }{dx^n}f(x)$
     
 2. 라그랑주(Lagrange) 표기법
-    * $f^{(1)} = f', \; f^{(2)} = f'', \; f^{(3)}=f''', \quad f^{(n)} = f^{''\cdots'}^{n}$
+    * $f^{(1)} = f', \; f^{(2)} = f'', \; f^{(3)}=f''', \quad f^{(n)} = f\, \overset{n}{\overbrace{''\cdots'}}$
     
 3. 뉴턴(Newton) 표기법
     * $\overset{1}{\dot{y}}=\dot{y}, \; \overset{2}{\dot{y}}=\ddot{y}, \; \overset{3}{\dot{y}}=\dddot{y}, \quad \overset{n}{\dot{y}}$
@@ -1530,7 +1534,8 @@ $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한�
 <br/>
 
 ### 미분'계수'?
-[꺼라위키 출처](https://namu.wiki/w/%EB%AF%B8%EB%B6%84#s-3), [영어위키](https://en.wikipedia.org/wiki/Differential_of_a_function)  
+[꺼라위키 출처](https://namu.wiki/w/%EB%AF%B8%EB%B6%84#s-3), [영어위키](https://en.wikipedia.org/wiki/Differential_of_a_function)
+  
 미분은 2가지 다른 단어가 미분이라는 한 단어로 번역된 것이라고 하는데, 
 * 도함수를 얻는 과정인 differentiate의 명사형 differentiation(미분)과
 * differential(미분)
@@ -1551,52 +1556,52 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 {% include blocks.html context1=context1 context2=context2 topic="수학2_미분" %}
 
 ### 미분공식들
-* $\left\\{\dfrac{f(x)}{g(x)}} \right\\}' = \dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
-* $r\in \mathbb{R}, y=x^r$의 도함수 $y'=rx{r-1}$
-* $y=f(g(x))$의 도함수 $y'=f'(g(x))g(x), y=f(u), u=g(x)$의 도함수 $\dfrac{dy}{dx}=\dfrac{dy}{du}\cdot \dfrac{du}{dx}$
-* $x=f(t),\; y=g(t)$일 때 $\dfrac{dy}{dx}=\dfrac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}=\dfrac{g'(t)}{f'(t)}$
+* $\left\\{\dfrac{f(x)}{g(x)} \right\\}' = \dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
+* $r\in \mathbb{R}, y=x^r$의 도함수 $y'=rx^{r-1}$
+* $y=f(u), u=g(x)$의 도함수 $y'=f'(g(x))g(x),\; \frac{dy}{dx}=\frac{dy}{du}\cdot \frac{du}{dx}$
+* $x=f(t),\; y=g(t)$일 때 $\frac{dy}{dx}=\dfrac{\frac{dy}{dt}}{\frac{dx}{dt}}=\frac{g'(t)}{f'(t)}$
 * 음함수 $f(x,\,y)=0$ 는 각 항을 $x$에 대하여 미분하여 $\frac{dy}{dx}$를 구한다
-  * $f(x,\,y)=x^2+y^2-4=0 \Rightarrow f'(x,\,y)=2x+2y\dfrac{dy}{dx}=0, \; \dfrac{dy}{dx}=-\dfrac{x}{y}$
-* $y=f^{-1}(x)$의 도함수 $\dfrac{dy}{dx}=\dfrac{1}{\dfrac{dx}{dy}}$ 
-* $(\sin x)'=\cos x,\; (\cos x)'=-\sin x,\; (\tan x)'=\sec^2 x,\; (\sec x)'=\sec x\tan x,\; 
+  * $f(x,\,y)=x^2+y^2-4=0 \Rightarrow f'(x,\,y)=2x+2y\frac{dy}{dx}=0, \; \frac{dy}{dx}=-\frac{x}{y}$
+* $y=f^{-1}(x)$의 도함수 $\frac{dy}{dx}=\dfrac{1}{\frac{dx}{dy}}$ 
+* $(\sin x)'=\cos x,\; (\cos x)'=-\sin x,\; (\tan x)'=\sec^2 x,\; (\sec x)'=\sec x\tan x, \\ 
   (\cot x)'=-\text{cosec}^2 x,\; (\text{cosec}x)=-\text{cosec}x\cot x$
-* $(\log_a x)'=\dfrac{1}{x\ln{a}},\; (a^x)'=a^x \ln{a}$
+* $(\log_a x)'=\frac{1}{x\ln{a}},\; (a^x)'=a^x \ln{a}$
 
 {% capture context1 %}
 증명은 다음단계에
 {% endcapture %}
 
 {% capture context2 %}
-* $r\in \mathbb{R}, y=x^r$의 도함수 $y'=rx{r-1}$
+* $r\in \mathbb{R}, y=x^r$의 도함수 $y'=rx^{r-1}$
   * $\dfrac{d}{dx}x^r = \dfrac{d}{dx}e^{r\ln x} = e^{r\ln x} \dfrac{r}{x} =rx^{r-1}$
 
-* $\left\\{\dfrac{f(x)}{g(x)}} \right\\}' = \dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
+* $\left\\{\dfrac{f(x)}{g(x)} \right\\}' = \dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
   * $y=\dfrac{1}{g(x)}, \Delta y=\dfrac{1}{g(x+\Delta x)}-\dfrac{1}{g(x)}= \dfrac{g(x)-g(x+\Delta x)}{g(x+\Delta x)g(x)}$
   * $\left\\{\dfrac{1}{g(x)}\right\\}'=\lim\limits_{\Delta x\to 0} {\dfrac{\Delta y}{\Delta x}}
     =-\lim\limits_{\Delta x\to 0} {\dfrac{g(x+\Delta x)-g(x)}{\Delta x}}\cdot \lim\limits_{\Delta x\to 0} {\dfrac{1}{g(x+\Delta x)g(x)}}=-\dfrac{g'(x)}{g^2(x)}$
   * $\left\\{\dfrac{f(x)}{g(x)}\right\\}'=\dfrac{f'(x)}{g(x)}+\dfrac{f(x)}{g'(x)}=\dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
 
-* $y=f(u),\; u=g(x)$의 도함수 $\dfrac{dy}{dx}=\dfrac{dy}{du}\cdot \dfrac{du}{dx}$
+* $y=f(u),\; u=g(x)$의 도함수 $\frac{dy}{dx}=\frac{dy}{du}\cdot \frac{du}{dx}$
   * $\Delta x\to 0$이면 $\Delta u\to 0$ 
   * $\dfrac{dy}{dx}=\lim\limits_{\Delta x\to 0} {\dfrac{\Delta y}{\Delta u}\cdot\dfrac{\Delta u}{\Delta x}} 
-    =\lim\limits_{\Delta u\to 0} {\dfrac{\Delta y}{\Delta u} \lim\limits_{\Delta x\to 0} \dfrac{\Delta u}{\Delta x}} = \dfrac{dy}{du}\cdot \dfrac{du}{dx}$
+    =\lim\limits_{\Delta u\to 0} {\dfrac{\Delta y}{\Delta u}\cdot \lim\limits_{\Delta x\to 0} \dfrac{\Delta u}{\Delta x}} = \dfrac{dy}{du}\cdot \dfrac{du}{dx}$
 
-* $y=f^{-1}(x)$의 도함수 $\dfrac{dy}{dx}=\dfrac{1}{\dfrac{dx}{dy}}$
-  * $x=f(y),\; \dfrac{dx}{dx}=1=\dfrac{df(y)}{dx}=\dfrac{df(y)}{dy}\cdot\dfrac{dy}{dx}$
-  * $\dfrac{dy}{dx}=\dfrac{1}{\dfrac{df(y)}{dy}}=\dfrac{1}{\dfrac{dx}{dy}}$
+* $y=f^{-1}(x)$의 도함수 $\frac{dy}{dx}=\dfrac{1}{\frac{dx}{dy}}$
+  * $x=f(y),\; \frac{dx}{dx}=1=\frac{df(y)}{dx}=\frac{df(y)}{dy}\cdot\frac{dy}{dx}$
+  * $\frac{dy}{dx}=\dfrac{1}{\frac{df(y)}{dy}}=\dfrac{1}{\frac{dx}{dy}}$
 
 * $(\sin x)'=\cos x$
-  * $(\sin x)'=\lim\limits_{h\to 0} {\dfrac{\sin(x+h)-\sin x}{h}}=\lim\limits_{h\to 0} {\dfrac{2\cos(x+h/2)\sin(h/2)}{h}}=
-    =\lim\limits_{h\to 0} cos(x+h/2)\cdot {\dfrac{\sin(h/2)}{h/2}}=\cos x \cdot 1=\cos x$
+  * $(\sin x)'=\lim\limits_{h\to 0} {\frac{\sin(x+h)-\sin x}{h}}=\lim\limits_{h\to 0} {\frac{2\cos(x+h/2)\sin(h/2)}{h}} \\
+    =\lim\limits_{h\to 0} cos(x+h/2)\cdot {\frac{\sin(h/2)}{h/2}}=\cos x \cdot 1=\cos x$
     
 * $(\log_a x)'=\dfrac{1}{x\ln{a}}$
   * $(\log_a x)'=\left\\{\dfrac{\log_e{x}}{\log_e{a}}\right\\}'=\dfrac{\ln'x}{\ln a}$
-  * $\ln'x = \lim\limits_{h\to 0}{\dfrac{\ln(x+h)-\ln x}{h}}=\lim\limits_{h\to 0} {\dfrac{1}{x}\left\\{\dfrac{x}{h}\ln\left(1+\dfrac{h}{x}\right)\right\\}}
-    = \dfrac{1}{x}\lim\limits_{h\to 0}{\ln\left(1+\dfrac{h}{x}\right)^{\dfrac{x}{h}}}=\dfrac{1}{x}\ln e=\dfrac{1}{x}$
+  * $\ln'x = \lim\limits_{h\to 0}{\frac{\ln(x+h)-\ln x}{h}}=\lim\limits_{h\to 0} {\frac{1}{x}\left\\{\frac{x}{h}\ln\left(1+\frac{h}{x}\right)\right\\}} \\
+    = \frac{1}{x}\lim\limits_{h\to 0}{\ln\left(1+\frac{h}{x}\right)^{\frac{x}{h}}}=\frac{1}{x}\ln e=\frac{1}{x}$
     
 * $(a^x)'=a^x \ln{a}$
-  * $(a^x)'=\lim\limits_{h\to 0} {\dfrac{a^{x+h}-a^x}{h}}=a^x\lim\limits_{h\to 0}{\dfrac{a^h-1}{h}}$
-  * $a^h=t+1,\; h=\log_a(t+1),\; \lim\limits_{h\to 0}{\dfrac{a^h-1}{h}}=\lim\limits_{t\to 0}{\dfrac{t}{\log_a(t+1)}}=\lim\limits_{t\to 0}{\dfrac{1}{\log_a(t+1)^{1/t}}}=\ln{a}$
+  * $(a^x)'=\lim\limits_{h\to 0} {\frac{a^{x+h}-a^x}{h}}=a^x\lim\limits_{h\to 0}{\frac{a^h-1}{h}}$
+  * $a^h=t+1,\; h=\log_a(t+1),\; \lim\limits_{h\to 0}{\frac{a^h-1}{h}}=\lim\limits_{t\to 0}{\frac{t}{\log_a(t+1)}}=\lim\limits_{t\to 0}{\frac{1}{\log_a(t+1)^{1/t}}}=\ln{a}$
 
 {% endcapture %}
 
@@ -1604,7 +1609,7 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 
 
 ### 도함수의 활용
-* 함수의 접선의 방정식 $y-f(a)=f'(a)(x-a)$, 접선에 수직인 방정식 $y-f(a)=-\dfrac{1}{f'(a)}(x-a)$
+* 함수의 접선의 방정식 $y-f(a)=f'(a)(x-a)$, 접선에 수직인 방정식 $y-f(a)=-\frac{1}{f'(a)}(x-a)$
 * 평균값의 정리: $[a, b]$에서 연속이고 $(a, b)$에서 미분가능한 $f(x)$에서 $\dfrac{f(b)-f(a)}{b-a}=f'(c)$인 $c$가 $[a, b]$ 안에 존재
 * 증가(감소): $f'(a)>0$이면 $f(x)$는 $x=a$에서 증가상태에 있고, 구간 내 모든 $x$에 대하여 $f'(x)>0$이면 $f(x)$는 증가함수이다.
 * $f'(a)=0$일 때, $f(x)$는 $f''(a)<0$이면 $x=a$에서 극댓값, $f''(a)>0$이면 $x=a$에서 극솟값을 가진다.
@@ -1613,17 +1618,20 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 {% capture context1 %}
 ### 평균값의 정리
 #### 롤의 정리
-![Alt text](/pictures/mathematics/롤의정리.JPG)
-함수 $f(x)$가 닫힌 구간 $[a, b]$에서 연속이고, $(a, b)$에서 미분가능하고, $f(a)=f(b)$이면 $\exists c\in (a, b):\; f'(c)=0$
+![Alt text](/pictures/mathematics/롤의정리.JPG)  
+함수 $f(x)$가 닫힌 구간 $[a, b]$에서 연속이고, $(a, b)$에서 미분가능하고, $f(a)=f(b)$이면  
+<p> $$\exists c\in (a, b):\; f'(c)=0$$ </p>
 
-<br/> 
 
 -----------------------
 #### 롤의 정리로부터 평균값의 정리 유도
 ![Alt text](/pictures/mathematics/평균값정리.JPG)
-* $\bar{PQ}$의 방정식: $y-f(a)=\dfrac{f(b)-f(a)}{b-a}(x-a)$
-* $g(x)= f(x)-\left\\{f(a)+\dfrac{f(b)-f(a)}{b-a}(x-a) \right\\}$로 두면, $g(x)$는 연속, 미분가능하며 $g(a)=g(b)=0$이다.
-* 롤의 정리에 의해, $\exists c\in (a, b):\; g'(c)=0,\; f'(c)=\left. \dfrac{d}{dx}\left( g(x)+\dfrac{f(b)-f(a)}{b-a}(x-a)\right)\right|_{x=c} =\dfrac{f(b)-f(a)}{b-a}$
+* $\bar{PQ}$의 방정식: $y-f(a)=\frac{f(b)-f(a)}{b-a}(x-a)$
+* $g(x)= f(x)-\left\\{f(a)+\frac{f(b)-f(a)}{b-a}(x-a) \right\\}$로 두면, $g(x)$는 연속, 미분가능하며 $g(a)=g(b)=0$이다.
+* 롤의 정리에 의해
+ <p> $$
+ \exists c\in (a, b):\; g'(c)=0,\; f'(c)=\left. \frac{d}{dx}\left( g(x)+\frac{f(b)-f(a)}{b-a}(x-a)\right)\right\|_{x=c} =\frac{f(b)-f(a)}{b-a}
+ $$ </p>
 
 {% endcapture %}
 
@@ -1635,8 +1643,10 @@ $[a, b]$에서 연속이고 $(a, b)$에서 미분가능한 $f:[a, b] \longrighta
   * WLOG, $\exists x\in(a, b):\; f(x)>f(a)=f(b)$
 * 최대, 최소의 정리에 의하여 $f$는 $x=c\in(a, b)$에서 최댓값을 가진다.
   * $\exists c\in(a,b):\; f(x)-f(c) \leq 0$
-* $\lim\limits_{x\to c+}{\dfrac{f(x)-f(c)}{x-c}} \leq 0,\; \lim\limits_{x\to c-}{\dfrac{f(x)-f(c)}{x-c}} \geq 0$
-* $f$는 $x=c\in(a, b)$에 대하여 미분가능하므로, $\lim\limits_{x\to c+}{\dfrac{f(x)-f(c)}{x-c}}=\lim\limits_{x\to c-}{\dfrac{f(x)-f(c)}{x-c}}=f'(c)=0$
+* $\lim\limits_{x\to c+}{\frac{f(x)-f(c)}{x-c}} \leq 0,\; \lim\limits_{x\to c-}{\frac{f(x)-f(c)}{x-c}} \geq 0$
+* $f$는 $x=c\in(a, b)$에 대하여 미분가능하므로, $\lim\limits_{x\to c+}{\frac{f(x)-f(c)}{x-c}}=\lim\limits_{x\to c-}{\frac{f(x)-f(c)}{x-c}}=f'(c)=0$
+
+<br/>
 
 ### Fermat's Theorem for Extrema
 $f:(a, b)\longrightarrow \mathbb{R}$에서, $f$가 $x_0\in (a, b)$에서 미분가능하다면, $x_0$는 극점 $\Rightarrow f'(x_0)=0$
@@ -1649,10 +1659,10 @@ $f:(a, b)\longrightarrow \mathbb{R}$에서, $f$가 $x_0\in (a, b)$에서 미분�
 
 증명을 해보자. [원래 방향으로도 증명이 가능하지만](https://en.wikipedia.org/wiki/Fermat%27s_theorem_(stationary_points)) 대우를 증명해보자.  
 * WLOG, 미분가능한 점 $x_0\in(a, b)$에 대하여 $f'(x_0)=K>0$이라고 가정하자
-* 미분의 정의상 $\lim\limits_{\varepsilon\to 0} {\dfrac{f(x_0+\varepsilon)-f(x_0)}{\varepsilon}}=K$
+* 미분의 정의상 $\lim\limits_{\varepsilon\to 0} {\frac{f(x_0+\varepsilon)-f(x_0)}{\varepsilon}}=K$
 * $\varepsilon$에 대하여 극한을 취하지 않고, 충분히 작은 $\varepsilon_0$에 대하여 $(x_0-\varepsilon_0, x_0+\varepsilon_0)$ 구간에 속하는 $\varepsilon$에 대해서 생각해 보면  
   $\varepsilon_0$가 충분히 작다면 구간 안의 모든 $\varepsilon$는 평균변화율이 $K/2$보다 클 것이다.
-  * $\varepsilon\in (x_0-\varepsilon_0, x_0+\varepsilon_0):\; \dfrac{f(x_0+\varepsilon)-f(x_0)}{\varepsilon}>\dfrac{K}{2}$
+  * $\varepsilon\in (x_0-\varepsilon_0, x_0+\varepsilon_0):\; \frac{f(x_0+\varepsilon)-f(x_0)}{\varepsilon}>\dfrac{K}{2}$
 * $\varepsilon>0$일 때, $f(x_0+\varepsilon)>f(x_0)+(K/2)\varepsilon>f(x_0)$
 * $\varepsilon<0$일 때, $f(x_0+\varepsilon)<f(x_0)+(K/2)\varepsilon<f(x_0)$
 * 따라서, $f(x_0)$는 구간 $(x_0-\varepsilon_0, x_0+\varepsilon_0)$에 대하여 왼쪽에서는 $f(x-\varepsilon)$이 더 작고, 오른쪽에서는 $f(x+\varepsilon)$이 더 크기 때문에 극값이 아니다.
