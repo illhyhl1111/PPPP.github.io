@@ -1334,7 +1334,7 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 
 ### 함수의 극한
 * 함수 $f(x)$에서, $x \to a$로 보낼 때, $\lim\limits_{x \to a} {f(x)}=\alpha$ 또는 $x\to a \longrightarrow f(x)\to\alpha$  
-* $\lim\limits_{x\to 0} {\frac{\sin x}{x}}=1,\; \lim\limits_{x\to 0} {(1+x)}^{\frac{1}{x}}=e,\; \lim\limits_{x\to \infty} {\left(1+\frac{1}{x}\right)}^x=e$  
+* $\lim\limits_{x\to 0} {\dfrac{\sin x}{x}}=1,\; \lim\limits_{x\to 0} {(1+x)}^{\frac{1}{x}}=e,\; \lim\limits_{x\to \infty} {\left(1+\frac{1}{x}\right)}^x=e$  
 * $\ln{x} := \log_{e}{x},\; \lim\limits_{x\to 0} {\frac{\log_{a}(1+x)}{x}}=\frac{1}{\ln{a}},\; \lim\limits_{x\to 0} {\frac{a^x-1}{x}}=\ln{a}$
   
 * 함수 $f(x)$에서 $\lim\limits_{x\to a} {f(x)} = f(a)$일 때 $f(x)$ 는 $x=a$에서 연속이라고 한다.  
@@ -1346,13 +1346,13 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 * 함수 $f(x)$에서 $x\neq a$가 한없이 $a$에 가까워질 때,  
   $f(x)$의 값이 일정한 값 $\alpha$에 한없이 가까워지면 $f(x)$는 $\alpha$에 수렴한다고 한다.  
 * $\lim\limits_{x \to a} {f(x)}=\alpha$ 또는 $(x\to a) \longrightarrow (f(x)\to\alpha)$  
-* $g(x)=\frac{x^2-1}{x-1}$에서 $g(1)$은 정의되지 않지만, $\lim\limits_{x \to 1}{g(x)}$는 2로 정의된다.
+* $g(x)=\dfrac{x^2-1}{x-1}$에서 $g(1)$은 정의되지 않지만, $\lim\limits_{x \to 1}{g(x)}$는 2로 정의된다.
 
 <br/>
 
 * 함수 $f(x)$에서 $x<a$가 한없이 $a$에 가까워질 때 $f(x)$의 값이 일정한 값 $\alpha$에 한없이 가까워지면  
   $f(x)$의 좌극한은 $\lim\limits_{x \to a-0}{f(x)}=\alpha$로 정의되고,  
-* $x>a$가 한없이 $a$에 가까워질 때 $f(x)$의 값이 일정한 값 $\beta$에 한없이 가까워지면  
+* $x>a$가 한없이 $a$에 가까워질 때 $f(x)$의 값이 $\beta$에 한없이 가까워지면  
   $f(x)$의 우극한은 $\lim\limits_{x \to a+0}{f(x)}=\beta$로 정의된다.
 * 이때 $\lim\limits_{x \to a-0}{f(x)}=\lim\limits_{x \to a+0}{f(x)}=\alpha \Leftrightarrow \lim\limits_{x \to a}{f(x)}=\alpha$ 로 극한값이 정의된다.
 
@@ -1364,6 +1364,7 @@ $\lim\limits_{x \to a}{f(x)}=\alpha,\; \lim\limits_{x \to a}{g(x)}=\beta$ 일 �
 * $\lim\limits_{x \to a}{f(x)\pm g(x)}=\alpha\pm \beta$
 * $\lim\limits_{x \to a}{f(x)g(x)}=\alpha \beta$
 * $\lim\limits_{x \to a}{\dfrac{f(x)}{g(x)}}=\dfrac{\alpha}{\beta}$
+
 
 $a$에 가까운 모든 $x$에 대하여
 * $f(x) \leq g(x) \Rightarrow \alpha\leq\beta$
@@ -1391,8 +1392,12 @@ $a$에 가까운 모든 $x$에 대하여
 2. $\lim\limits_{x\to a} {f(x)}$가 존재하며
 3. $\lim\limits_{x\to a} {f(x)} = f(a)$일 때
 
+<br/>
+
 이 때 $f(x)$가 구간 $(a, b)$의 모든 실수에 대하여 연속일 때, $f(x)$는 $(a, b)$에서 연속함수라고 한다.  
 * 닫힌 구간 $[a, b]$에 대해서는 추가로 $\lim\limits_{x\to a+0} {f(x)}=f(a),\; \lim\limits_{x\to b-0} {f(x)}=f(b)$를 만족해야 함
+
+<br/>
 
 $f(x),\; g(x)$가 $x=a$에서 연속이면, 아래는 모두 연속
 * $cf(x),\; f(x)\pm g(x),\; f(x)g(x),\; \frac{f(x)}{g(x)}$
@@ -1417,9 +1422,9 @@ $$</p>
 
 다변수 함수에서 최대, 최소 정리를 일반화시키면: 
 <p align="center">
-$f:\; \mathbb{R}^n \to \mathbb{R}$가 $A \subset \mathbb{R}^n$에서 연속이고, $A$가 [compact](https://ko.wikipedia.org/wiki/%EC%BD%A4%ED%8C%A9%ED%8A%B8_%EA%B3%B5%EA%B0%84)하면 $f$는 $A$에서 최대값과 최소값을 가진다.  
+$f:\; \mathbb{R}^n \to \mathbb{R}$가 $A \subset \mathbb{R}^n$에서 연속이고, $A$가 compact하면 $f$는 $A$에서 최대값과 최소값을 가진다.  
 </p>
-가 된다.
+가 된다. [compact 정의](https://ko.wikipedia.org/wiki/%EC%BD%A4%ED%8C%A9%ED%8A%B8_%EA%B3%B5%EA%B0%84)
 <br/>
 
 ### 자연상수 e
@@ -1450,10 +1455,10 @@ $e$는 매우 많은 성질을 가지고 있다. 몇가지만 나열해보자면
 -----------------
 
 **개인적으로 생각하는** 가장 직관적인 정의는  
-함수 $f(x)=a^x$의 $x$에서 기울기값은 원래 함수값 $a^x$에 특정한 상수 $C$가 곱해진 값으로 나타나는 성질이 있는데  
-$a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한다.  
-근데 $a$가 증가함에 따라 $C$가 연속적으로 증가하니까, 자연스레 $C=1$이 되는 순간이 있을 것이고  
-그 때의 무리수 $a=2.71828182845\cdots$ 를 $e$로 정의한다.
+* 함수 $f(x)=a^x$의 $x$에서 기울기값은 원래 함수값 $a^x$에 특정한 상수 $C$가 곱해진 값으로 나타나는 성질이 있는데  
+* $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한다.  
+* 근데 $a$가 증가함에 따라 $C$가 연속적으로 증가하니까, 자연스레 $C=1$이 되는 순간이 있을 것이고  
+  그 때의 무리수 $a=2.71828182845\cdots$ 를 $e$로 정의한다.
   
 이후 기타 $e$의 성질들은 차근차근 유도 가능함
 
@@ -1470,23 +1475,26 @@ $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한�
 {% capture context1 %}
 ### 평균변화율
 * $x$의 값이 $a$에서 $b$로 변할 때, 함숫값 $y$의 증분$(\Delta y) \; f(a) - f(b)$를 $x$의 증분$(\Delta x) \; b-a$으로 나눈 값  
-* 즉 $\dfrac{\Delta y}{\Delta x} = \dfrac{f(b)-f(a)}{b-a} = \dfrac{f(a+\Delta x)-f(a)}{\Delta x}$ 
+* 즉 $\frac{\Delta y}{\Delta x} = \frac{f(b)-f(a)}{b-a} = \frac{f(a+\Delta x)-f(a)}{\Delta x}$ 
 * 기하학적으로는 함수 $y=f(x)$ 그래프 위의 두 점 $P(a, f(a)),\; Q(a+\Delta x, f(a+\Delta x))$에 대하여 직선 $PQ$의 기울기를 뜻함 
 
 <br/>
 
 ### 미분계수
 * 함수 $f(x)$의 $a\to a+\Delta x$의 평균변화율의 $\Delta x\to 0$ 일 때의 극한값
-* $f'(a) = \lim\limits_{\Delta x\to 0} {\dfrac{f(a+\Delta x)-f(a)}{\Delta x}}$이 존재 할 때(우극한 = 좌극한)    
+* $f'(a) = \lim\limits_{\Delta x\to 0} {\frac{f(a+\Delta x)-f(a)}{\Delta x}}$이 존재 할 때(우극한 = 좌극한)    
   $f(x)$는 $x=a$에서 미분가능하다고 하며, 이 값을 $y=f(x)$의 미분계수라고 한다.  
 * $f(x)$가 어떤 구간에 속하는 $x$에서 모두 미분 가능할 때, $f(x)$는 그 구간에서 미분가능하다고 한다.
 
+<br/>
 
 * 미분가능성한 함수는 연속인 함수의 충분조건이다.  
-  * $f(x)$가 $x=a$에서 미분가능 $\Rightarrow f(x)$는 $x=a$에서 연속  
-  ![Alt text](/pictures/mathematics/미분가능성.JPG)  
-  역의 반례
+  * $f(x)$가 $x=a$에서 미분가능 $\Rightarrow f(x)$는 $x=a$에서 연속
 
+![Alt text](/pictures/mathematics/미분가능성.JPG)  
+역의 반례
+
+<br/>
 
 * 기하학적으로는 곡선 $y=f(x)$ 위의 점 $(a, f(a))$에서의 접선의 기울기를 뜻함
  
@@ -1494,9 +1502,10 @@ $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한�
  
 ### 도함수
 * 정의역 $X$에서 미분가능한 함수 $y=f(x)$에 대하여 $\forall x\in X$를 $f'(x)$로 대응시키는 함수.  
-* $f':x \longrightarrow f'(x) = \lim\limits_{\Delta x\to 0} {\dfrac{f(x+\Delta x)-f(x)}{\Delta x}}$  
+* $f':x \longrightarrow f'(x) = \lim\limits_{\Delta x\to 0} {\frac{f(x+\Delta x)-f(x)}{\Delta x}}$  
 * 이 함수를 구하는 것을 미분법이라고 한다.
 
+<br/>
 
 미분법의 매우 기본적인 공식으로는
 1. $f(x)=x^n \Rightarrow f'(x)=nx^{n-1}$
@@ -1509,9 +1518,9 @@ $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한�
 
 {% capture context2 %}
 ### 미분가능 $\Rightarrow$ 연속 증명
-* 미분가능 $\Rightarrow f'(a)=\lim\limits_{x\to a} {\dfrac{f(x)-f(a)}{x-a}}$가 존재, $f'(a)$ 존재  
-* $\lim\limits_{x\to a} {f(x)-f(a)} = \lim\limits_{x\to a} {\dfrac{f(x)-f(a)}{x-a}\cdot (x-a)} \\ 
-   = \lim\limits_{x\to a} {\dfrac{f(x)-f(a)}{x-a}}\cdot \lim\limits_{x\to a} {(x-a)}=f'(a)\cdot 0 = 0$  
+* 미분가능 $\Rightarrow f'(a)=\lim\limits_{x\to a} {\frac{f(x)-f(a)}{x-a}}$가 존재, $f'(a)$ 존재  
+* $\lim\limits_{x\to a} {f(x)-f(a)} = \lim\limits_{x\to a} {\frac{f(x)-f(a)}{x-a}\cdot (x-a)}$   
+  $=\lim\limits_{x\to a} {\frac{f(x)-f(a)}{x-a}}\cdot \lim\limits_{x\to a} {(x-a)}=f'(a)\cdot 0 = 0$  
 * $\therefore \lim\limits_{x\to a} {f(x)}=f(a), \quad y=f(x)$는 $x=a$에서 연속이다.
 
 <br/>
@@ -1542,10 +1551,11 @@ $a=1$일 때 $C$는 $0$이고 $a\to\infty$일 때 $C$는 $\infty$로 발산한�
 
 이 있다.  
   
-differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a\mathbb{x}+\mathbb{y})=aL(\mathbb{x})+L(\mathbb{y}))$ 근사 함수 $L(\mathbb{x})=\mathbb{Ax}$를 구하는 것이고,  
-이 때 $\mathbb{x}=\mathbb{a}$에서 differential(미분)의 계수는 각 방향으로의 기울기값이 되며,  
-그렇기 때문에 기울기 == 미분'계수'가 된다  
+differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a\mathbb{x}+\mathbb{y})=aL(\mathbb{x})+L(\mathbb{y}))$ 근사 함수 $L(\mathbb{x})=\mathbb{Ax}$를 구하는 것이고,
+이 때 $\mathbb{x}=\mathbb{a}$에서 differential(미분)의 계수는 각 방향으로의 기울기값이 되며, 그렇기 때문에 기울기 == 미분'계수'가 된다  
 * $dy=\frac{\partial y}{\partial x_1}dx_1+\frac{\partial y}{\partial x_1}dx_1+ \cdots + \frac{\partial y}{\partial x_n}dx_n$ 에서 $dx_i$의 계수: $x_i$방향으로의 기울기
+
+<br/>
 
 즉 미분은 도함수(derivative)를 구하는 것(differentiation)이거나    
 혹은 선형근사함수를 구하는 것(differential)인데  
@@ -1556,15 +1566,15 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 {% include blocks.html context1=context1 context2=context2 topic="수학2_미분" %}
 
 ### 미분공식들
-* $\left\\{\dfrac{f(x)}{g(x)} \right\\}' = \dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
+* $\left\\{\frac{f(x)}{g(x)} \right\\}' = \frac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
 * $r\in \mathbb{R}, y=x^r$의 도함수 $y'=rx^{r-1}$
 * $y=f(u), u=g(x)$의 도함수 $y'=f'(g(x))g(x),\; \frac{dy}{dx}=\frac{dy}{du}\cdot \frac{du}{dx}$
 * $x=f(t),\; y=g(t)$일 때 $\frac{dy}{dx}=\dfrac{\frac{dy}{dt}}{\frac{dx}{dt}}=\frac{g'(t)}{f'(t)}$
 * 음함수 $f(x,\,y)=0$ 는 각 항을 $x$에 대하여 미분하여 $\frac{dy}{dx}$를 구한다
   * $f(x,\,y)=x^2+y^2-4=0 \Rightarrow f'(x,\,y)=2x+2y\frac{dy}{dx}=0, \; \frac{dy}{dx}=-\frac{x}{y}$
 * $y=f^{-1}(x)$의 도함수 $\frac{dy}{dx}=\dfrac{1}{\frac{dx}{dy}}$ 
-* $(\sin x)'=\cos x,\; (\cos x)'=-\sin x,\; (\tan x)'=\sec^2 x,\; (\sec x)'=\sec x\tan x, \\ 
-  (\cot x)'=-\text{cosec}^2 x,\; (\text{cosec}x)=-\text{cosec}x\cot x$
+* $(\sin x)'=\cos x,\; (\cos x)'=-\sin x,\; (\tan x)'=\sec^2 x,\; (\sec x)'=\sec x\tan x,$   
+  $(\cot x)'=-\text{cosec}^2 x,\; (\text{cosec}x)=-\text{cosec}x\cot x$
 * $(\log_a x)'=\frac{1}{x\ln{a}},\; (a^x)'=a^x \ln{a}$
 
 {% capture context1 %}
@@ -1575,29 +1585,35 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 * $r\in \mathbb{R}, y=x^r$의 도함수 $y'=rx^{r-1}$
   * $\dfrac{d}{dx}x^r = \dfrac{d}{dx}e^{r\ln x} = e^{r\ln x} \dfrac{r}{x} =rx^{r-1}$
 
+
 * $\left\\{\dfrac{f(x)}{g(x)} \right\\}' = \dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
   * $y=\dfrac{1}{g(x)}, \Delta y=\dfrac{1}{g(x+\Delta x)}-\dfrac{1}{g(x)}= \dfrac{g(x)-g(x+\Delta x)}{g(x+\Delta x)g(x)}$
   * $\left\\{\dfrac{1}{g(x)}\right\\}'=\lim\limits_{\Delta x\to 0} {\dfrac{\Delta y}{\Delta x}}
     =-\lim\limits_{\Delta x\to 0} {\dfrac{g(x+\Delta x)-g(x)}{\Delta x}}\cdot \lim\limits_{\Delta x\to 0} {\dfrac{1}{g(x+\Delta x)g(x)}}=-\dfrac{g'(x)}{g^2(x)}$
   * $\left\\{\dfrac{f(x)}{g(x)}\right\\}'=\dfrac{f'(x)}{g(x)}+\dfrac{f(x)}{g'(x)}=\dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
 
+
 * $y=f(u),\; u=g(x)$의 도함수 $\frac{dy}{dx}=\frac{dy}{du}\cdot \frac{du}{dx}$
   * $\Delta x\to 0$이면 $\Delta u\to 0$ 
   * $\dfrac{dy}{dx}=\lim\limits_{\Delta x\to 0} {\dfrac{\Delta y}{\Delta u}\cdot\dfrac{\Delta u}{\Delta x}} 
     =\lim\limits_{\Delta u\to 0} {\dfrac{\Delta y}{\Delta u}\cdot \lim\limits_{\Delta x\to 0} \dfrac{\Delta u}{\Delta x}} = \dfrac{dy}{du}\cdot \dfrac{du}{dx}$
 
+
 * $y=f^{-1}(x)$의 도함수 $\frac{dy}{dx}=\dfrac{1}{\frac{dx}{dy}}$
   * $x=f(y),\; \frac{dx}{dx}=1=\frac{df(y)}{dx}=\frac{df(y)}{dy}\cdot\frac{dy}{dx}$
   * $\frac{dy}{dx}=\dfrac{1}{\frac{df(y)}{dy}}=\dfrac{1}{\frac{dx}{dy}}$
 
+
 * $(\sin x)'=\cos x$
-  * $(\sin x)'=\lim\limits_{h\to 0} {\frac{\sin(x+h)-\sin x}{h}}=\lim\limits_{h\to 0} {\frac{2\cos(x+h/2)\sin(h/2)}{h}} \\
-    =\lim\limits_{h\to 0} cos(x+h/2)\cdot {\frac{\sin(h/2)}{h/2}}=\cos x \cdot 1=\cos x$
+  * $(\sin x)'=\lim\limits_{h\to 0} {\frac{\sin(x+h)-\sin x}{h}}=\lim\limits_{h\to 0} {\frac{2\cos(x+h/2)\sin(h/2)}{h}}$  
+    $=\lim\limits_{h\to 0} cos(x+h/2)\cdot {\frac{\sin(h/2)}{h/2}}=\cos x \cdot 1=\cos x$
+
     
 * $(\log_a x)'=\dfrac{1}{x\ln{a}}$
   * $(\log_a x)'=\left\\{\dfrac{\log_e{x}}{\log_e{a}}\right\\}'=\dfrac{\ln'x}{\ln a}$
-  * $\ln'x = \lim\limits_{h\to 0}{\frac{\ln(x+h)-\ln x}{h}}=\lim\limits_{h\to 0} {\frac{1}{x}\left\\{\frac{x}{h}\ln\left(1+\frac{h}{x}\right)\right\\}} \\
-    = \frac{1}{x}\lim\limits_{h\to 0}{\ln\left(1+\frac{h}{x}\right)^{\frac{x}{h}}}=\frac{1}{x}\ln e=\frac{1}{x}$
+  * $\ln'x = \lim\limits_{h\to 0}{\frac{\ln(x+h)-\ln x}{h}}=\lim\limits_{h\to 0} {\frac{1}{x}\left\\{\frac{x}{h}\ln\left(1+\frac{h}{x}\right)\right\\}}$  
+    $= \frac{1}{x}\lim\limits_{h\to 0}{\ln\left(1+\frac{h}{x}\right)^{\frac{x}{h}}}=\frac{1}{x}\ln e=\frac{1}{x}$
+
     
 * $(a^x)'=a^x \ln{a}$
   * $(a^x)'=\lim\limits_{h\to 0} {\frac{a^{x+h}-a^x}{h}}=a^x\lim\limits_{h\to 0}{\frac{a^h-1}{h}}$
@@ -1610,7 +1626,7 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 
 ### 도함수의 활용
 * 함수의 접선의 방정식 $y-f(a)=f'(a)(x-a)$, 접선에 수직인 방정식 $y-f(a)=-\frac{1}{f'(a)}(x-a)$
-* 평균값의 정리: $[a, b]$에서 연속이고 $(a, b)$에서 미분가능한 $f(x)$에서 $\dfrac{f(b)-f(a)}{b-a}=f'(c)$인 $c$가 $[a, b]$ 안에 존재
+* 평균값의 정리: $[a, b]$에서 연속이고 $(a, b)$에서 미분가능한 $f(x)$에서 $\frac{f(b)-f(a)}{b-a}=f'(c)$인 $c$가 $[a, b]$ 안에 존재
 * 증가(감소): $f'(a)>0$이면 $f(x)$는 $x=a$에서 증가상태에 있고, 구간 내 모든 $x$에 대하여 $f'(x)>0$이면 $f(x)$는 증가함수이다.
 * $f'(a)=0$일 때, $f(x)$는 $f''(a)<0$이면 $x=a$에서 극댓값, $f''(a)>0$이면 $x=a$에서 극솟값을 가진다.
 * 어떤 구간에서 $f''(x)>0$이면 $f(x)$는 아래로 볼록하고, $f''(x)<0$이면 위로 볼록하며, 곡선이 오목에서 볼록으로 바뀌는 지점을 변곡점이라 한다.  
@@ -1630,7 +1646,7 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 * $g(x)= f(x)-\left\\{f(a)+\frac{f(b)-f(a)}{b-a}(x-a) \right\\}$로 두면, $g(x)$는 연속, 미분가능하며 $g(a)=g(b)=0$이다.
 * 롤의 정리에 의해
  <p> $$
- \exists c\in (a, b):\; g'(c)=0,\; f'(c)=\left. \frac{d}{dx}\left( g(x)+\frac{f(b)-f(a)}{b-a}(x-a)\right)\right\|_{x=c} =\frac{f(b)-f(a)}{b-a}
+ \exists c\in (a, b):\; g'(c)=0 \\ f'(c)=\left. \frac{d}{dx}\left( g(x)+\frac{f(b)-f(a)}{b-a}(x-a)\right)\right\|_{x=c} =\frac{f(b)-f(a)}{b-a}
  $$ </p>
 
 {% endcapture %}
@@ -1649,7 +1665,8 @@ $[a, b]$에서 연속이고 $(a, b)$에서 미분가능한 $f:[a, b] \longrighta
 <br/>
 
 ### Fermat's Theorem for Extrema
-$f:(a, b)\longrightarrow \mathbb{R}$에서, $f$가 $x_0\in (a, b)$에서 미분가능하다면, $x_0$는 극점 $\Rightarrow f'(x_0)=0$
+$f:(a, b)\longrightarrow \mathbb{R}$에서, $f$가 $x_0\in (a, b)$에서 미분가능하다면,  
+$x_0$는 극점 $\Rightarrow f'(x_0)=0$
 * 어떠한 미분가능한 함수 $f$의 모든 극점(local extremum)은 stationary point이다 라는 정리.  
 * 여기서 stationary point이란 $f$의 도함수가 0인 지점을 뜻한다.
   * 다변수 함수에 대해서, stationary point는 모든 편미분 계수가 0인 지점
@@ -1660,7 +1677,7 @@ $f:(a, b)\longrightarrow \mathbb{R}$에서, $f$가 $x_0\in (a, b)$에서 미분�
 증명을 해보자. [원래 방향으로도 증명이 가능하지만](https://en.wikipedia.org/wiki/Fermat%27s_theorem_(stationary_points)) 대우를 증명해보자.  
 * WLOG, 미분가능한 점 $x_0\in(a, b)$에 대하여 $f'(x_0)=K>0$이라고 가정하자
 * 미분의 정의상 $\lim\limits_{\varepsilon\to 0} {\frac{f(x_0+\varepsilon)-f(x_0)}{\varepsilon}}=K$
-* $\varepsilon$에 대하여 극한을 취하지 않고, 충분히 작은 $\varepsilon_0$에 대하여 $(x_0-\varepsilon_0, x_0+\varepsilon_0)$ 구간에 속하는 $\varepsilon$에 대해서 생각해 보면  
+* $\varepsilon$에 대하여 극한을 취하지 않고, 충분히 작은 $\varepsilon_0$에 대하여 $(x_0-\varepsilon_0, x_0+\varepsilon_0)$ 구간에 속하는 $\varepsilon$에 대해서 생각해 보면,
   $\varepsilon_0$가 충분히 작다면 구간 안의 모든 $\varepsilon$는 평균변화율이 $K/2$보다 클 것이다.
   * $\varepsilon\in (x_0-\varepsilon_0, x_0+\varepsilon_0):\; \frac{f(x_0+\varepsilon)-f(x_0)}{\varepsilon}>\dfrac{K}{2}$
 * $\varepsilon>0$일 때, $f(x_0+\varepsilon)>f(x_0)+(K/2)\varepsilon>f(x_0)$
