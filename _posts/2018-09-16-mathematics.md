@@ -1742,7 +1742,7 @@ $\therefore, y=\displaystyle\int f(t)dt =\displaystyle\int \left(f(t)\dfrac{dt}{
   
 위 예시던, 미분의 chain rule에서던, 기타등등  
 $dx,\, dy$와 같은 미분소(differential)가 곱해지고 cancel out되고 등등 실제 변수마냥 취급되는 것을 확인할 수 있다.  
-미분소가 항상 분자/분모 형태로 묶여 나오던 미분파트와는 다르게, 적분에서는 미분소가 $\displaystyle\int dx$로 묶여 나오면서 $dx$라는 term이 따로 노는 형태가 처음 등장하는데,    
+미분소가 항상 분자/분모 형태로 묶여 나오던 미분파트와는 다르게, 적분에서는 미분소가 $\int dx$로 묶여 나오면서 $dx$라는 term이 따로 노는 형태가 처음 등장하는데,    
 이때 $\left(\dfrac{dy}{dx}\right)dx$가 어떻게 $dy$가 되는지, 그러니까 $dx$를 왜 실제 변수처럼 취급하여 cancel out할 수 있는지,  
 더 근본적으로는, 그래서 $dx$가 정확히 무엇인지 궁금했었다.   
 * 물론 위 식 $\displaystyle\int f(t)dt =\displaystyle\int \left(f(t)\dfrac{dt}{dx}\right)$에서 간접적으로 보여지긴 한다만, 그래도 직관적이진 않았다.
@@ -1775,7 +1775,7 @@ $\displaystyle\int f'(x)g(x)dx=f(x)g(x)-\displaystyle\int f(x)g'(x)d$
 
 ### 정적분
 * 구분구적법의 극한 $\lim\limits_{n\to\infty}{\sum\limits_{k=1}^{n} {f(x_k)\Delta x}}=\int_a^b {f(x)dx}$  
-* $\int_a^b {f(x)dx}=\left[F(x)\right]_a^b=F(b)-F(a)$  
+* $\displaystyle\int_a^b {f(x)dx}=\left[F(x)\right]_a^b=F(b)-F(a)$  
 
 {% capture context1 %}
 ### 구분구적법과 정적분
@@ -1792,19 +1792,19 @@ $\Delta x=\dfrac{b-a}{n}$으로 두면, $[a, b]$ 구간에서 $f(x)$ 그래프�
 <br/>
 
 ### 정적분의 계산
-* $\int_a^a f(x)dx=0$
-* $\int_a^b f(x)dx=-\int_b^a f(x)dx$
-* $\int_a^b kf(x)dx=k\int_a^b f(x)dx$
-* $\int_a^b \left\\{f(x)\pm g(x)\right\\}dx=\int_a^b f(x)dx \pm \int_a^b g(x)dx$
-* $\int_a^b f(x)dx=\int_a^c f(x)dx+\int_c^b f(x)dx$
+* $\displaystyle\int_a^a f(x)dx=0$
+* $\displaystyle\int_a^b f(x)dx=-\displaystyle\int_b^a f(x)dx$
+* $\displaystyle\int_a^b kf(x)dx=k\displaystyle\int_a^b f(x)dx$
+* $\displaystyle\int_a^b \left\\{f(x)\pm g(x)\right\\}dx=\displaystyle\int_a^b f(x)dx \pm \displaystyle\int_a^b g(x)dx$
+* $\displaystyle\int_a^b f(x)dx=\displaystyle\int_a^c f(x)dx+\displaystyle\int_c^b f(x)dx$
 
 <br/>
 
-* $g(a)=\alpha, g(b)=\beta \Rightarrow \int_a^b f(g(x))g'(x)dx=\int_{\alpha}^{\beta} f(t)dt$
-* $\int_a^b f'(x)g(x)dx=\left[f(x)g(x)\right]_a^b-\int_a^b f(x)g'(x)dx$
-* $f(-x)=f(x) \Rightarrow \int_a^a f(x)dx=2\int_0^a f(x)dx$
-* $f(-x)=-f(x) \Rightarrow \int_a^a f(x)dx=0$
-* $\dfrac{d}{dx} \int_{h(x)}^{g(x)} f(t)dt=f(g(x))g'(x)-f(h(x))h'(x)$
+* $g(a)=\alpha, g(b)=\beta \Rightarrow \displaystyle\int_a^b f(g(x))g'(x)dx=\displaystyle\int_{\alpha}^{\beta} f(t)dt$
+* $\displaystyle\int_a^b f'(x)g(x)dx=\left[f(x)g(x)\right]_a^b-\displaystyle\int_a^b f(x)g'(x)dx$
+* $f(-x)=f(x) \Rightarrow \displaystyle\int_a^a f(x)dx=2\displaystyle\int_0^a f(x)dx$
+* $f(-x)=-f(x) \Rightarrow \displaystyle\int_a^a f(x)dx=0$
+* $\dfrac{d}{dx} \displaystyle\int_{h(x)}^{g(x)} f(t)dt=f(g(x))g'(x)-f(h(x))h'(x)$
 
 {% endcapture %}
 
@@ -1820,7 +1820,7 @@ $\Delta x=\dfrac{b-a}{n}$으로 두면, $[a, b]$ 구간에서 $f(x)$ 그래프�
 
 #### 제1 기본정리
 함수 $f$가 닫힌구간 $[a,b]$에서 연속이면,  
-함수 $F(x)=\displaystyle\int _{a}^{x}f(t)\,dt$ 는 닫힌구간 $[a,b]$에서 연속이며 열린구간 $(a,b)$에서 미분이 가능하고,  
+함수 $F(x)=\displaystyle\int_{a}^{x}f(t)\,dt$ 는 닫힌구간 $[a,b]$에서 연속이며 열린구간 $(a,b)$에서 미분이 가능하고,  
 함수 $F$의 도함수는 $f$이다.
 
 pf)  
@@ -1832,7 +1832,7 @@ F'(x)&=\lim_{h\to 0} {\frac{F(x+h)-F(x)}{h}} \\
 \end{align*}$$ </p> 
  
 이때, [적분의 평균값 정리](https://ko.wikipedia.org/wiki/%ED%8F%89%EA%B7%A0%EA%B0%92_%EC%A0%95%EB%A6%AC#%EC%A0%81%EB%B6%84_%ED%8F%89%EA%B7%A0%EA%B0%92_%EC%A0%95%EB%A6%AC)에 의해   
-$c\in [x,x+h]:\; \dfrac{1}{h} \int_{x}^{x+h}f(t)\,dt=f(c)$  
+$c\in [x,x+h]:\; \dfrac{1}{h} \displaystyle\int_{x}^{x+h}f(t)\,dt=f(c)$  
 함수 $f$는 주어진 구간에서 연속이므로, [샌드위치 정리](https://en.wikipedia.org/wiki/Squeeze_theorem)에 의해 $h$가 작아짐에 따라 $x+h$는 $x$에 다가가고, 그러므로 $c$도 $x$에 다가간다.  
 $\therefore \lim _{h\to 0}f(c)=f(x)$
   
@@ -1847,10 +1847,10 @@ F'(x)&=\lim_{h\to 0}{\frac{1}{h}} \int_{x}^{x+h}f(t)\,dt\\
 <br/>
 
 #### 제2 기본정리
-함수 $f$가 닫힌구간 $[a,b]$에서 연속이며, 함수 $F$가 $f$의 임의의 부정적분이면, $\displaystyle\int _{a}^{b}f(t)dt=F(b)-F(a)$
+함수 $f$가 닫힌구간 $[a,b]$에서 연속이며, 함수 $F$가 $f$의 임의의 부정적분이면, $\displaystyle\int_{a}^{b}f(t)dt=F(b)-F(a)$
 
 pf)  
-함수 $G$를 $G(x)=\displaystyle\int _{a}^{x}f(t)\,dt$ 으로 정의하면, 제1 기본정리에 의해 $G(x)$의 도함수는 $f(x)$가 되기 때문에 $G(x)=\displaystyle\int f(x)dx +C'$ 이다.  
+함수 $G$를 $G(x)=\displaystyle\int_{a}^{x}f(t)\,dt$ 으로 정의하면, 제1 기본정리에 의해 $G(x)$의 도함수는 $f(x)$가 되기 때문에 $G(x)=\displaystyle\int f(x)dx +C'$ 이다.  
 또 함수 $F$는 $f$의 임의의 부정적분이랬으니 $F(x)=\displaystyle\int f(x)dx+C''$이며,  
 정리하면 $F(x)=G(x)+C$ 가 된다.
   
@@ -1887,7 +1887,7 @@ F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right] \\
     * 임의의 $x_i$는 $[a, b]$ 구간 안에만 있음 된다. 심지어 $x_i < x_{i+1}$일 필요도 없이 내맘대로인데 편의상 $x_i < x_{i+1}$로 둔다.
     * $\Gamma$의 norm을 $\max_i \|x_i-x_{i-1}\|$, 그러니까 모든 subinterval의 가장 큰 길이를 norm으로 정의한다.
 2. 각 구간에서, 함수값을 어느 것으로 선택할지 내맘대로 고른다.
-    * $\min(x_{i-1}, x_i) \leq \xi_i \leq \max(x_{i-1}, x_i)$
+    * $\min(x_{i-1}, x_i) \leq \xi_i \leq \displaystyle\max(x_{i-1}, x_i)$
     * $\xi$ 를 태그(tag)라고 부른다.
 
 <br/>
@@ -1901,7 +1901,7 @@ F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right] \\
 <br/>
 
 이때 파티션의 최대 길이인 $\Gamma$의 norm을 0으로 보낼 때, 즉 모든 subinterval의 길이를 0으로 보낼 때,  
-$\lim\limits_{\|\Gamma\|\to 0} {\sum\limits_{i=1}^n {f(\xi)\|x_i-x_{i-1}\|}}$가 어떠한 값으로 만약 수렴한다면? 이를 $\int_a^b f(x)dx$라고 정의한다.
+$\lim\limits_{\|\Gamma\|\to 0} {\sum\limits_{i=1}^n {f(\xi)\|x_i-x_{i-1}\|}}$가 어떠한 값으로 만약 수렴한다면? 이를 $\displaystyle\int_a^b f(x)dx$라고 정의한다.
   
 <p> $$ \int_a^b f(x)dx = \lim\limits_{\|\Gamma\|\to 0} {\sum_{i=1}^n {f(\xi)|x_i-x_{i-1}|}} $$ </p>
 
