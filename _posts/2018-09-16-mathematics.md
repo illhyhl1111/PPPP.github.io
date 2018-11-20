@@ -1834,7 +1834,7 @@ F'(x)&=\lim_{h\to 0} {\frac{F(x+h)-F(x)}{h}} \\
 이때, [적분의 평균값 정리](https://ko.wikipedia.org/wiki/%ED%8F%89%EA%B7%A0%EA%B0%92_%EC%A0%95%EB%A6%AC#%EC%A0%81%EB%B6%84_%ED%8F%89%EA%B7%A0%EA%B0%92_%EC%A0%95%EB%A6%AC)에 의해   
 $c\in [x,x+h]:\; \dfrac{1}{h} \displaystyle\int_{x}^{x+h}f(t)\,dt=f(c)$  
 함수 $f$는 주어진 구간에서 연속이므로, [샌드위치 정리](https://en.wikipedia.org/wiki/Squeeze_theorem)에 의해 $h$가 작아짐에 따라 $x+h$는 $x$에 다가가고, 그러므로 $c$도 $x$에 다가간다.  
-$\therefore \lim _{h\to 0}f(c)=f(x)$
+$\therefore \lim\limits_{h\to 0}f(c)=f(x)$
   
 <p> $$\begin{align*}
 F'(x)&=\lim_{h\to 0}{\frac{1}{h}} \int_{x}^{x+h}f(t)\,dt\\
@@ -1885,9 +1885,9 @@ F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right] \\
 1. 구간을 균등하게 자르지 않고 내맘대로 자른다.
     * partition $\Gamma = \\{x_0=a, x_1, x_2, \cdots, x_{n-1}, x_n=b \\}$
     * 임의의 $x_i$는 $[a, b]$ 구간 안에만 있음 된다. 심지어 $x_i < x_{i+1}$일 필요도 없이 내맘대로인데 편의상 $x_i < x_{i+1}$로 둔다.
-    * $\Gamma$의 norm을 $\max_i \|x_i-x_{i-1}\|$, 그러니까 모든 subinterval의 가장 큰 길이를 norm으로 정의한다.
+    * $\Gamma$의 norm을 $\displaystyle\max_i \|x_i-x_{i-1}\|$, 그러니까 모든 subinterval의 가장 큰 길이를 norm으로 정의한다.
 2. 각 구간에서, 함수값을 어느 것으로 선택할지 내맘대로 고른다.
-    * $\min(x_{i-1}, x_i) \leq \xi_i \leq \displaystyle\max(x_{i-1}, x_i)$
+    * $\min(x_{i-1}, x_i) \leq \xi_i \leq \max(x_{i-1}, x_i)$
     * $\xi$ 를 태그(tag)라고 부른다.
 
 <br/>
