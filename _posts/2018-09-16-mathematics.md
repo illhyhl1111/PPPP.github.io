@@ -1691,9 +1691,9 @@ $x_0$는 극점 $\Rightarrow f'(x_0)=0$
 ## 적분과 통계
 
 ### 부정적분
-* $F'(x)=f(x)$일 때 $F(x)$를 $f(x)$의 부정적분이라고 함. $\int f(x)dx=F(x)+C,\; \int\left(\dfrac{d}{dx}f(x)dx\right)=f(x)+C$  
-* 치환적분: $\int f(g(x))g'(x)dx=\int \left(f(t)\dfrac{dt}{dx}\right)=\int f(t)dt$  
-* 부분적분: $\int f'(x)g(x)dx=f(x)g(x)-\int f(x)g'(x)dx,\; \int u'vdx=uv-\int uv'dx$
+* $F'(x)=f(x)$일 때 $F(x)$를 $f(x)$의 부정적분이라고 함. $\displaystyle\int f(x)dx=F(x)+C,\; \displaystyle\int\left(\dfrac{d}{dx}f(x)dx\right)=f(x)+C$  
+* 치환적분: $\displaystyle\int f(g(x))g'(x)dx=\displaystyle\int \left(f(t)\dfrac{dt}{dx}\right)=\displaystyle\int f(t)dt$  
+* 부분적분: $\displaystyle\int f'(x)g(x)dx=f(x)g(x)-\displaystyle\int f(x)g'(x)dx,\; \displaystyle\int u'vdx=uv-\displaystyle\int uv'dx$
 
 {% capture context1 %}
 ### 정의
@@ -1704,15 +1704,15 @@ $x_0$는 극점 $\Rightarrow f'(x_0)=0$
 <br/>
 
 ### 부정적분의 계산
-1. $\int kdx=kx+C$
-2. $\int x^n dx=\frac{1}{n+1}x^{n+1}+C (r\in\mathbb{R},\; n\neq 1)$
-    * $\int x^{-1} dx=\ln \|x\|+C$ 
-3. $\int kf(x)dx=k\int f(x)dx$
-4. $\int \left(f(x)\pm g(x)\right)dx = \int f(x)dx \pm \int g(x)dx$
-5. $\int \sin x dx=-\cos x+C,\; \int \cos xdx=\sin x+C$
-    * $\int \sec^2 xdx=\tan x+C,\; \int \csc^2 xdx=-\cot x+C$
-    * $\int \sec x\tan xdx=\sec x+C,\; \int \csc x\cot xdx=-\csc x+C$
-6. $\int a^x dx=\dfrac{a^x}{\ln a}+C$
+1. $\displaystyle\int kdx=kx+C$
+2. $\displaystyle\int x^n dx=\dfrac{1}{n+1}x^{n+1}+C (r\in\mathbb{R},\; n\neq 1)$
+    * $\displaystyle\int x^{-1} dx=\ln \|x\|+C$ 
+3. $\displaystyle\int kf(x)dx=k\displaystyle\int f(x)dx$
+4. $\displaystyle\int \left(f(x)\pm g(x)\right)dx = \displaystyle\int f(x)dx \pm \displaystyle\int g(x)dx$
+5. $\displaystyle\int \sin x dx=-\cos x+C,\; \displaystyle\int \cos xdx=\sin x+C$  
+   $\displaystyle\int \sec^2 xdx=\tan x+C,\; \displaystyle\int \csc^2 xdx=-\cot x+C$  
+   $\displaystyle\int \sec x\tan xdx=\sec x+C,\; \displaystyle\int \csc x\cot xdx=-\csc x+C$
+6. $\displaystyle\int a^x dx=\dfrac{a^x}{\ln a}+C$
 {% endcapture %}
 
 {% capture context2 %}
@@ -1725,9 +1725,9 @@ $x_0$는 극점 $\Rightarrow f'(x_0)=0$
 <br/>
 
 ### 부정적분의 계산 증명
-$\int \left(f(x)\pm g(x)\right)dx = \int f(x)dx \pm \int g(x)dx$
-* $\frac{d}{dx}\left(\int f(x)dx\pm \int g(x)dx\right)=\frac{d}{dx}\left(\int f(x)dx\right)\pm\frac{d}{dx}\left(\int g(x)dx\right)=f(x)\pm g(x)$
-* $\therefore \int f(x)dx \pm \int g(x)dx +C = \int \left(f(x)\pm g(x)\right)dx$
+$\displaystyle\int \left(f(x)\pm g(x)\right)dx = \displaystyle\int f(x)dx \pm \displaystyle\int g(x)dx$
+* $\dfrac{d}{dx}\left(\displaystyle\int f(x)dx\pm \displaystyle\int g(x)dx\right)=\dfrac{d}{dx}\left(\displaystyle\int f(x)dx\right)\pm\dfrac{d}{dx}\left(\displaystyle\int g(x)dx\right)=f(x)\pm g(x)$
+* $\therefore \displaystyle\int f(x)dx \pm \displaystyle\int g(x)dx +C = \displaystyle\int \left(f(x)\pm g(x)\right)dx$
 * 위 식은 임의의 $f(x),\; g(x)$에 대하여 성립하므로, $f(x)=g(x)=0$으로 두면 $C=0$
 
 
@@ -1736,16 +1736,16 @@ $\int \left(f(x)\pm g(x)\right)dx = \int f(x)dx \pm \int g(x)dx$
 <br/>
 
 ### 치환적분 증명, infinitesimal differential
-$y=\int f(t)dt$라고 두자  
-chain rule에 의하여, $\frac{dy}{dx}=\frac{dy}{dt}\cdot \frac{dt}{dx}=f(t)\frac{dt}{dx}=f(g(x))g'(x)$  
-$\therefore, y=\int f(t)dt =\int \left(f(t)\frac{dt}{dx}\right)= \int f(g(x))g'(x)dx$
+$y=\displaystyle\int f(t)dt$라고 두자  
+chain rule에 의하여, $\dfrac{dy}{dx}=\dfrac{dy}{dt}\cdot \dfrac{dt}{dx}=f(t)\dfrac{dt}{dx}=f(g(x))g'(x)$  
+$\therefore, y=\displaystyle\int f(t)dt =\displaystyle\int \left(f(t)\dfrac{dt}{dx}\right)= \displaystyle\int f(g(x))g'(x)dx$
   
 위 예시던, 미분의 chain rule에서던, 기타등등  
 $dx,\, dy$와 같은 미분소(differential)가 곱해지고 cancel out되고 등등 실제 변수마냥 취급되는 것을 확인할 수 있다.  
-미분소가 항상 분자/분모 형태로 묶여 나오던 미분파트와는 다르게, 적분에서는 미분소가 $\int dx$로 묶여 나오면서 $dx$라는 term이 따로 노는 형태가 처음 등장하는데,    
+미분소가 항상 분자/분모 형태로 묶여 나오던 미분파트와는 다르게, 적분에서는 미분소가 $\displaystyle\int dx$로 묶여 나오면서 $dx$라는 term이 따로 노는 형태가 처음 등장하는데,    
 이때 $\left(\dfrac{dy}{dx}\right)dx$가 어떻게 $dy$가 되는지, 그러니까 $dx$를 왜 실제 변수처럼 취급하여 cancel out할 수 있는지,  
 더 근본적으로는, 그래서 $dx$가 정확히 무엇인지 궁금했었다.   
-* 물론 위 식 $\int f(t)dt =\int \left(f(t)\frac{dt}{dx}\right)$에서 간접적으로 보여지긴 한다만, 그래도 직관적이진 않았다.
+* 물론 위 식 $\displaystyle\int f(t)dt =\displaystyle\int \left(f(t)\dfrac{dt}{dx}\right)$에서 간접적으로 보여지긴 한다만, 그래도 직관적이진 않았다.
 
 <br/>
 
@@ -1754,15 +1754,17 @@ $dx,\, dy$와 같은 미분소(differential)가 곱해지고 cancel out되고 �
 
 미분의 여러 notations 들 중, 왜 하필이면 라이프니츠의 표기법이 승리했는지를 알 수 있다.  
 미분이라는 것을 $',\, \cdot,\, D$와 같이 하나의 기본 연산자가 아니라, $dy$와 $dx$ 두 미분소의 결합으로 두었기 때문에  
-$\left(\dfrac{dy}{dx}\right)dx$ 이라는 직관적 표현이 다른 표기법으로는 죽었다 깨어나도 불가능하기 때문.  
+$\left(\dfrac{dy}{dx}\right)dx=dy$ 이라는 직관적 표현이 다른 표기법으로는 죽었다 깨어나도 불가능하기 때문.  
 
 <br/>
 
 ### 부분적분 증명
+$\displaystyle\int f'(x)g(x)dx=f(x)g(x)-\displaystyle\int f(x)g'(x)d$
 * 곱의 미분법에 의하여, $\left\\{f(x)g(x)\right\\}'=f'(x)g(x)+f(x)g'(x)$  
-* 이걸 부정적분하면, $f(x)g(x)+C =\int f'(x)g(x)dx + \int f(x)g'(x)dx$  
+* 이걸 부정적분하면, $f(x)g(x)+C =\displaystyle\int f'(x)g(x)dx + \displaystyle\int f(x)g'(x)dx$  
 * 임의의 $f(x), g(x)$에 대하여 성립해야 하므로, $f(x)=g(x)=0$으로 두면 $C=0$  
-* $\therefore \int f'(x)g(x)dx=f(x)g(x)-\int f(x)g'(x)dx, \; \int u'vdx=uv-\int uv'dx$
+* $\therefore \displaystyle\int f'(x)g(x)dx=f(x)g(x)-\displaystyle\int f(x)g'(x)dx, \; \displaystyle\int u'vdx=uv-\displaystyle\int uv'dx$
+
 
 부분적분에서는 함수를 적분될 놈($u$)이랑 미분될 놈($v$)으로 구분하는게 제일 중요한데,  
 미분 우선순위는 $\ln x \to\; x^n \to\; \sin x \to\; e^x$ 순서대로 좋다(미분해서 빨리 조질 수 있는 형태).
@@ -1772,7 +1774,7 @@ $\left(\dfrac{dy}{dx}\right)dx$ 이라는 직관적 표현이 다른 표기법�
 {% include blocks.html context1=context1 context2=context2 topic="적통_부정적분" %}
 
 ### 정적분
-* 구분구적법의 극한 $\lim\limits_{n\to\infty}{\sum_{k=1}^{n} {f(x_k)\Delta x}}=\int_a^b {f(x)dx}$  
+* 구분구적법의 극한 $\lim\limits_{n\to\infty}{\sum\limits_{k=1}^{n} {f(x_k)\Delta x}}=\int_a^b {f(x)dx}$  
 * $\int_a^b {f(x)dx}=\left[F(x)\right]_a^b=F(b)-F(a)$  
 
 {% capture context1 %}
@@ -1780,7 +1782,7 @@ $\left(\dfrac{dy}{dx}\right)dx$ 이라는 직관적 표현이 다른 표기법�
 ![Alt text](/pictures/mathematics/정적분.jpg)  
 넓이를 구하는데 사용되는 적분이라는 개념의 시초  
 $[a, b]$에서 연속인 어떤 함수 $f(x)$를 $n$등분하여 각 분점의 $x$좌표를 $x_0(=a), x_1, \cdots x_n(=b)$로 두었을 때,  
-$\Delta x=\frac{b-a}{n}$으로 두면, $[a, b]$ 구간에서 $f(x)$ 그래프의 넓이를 다음과 같이 근사할 수 있다.
+$\Delta x=\dfrac{b-a}{n}$으로 두면, $[a, b]$ 구간에서 $f(x)$ 그래프의 넓이를 다음과 같이 근사할 수 있다.
 <p> $$ S_n \simeq \sum\limits_{k=1}^n {f(x_k)\Delta x} $$</p>
 
 이때 $n\to\infty$로 보내버리면 $S_n$은 실제 넓이의 참값에 수렴하게 되는데, 이를
@@ -1802,7 +1804,7 @@ $\Delta x=\frac{b-a}{n}$으로 두면, $[a, b]$ 구간에서 $f(x)$ 그래프의
 * $\int_a^b f'(x)g(x)dx=\left[f(x)g(x)\right]_a^b-\int_a^b f(x)g'(x)dx$
 * $f(-x)=f(x) \Rightarrow \int_a^a f(x)dx=2\int_0^a f(x)dx$
 * $f(-x)=-f(x) \Rightarrow \int_a^a f(x)dx=0$
-* $\dfrac{d}{dx} \int_{h(x)}^{g(x) f(t)dt=f(g(x))g'(x)-f(h(x))h'(x)$
+* $\dfrac{d}{dx} \int_{h(x)}^{g(x)} f(t)dt=f(g(x))g'(x)-f(h(x))h'(x)$
 
 {% endcapture %}
 
@@ -1817,45 +1819,49 @@ $\Delta x=\frac{b-a}{n}$으로 두면, $[a, b]$ 구간에서 $f(x)$ 그래프의
 <br/>
 
 #### 제1 기본정리
-함수 $\f$가 닫힌구간 $[a,b]$에서 연속이면,  
-함수 $F(x)=\int _{a}^{x}f(t)\,dt$ 는 닫힌구간 $[a,b]$에서 연속이며 열린구간 $(a,b)$에서 미분이 가능하고,  
+함수 $f$가 닫힌구간 $[a,b]$에서 연속이면,  
+함수 $F(x)=\displaystyle\int _{a}^{x}f(t)\,dt$ 는 닫힌구간 $[a,b]$에서 연속이며 열린구간 $(a,b)$에서 미분이 가능하고,  
 함수 $F$의 도함수는 $f$이다.
 
+pf)  
 $x,x+h\in [a,b]$ 일 때,  
-<p> $$\begin{aligned}
-F'(x)&=\lim _{{h\to 0}}{\frac  {F(x+h)-F(x)}{h}}\\
-     &=\lim _{{h\to 0}}{\frac  {1}{h}}\left[\int _{{a}}^{{x+h}}f(t)\,dt-\int _{{a}}^{{x}}f(t)\,dt\right]\\
-     &=\lim _{{h\to 0}}{\frac  {1}{h}}\int _{{x}}^{{x+h}}f(t)\,dt
-\end{aligned}$$ </p> 
+<p> $$\begin{align*}
+F'(x)&=\lim_{h\to 0} {\frac{F(x+h)-F(x)}{h}} \\
+     &=\lim_{h\to 0} {\frac{1}{h}\left[\int_{a}^{x+h} f(t)\,dt - \int_{a}^{x} f(t)\,dt\right]} \\
+     &=\lim_{h\to 0} {\frac{1}{h}\int_{x}^{x+h} f(t)\,dt}
+\end{align*}$$ </p> 
  
 이때, [적분의 평균값 정리](https://ko.wikipedia.org/wiki/%ED%8F%89%EA%B7%A0%EA%B0%92_%EC%A0%95%EB%A6%AC#%EC%A0%81%EB%B6%84_%ED%8F%89%EA%B7%A0%EA%B0%92_%EC%A0%95%EB%A6%AC)에 의해   
-$c\in [x,x+h]:\; {\frac  {1}{h}}\int _{{x}}^{{x+h}}f(t)\,dt=f(c)$  
+$c\in [x,x+h]:\; \dfrac{1}{h} \int_{x}^{x+h}f(t)\,dt=f(c)$  
 함수 $f$는 주어진 구간에서 연속이므로, [샌드위치 정리](https://en.wikipedia.org/wiki/Squeeze_theorem)에 의해 $h$가 작아짐에 따라 $x+h$는 $x$에 다가가고, 그러므로 $c$도 $x$에 다가간다.  
-$\lim _{h\to 0}f(c)=f(x)$
+$\therefore \lim _{h\to 0}f(c)=f(x)$
   
-<p> $$\begin{aligned}
-F'(x)&=\lim _{{h\to 0}}{\frac  {1}{h}}\int _{{x}}^{{x+h}}f(t)\,dt\\
-     &=\lim _{{h\to 0}}f(c)\\
+<p> $$\begin{align*}
+F'(x)&=\lim_{h\to 0}{\frac{1}{h}} \int_{x}^{x+h}f(t)\,dt\\
+     &=\lim_{h\to 0}f(c)\\
      &=f(x)
-\end{aligned}$$ </p>
+\end{align*}$$ </p>
 
 -------------------
 
-#### 제2 기본정리
-함수 $f$가 닫힌구간 $[a,b]$에서 연속이며, 함수 $F$가 $f$의 임의의 부정적분이면, $\int _{a}^{b}f(t)dt=F(b)-F(a)$
+<br/>
 
-함수 $G$를 $G(x)=\int _{a}^{x}f(t)\,dt$ 으로 정의하면, 제1 기본정리에 의해 $G(x)$의 도함수는 $f(x)$가 되기 때문에 $G(x)=\int f(x)dx +C'$ 이다.  
-또 함수 $F$는 $f$의 임의의 부정적분이랬으니 $F(x)=\int f(x)dx+C''$이며,  
+#### 제2 기본정리
+함수 $f$가 닫힌구간 $[a,b]$에서 연속이며, 함수 $F$가 $f$의 임의의 부정적분이면, $\displaystyle\int _{a}^{b}f(t)dt=F(b)-F(a)$
+
+pf)  
+함수 $G$를 $G(x)=\displaystyle\int _{a}^{x}f(t)\,dt$ 으로 정의하면, 제1 기본정리에 의해 $G(x)$의 도함수는 $f(x)$가 되기 때문에 $G(x)=\displaystyle\int f(x)dx +C'$ 이다.  
+또 함수 $F$는 $f$의 임의의 부정적분이랬으니 $F(x)=\displaystyle\int f(x)dx+C''$이며,  
 정리하면 $F(x)=G(x)+C$ 가 된다.
   
 $F$와, (제1 기본정리에 의해) $G$는 $[a,b]$에서 연속이므로,
-<p> $$\begin{aligned}
-F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right]\\
-         &=G(b)-G(a)\\
-         &=\int _{{a}}^{{b}}f(t)\,dt-\int _{{a}}^{{a}}f(t)\,dt\\
-         &=\int _{{a}}^{{b}}f(t)\,dt-0\\
-         &=\int _{{a}}^{{b}}f(t)\,dt
-\end{aligned}$$ </p>
+<p> $$\begin{align*}
+F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right] \\
+         &=G(b)-G(a) \\
+         &=\int_{a}^{b} f(t)\,dt-\int_{a}^{a}f(t)\,dt \\
+         &=\int_{a}^{b} f(t)\,dt-0 \\
+         &=\int_{a}^{b} f(t)\,dt
+\end{align*}$$ </p>
 
 <br/> 
  
@@ -1868,8 +1874,9 @@ F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right]\\
 진짜?  
 않이... 왜?
 
-좀 더 엄밀하게 다뤄보자. 하악  
-![Alt text](/pictures/mathematics/하악.JPG)
+좀 더 엄밀하게 다뤄보자.  
+하악  
+
 
 일단 [리만 적분](http://mathnmath.tistory.com/95)이라는걸 정의해보자.  
 ![Alt text](/pictures/mathematics/구분구적법.jpg)  
@@ -1885,21 +1892,21 @@ F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right]\\
 
 <br/>
 
+![Alt text](/pictures/mathematics/리만적분.jpg)  
 이렇게, 구간 $[a, b]$에서 함수의 넓이를 나타낸 급수는 다음과 같다  
 <p> $$ \sum_{i=1}^n {f(\xi)|x_i-x_{i-1}|} $$ </p>
 
 얘를 리만합(Riemann sum) 이라고 한다.  
-![Alt text](/pictures/mathematics/리만적분.jpg)
 
 <br/>
 
 이때 파티션의 최대 길이인 $\Gamma$의 norm을 0으로 보낼 때, 즉 모든 subinterval의 길이를 0으로 보낼 때,  
-$\lim\limits_{\|\Gamma\|\to 0} {\sum_{i=1}^n {f(\xi)\|x_i-x_{i-1}\|}}$가 어떠한 값으로 만약 수렴한다면? 이를 $\int_a^b f(x)dx$라고 정의한다.
+$\lim\limits_{\|\Gamma\|\to 0} {\sum\limits_{i=1}^n {f(\xi)\|x_i-x_{i-1}\|}}$가 어떠한 값으로 만약 수렴한다면? 이를 $\int_a^b f(x)dx$라고 정의한다.
   
 <p> $$ \int_a^b f(x)dx = \lim\limits_{\|\Gamma\|\to 0} {\sum_{i=1}^n {f(\xi)|x_i-x_{i-1}|}} $$ </p>
 
 더 정확히는, 임의의 $\Gamma$, $\xi$ 및 $\epsilon$에 대하여,  
-$\|\Gamma\| < \delta(\epsilon)$ 일 때 $\|리만합-I\|<\epsilon$인 $\delta(\epsilon)$이 존재한다면 리만 적분값 $I$가 정의된다.  
+$\|\Gamma\| < \delta(\epsilon)$ 일 때 $\|$리만합$-I\|<\epsilon$인 $\delta(\epsilon)$이 존재한다면 리만 적분값 $I$가 정의된다.  
 
 <br/>
 
