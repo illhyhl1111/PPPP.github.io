@@ -1938,6 +1938,84 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 
 {% include blocks.html context1=context1 context2=context2 topic="적통_정적분" %}
 
+{% comment %}
+
+### 순열조합
+<table>
+<thead><tr><th colspan=5 align="center">서로 다른 n개의 원소에서 r개를 고르는 방법의 숫자.  </th></tr></thead>
+<tbody>
+<tr>
+  <td> </td> <td>표기</td> <td>계산</td> <td>순서고려</td> <td>중복허용</td>
+</tr>
+<tr>
+  <td>순열</td> <td>_n\mathrm{P}_r</td> <td>\dfrac{n!}{(n-r)!}</td> <td>O</td> <td>X</td>
+</tr>
+<tr>
+  <td>중복순열</td> <td>_n\Pi_r</td> <td>n^r</td> <td>O</td> <td>O</td>
+</tr>
+<tr>
+  <td>조합</td> <td>_n\mathrm{C}_r</td> <td>\dfrac{n!}{r!(n-r)!}</td> <td>X</td> <td>X</td>
+</tr>
+<tr>
+  <td>중복조합</td> <td>_n\mathrm{H}_r</td> <td>_{n+r-1}\mathrm{C}_r</td> <td>X</td> <td>O</td>
+</tr>
+
+선별된 r개 중 구별되지 않는 원소가 s, t, u, \cdots 만큼 있으면 (s!t!u!\cdots)만큼 나눈다.  
+이항정리: (a+b)^n=_n\mathrm{C}_0 a^n b^0+_n\mathrm{C}_1 a^{n-1}b^1+\cdots+_n\mathrm{C}_n a^0 b^n = \sum\limits_{k=0}^{n} {_n\mathrm{C}_k a^k b^{n-k}}
+
+{% capture context1 %}
+### 순열
+서로 다른 n개의 원소에서 r개를 택하여 순서 있게 배열하는 가능한 가짓수.  
+_n\mathrm{P}_r=n(n-1)(n-2)\cdots (n-r+1)=\dfrac{n!}{(n-r)!}
+중복을 허용할 경우, _n\Pi_r=n^r
+
+원소에 같은 것이 있는 경우, 같은 것이 각각 p, q, r, \cdots, s(p+q+r+\cdots+s=n)개가 있을 경우,
+* 원소 전체를 뽑는 경우엔 \dfrac{n!}{p!\times q!\times r!\times \cdots \times s!}
+  * ![Alt text](/pictures/mathematics/최단경로.JPG) 
+  * A\to B로 가는 최단경로의 갯수에 매칭된다.
+* 모두 뽑는게 아닌 경우엔 뽑힌 r개의 원소 중 같은 원소가 몇개가 되는지를 모두 따져서 일일이 더하는 개싸움이 된다.
+
+<br/>
+
+### 원순열
+* 서로 다른 n개의 원소를 원형으로 배열하는 것을 원순열이라 함
+* (n-1)!가지 배열이 존재함.
+  * 회전 대칭인 경우가 n가지 존재하기 때문
+* ![Alt text](/pictures/mathematics/원순열.png)
+* 저런 탁자같은데 배열하는 갯수는 n!에다가 대칭인 갯수를 나눈다.
+
+* 원순열을 뒤집는 것 까지 허용되는 경우를 염주순열이라고 함
+* 이미 회전에 대해선 대칭인 경우를 모두 제거하였으므로, 좌우 반전 하나만 고려하여 2로 나눈다. \frac{1}{2}(n-1)!
+  * 같은 원소를 포함 할 경우, 좌우가 처음부터 대칭이라서 2로 나눌 수가 없는 케이스가 또 생긴다..
+
+<br/>
+
+### 조합
+서로 다른 n개의 원소에서 r개를 순서를 고려하지 않고 뽑는 가능한 가짓수,  
+_n\mathrm{C}_r = \dfrac{_n\mathrm{P}_r}{r!} = \dfrac{n!}{r!(n-r)!} = _n\mathrm{C}_{n-r}
+
+서로 다른 n개의 원소에서 a, b, c개 만큼 각각 뽑아서 분리하는 가짓수는  
+_n\mathrm{C}_a \times _n\mathrm{C}_b \times _n\mathrm{C}_c  
+이때 a=b 이면 각 그룹간의 구별이 불가능하므로 2!로 나누어 준다. a=b=c이면 3!으로 나눔.
+
+<br/>
+
+### 중복조합
+![Alt text](/pictures/mathematics/중복조합.jpg)  
+중복을 허용하는 경우, 원소를 r개 막대기를 (n-1)개로 두고 (n+r-1)개 슬롯에 막대기를 꽂으면 각 막대기 사이의 원소 갯수가 특정 원소의 선택횟수가 된다.  
+즉 _n\mathrm{H}_r = _{n+r-1}\mathrm{C}_{n-1} = _{n+r-1}\mathrm{C}_r
+
+{% endcapture %}
+
+
+{% capture context2 %}
+### gamma function
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="" %}
+
+{% endcomment %}
+
 ## 기하와 벡터
 TBD
 
