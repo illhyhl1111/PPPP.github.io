@@ -2164,6 +2164,7 @@ P(S)=1, P(\varnothing)=0
 이전까지 확률 P(A)를 어떤 event A가 등장할 확률 정도로 정의했는데,  
 event 라는 개념을 정의역으로 두기엔 너무 난잡하기 때문에, 이를 좀 깔끔하게 정리하고자 만든 것이 확률변수라고 생각하면 된다.
   
+![Alt text](/pictures/mathematics/확률변수.jpg)  
 확률변수란, 표본 공간의 원소인 근원사건을 자신이 원하는 임의의 실수값으로 매칭하는 함수이다.  
 예를 들면, 주사위를 2번 던져서 눈의 합이 3인 event가 A=\\{(1, 2), (2, 1)\\}이라면  
 확률변수 X를 두 주사위의 눈의 합으로 정의하여, P(A)=P(X=3)이 되도록 한다.
@@ -2185,12 +2186,16 @@ X:a_j \longrightarrow a_j의 값 으로 보내는 확률변수를 정의한다�
 즉 P(X=x_i)는 a_j이라는 값이 등장할 확률을 뜻하며, X의 평균(기댓값)은 E(X)=\sum\limits_{j=1}{n} a_j의 값 = \sum\limits_{i=1}{n} {x_i\cdot p_i} 가 된다. 
 분산도 비슷하게 (x_i-m)^2 p_i의 총합을 구한다.
 
+<br/>
+
 ### 이항분포
 서로 독립인 시행(`독립시행`)을 여러번 반복했을 때, 각 시행이 사건 A 혹은 A^C에 속한다고 하면(P(A)=p)  
 각 시행의 outcome을 a_i(시행 i가 사건 A에 포함), b_i(아님) 이라 두자.  
 그럼 S=\\{(a_1, a_2, \cdots a_n), (b_1, a_2, \cdots a_n), (a_1, b_2, \cdots a_n), cdots, (b_1, b_2, \cdots b_n)\\} 이 되며  
 사건 A가 r회 일어나는 최종 event R=\underset{n(a)=r}{\underbrace{(a_1, b_2, \cdots, b_n)}}를 r로 매핑하는 확률변수 X를 정의하면
 X의 확률분포는 \mathrm{P}(X=r)=\,_n\mathrb{C}_r p^r (1-p)^{n-r} 가 된다.
+
+<br/>
 
 ### 정규분포
 ![Alt text](/pictures/mathematics/정규분포.png)  
@@ -2215,7 +2220,29 @@ X\sim \mathrm{N}(m, \sigma^2) = \dfrac{1}{\sqrt{2\pi}\sigma} e^{-\dfrac{(x-m)^2}
   * \therefore \sum\limits_{r=0}^n r^2 \mathrm{P}(X=r) = n(n-1)p^2+np=np(np-p+1)
   * V(X)=np(np-p+1)-(np)^2 = np(1-p)=npq
 
-### 
+<br/>
+
+### 확률변수의 정의
+확률변수 X:\,\Omega\longrightarrow E 로 정의가 보통 되는데, 여기서 \Omega는 위에서 말한 Sample space S이고 E는 measurable space 이다.  
+Measurable space가 무엇인지에 대해선 좀 찾아봤는데 너무 어려운 관계로 링크만 남긴다.
+[위키](https://en.wikipedia.org/wiki/Measurable_space), [Quora](https://www.quora.com/What-is-a-measurable-space), [Encyclopedia](https://www.encyclopediaofmath.org/index.php/Measurable_space)  
+간단히 설명하자면, 어떠한 집합에 길이와 같은 성질처럼 measure를 assign할 수 있는 공간이라고 해야되나? 잘 모르겠다.  
+아무튼 보통 E=\mathbb{R}이다. 
+
+확률 변수 이전까지 확률 측도 P:A(event) \longrightarrow \mathbb{R} 로 표기했었는데,  
+확률 변수가 도입되고 갑자기 P(X=1)=0.1 처럼 P:X(A)=E(보통 \mathbb{R}) \longrightarrow \mathbb{R} 처럼 정의역이 확률변수의 output으로 바뀐다.  
+뭐가 맞는 것일까.
+
+일단 P:A(event) \longrightarrow \mathbb{R}가 맞다.  
+그리고 확률변수가 들어간 표기는 사실 다음과 같음.
+S \subset E,\; P(X\in S) = P(\\{\omega\in\Omega \| X(\omega)\in S \\})
+즉, P의 정의역은 X(\omega)\in S를 만족하는 \omega 들의 집합이며, \omega 는 근원사건들이다. 고로 정의역은 Sample space.  
+다만 표기를 간단히 하기 위해서, \omega를 생략하여 P(X\in S) 로 표기하는 것. 
+
+예를 들면, X를 주사위 2번 던진 결과 \longrightarrow 주사위 눈금 합 으로 정의하고, S=\\{2, 3\\}으로 두면  
+P(\\{\omega\in\Omega \| X(\omega)\in \\{2, 3\\} \\}) = P(\\{(1, 1), (1, 2), (2, 1)\\}) 가 원래 표기인데  
+P(X=\\{2, 3\\}) 으로 간략하게 표기하는 것
+
 
 {% endcapture %}
 
