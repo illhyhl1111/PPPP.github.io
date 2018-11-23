@@ -1957,6 +1957,7 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 <tr>
   <td>중복조합</td> <td>$_n\mathrm{H}_r$</td> <td>$_{n+r-1}\mathrm{C}_r$</td> <td>X</td> <td>O</td>
 </tr>
+</table>
 
 * 선별된 r개 중 구별되지 않는 원소가 $s, t, u, \cdots$ 만큼 있으면 $(s!t!u!\cdots)$만큼 나눈다.  
 * `이항정리`: $(a+b)^n=_n\mathrm{C}_0 a^n b^0+_n\mathrm{C}_1 a^{n-1}b^1+\cdots+_n\mathrm{C}_n a^0 b^n = \sum\limits_{k=0}^{n} {_n\mathrm{C}_k a^k b^{n-k}}$
