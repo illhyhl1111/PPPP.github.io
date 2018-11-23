@@ -1961,7 +1961,7 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 </table>
 
 * 선별된 r개 중 구별되지 않는 원소가 $s, t, u, \cdots$ 만큼 있으면 $(s!t!u!\cdots)$만큼 나눈다.  
-* `이항정리`: $ (a+b)^n=\,_n\mathrm{C}_0 a^n b^0+\,_n\mathrm{C}_1 a^{n-1}b^1+\cdots+\,_n\mathrm{C}_n a^0 b^n = \sum\limits_{k=0}^{n} {_n\mathrm{C}_k a^k b^{n-k}} $
+* `이항정리`: $ (a+b)^n=\,_n\mathrm{C}_0 a^n b^0+\,_n\mathrm{C}_1 a^{n-1}b^1+\cdots+\,_n\mathrm{C}_n a^0 b^n = \sum\limits _{k=0}^{n} {_n\mathrm{C}_k a^k b^{n-k}} $
 
 {% capture context1 %}
 ### 순열
@@ -1994,8 +1994,8 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 
 ### 조합
 * 서로 다른 $n$개의 원소에서 $r$개를 순서를 고려하지 않고 뽑는 가능한 가짓수,  
-* $ _n\mathrm{C}_r = \dfrac{_n\mathrm{P}_r}{r!} = \dfrac{n!}{r!(n-r)!} =\, _n\mathrm{C}_{n-r} $  
-* $ _{n-1}\mathrm{C}_{r-1} +\, _{n-1}\mathrm{C}_r =\, _n\mathrm{C}_r $
+* $ _n\mathrm{C}_r = \dfrac{_n\mathrm{P}_r}{r!} = \dfrac{n!}{r!(n-r)!} =\, _n\mathrm{C} _{n-r} $  
+* $ _{n-1}\mathrm{C} _{r-1} +\, _{n-1}\mathrm{C}_r =\, _n\mathrm{C}_r $
 
 
 * 서로 다른 $n$개의 원소에서 $a, b, c$개 만큼 각각 뽑아서 분리하는 가짓수는  
@@ -2007,7 +2007,7 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 ### 중복조합
 ![Alt text](/pictures/mathematics/중복조합.jpg)  
 * 중복을 허용하는 경우, 원소를 $r$개 막대기를 $(n-1)$개로 두고 $(n+r-1)$개 슬롯에 막대기를 꽂으면 각 막대기 사이의 원소 갯수가 특정 원소의 선택횟수가 된다.  
-* 즉 $ _n\mathrm{H}_r =\, _{n+r-1}\mathrm{C}_{n-1} =\, _{n+r-1}\mathrm{C}_r$
+* 즉 $ _n\mathrm{H}_r =\, _{n+r-1}\mathrm{C} _{n-1} =\, _{n+r-1}\mathrm{C}_r$
 
 <br/>
 
@@ -2025,7 +2025,7 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 
 {% capture context2 %}
 ### 이항계수
-이항계수 \displaystyle${n\choose k}$를 $(x+y)^n$을 전개하였을 때 음이 아닌 정수 $k\leq n$에 대한 $x^k y^{n-k}$ 항의 계수로 정의하면   
+이항계수 $\displaystyle{n\choose k}$를 $(x+y)^n$을 전개하였을 때 음이 아닌 정수 $k\leq n$에 대한 $x^k y^{n-k}$ 항의 계수로 정의하면   
 $(x+y)^n=\sum\limits_{k=0}^{n} \displaystyle{n\choose k}x^k y^{n-k}$가 된다.  
 * 이때 $\displaystyle{n\choose k}$는 $_n\mathrm{C}_k$와 동일함을 수학적 귀납법으로 증명 가능하다. [증명](https://ko.wikipedia.org/wiki/%EC%9D%B4%ED%95%AD_%EC%A0%95%EB%A6%AC)
 
@@ -2040,7 +2040,7 @@ $\|x\|>\|y\|$일 때, $\displaystyle{\alpha\choose k} = \dfrac{\alpha(\alpha-1)(
 
 ### 다항정리
 <p> $$(x_{1}+x_{2}+\cdots +x_{m})^{n}=\sum _{k_{1},k_{2},\dots ,k_{m}\in \mathbb {N} }^{k_{1}+k_{2}+\cdots k_{m}=n}{\dfrac {n!}{k_{1}!k_{2}!\cdots k_{m}!}}x_{1}^{k_{1}}x_{2}^{k_{2}}\cdots x_{m}^{k_{m}}=\sum _{K\in \mathbb {N} ^{m}}^{|K|=n}{\binom {n}{K}}x^{K}$$ </p>  
-이 때 이항 계수에 대응되는 다항 계수 $ \displaystyle{n \choose K} = {n \choose k_1,k_2,\cdots,k_m} = \dfrac{n!}{k_{1}!k_{2}!\cdots k_{m}! $이며,  
+이 때 이항 계수에 대응되는 다항 계수 $ \displaystyle{n \choose K} = {n \choose k_1,k_2,\cdots,k_m} = \dfrac{n!}{k_{1}!k_{2}!\cdots k_{m}!} $이며,  
 이는 $\displaystyle{n\choose k_1} \displaystyle{n-k_1\choose k_2} \displaystyle{n-k_1-k_2\choose k_3}\cdots \displaystyle{n-k_1-k_2\cdots-k_{m-1}\choose k_m}$ 과 같기 때문에, 정리하면 
 
 <p> $${\binom {n}{K}} = {\binom {n}{k_1,k_2,\cdots,k_m}}=\prod_{i=1}^{m}{\binom {k_{i}+k_{i+1}+\cdots +k_{m}}{k_{i}}}=\prod_{i=1}^{m}{\binom {k_{1}+k_{2}+\cdots +k_{i}}{k_{i}}}$$ </p>
@@ -2065,20 +2065,20 @@ $\left(\dfrac{9}{2}\right)! = \left(\dfrac{9}{2}\right)\cdot \left(\dfrac{7}{2}\
 
 1. 우선 팩토리얼의 종특인 $f(1)=1,\; f(x+1)=xf(x)$이라는 recurrence relation 을 만족하는 함수를 $\Gamma(x)$라고 정의하자.
 2. $z\in\mathbb{C}:\; Re(z)>0$인 $z$을 정의역으로 두는  
-   $\Gamma (z):=\int _{0}^{\infty }x^{z-1}e^{-x}\,dx$ 으로 두면 
-3. $\begin{aligned}
+   $\Gamma (z):=\displaystyle\int_{0}^{\infty }x^{z-1}e^{-x}\,dx$ 으로 두면 
+3. <p>$$ \begin{align*}
    \Gamma (z+1)&=\int_{0}^{\infty}x^{z}e^{-x}\,dx \\\\
                &=\left[-x^{z}e^{-x}\right]_{0}^{\infty }+\int _{0}^{\infty }zx^{z-1}e^{-x}\,dx \\\\
                &=\lim _{x\to \infty}(-x^{z}e^{-x})-(0e^{-0})+z\int _{0}^{\infty }x^{z-1}e^{-x}\,dx \\\\
                &=z\int _{0}^{\infty }x^{z-1}e^{-x}\,dx \\\\
                &=z\Gamma(z)
-   \end{aligned}$
-4. $\begin{aligned}
+   \end{align*}$$ </p>
+4. <p>$$ \begin{align*}
    \Gamma (1)&=\int_{0}^{\infty }x^{1-1}e^{-x}\,dx \\\\
              &=\left[-e^{-x}\right]_{0}^{\infty } \\\\
              &=\lim _{x\to \infty }(-e^{-x})-(-e^{-0}) \\\\
              &=0-(-1) \\&=1
-   \end{aligned}$
+   \end{align*}$$ </p>
 5. 와와
 
 $\Gamma(1)=1,\, \Gamma(2)=1\cdot \Gamma(1)=1,\, \Gamma(3)=2\cdot \Gamma(2)=2,\, \cdots$ 와 같이  
@@ -2222,17 +2222,17 @@ $X\sim \mathrm{N}(m, \sigma^2) = \dfrac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-m)^2}
 ### 이항분포 평균, 분산 계산
 $\mathrm{P}(X=r)=\,_n\mathrm{C}_r p^r q^{n-r} (q=1-p)$
 * 평균 $m=np$
-  * $(q+pt)^n =\sum\limits_{r=0}^n { {n\choose r} p^r t^r q^{n-r}}$
-  * $t$에 대하여 미분하면, $np(q+pt)^{n-1} = \sum\limits_{r=0}^n {r{n \choose r}p^r t^{r-1} q^{n-r}}$
-  * $t=1 \Rightarrow np=\sum\limits_{r=0}^n {r{n \choose r}p^r q^{n-r}}$
+  * $(q+pt)^n =\sum\limits_{r=0}^n { \displaystyle{n\choose r} p^r t^r q^{n-r}}$
+  * $t$에 대하여 미분하면, $np(q+pt)^{n-1} = \sum\limits_{r=0}^n {r\displaystyle{n \choose r}p^r t^{r-1} q^{n-r}}$
+  * $t=1 \Rightarrow np=\sum\limits_{r=0}^n {r\displaystyle{n \choose r}p^r q^{n-r}}$
   * $m=\sum\limits_{r=0}^{n} r\mathrm{P}(X=r)=\sum\limits_{r=1}^{n} r_n\mathrm{C}_r p^r q^{n-r}=np$
 
 <br/> 
   
 * 분산 $V(X)=npq$
   * $V(X)=\sum\limits_{r=0}^{n} r^2 \mathrm{P}(X=r)-m^2$
-  * 평균에서 2번째 식을 한번 더 미분하면, $n(n-1)p^2(q+pt)^{n-2} = \sum\limits_{r=0}^n {r(r-1){n \choose r}p^r t^{r-2} q^{n-r}}$
-  * $t=1 \Rightarrow n(n-1)p^2=\sum\limits_{r=0}^n {r(r-1){n \choose r}p^r q^{n-r}}=\sum\limits_{r=0}^n r(r-1)\mathrm{P}(X=r)$
+  * 평균에서 2번째 식을 한번 더 미분하면, $n(n-1)p^2(q+pt)^{n-2} = \sum\limits_{r=0}^n {r(r-1)\displaystyle{n \choose r}p^r t^{r-2} q^{n-r}}$
+  * $t=1 \Rightarrow n(n-1)p^2=\sum\limits_{r=0}^n {r(r-1)\displaystyle{n \choose r}p^r q^{n-r}}=\sum\limits_{r=0}^n r(r-1)\mathrm{P}(X=r)$
   * $\therefore \sum\limits_{r=0}^n r^2 \mathrm{P}(X=r) = n(n-1)p^2+np=np(np-p+1)$
   * $V(X)=np(np-p+1)-(np)^2 = np(1-p)=npq$
 
@@ -2276,7 +2276,7 @@ $P(X=\\{2, 3\\})$ 으로 간략하게 표기하는 것
   * 표본평균의 분포: $\bar{X} \sim \mathrm{N}\left(m, \dfrac{\sigma^2}{n}\right)\; (n >\,> 1)$
 * 모집단의 확률분포가 $\mathrm{N}(m, \sigma)$이고 $m$을 모를 때, 크기가 $n$인 임의표본을 추출하여 모평균 $m$을 추정할 수 있다
   * 95% `신뢰도`로서, $\bar{X}-1.96\cdot \dfrac{\sigma}{\sqrt{n}} \leq m \leq \bar{X}+1.96\cdot \dfrac{\sigma}{\sqrt{n}}$
-* `표본비율` $\hat{p}=\dfrac{X}{n}$에 대하여, $E(\hat{p})=p,\, V(\hat{p})=\dfrac{pq}{n},], \hat{p}\sim \mathrm{N}(p, \dfrac{pq}{n})$
+* `표본비율` $\hat{p}=\dfrac{X}{n}$에 대하여, $E(\hat{p})=p,\, V(\hat{p})=\dfrac{pq}{n},\, \hat{p}\sim \mathrm{N}(p, \dfrac{pq}{n})$
 
 {% capture context1 %}
 ### 표본평균
