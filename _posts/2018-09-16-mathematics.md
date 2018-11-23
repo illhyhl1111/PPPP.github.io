@@ -1939,8 +1939,8 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 {% include blocks.html context1=context1 context2=context2 topic="적통_정적분" %}
 
 ### 순열조합
-<table>
-<thead><tr><th colspan=5 align="center">서로 다른 $n$개의 원소에서 $r$개를 고르는 방법의 숫자.  </th></tr></thead>
+<table style="font-family:나눔고딕; font-size: 15px;">
+<thead><tr><th colspan="5" align="center">서로 다른 $n$개의 원소에서 $r$개를 고르는 방법의 숫자.  </th></tr></thead>
 <tbody>
 <tr>
   <td> </td> <td>표기</td> <td>계산</td> <td>순서고려</td> <td>중복허용</td>
