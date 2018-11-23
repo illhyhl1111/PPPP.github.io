@@ -2144,7 +2144,7 @@ P(S)=1, P(\varnothing)=0
     
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 topic="확통_확률" %}
+{% include blocks.html context1=context1 context2=context2 topic="적통_확률" %}
 
 ### 확률분포
 * `평균` m=\dfrac{x_1+x_2+\cdots+x_n}{n}=\dfrac{1}{n}\sum\limits_{i=1}^{n} x_i  
@@ -2203,7 +2203,7 @@ X\sim \mathrm{N}(m, \sigma^2) = \dfrac{1}{\sqrt{2\pi}\sigma} e^{-\dfrac{(x-m)^2}
 ### 이항분포 평균, 분산 계산
 \mathrm{P}(X=r)=\,_n\mathrb{C}_r p^r q^{n-r} (q=1-p)
 * 평균 m=np
-  * (q+pt)^n =\sum\limits_{r=0}^n {{n \choose r}p^r t^r q^{n-r}}
+  * (q+pt)^n =\sum\limits_{r=0}^n { {n\choose r} p^r t^r q^{n-r}}
   * t에 대하여 미분하면, np(q+pt)^{n-1} = \sum\limits_{r=0}^n {r{n \choose r}p^r t^{r-1} q^{n-r}}
   * t=1 \Rightarrow np=\sum\limits_{r=0}^n {r{n \choose r}p^r q^{n-r}}
   * m=\sum\limits_{r=0}^{n} r\mathrm{P}(X=r)=\sum\limits_{r=1}^{n} r_n\mathrb{C}_r p^r q^{n-r}=np
@@ -2219,7 +2219,7 @@ X\sim \mathrm{N}(m, \sigma^2) = \dfrac{1}{\sqrt{2\pi}\sigma} e^{-\dfrac{(x-m)^2}
 
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 topic="확통_확률분포" %}
+{% include blocks.html context1=context1 context2=context2 topic="적통_확률분포" %}
 
 ### 통계적 추정
 * 조사 대상 전체인 `모집단`의 자료 일부를 추출한 것을 `표본`이라 함
@@ -2287,7 +2287,7 @@ E[Y]=p일 것이고, Y^2=Y 이므로 V(Y)=E[Y^2]-E[Y]^2=p(1-p)이다.
 
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 topic="확통_통계적_추정" %}
+{% include blocks.html context1=context1 context2=context2 topic="적통_통계적_추정" %}
 
 {% endcomment %}
 
