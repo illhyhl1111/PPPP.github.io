@@ -1938,8 +1938,6 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 
 {% include blocks.html context1=context1 context2=context2 topic="적통_정적분" %}
 
-{% comment %}
-
 ### 순열조합
 <table>
 <thead><tr><th colspan=5 align="center">서로 다른 $n$개의 원소에서 $r$개를 고르는 방법의 숫자.  </th></tr></thead>
@@ -2329,8 +2327,6 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="적통_통계적_추정" %}
-
-{% endcomment %}
 
 ## 기하와 벡터
 TBD
