@@ -2167,13 +2167,13 @@ Analytic 함수에 대한 설명은.. 나중에 언젠간..
 
 ### 확률분포
 * `평균` $m=\dfrac{x_1+x_2+\cdots+x_n}{n}=\dfrac{1}{n}\sum\limits_{i=1}^{n} x_i$  
-* `분산` $\sigma^2=\dfrac{(x_1-m)^2+(x_2-m)2^2+\cdots+(x_n-m)^2}{n}=\dfrac{1}{n}\sum\limits_{i=1}^{n} (x_i-m)^2=\dfrac{1}{n}\sum\limits_{i=1}^{n} x_i^2 -m^2$
+* `분산` $\sigma^2=\dfrac{(x_1-m)^2+(x_2-m)^2+\cdots+(x_n-m)^2}{n}=\dfrac{1}{n}\sum\limits_{i=1}^{n} (x_i-m)^2=\dfrac{1}{n}\sum\limits_{i=1}^{n} x_i^2 -m^2$
 * `확률변수` $X$ : 어떤 event 를 어떤 실수값으로 매칭시키는 함수. $X:\, S \longrightarrow \mathbb{R}$
 * `확률분포`: $X=x_i$를 가질 확률 $p_i$의 대응 관계. $P(X=x_i)=p_i$
   * 확률분포의 평균 $E(X)=\sum\limits_{i=1}^n {x_i p_i}$
   * 확률분포의 분산 $V(X)=\sum\limits_{i=1}^n {(x_i-m)^2 p_i}=\sum\limits_{i=1}^n {x_i^2 p_i} -m^2=E(X^2)-E(X)^2$
 * `이항분포`: 각 시행의 결과가 서로 독립인 시행에서 $P(A)=p$인 사건 $A$가 $r$번 일어날 확률
-  * $P(X=r)=_n\mathrm{C}_r p^r (1-p)^{n-r} \Rightarrow X\sim \mathrm{B}(n, p) E(X)=np, V(x)=np(1-p)$
+  * $P(X=r)=_n\mathrm{C}_r p^r (1-p)^{n-r} \Rightarrow X\sim \mathrm{B}(n, p),\; E(X)=np,\, V(x)=np(1-p)$
 * `정규분포` $X\sim \mathrm{N}(m, \sigma^2) = \dfrac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-m)^2}{2\sigma^2}}$
   * `정규확률변수` $Z=\dfrac{X-m}{\sigma}\sim \mathrm{N}(0, 1^2)$
   * $X\sim B(n, p), \text{ if } np > 5 \text{ and } n(1-p) > 5 \Rightarrow X\sim \mathrm{N}(np, np(1-p))$
