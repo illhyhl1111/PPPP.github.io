@@ -49,10 +49,12 @@ sidebar:
 <br/>
 
 ### 부정
-* 명제 $p$ 혹은 조건 $p(x)$에 대해 $p(x)$가 아니다 를 $p(x)$의 부정이라 하고, $\sim p(x)$$로 표기함.
+* 명제 $p$ 혹은 조건 $p(x)$에 대해 $p(x)$가 아니다 를 $p(x)$의 부정이라 하고, $\sim p(x)$로 표기함.
 
-<p> $$ \sim (p \vee q) \Leftrightarrow (\sim p \wedge \sim q), \sim (p \wedge q) \Leftrightarrow (\sim p \vee \sim q) $$ </p>
-<p> $$ \sim (\forall x, p(x)) \Leftrightarrow (\exists x, \sim p(x)), \sim (\exists x, p(x)) \Leftrightarrow (\forall x, \sim p(x))$$ </p>
+<p> $$ \sim (p \vee q) \Leftrightarrow (\sim p \wedge \sim q)
+\quad \sim (p \wedge q) \Leftrightarrow (\sim p \vee \sim q) $$ </p>
+<p> $$ \sim (\forall x, p(x)) \Leftrightarrow (\exists x, \sim p(x)),
+\quad \sim (\exists x, p(x)) \Leftrightarrow (\forall x, \sim p(x))$$ </p>
 
 <br/>
 
@@ -65,8 +67,11 @@ sidebar:
 ### 조건과 집합
 * 집합 $P$, $Q$를 조건 $p$, $q$의 진리집합이라고 둘 때,
 
-<p> $$ P \subset Q \Leftrightarrow (p \Rightarrow q), P \nsubseteq Q \Leftrightarrow (p \nLeftarrow q), \\
-p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \Leftrightarrow P^c $$ </p>
+<p> $$ P \subset Q \Leftrightarrow (p \Rightarrow q)
+\quad P \nsubseteq Q \Leftrightarrow (p \nLeftarrow q), \\
+p \vee q \Leftrightarrow P \cup Q
+\quad p \wedge q \Leftrightarrow P \cap Q
+\quad \sim p \Leftrightarrow P^c $$ </p>
 
 ### 필요 · 충분 조건
 * $p \Rightarrow q$일 때, $p$는 $q$이기 위한 충분조건이고 $q$는 $p$이기 위한 필요조건이 된다.
@@ -85,9 +90,9 @@ p \vee q \Leftrightarrow P \cup Q, p \wedge q \Leftrightarrow P \cup Q, \sim p \
 * 두 **조건** $p$, $q$를 $p \rightarrow q$ 꼴로 연결하면 명제가 되어버림. <br/>
  '4의 약수는 8의 약수이다' 를 풀어서 '$x$가 4의 약수이면 $x$는 8의 약수이다' 로 명제와 같이 표현가능.
 * $(P \subset Q) \Rightarrow (x \in P \Rightarrow x \in Q) \Rightarrow (p \Rightarrow q)$
-* $ \sim (p \vee q) \Rightarrow (P \cup Q)^c \Rightarrow P^c \cup Q^c \Rightarrow \sim p \wedge \sim q $
+* $ \sim (p \vee q) \Rightarrow (P \cup Q)^c \Rightarrow (P^c \cap Q^c) \Rightarrow (\sim p \wedge \sim q) $
 * $ \sim$ (모든 $x$에 대하여 $p(x)$이다) $\Rightarrow \sim (p(x_1) \; and \; p(x_2) \; and \; \cdots \; and \; p(x_n))$ <br/>
-  $ \Rightarrow \sim p(x_1) \; or \; \sim \; p(x_2) \; or \; \cdots \; or \; \sim p(x_n) \Rightarrow$ 어떤 $x$에 대하여 $\sim p(x) $ <br/>
+  $ \Rightarrow (\sim p(x_1)) \; or \; (\sim \; p(x_2)) \; or \; \cdots \; or \; (\sim p(x_n)) \Rightarrow$ 어떤 $x$에 대하여 $\sim p(x) $ <br/>
   비슷한 방법으로 모두 증명 가능
 * 귀류법이 옳다는 것을 증명하는 방법 : <br/>
   $(p \rightarrow q) \Leftrightarrow (p \wedge \sim q) \rightarrow c$ 임을 보이면 됨 ($c$는 항상 False) <br/>
@@ -161,7 +166,7 @@ https://m.blog.naver.com/PostView.nhn?blogId=obrigadu&logNo=50098477517&proxyRef
 
 ### 유클리드 호제법 (Euclidean algorithm)
 * 맨날까먹음
-* $A > B$인 임의의 자연수 $A$, $B$가 있을 때, $A = B \cdot Q + R$로 몫과 나머지를 분리하면 </br>
+* $A > B$인 임의의 자연수 $A$, $B$가 있을 때, $A = B \cdot Q + R$로 몫과 나머지를 분리하면 <br/>
   <p> $$\gcd(A, B) = \gcd(B, R)$$ </p>
   임이 성립한다는 것
 
@@ -179,7 +184,7 @@ https://m.blog.naver.com/PostView.nhn?blogId=obrigadu&logNo=50098477517&proxyRef
 {% capture context2 %}
 ### Euclidean algorithm으로 gcd 찾기
 <p> $$r_0 \leftarrow a, r_1 \leftarrow b \\
-r_{i+1}=r_{i−1}−q_i r_i, \quad q_i=\frac{r_{i−1}}{r_i} $$ </p>
+r_{i+1}=r_{i−1}−q_i r_i, \quad q_i=\lfloor\frac{r_{i−1}}{r_i}\rfloor $$ </p>
 
 만약 $r_{i+1}=0$ 이라면 $r_i$ 가 바로 $\gcd(a,b)$ 이다.
 
