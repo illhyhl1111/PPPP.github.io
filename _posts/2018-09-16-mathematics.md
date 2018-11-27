@@ -1939,8 +1939,8 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 {% include blocks.html context1=context1 context2=context2 topic="적통_정적분" %}
 
 ### 순열조합
-<table>
-<thead><tr><th colspan=5 align="center">서로 다른 $n$개의 원소에서 $r$개를 고르는 방법의 숫자.  </th></tr></thead>
+<table style="font-family:나눔고딕; font-size: 15px;">
+<thead><tr><th colspan="5" align="center">서로 다른 $n$개의 원소에서 $r$개를 고르는 방법의 숫자.  </th></tr></thead>
 <tbody>
 <tr>
   <td> </td> <td>표기</td> <td>계산</td> <td>순서고려</td> <td>중복허용</td>
@@ -1957,9 +1957,11 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 <tr>
   <td>중복조합</td> <td>$_n\mathrm{H}_r$</td> <td>$_{n+r-1}\mathrm{C}_r$</td> <td>X</td> <td>O</td>
 </tr>
+</tbody>
+</table>
 
 * 선별된 r개 중 구별되지 않는 원소가 $s, t, u, \cdots$ 만큼 있으면 $(s!t!u!\cdots)$만큼 나눈다.  
-* `이항정리`: $(a+b)^n=_n\mathrm{C}_0 a^n b^0+_n\mathrm{C}_1 a^{n-1}b^1+\cdots+_n\mathrm{C}_n a^0 b^n = \sum\limits_{k=0}^{n} {_n\mathrm{C}_k a^k b^{n-k}}$
+* `이항정리`: $ (a+b)^n=\,_n\mathrm{C}_0 a^n b^0+\,_n\mathrm{C}_1 a^{n-1}b^1+\cdots+\,_n\mathrm{C}_n a^0 b^n = \sum\limits _{k=0}^{n} {_n\mathrm{C}_k a^k b^{n-k}} $
 
 {% capture context1 %}
 ### 순열
@@ -1992,20 +1994,20 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 
 ### 조합
 * 서로 다른 $n$개의 원소에서 $r$개를 순서를 고려하지 않고 뽑는 가능한 가짓수,  
-* $_n\mathrm{C}_r = \dfrac{_n\mathrm{P}_r}{r!} = \dfrac{n!}{r!(n-r)!} =\, _n\mathrm{C}_{n-r}$  
-* $_{n-1}\mathrm{C}_{r-1} + _{n-1}\mathrm{C}_r =\, _n\mathrm{C}_r$
+* $ _n\mathrm{C}_r = \dfrac{_n\mathrm{P}_r}{r!} = \dfrac{n!}{r!(n-r)!} =\, _n\mathrm{C} _{n-r} $  
+* $ _{n-1}\mathrm{C} _{r-1} +\, _{n-1}\mathrm{C}_r =\, _n\mathrm{C}_r $
 
 
 * 서로 다른 $n$개의 원소에서 $a, b, c$개 만큼 각각 뽑아서 분리하는 가짓수는  
   $_n\mathrm{C}_a \times _n\mathrm{C}_b \times _n\mathrm{C}_c$  
-* 이때 $a=b$ 이면 각 그룹간의 구별이 불가능하므로 $2!$로 나누어 준다. $a=b=c$이면 $3!$으로 나눔.
+* 이때 $a=b$ 이면 각 그룹간의 구별이 불가능하므로 $2!$로 나누어 준다. $a=b=c$ 이면 $3!$으로 나눔.
 
 <br/>
 
 ### 중복조합
 ![Alt text](/pictures/mathematics/중복조합.jpg)  
 * 중복을 허용하는 경우, 원소를 $r$개 막대기를 $(n-1)$개로 두고 $(n+r-1)$개 슬롯에 막대기를 꽂으면 각 막대기 사이의 원소 갯수가 특정 원소의 선택횟수가 된다.  
-* 즉 $_n\mathrm{H}_r =\, _{n+r-1}\mathrm{C}_{n-1} =\, _{n+r-1}\mathrm{C}_r$
+* 즉 $ _n\mathrm{H}_r =\, _{n+r-1}\mathrm{C} _{n-1} =\, _{n+r-1}\mathrm{C}_r$
 
 <br/>
 
@@ -2023,23 +2025,23 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 
 {% capture context2 %}
 ### 이항계수
-이항계수 ${n\choose k}$를 $(x+y)^n$을 전개하였을 때 음이 아닌 정수 $k\leq n$에 대한 $x^k y{n-k}$ 항의 계수로 정의하면   
-$(x+y)^n=\sum\limits_{k=0}^{n} {n\choose k}x^k y^{n-k}$가 된다.  
-* 이때 ${n\choose k}$는 $_n\mathrm{C}_k$와 동일함을 수학적 귀납법으로 증명 가능하다. [증명](https://ko.wikipedia.org/wiki/%EC%9D%B4%ED%95%AD_%EC%A0%95%EB%A6%AC)
+이항계수 $\displaystyle{n\choose k}$를 $(x+y)^n$을 전개하였을 때 음이 아닌 정수 $k\leq n$에 대한 $x^k y^{n-k}$ 항의 계수로 정의하면   
+$(x+y)^n=\sum\limits_{k=0}^{n} \displaystyle{n\choose k}x^k y^{n-k}$가 된다.  
+* 이때 $\displaystyle{n\choose k}$는 $_n\mathrm{C}_k$와 동일함을 수학적 귀납법으로 증명 가능하다. [증명](https://ko.wikipedia.org/wiki/%EC%9D%B4%ED%95%AD_%EC%A0%95%EB%A6%AC)
 
 
 $k\in \mathbb{N}$ 을 확장시켜, 복소수 값을 가지는 $\alpha\in \mathbb{C}$로 확장시킬 수 있다.  
 <p> $$ (x+y)^\alpha=\sum\limits_{k=0}^{\infty} {\alpha\choose k}x^{\alpha-k} y^{k} = x^{\alpha} + \alpha x^{\alpha-1} + \dfrac{\alpha(\alpha-1)}{2}x^{\alpha-2}y^2 + cdots$$ </p>  
 
-$\|x\|>\|y\|$일 때, ${\alpha\choose k} = \dfrac{\alpha(\alpha-1)(\alpha-2)\cdots(\alpha-k+1)}{k!}$가 성립한다고 하는데 아니면 왜 아닌지는 잘 몰겠다.  
+$\|x\|>\|y\|$일 때, $\displaystyle{\alpha\choose k} = \dfrac{\alpha(\alpha-1)(\alpha-2)\cdots(\alpha-k+1)}{k!}$가 성립한다고 하는데 아니면 왜 아닌지는 잘 몰겠다.  
 몰라 
 
 <br/>
 
 ### 다항정리
 <p> $$(x_{1}+x_{2}+\cdots +x_{m})^{n}=\sum _{k_{1},k_{2},\dots ,k_{m}\in \mathbb {N} }^{k_{1}+k_{2}+\cdots k_{m}=n}{\dfrac {n!}{k_{1}!k_{2}!\cdots k_{m}!}}x_{1}^{k_{1}}x_{2}^{k_{2}}\cdots x_{m}^{k_{m}}=\sum _{K\in \mathbb {N} ^{m}}^{|K|=n}{\binom {n}{K}}x^{K}$$ </p>  
-이 때 이항 계수에 대응되는 다항 계수 ${\binom {n}{K}} = {\binom {n}{k_1,k_2,\cdots,k_m}} = \dfrac{n!}{k_{1}!k_{2}!\cdots k_{m}!$이며,  
-이는 ${n\choose k_1} {n-k_1\choose k_2} {n-k_1-k_2\choose k_3}\cdots {n-k_1-k_2\cdots-k_{m-1}\choose k_m}$ 과 같기 때문에, 정리하면 
+이 때 이항 계수에 대응되는 다항 계수 $ \displaystyle{n \choose K} = {n \choose k_1,k_2,\cdots,k_m} = \dfrac{n!}{k_{1}!k_{2}!\cdots k_{m}!} $이며,  
+이는 $\displaystyle{n\choose k_1} \displaystyle{n-k_1\choose k_2} \displaystyle{n-k_1-k_2\choose k_3}\cdots \displaystyle{n-k_1-k_2\cdots-k_{m-1}\choose k_m}$ 과 같기 때문에, 정리하면 
 
 <p> $${\binom {n}{K}} = {\binom {n}{k_1,k_2,\cdots,k_m}}=\prod_{i=1}^{m}{\binom {k_{i}+k_{i+1}+\cdots +k_{m}}{k_{i}}}=\prod_{i=1}^{m}{\binom {k_{1}+k_{2}+\cdots +k_{i}}{k_{i}}}$$ </p>
 가 된다.
@@ -2049,11 +2051,11 @@ $\|x\|>\|y\|$일 때, ${\alpha\choose k} = \dfrac{\alpha(\alpha-1)(\alpha-2)\cdo
 ### gamma function
 $n\in\mathbb{N}:\; n!=1\cdot 2\cdot 3\cdots n$ 에서 $n$ 범위의 일반화.  
 
-$\left(\frac{9}{2}\right)!$ 은 무엇일까.  
+$\left(\dfrac{9}{2}\right)!$ 은 무엇일까.  
 자연수 범위를 벗어난 팩토리얼 값이 정의하기가 애매해지는 이유는  
 자연수에 대해선 $1!=1$이라고 정의를 내리고 시작하는 것과는 달리,   
-$\left(\frac{9}{2}\right)! = \left(\frac{9}{2}\right)\cdot \left(\frac{7}{2}\right)! = \cdots = \left(\frac{9}{2}\right)\cdot \left(\frac{7}{2}\right)!\cdots \left(\frac{1}{2}\right)!$  
-로 재귀적으로 자연수가 아닌 팩토리얼의 값을 줄여나갈 때, $\left(\frac{1}{2}\right)!$ 과 같은 시작점을 찾아서 정의하기가 참 그렇기 때문이다.  
+$\left(\dfrac{9}{2}\right)! = \left(\dfrac{9}{2}\right)\cdot \left(\dfrac{7}{2}\right)! = \cdots = \left(\dfrac{9}{2}\right)\cdot \left(\dfrac{7}{2}\right)!\cdots \left(\dfrac{1}{2}\right)!$  
+로 재귀적으로 자연수가 아닌 팩토리얼의 값을 줄여나갈 때, $\left(\dfrac{1}{2}\right)!$ 과 같은 시작점을 찾아서 정의하기가 참 그렇기 때문이다.  
 반대로 말하자면, 어떤 값 $z$에 대해서던 $z! = z\cdot (z-1)!$ 이라고 정의내리는 것은 크게 이상하지 않다. 
 
 
@@ -2063,20 +2065,20 @@ $\left(\frac{9}{2}\right)! = \left(\frac{9}{2}\right)\cdot \left(\frac{7}{2}\rig
 
 1. 우선 팩토리얼의 종특인 $f(1)=1,\; f(x+1)=xf(x)$이라는 recurrence relation 을 만족하는 함수를 $\Gamma(x)$라고 정의하자.
 2. $z\in\mathbb{C}:\; Re(z)>0$인 $z$을 정의역으로 두는  
-   $\Gamma (z):=\int _{0}^{\infty }x^{z-1}e^{-x}\,dx$ 으로 두면 
-3. $\begin{align*}
+   $\Gamma (z):=\displaystyle\int_{0}^{\infty }x^{z-1}e^{-x}\,dx$ 으로 두면 
+3. <p>$$ \begin{align*}
    \Gamma (z+1)&=\int_{0}^{\infty}x^{z}e^{-x}\,dx \\\\
                &=\left[-x^{z}e^{-x}\right]_{0}^{\infty }+\int _{0}^{\infty }zx^{z-1}e^{-x}\,dx \\\\
                &=\lim _{x\to \infty}(-x^{z}e^{-x})-(0e^{-0})+z\int _{0}^{\infty }x^{z-1}e^{-x}\,dx \\\\
                &=z\int _{0}^{\infty }x^{z-1}e^{-x}\,dx \\\\
                &=z\Gamma(z)
-   \end{align*}$
-4. $\begin{align*}
+   \end{align*}$$ </p>
+4. <p>$$ \begin{align*}
    \Gamma (1)&=\int_{0}^{\infty }x^{1-1}e^{-x}\,dx \\\\
              &=\left[-e^{-x}\right]_{0}^{\infty } \\\\
              &=\lim _{x\to \infty }(-e^{-x})-(-e^{-0}) \\\\
              &=0-(-1) \\&=1
-   \end{align*}$
+   \end{align*}$$ </p>
 5. 와와
 
 $\Gamma(1)=1,\, \Gamma(2)=1\cdot \Gamma(1)=1,\, \Gamma(3)=2\cdot \Gamma(2)=2,\, \cdots$ 와 같이  
@@ -2118,7 +2120,7 @@ Analytic 함수에 대한 설명은.. 나중에 언젠간..
 * 여사건: $P(A)+P(A^C)=1$
 * `덧셈정리`: $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
 * `조건부 확률`: $P(B\|A)=\dfrac{P(A\cup B)}{P(A)}$
-  * 표본 공간을 구성하는 outcome을 사건 $A$에 속하는 outcome으로 제한하였을 때$(S \leftarrow A) B$의 확률
+  * 표본 공간을 구성하는 outcome을 사건 $A$에 속하는 outcome으로 제한하였을 때$(S \leftarrow A)$, $B$의 확률
   * 즉, outcome이 A에 속한다는 사실을 이미 알고 있을 때 $B$의 확률
   * 혹은, 사건 $A$가 일어났다고 가정할 때 $B$가 일어날 확률 
 * `곱셈정리`: $P(A \cap B)=P(A)\cdot P(B\|A)=P(B)\cdot P(A\|B)$
@@ -2134,15 +2136,16 @@ Analytic 함수에 대한 설명은.. 나중에 언젠간..
 추가적으로, 모든 근원사건에 할당된 확률을 모두 더하면 1이 되어야 하는 제한조건이 붙는다.  
 * $P(S)=1, P(\varnothing)=0$
   
+<br/>
   
 이제 이걸 어떻게 매핑시켜줄 것이냐?  
 몇가지 관점에 따른 정의가 있다.
 1. 수학적 확률
-    * 각각의 근원사건이 일어나는 것이 같은 정도로 확실할 때, 사건 $A$가 일어날 확률은 $\dfrac{A에 속하는 근원사건 수}{전체 근원사건 수} = \dfrac{n(A)}{n(S)}$ 로 정의
+    * 각각의 근원사건이 일어나는 것이 같은 정도로 확실할 때, 사건 $A$가 일어날 확률은 $\dfrac{A에\; 속하는\; 근원사건\; 수}{전체\; 근원사건\; 수} = \dfrac{n(A)}{n(S)}$ 로 정의
     * **각각의 근원사건이 일어나는 것이 같은 정도로 확실할 때** 라는 조건이 붙는데, 아무런 시행 없이 확실하다고 가정하는 것 자체가 어렵다.  
     * 즉 완전히 이상적인 확률.
 2. 기하학적 확률
-    * 수학적 확률과 비슷한데, 확률을 사건 $A$가 일어날 수 있는 영역의 크기/모든 영역 크기 로 정의함
+    * 수학적 확률과 비슷한데, 확률을 (사건 $A$가 일어날 수 있는 영역의 크기)/(모든 영역 크기 로 정의함)
 3. 통계적 확률
     * 시행 횟수를 $N$, 사건 $A$가 일어난 횟수를 $a$라 뒀을 때, `상대도수`를 $\dfrac{a}{N}$으로 정의
     * 통계적 확률은 $\lim\limits_{N\to\infty} \dfrac{a}{N}=p$ 로 정의.
@@ -2150,11 +2153,13 @@ Analytic 함수에 대한 설명은.. 나중에 언젠간..
 4. 베이즈 확률
     * $N\to\infty$ 가 안되서 통계적 확률을 믿을 수 없기 때문에 생김
     * degree of belief 을 도입해서, belief가 강하다면 상대도수 $\dfrac{a}{N}$가 어떤 값을 가지더라도  
-      빼애애액 $N$이 충분히 안크잖아 내가 믿는 값이 맞음 애애애애앵앵 하지만 그래도 참고 정도는 해 주지 흥  
+      빼애애액 $N$이 충분히 안크잖아 내가 믿는 값이 맞음 애애애애앵앵  
+      하지만 그래도 참고 정도는 해 주지 흥  
       ..을 시전할 수 있는 이론. 그게 꼭 나쁘다는건 아니지만.
-        * 아주 간단히 요약하자면, 실제 실험 결과 1회와 본인이 믿는 대로 뇌내에서 실험한 결과 1회가 최종 결론에 미치는 영향이 같다. 이때 degree of belief 는 내뇌 실험 횟수 A를 뜻함.   
+        * 아주 간단히 요약하자면, 실제 실험 결과 1회와 본인이 믿는 대로 뇌내에서 실험한 결과 1회가 최종 결론에 미치는 영향이 같다. 
+        * 이때 degree of belief 는 내뇌 실험 횟수 A를 뜻함.   
     * 가설(belief) $H$와 데이터 $D$에 대하여 뇌피셜 $P(H)$을 이미 가지고 있을 때, 실험 데이터가 주어진 이후의 `사후확률`은 베이즈 정리에 의하여  
-      $P(H|D)={\frac{P(D|H)\;P(H)}{P(D)}}$가 된다.
+      $P(H|D)={\dfrac{P(D|H)\;P(H)}{P(D)}}$가 된다.
     
 {% endcapture %}
 
@@ -2168,10 +2173,10 @@ Analytic 함수에 대한 설명은.. 나중에 언젠간..
   * 확률분포의 평균 $E(X)=\sum\limits_{i=1}^n {x_i p_i}$
   * 확률분포의 분산 $V(X)=\sum\limits_{i=1}^n {(x_i-m)^2 p_i}=\sum\limits_{i=1}^n {x_i^2 p_i} -m^2=E(X^2)-E(X)^2$
 * `이항분포`: 각 시행의 결과가 서로 독립인 시행에서 $P(A)=p$인 사건 $A$가 $r$번 일어날 확률
-  * $P(X=r)=_n\mathrb{C}_r p^r (1-p)^{n-r} \Rightarrow X\sim \mathrm{B}(n, p) E(X)=np, V(x)=np(1-p)$
-* `정규분포` $X\sim \mathrm{N}(m, \sigma^2) = \dfrac{1}{\sqrt{2\pi}\sigma} e^{-\dfrac{(x-m)^2}{2\sigma^2}}$
+  * $P(X=r)=_n\mathrm{C}_r p^r (1-p)^{n-r} \Rightarrow X\sim \mathrm{B}(n, p) E(X)=np, V(x)=np(1-p)$
+* `정규분포` $X\sim \mathrm{N}(m, \sigma^2) = \dfrac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-m)^2}{2\sigma^2}}$
   * `정규확률변수` $Z=\dfrac{X-m}{\sigma}\sim \mathrm{N}(0, 1^2)$
-  * $X\sim B(n, p), \text{ if } np >> 5 \text{ and } n(1-p) >> 5 \Rightarrow X\sim \mathrm{N}(np, np(1-p))$
+  * $X\sim B(n, p), \text{ if } np > 5 \text{ and } n(1-p) > 5 \Rightarrow X\sim \mathrm{N}(np, np(1-p))$
 
 {% capture context1 %}
 
@@ -2189,40 +2194,45 @@ event 라는 개념을 정의역으로 두기엔 너무 variation이 크고 다�
 <br/>
 
 `확률분포`(Probability distribution function, PDF)는 확률변수와 확률의 대응 관계를 나타내는 함수이다.  
-$P(X=x)=p : \mathbb{R} \longrightarrow [0, 1](\subset \mathbb{R})$ 
+* $ P(X=x)=p : \mathbb{R} \longrightarrow [0, 1] (\subset \mathbb{R}) $
+
+  
 $X$는 이산형 변수일 수도 있고, 연속일 수도 있으며, 확률분포 역시 이를 따라 `이산확률분포`와 `연속확률분포`로 나뉜다. 
 
 <br/>
 
 ### 이항분포
-서로 독립인 시행(`독립시행`)을 여러번 반복했을 때, 각 시행이 사건 $A$ 혹은 $A^C$에 속한다고 하면($P(A)=p$)  
-각 시행의 outcome을 $a_i$(시행 $i$가 사건 $A$에 포함), $b_i$(아님) 이라 두자.  
-그럼 $S=\\{(a_1, a_2, \cdots a_n), (b_1, a_2, \cdots a_n), (a_1, b_2, \cdots a_n), cdots, (b_1, b_2, \cdots b_n)\\}$ 이 되며  
-사건 $A$가 $r$회 일어나는 최종 outcome $R=\underset{n(a)=r}{\underbrace{(a_1, b_2, \cdots, b_n)}}$를 $r$로 매핑하는 확률변수 $X$를 정의하면
-$X$의 확률분포는 $\mathrm{P}(X=r)=\,_n\mathrb{C}_r p^r (1-p)^{n-r}$ 가 된다.
+서로 독립인 시행(`독립시행`)을 여러번 반복했을 때, 각 시행이 사건 $A$ 혹은 $A^C$에 속한다고 하면$(P(A)=p)$  
+각 시행의 outcome을 $a_i$(: 시행 $i$가 사건 $A$에 포함), $b_i$(: 아님) 이라 두자.  
+그럼 $S=\\{(a_1, a_2, \cdots a_n), (b_1, a_2, \cdots a_n), (a_1, b_2, \cdots a_n), \cdots, (b_1, b_2, \cdots b_n)\\}$ 이 되며  
+사건 $A$가 $r$회 일어나는 최종 outcome $R=\underset{n(a)=r}{\underbrace{(a_1, b_2, \cdots, b_n)}}$를 $r$로 매핑하는 확률변수 $X$를 정의하면, $X$의 확률분포는 
+<p> $$\mathrm{P}(X=r)=\,_n\mathrm{C}_r p^r (1-p)^{n-r}$$ </p>
+가 된다.
 
 <br/>
 
 ### 정규분포
 ![Alt text](/pictures/mathematics/정규분포.png)  
-$X\sim \mathrm{N}(m, \sigma^2) = \dfrac{1}{\sqrt{2\pi}\sigma} e^{-\dfrac{(x-m)^2}{2\sigma^2}}$  
+$X\sim \mathrm{N}(m, \sigma^2) = \dfrac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-m)^2}{2\sigma^2}}$  
 정규분포 관련해선 해야될 얘기가 많긴한데 통계 파트에서 나중에 할 예정
 
 {% endcapture %}
 
 {% capture context2 %}
 ### 이항분포 평균, 분산 계산
-$\mathrm{P}(X=r)=\,_n\mathrb{C}_r p^r q^{n-r} (q=1-p)$
+$\mathrm{P}(X=r)=\,_n\mathrm{C}_r p^r q^{n-r} (q=1-p)$
 * 평균 $m=np$
-  * $(q+pt)^n =\sum\limits_{r=0}^n { {n\choose r} p^r t^r q^{n-r}}$
-  * $t$에 대하여 미분하면, $np(q+pt)^{n-1} = \sum\limits_{r=0}^n {r{n \choose r}p^r t^{r-1} q^{n-r}}$
-  * $t=1 \Rightarrow np=\sum\limits_{r=0}^n {r{n \choose r}p^r q^{n-r}}$
-  * $m=\sum\limits_{r=0}^{n} r\mathrm{P}(X=r)=\sum\limits_{r=1}^{n} r_n\mathrb{C}_r p^r q^{n-r}=np$
+  * $(q+pt)^n =\sum\limits_{r=0}^n { \displaystyle{n\choose r} p^r t^r q^{n-r}}$
+  * $t$에 대하여 미분하면, $np(q+pt)^{n-1} = \sum\limits_{r=0}^n {r\displaystyle{n \choose r}p^r t^{r-1} q^{n-r}}$
+  * $t=1 \Rightarrow np=\sum\limits_{r=0}^n {r\displaystyle{n \choose r}p^r q^{n-r}}$
+  * $m=\sum\limits_{r=0}^{n} r\mathrm{P}(X=r)=\sum\limits_{r=1}^{n} r_n\mathrm{C}_r p^r q^{n-r}=np$
+
+<br/> 
   
 * 분산 $V(X)=npq$
   * $V(X)=\sum\limits_{r=0}^{n} r^2 \mathrm{P}(X=r)-m^2$
-  * 평균에서 2번째 식을 한번 더 미분하면, $n(n-1)p^2(q+pt)^{n-2} = \sum\limits_{r=0}^n {r(r-1){n \choose r}p^r t^{r-2} q^{n-r}}$
-  * $t=1 \Rightarrow n(n-1)p^2=\sum\limits_{r=0}^n {r(r-1){n \choose r}p^r q^{n-r}}=\sum\limits_{r=0}^n r(r-1)\mathrm{P}(X=r)$
+  * 평균에서 2번째 식을 한번 더 미분하면, $n(n-1)p^2(q+pt)^{n-2} = \sum\limits_{r=0}^n {r(r-1)\displaystyle{n \choose r}p^r t^{r-2} q^{n-r}}$
+  * $t=1 \Rightarrow n(n-1)p^2=\sum\limits_{r=0}^n {r(r-1)\displaystyle{n \choose r}p^r q^{n-r}}=\sum\limits_{r=0}^n r(r-1)\mathrm{P}(X=r)$
   * $\therefore \sum\limits_{r=0}^n r^2 \mathrm{P}(X=r) = n(n-1)p^2+np=np(np-p+1)$
   * $V(X)=np(np-p+1)-(np)^2 = np(1-p)=npq$
 
@@ -2242,9 +2252,9 @@ Measurable space가 무엇인지에 대해선 좀 찾아봤는데 너무 어려�
 
 <br/>
 
-일단 $P:A(event) \longrightarrow \mathbb{R}$가 맞다.  
+일단 $P:\text{event} A \longrightarrow \mathbb{R}$가 맞다.  
 그리고 확률변수가 들어간 표기는 사실 다음과 같음.
-$S \subset E,\; P(X\in S) = P(\\{\omega\in\Omega \| X(\omega)\in S \\})$
+$S \subset E,\; P(X\in S) = P(\\{\omega\in\Omega \| X(\omega)\in S \\})$  
 즉, $P$의 정의역은 $X(\omega)\in S$를 만족하는 $\omega$ 들의 집합이며, $\omega$ 는 근원사건들이다. 고로 정의역은 Sample space.  
 다만 표기를 간단히 하기 위해서, $\omega$를 생략하여 $P(X\in S)$ 로 표기하는 것. 
 
@@ -2263,30 +2273,30 @@ $P(X=\\{2, 3\\})$ 으로 간략하게 표기하는 것
 * 모집단의 확률분포가 모평균이 $m$, 모분산이 $\sigma^2$ 일 때, 크기가 $n$인 임의표본을 추출하는 경우
   * 복원추출: $E(\bar{X})=m, V(\bar{X})=\dfrac{\sigma^2}{n}$
   * 비복원추출: $E(\bar{X})=m, V(\bar{X}) = \dfrac{\sigma^2}{n}\cdot \dfrac{N-n}{N-1}$
-  * 표본평균의 분포: $\bar{X} \sim N(m, \dfrac{\sigma^2}{n}) (n >> 1)$
+  * 표본평균의 분포: $\bar{X} \sim \mathrm{N}\left(m, \dfrac{\sigma^2}{n}\right)\; (n >\,> 1)$
 * 모집단의 확률분포가 $\mathrm{N}(m, \sigma)$이고 $m$을 모를 때, 크기가 $n$인 임의표본을 추출하여 모평균 $m$을 추정할 수 있다
   * 95% `신뢰도`로서, $\bar{X}-1.96\cdot \dfrac{\sigma}{\sqrt{n}} \leq m \leq \bar{X}+1.96\cdot \dfrac{\sigma}{\sqrt{n}}$
-* `표본비율` $\hat{p}=\dfrac{X}{n}$에 대하여, $E(\hat{p})=p, V(\hat{p})=\dfrac{pq}{n}, \hat{p}\sim \mathrm{N}(p, \dfrac{pq}{n})$
+* `표본비율` $\hat{p}=\dfrac{X}{n}$에 대하여, $E(\hat{p})=p,\, V(\hat{p})=\dfrac{pq}{n},\, \hat{p}\sim \mathrm{N}(p, \dfrac{pq}{n})$
 
 {% capture context1 %}
 ### 표본평균
 모집단에서의 평균 $m$은 그냥 $m=\dfrac{1}{n}\sum\limits_{i=1}^{n} x_i$ 인 숫자이다.  
 하지만 표본에서의 평균은 선택되는 표본에 따라 값이 달라지므로,   
 Sample space를 크기가 $n$인 모든 표본의 조합으로 두면, 그 값을 나타내는 확률변수 $\bar{X}$에 대한 확률분포가 존재한다.  
-`표본평균` $\bar{X}$의 기대값은 모평균 $m$과 같지만, 그 분산은 크기에 반비례하고, $\bar{X} \sim \mathrm{N}(m, \dfrac{\sigma^2}{n})$를 따른다.
+`표본평균` $\bar{X}$의 기대값은 모평균 $m$과 같지만, 그 분산은 크기에 반비례하고, $\bar{X} \sim \mathrm{N}\left(m, \dfrac{\sigma^2}{n}\right)$를 따른다.
 
 주의할 것은, $V(\bar{X})$는 Sample space를 크기가 $n$인 모든 표본의 조합으로 두었을 때 표본평균의 분산값이지, 임의의 표본 자체의 분산은 아니다.  
-마찬가지로 $\bar{X} \sim N(m, \dfrac{\sigma^2}{n})$도 표본 자체의 분포가 아니다.
+마찬가지로 $\bar{X} \sim \mathrm{N}\left(m, \dfrac{\sigma^2}{n}\right)$도 표본 자체의 분포가 아니다.
 
 <br/>
 
 ### 모평균의 추정
-$\bar{X} \sim \mathrm{N}(m, \dfrac{\sigma^2}{n})$이므로, $Z=\dfrac{\bar{X}-m}{\dfrac{\sigma}{\sqrt{n}}} \sim \mathrm{N}(0, 1^2)$  
-$\mathrm{P}(-1.96\leq Z\leq 1.96)=0.95$이므로, $\mathrm{P}(-1.96\leq \dfrac{\bar{X}-m}{\sigma/ \sqrt{n}}\leq 1.96)=0.95$  
-정리하면, $\mathrm{P}(\bar{X}-1.96\cdot\dfrac{\sigma}{\sqrt{n}} \leq m \leq \bar{X}+1.96\cdot\dfrac{\sigma}{\sqrt{n}})=0.95$  
+$\bar{X} \sim \mathrm{N}\left(m, \dfrac{\sigma^2}{n}\right)$이므로, $Z=\dfrac{\bar{X}-m}{\frac{\sigma}{\sqrt{n}}} \sim \mathrm{N}(0, 1^2)$  
+$\mathrm{P}(-1.96\leq Z\leq 1.96)=0.95$이므로, $\mathrm{P}\left(-1.96\leq \dfrac{\bar{X}-m}{\sigma/ \sqrt{n}}\leq 1.96\right)=0.95$  
+정리하면, $\mathrm{P}\left(\bar{X}-1.96\cdot\dfrac{\sigma}{\sqrt{n}} \leq m \leq \bar{X}+1.96\cdot\dfrac{\sigma}{\sqrt{n}}\right)=0.95$  
 즉, 구간 $\left[\bar{X}-1.96\cdot\dfrac{\sigma}{\sqrt{n}}, \bar{X}+1.96\cdot\dfrac{\sigma}{\sqrt{n}} \right]$ 안에 $m$이 들어갈 확률은 95%이다.
 
-신뢰도가 $a$일 때, $P(-\alpha\leq Z \leq \alpha)=a$인 $\alpha$가 $\dfrac{\sigma}{\sqrt{n}$ 앞의 계수가 됨.
+신뢰도가 $a$일 때, $P(-\alpha\leq Z \leq \alpha)=a$인 $\alpha$가 $\dfrac{\sigma}{\sqrt{n}}$ 앞의 계수가 됨.
 
 <br/>
 
@@ -2307,14 +2317,14 @@ $\mathrm{P}(-1.96\leq Z\leq 1.96)=0.95$이므로, $\mathrm{P}(-1.96\leq \dfrac{\
 ### 복원추출의 표본분산
 * $\mu=\bar{X}=\dfrac{1}{n}\sum\limits_{i=1}^n x_i$  
 * $V(\bar{X}) = E((\bar{X}-m)^2)= E\left[\left(\dfrac{1}{n}\sum\limits_{i=1}^n x_i -\mu\right)^2\right]=\dfrac{1}{n^2} E\left[\left(\sum\limits_{i=1}^n (x_i -\mu)\right)^2\right]$
-* 전개하면, $V(\bar{X}) =\dfrac{1}{n^2}E[(x_1-\mu)^2+(x_2-\mu)^2+\cdots+(x_n-\mu)^2+(x_1-\mu)(x_2-\mu)+(x_1-\mu)(x_3-\mu)+\cdots]$
+* 전개하면, $V(\bar{X}) =\dfrac{1}{n^2}E[(x_1-\mu)^2+\cdots+(x_n-\mu)^2+(x_1-\mu)(x_2-\mu)+(x_1-\mu)(x_3-\mu)+\cdots]$
 * 각 표본은 서로 독립이므로, $E[(x_i-\mu)(x_j-\mu)]=E[x_i-\mu]E[x_j-\mu]=0, E[(x_i-\mu)^2]=\sigma^2$
-* $\therefore V(\bar{X}) =\dfrac{1}{n^2}\cdot n\sigma^2 = \dfrac{sigma^2}{n}$
+* $\therefore V(\bar{X}) =\dfrac{1}{n^2}\cdot n\sigma^2 = \dfrac{\sigma^2}{n}$
 
 <br/>
 
 ### 표본평균과 표본비율의 분산
-표본평균의 분산은 $\dfrac{sigma^2}{n}$, 즉 모분산 나누기 $n$이다.  
+표본평균의 분산은 $\dfrac{\sigma^2}{n}$, 즉 모분산 나누기 $n$이다.  
 그렇다면 표본비율의 분산도 모분산 나누기 $n$으로 해서, $npq / n = pq$가 되어야 하지 않는가.
 
 <br/>
