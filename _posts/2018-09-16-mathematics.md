@@ -2416,8 +2416,7 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 
 ### 원추곡선
 : 대수적으로 표현한 이차곡선을 기하적인 명칭으로 변형  
-![Alt text](/pictures/mathematics/원뿔곡선2.gif) ![Alt text](/pictures/mathematics/원뿔곡선3.png)  
-(gif 출처 - m.blog.naver.com/PostView.nhn?blogId=yh6613&logNo=220696726122 )  
+![Alt text](/pictures/mathematics/원뿔곡선2.gif) ![Alt text](/pictures/mathematics/원뿔곡선3.png)    
 원뿔을 평면으로 잘랐을 때 생기는 곡선. 
 
 * \alpha = \angle(A, L)을 원뿔의 반 꼭지각이라 둔다  
@@ -2497,23 +2496,42 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 ### 당들렝의 구
 ![Alt text](/pictures/mathematics/당들렝.gif)  
 이차곡선의 기하학적 표현인 원추곡선을 증명하기 위해서 당들렝이 원뿔에 구를 넣어서 노오력한 결과  
-자세한 증명은 [여기를 보십시오](https://m.blog.naver.com/PostView.nhn?blogId=yh6613&logNo=220696726122&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
+자세한 증명은 여기를 보십시오 - http://mathseodang.com/220696726122  
+기타 모든 그림이나 gif들도 위 블로그에서 따왔습니다.
 
 #### 포물선
-![Alt text](/pictures/mathematics/당들렝_포물선1.gif)  ![Alt text](/pictures/mathematics/당들렝_포물선2.gif)  
+![Alt text](/pictures/mathematics/당들렝_포물선1.gif) ![Alt text](/pictures/mathematics/당들렝_포물선2.gif)  
 \bar{PF}=\bar{PR}(구면 접선의 길이)=\bar{QT}(원뿔대 모선의 길이)=\bar{MX}(\alpha=\beta)=\bar{PH}
 
 #### 타원
-![Alt text](/pictures/mathematics/당들렝_타원1.gif)  ![Alt text](/pictures/mathematics/당들렝_타원2.jpg)  
+![Alt text](/pictures/mathematics/당들렝_타원1.gif) ![Alt text](/pictures/mathematics/당들렝_타원2.jpg)  
 \bar{PF}=\bar{PR}, \bar{PF'}=\bar{PR'}, \therefore \bar{PF}+\bar{PF'}=\bar{RR'} : 원뿔대의 길이로 항상 일정  
 \bar{PF}=\bar{PR}=\bar{QT}, \bar{MX}=\bar{PH}, \bar{TL}=\bar{XK},  
 \sin\alpha=\dfrac{\bar{TL}}{\bar{QT}}=\dfrac{\bar{TL}}{\bar{PF}}, \sin\beta=\dfrac{\bar{XK}}{\bar{MX}}=\dfrac{\bar{XK}}{\bar{PH}}  
 \therefore \epsilon=\dfrac{\bar{PF}}{\bar{PH}} = \dfrac{\sin\beta}{\sin\alpha} 
 
+#### 쌍곡선
+![Alt text](/pictures/mathematics/당들렝_쌍곡선1.gif){: width="50%" height="50%"} ![Alt text](/pictures/mathematics/당들렝_쌍곡선2.jpg)  
+\bar{PF}=\bar{PR}, \bar{PF'}=\bar{PR'}, \therefore \bar{PF}-\bar{PF'}=\bar{RR'} : 원뿔대의 길이로 항상 일정  
+타원과 같은 방법으로 (+ \bar{QL}=\bar{MK}),
+\sin\alpha=\dfrac{\bar{QL}}{\bar{QT}}=\dfrac{\bar{QL}}{\bar{PF}}, \sin\beta=\dfrac{\bar{MK}}{\bar{MX}}=\dfrac{\bar{MK}}{\bar{PH}}, \epsilon=\dfrac{\bar{PF}}{\bar{PH}} = \dfrac{\sin\beta}{\sin\alpha} 
+
+<br/>
+
+### 극좌표계와 이심률
+같은 블로그 [참조](http://mathseodang.com/220621141953)  
+
+위에서 언급했듯이 준선의 방정식 x=-p, 초점을 (p, 0)으로 두고 정리하면, x^2+y^2=e^2(x+p)^2가 된다.  
+극좌표계로 변환하면(r=\sqrt{x^2+y^2}, x=r\cos\theta), r^2=e^2(r\cos\theta+p)^2, r=\dfrac{pe}{1-e\cos\theta}=\dfrac{l}{1-e\cos\theta} 가 된다(l=pe).  
+반대로 준선을 x=p, 초점을 (-p, 0)으로 두면, r=\dfrac{pe}{1+e\cos\theta}=\dfrac{l}{1+e\cos\theta}가 된다.
+
+정리하면, r=\dfrac{pe}{1\pm e\cos\theta}=\dfrac{l}{1\pm e\cos\theta}이며,  
+타원의 경우 장축의 길이 2a=\dfrac{pe}{1-e}+\dfrac{pe}{1+e}=\dfrac{2pe}{1-e^2}에서 pe=l=a(1-e^2)가 되어 r=\dfrac{a(1-e^2)}{1\pm e\cos\theta}가 된다.  
+e\to 0일 때, p\to \infty 이며, r=a가 된다. x^2+y^2=e^2(x+p)^2 에서 e\to 0이면 반지름이 항상 0이 되지 않나 싶은데 p\to\infty 로 발산하면서 장축 2a는 유지된다.
+
 <br/>
 
 ### 잡소리
-* 극좌표계에서 포물선의 방정식은 r=\dfrac{l}{1+\cos\theta} 이다. 와!  
 * 포물선의 축과 평행하게 들어온 빛은 포물선에서 반사되어 모두 초점으로 모인다.  
   ![Alt text](/pictures/mathematics/포물선.png)  
   * 반대로, 초점에서 나간 빛은 포물선에서 반사되어 모두 축과 평행하게 나간다.
