@@ -2416,7 +2416,8 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 
 ### 원추곡선
 : 대수적으로 표현한 이차곡선을 기하적인 명칭으로 변형  
-![Alt text](/pictures/mathematics/원뿔곡선2.png) ![Alt text](/pictures/mathematics/원뿔곡선3.png)    
+![Alt text](/pictures/mathematics/원뿔곡선2.gif) ![Alt text](/pictures/mathematics/원뿔곡선3.png)  
+(gif 출처 - m.blog.naver.com/PostView.nhn?blogId=yh6613&logNo=220696726122 )  
 원뿔을 평면으로 잘랐을 때 생기는 곡선. 
 
 * \alpha = \angle(A, L)을 원뿔의 반 꼭지각이라 둔다  
@@ -2449,12 +2450,67 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 \bar{PF}^2 = (x-p)^2+y^2 = \epsilon^2 \bar{PD}^2 = \epsilon^2(x+p)^2  
 (1-\epsilon^2)x^2+y^2+Dx+F=0 꼴이 되기 때문에 각 케이스별로 이차곡선의 일반항 조건을 생각해보면 증명된다.
 
+축이 x, y축과 평행하지 않은, 임의의 회전변환을 거친 임의의 이차곡선의 일반항 Ax^2+Bxy+Cy^2+Dx+Ey+F=0이 어떤 곡선인지의 판별을
+5.번의 이심률 공식을 통해 계산하여 구할 수 있다... 있는데 별로 그러고싶진 않다
+
 {% endcapture %}
 
 {% capture context2 %}
 ### 이차곡선 일반화
+위에서 말했듯이, 이차곡선의 일반항에서 이심률을 구함으로서 이차곡선의 분류뿐만 아니라 형태까지 구할 수 있다(이심률이 같으면 닮은꼴이므로)  
+하지만 솔직히 저걸 이해하긴 좀 힘들고, 다른 방식으로 접근해 보자.
+
+* Ax^2+Bxy+Cy^2+Dx+Ey+F=0에서, A=B=C=0인 경우 식은 일차식이 되며 직선의 방정식이 된다. 와의미없당  
+* B=0인 경우, 이차곡선의 축은 x 혹은 y축과 평행하며 식을 정리하면 간단하게 판별할 수 있다. 
+  * AC > 0 이면 타원(원), AC=0이면 포물선, AC < 0 이면 쌍곡선이다.
+* B\neq 0인 경우.. 회전변환이 들어간 상태이며 3가지 방법이 있다.
+ 
+1. 멍청한 방법: 곡선을 \theta 만큼 회전변환시킨다. [참조](https://wiki.mathnt.net/index.php?title=%EC%9D%B4%EC%B0%A8%EA%B3%A1%EC%84%A0%EA%B3%BC_%ED%9A%8C%EC%A0%84%EB%B3%80%ED%99%98)
+    * x→Xcos(θ)−Ysin(θ),y→Xsin(θ)+Ycos(θ)을 대입하여 A'X^2+B'XY+C'Y^2+D'X+E'Y+F'=0을 얻는다
+    * B'=−asin(2θ)+bcos(2θ)+csin(2θ) 이 되는데, cot(2θ)=\dfrac{a−c}{b}가 되도록 \theta를 바꿔서 B'을 조진다.
+    * A'X^2+C'Y^2+D'X+E'Y+F'=0 이 되어 쉽게 형태를 구할 수 있다. 해-피
+    
+2. 어려운 방법: 일반화를 통한 판별식 도출. [참조](http://goodmath.tumblr.com/post/76467577056/%EC%9B%90%EB%BF%94%EA%B3%A1%EC%84%A0%EC%9D%98-%ED%8C%90%EB%B3%84%EC%8B%9D-discriminant-of-a-conic-section)
+    * [주축정리](https://en.wikipedia.org/wiki/Principal_axis_theorem)의 증명과 비슷한 과정을 거친다.
+    * x:=\begin{bmatrix}x \\\\ y\end{bmatrix} , Q:=\begin{bmatrix}A & \dfrac B 2\\\\ \dfrac B 2 & C\end{bmatrix}, K:=\begin{bmatrix} D & E\end{bmatrix} 
+      로 두면 S(x,y)=x^TQx+Kx+F=0 으로 표현할 수 있다.
+    * Q를 직교대각화하는 행렬 P를 구한다. 
+      * 즉, Qx = \lambda x를 만족하는 고윳값 \lambda_1, \lambda_2를 구하고, 각각의 단위고유벡터를 구하여 합쳐 P를 만든다.
+      * 이때 P^T Q P=\begin{bmatrix} \lambda_1 & 0 \\\\ 0 & \lambda_2 \end{bmatrix} 가 성립한다.  
+    * det(P) = 1이므로, 선형변환 P는 회전변환이 된다. x=Px'
+    * x=Px'를 원래 식에 대입하면, x'^T (P^TQP) x' + (KP)x' + F = 0, 즉 S(x', y')=\lambda_1 x'^2 + \labmda_2 y'^2+ D'x'+E'y'+F=0 인 
+      혼합항의 계수 B'=0인 식을 구할 수 있다.
+    * B'=0이므로, \lambda_1 \lambda_2 의 부호에 따라 이차곡선의 형태를 결정할 수 있으며, 이는 AC-(B/2)^2와 같다!
+      * det(Q−\lambda I)=0 조건으로부터, \lambda−(A+C)\lambda+\dfrac{4AC−B^2}{4}=0 이며 근과 계수의 관계에 따라 둘이 같음. 
+
+3. 얍삽한 방법: 2번의 결실을 날먹한다.
+    * B^2−4AC < 0 ⇒ 타원
+    * B^2−4AC = 0 ⇒ 포물선
+    * B^2−4AC > 0 ⇒ 쌍곡선
+    * 해----피    
+
+
+추가로, 2.번 증명을 통해 y=\dfrac 1 x와 같은 유리식은 쌍곡선의 한 형태임이 증명된다.
+
+<br/>
 
 ### 당들렝의 구
+![Alt text](/pictures/mathematics/당들렝.gif)  
+이차곡선의 기하학적 표현인 원추곡선을 증명하기 위해서 당들렝이 원뿔에 구를 넣어서 노오력한 결과  
+자세한 증명은 [여기를 보십시오](https://m.blog.naver.com/PostView.nhn?blogId=yh6613&logNo=220696726122&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
+
+#### 포물선
+![Alt text](/pictures/mathematics/당들렝_포물선1.gif)  ![Alt text](/pictures/mathematics/당들렝_포물선2.gif)  
+\bar{PF}=\bar{PR}(구면 접선의 길이)=\bar{QT}(원뿔대 모선의 길이)=\bar{MX}(\alpha=\beta)=\bar{PH}
+
+#### 타원
+![Alt text](/pictures/mathematics/당들렝_타원1.gif)  ![Alt text](/pictures/mathematics/당들렝_타원2.jpg)  
+\bar{PF}=\bar{PR}, \bar{PF'}=\bar{PR'}, \therefore \bar{PF}+\bar{PF'}=\bar{RR'} : 원뿔대의 길이로 항상 일정  
+\bar{PF}=\bar{PR}=\bar{QT}, \bar{MX}=\bar{PH}, \bar{TL}=\bar{XK},  
+\sin\alpha=\dfrac{\bar{TL}}{\bar{QT}}=\dfrac{\bar{TL}}{\bar{PF}}, \sin\beta=\dfrac{\bar{XK}}{\bar{MX}}=\dfrac{\bar{XK}}{\bar{PH}}  
+\therefore \epsilon=\dfrac{\bar{PF}}{\bar{PH}} = \dfrac{\sin\beta}{\sin\alpha} 
+
+<br/>
 
 ### 잡소리
 * 극좌표계에서 포물선의 방정식은 r=\dfrac{l}{1+\cos\theta} 이다. 와!  
