@@ -2339,7 +2339,144 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 {% include blocks.html context1=context1 context2=context2 topic="적통_통계적_추정" %}
 
 ## 기하와 벡터
-TBD
+
+{% comment %}
+
+### 이차곡선
+![Alt text](/pictures/mathematics/원뿔곡선.gif)  
+#### 포물선
+* 정의 : 평면 위에서의 한 정점(초점)과 정적선(준선)에 이르는 거리가 같은 점의 자취
+* 방정식 : 초점이 (p, 0), 준선이 x=-p일 때, y^2=4px
+#### 타원
+* 정의 : 두 정점(초점)으로부터 거리 합이 일정한 점의 자취
+* 방정식 : F(k, 0), F'(-k, 0), 거리 합 2a일 때 \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 (k^2=a^2-b^2)
+#### 쌍곡선
+* 정의 : 두 정점(초점)으로부터 거리 차가 일정한 점의 자취
+* 방정식 : F(k, 0), F'(-k, 0), 거리 차 2a일 때 \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1 (k^2=a^2+b^2)
+* 점근선 : \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 0, \; y=\pm \dfrac{b}{a}x
+#### 이심률
+![Alt text](/pictures/mathematics/이심률.png)  
+이차곡선의 일반화. 정적선 l과 정점 F간의 거리 비인 이심률의 값으로 모든 이차곡선이 정의된다.
+
+{% capture context1 %}
+### 포물선
+![Alt text](/pictures/mathematics/포물선.png)  
+* 평면 위에서 초점과 준선에 이르는 거리가 같은 점의 자취
+* F를 초점, l을 준선, 초점을 지나고 준선에 수직인 직선을 축, 축과 포물선의 교점을 꼭짓점이라고 한다.
+* 초점이 (p, 0), 준선이 x=-p일 때, 포물선의 방정식은 y^2=4px
+  * \|x+p\| = \sqrt{(x-p)^2+y^2} 양변을 제곱
+  * 평행이동에 의하여 (y-n)^2 = 4p(x-m), 축은 x축과 평행
+  * 일반형 y^2+2gx+2fy+c=0 (g\neq 0) 
+* 초점이 (0, p), 준선이 y=-p일 때, 포물선의 방정식은 x^2=4py
+  * 평행이동에 의하여, (x-m)^2 = 4p(y-n), 축은 y축과 평행
+  * 일반형 x^2+2gx+2fy+c=0 (f\neq 0)
+* 접선의 방정식은
+  * y^2=4px 위의 점 (x_1, y_1)에서 접선은 y_1y=2p(x+x_1)
+  * 기울기가 m인 접선은 y=mx+\dfrac{p}{m}
+  * 이지만 어차피 미분해서 구할수 있잖아
+
+<br/>
+
+### 타원
+![Alt text](/pictures/mathematics/타원.gif) ![Alt text](/pictures/mathematics/타원2.png)
+* 두 초점으로부터 거리 합이 일정한 점의 자취 
+* F, F'를 두 초점, 두 초점을 지나는 \bar{AB}를 장축, \bar{CD}를 단축, 두 축의 교점을 타원의 중심이라고 하고, A,B,C,D를 꼭짓점이라 한다.
+* 초점이 F(k, 0), F'(-k, 0), 거리 합 2a일 때 타원의 방정식은 \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 (k^2=a^2-b^2)
+  * \sqrt{(x-k)^2+y^2} + \sqrt{(x+k)^2+y^2}=2a 에서 제곱하여 잘 정리
+  * 평행이동에 의하여 \dfrac{(x-m)^2}{a^2} + \dfrac{(y-n)^2}{b^2} = 1, 장축은 x축과 평행
+  * 일반형 Ax^2+By^2+Fx+Gy+C=0 (AB>0, A<B)
+* 초점이 F(0, k), F'(0, -k), 거리 합 2b일 때 타원의 방정식은 \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 (k^2=b^2-a^2)
+  * 일반형 Ax^2+By^2+Fx+Gy+C=0 (AB>0, A>B)
+* 접선의 방정식은
+  * \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 위의 점 (x_1, y_1)에서 접선은 \dfrac{x_1x}{a^2} + \dfrac{y_1y}{b^2} = 1
+  * 기울기가 m인 접선은 y=mx\pm \sqrt{a^2m^2+b^2}
+* 타원의 넓이는 \pi ab
+  
+<br/>
+  
+### 쌍곡선
+![Alt text](/pictures/mathematics/쌍곡선.JPG)
+* 두 초점으로부터 거리 차가 일정한 점의 자취
+* F, F'를 두 초점, 쌍곡선과 \bar{FF'}의 교점을 A, A', \bar{AA'}을 주축, \bar{AA'}의 중점 O를 쌍곡선의 중심이라 한다.
+* 초점이 F(k, 0), F'(-k, 0), 거리 차 2a일 때 쌍곡선의 방정식은 \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1 (k^2=a^2+b^2)
+  * \sqrt{(x+k)^2+y^2} - \sqrt{(x-k)^2+y^2}=2a 에서 제곱하여 잘 정리
+  * 평행이동에 의하여 \dfrac{(x-m)^2}{a^2} - \dfrac{(y-n)^2}{b^2} = 1, 주축은 x축과 평행
+  * 일반형 Ax^2+By^2+Fx+Gy+C=0 (AB<0)
+* 점근선은 dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 0
+  * 쌍곡선의 방정식을 y에 관하여 풀면 y=\pm\dfrac{b}{a}x\sqrt{1-\left(\dfrac{a}{b}\right)^2}, x\to\infty 일 때 y\to\pm\dfrac b a x
+  * 변형하면 \dfrac x a \mp \dfrac y b = 0, \left(\dfrac x a - \dfrac y b\right) \left(\dfrac x a + \dfrac y b\right)=\dfrac x^2 a^2 - \dfrac y^2 b^2 =0
+* 초점이 F(0, k), F'(0, -k), 거리 차 2b일 때 쌍곡선의 방정식은 \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = -1 (k^2=a^2+b^2)
+  * 평행이동에 의하여 \dfrac{(x-m)^2}{a^2} - \dfrac{(y-n)^2}{b^2} = -1, 주축은 y축과 평행
+  * 일반형 Ax^2+By^2+Fx+Gy+C=0 (AB<0)
+* 접선의 방정식은
+  * \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1 위의 점 (x_1, y_1)에서 접선은 \dfrac{x_1x}{a^2} - \dfrac{y_1y}{b^2} = 1
+  * 기울기가 m인 접선은 y=mx\pm \sqrt{a^2m^2-b^2}
+
+<br/>
+
+### 원추곡선
+: 대수적으로 표현한 이차곡선을 기하적인 명칭으로 변형  
+![Alt text](/pictures/mathematics/원뿔곡선2.png) ![Alt text](/pictures/mathematics/원뿔곡선3.png)    
+원뿔을 평면으로 잘랐을 때 생기는 곡선. 
+
+* \alpha = \angle(A, L)을 원뿔의 반 꼭지각이라 둔다  
+* 원뿔의 축 A와, 절단하는 평면 H 사이의 각 \beta=\angle(A, H)을 정의할 때, 원추곡선 C는
+  * \beta = 0 \Rightarrow C는 원(\epsilon < 1)
+  * \alpha < \beta \Rightarrow C는 타원(\epsilon < 1)
+  * \alpha = \beta \Rightarrow C는 포물선(\epsilon = 1)
+  * \alpha > \beta \Rightarrow C는 쌍곡선(\epsilon > 1)
+
+을 만족한다.  
+증명은 당들렝의 구를 통하여 한다. 다음 단계 참조
+
+<br/>
+
+### 이심률
+원추곡선(이차곡선)의 특성을 나타내는 값으로, 아래 종특이 있다.
+1. 점 P가 있을 때, 한 정적선 l에 내린 수선의 발 D와 한 정점 F에서 \dfrac{\bar{PF}}{\bar{PD}} = \epsilon
+1. 두 원추곡선의 이심률이 같다 \Leftrightarrow 두 원추곡선이 서로 닮는다
+2. 원추곡선(이차곡선)이 원에서 벗어나는 정도를 나타냄
+    * 원: 0, 타원: (0, 1), 포물선: 1, 쌍곡선: (1, \infty), 직선: \infty
+3. 원뿔에서, \epsilon=\dfrac{\sin\beta}{\sin\alpha}  
+  ![Alt text](/pictures/mathematics/이심률2.png)    
+4. 이차곡선을 Ax^2+Bxy+Cy^2+Dx+Ey+F=0으로 일반화하였을 때, 이심률은 다음과 같다.
+    * e=\sqrt{\frac{2\sqrt{(A-C)^2 + B^2}}{\eta (A+C) + \sqrt{(A-C)^2 + B^2}}}
+    * \eta sign\left(-det\left(\begin{bmatrix}A & B/2 & D/2\\B/2 & C & E/2\\D/2&E/2&F\end{bmatrix}\right)\right)  
+    * ㅎㄷㄷ
+    
+1.번이 3.번이 됨을 보이자면, 정적선 l: x=-p, F(p, 0)로 두면  
+\bar{PF} = \sqrt{(x-p)^2+y^2}, \bar{PD} = x+p이므로  
+\bar{PF}^2 = (x-p)^2+y^2 = \epsilon^2 \bar{PD}^2 = \epsilon^2(x+p)^2  
+(1-\epsilon^2)x^2+y^2+Dx+F=0 꼴이 되기 때문에 각 케이스별로 이차곡선의 일반항 조건을 생각해보면 증명된다.
+
+{% endcapture %}
+
+{% capture context2 %}
+### 이차곡선 일반화
+
+### 당들렝의 구
+
+### 잡소리
+* 극좌표계에서 포물선의 방정식은 r=\dfrac{l}{1+\cos\theta} 이다. 와!  
+* 포물선의 축과 평행하게 들어온 빛은 포물선에서 반사되어 모두 초점으로 모인다.  
+  ![Alt text](/pictures/mathematics/포물선.png)  
+  * 반대로, 초점에서 나간 빛은 포물선에서 반사되어 모두 축과 평행하게 나간다.
+  * 반사망원경이나 안테나(전파가 겁나 먼 곳에서 들어오므로 다 평행하게 들어옴), 손전등(초점에서 빛을 보냄) 등에 우려먹는다.
+* [기타 성질들](https://m.blog.naver.com/yh6613/220881307005)
+  
+* 타원의 매개변수 방정식은 x=a\cos t, y=b\sin t, 0\leq t < 2\pi 이다.
+* 한 초점에서 출발한 빛이 타원에 반사되면 [페르마의 최소 시간 원리](https://ko.wikipedia.org/wiki/%ED%8E%98%EB%A5%B4%EB%A7%88%EC%9D%98_%EC%9B%90%EB%A6%AC)에 의하여 다른 초점을 지나게 된다.
+  * 반대로 타원의 외부에서 초점을 향해 진행하는 빛이 타원의 점에 의해 반사되면, 그 점과 다른 초점을 연결한 직선에 따라 반사됨.  
+
+
+* 쌍곡선에서 각 점근선에 내린 수선의 발의 길이 곱은 일정함.
+* 초점이 일치하는 쌍곡선과 타원의 교점에서 각각 접선은 수직함
+
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="기벡_이차곡선" %}
+
+{% endcomment %}
 
 # 미적분학
 TBD
