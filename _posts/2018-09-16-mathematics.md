@@ -2345,16 +2345,22 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 #### 포물선
 * 정의 : 평면 위에서의 한 정점(`초점`)과 정적선(`준선`)에 이르는 `거리가 같은 점`의 자취
 * 방정식 : 초점이 $(p, 0)$, 준선이 $x=-p$일 때, $y^2=4px$
+
+
 #### 타원
 * 정의 : 두 정점(`초점`)으로부터 `거리 합이 일정한 점`의 자취
 * 방정식 : $F(k, 0),\, F'(-k, 0)$, 거리 합 $2a$일 때 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1\; (k^2=a^2-b^2)$
+
+
 #### 쌍곡선
 * 정의 : 두 정점(`초점`)으로부터 `거리 차가 일정한 점`의 자취
 * 방정식 : $F(k, 0),\, F'(-k, 0)$, 거리 차 $2a$일 때 $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1\; (k^2=a^2+b^2)$
 * 점근선 : $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 0, \; y=\pm \dfrac{b}{a}x$
+
+
 #### 이심률
 ![Alt text](/pictures/mathematics/이심률.png)  
-이차곡선의 일반화. 정적선 $l$과 정점 $F$간의 거리 비인 `이심률` $\epsilon=\dfrac{\bar{PF}}{\bar{PD}}$의 값으로 모든 이차곡선이 정의된다.
+이차곡선의 일반화. 정적선 $l$과 정점 $F$간의 거리 비인 `이심률` $\epsilon=\dfrac{\overline{PF}}{\overline{PD}}$의 값으로 모든 이차곡선이 정의된다.
 
 {% capture context1 %}
 ### 포물선
@@ -2378,7 +2384,7 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 ### 타원
 ![Alt text](/pictures/mathematics/타원.gif) ![Alt text](/pictures/mathematics/타원2.png)
 * 두 초점으로부터 거리 합이 일정한 점의 자취 
-* $F$, $F'$를 두 `초점`, 두 `초점`을 지나는 $\bar{AB}$를 `장축`, $\bar{CD}$를 `단축`, 두 축의 교점을 `타원의 중심`이라고 하고, $A,B,C,D$를 `꼭짓점`이라 한다.
+* $F$, $F'$를 두 `초점`, 두 `초점`을 지나는 $\overline{AB}$를 `장축`, $\overline{CD}$를 `단축`, 두 축의 교점을 `타원의 중심`이라고 하고, $A,B,C,D$를 `꼭짓점`이라 한다.
 * 초점이 $F(k, 0), F'(-k, 0)$, 거리 합 $2a$일 때 타원의 방정식은 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1\; (k^2=a^2-b^2)$
   * $\sqrt{(x-k)^2+y^2} + \sqrt{(x+k)^2+y^2}=2a$ 에서 제곱하여 잘 정리
   * 평행이동에 의하여 $\dfrac{(x-m)^2}{a^2} + \dfrac{(y-n)^2}{b^2} = 1$, `장축`은 $x$축과 평행
@@ -2395,14 +2401,14 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 ### 쌍곡선
 ![Alt text](/pictures/mathematics/쌍곡선.JPG)
 * 두 초점으로부터 거리 차가 일정한 점의 자취
-* $F, F'$를 두 `초점`, 쌍곡선과 $\bar{FF'}$의 교점을 $A, A'$, $\bar{AA'}$을 `주축`, $\bar{AA'}$의 중점 O를 `쌍곡선의 중심`이라 한다.
+* $F, F'$를 두 `초점`, 쌍곡선과 $\overline{FF'}$의 교점을 $A, A'$, $\overline{AA'}$을 `주축`, $\overline{AA'}$의 중점 O를 `쌍곡선의 중심`이라 한다.
 * 초점이 $F(k, 0), F'(-k, 0)$, 거리 차 $2a$일 때 쌍곡선의 방정식은 $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1\; (k^2=a^2+b^2)$
   * $\sqrt{(x+k)^2+y^2} - \sqrt{(x-k)^2+y^2}=2a$ 에서 제곱하여 잘 정리
   * 평행이동에 의하여 $\dfrac{(x-m)^2}{a^2} - \dfrac{(y-n)^2}{b^2} = 1$, 주축은 $x$축과 평행
   * 일반형 $Ax^2+By^2+Fx+Gy+C=0 (AB<0)$
-* 점근선은 $dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 0$
+* 점근선은 $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 0$
   * 쌍곡선의 방정식을 $y$에 관하여 풀면 $y=\pm\dfrac{b}{a}x\sqrt{1-\left(\dfrac{a}{b}\right)^2},\; x\to\infty$ 일 때 $y\to\pm\dfrac b a x$
-  * 변형하면 $\dfrac x a \mp \dfrac y b = 0,\; \left(\dfrac x a - \dfrac y b\right) \left(\dfrac x a + \dfrac y b\right)=\dfrac x^2 a^2 - \dfrac y^2 b^2 =0$
+  * 변형하면 $\dfrac x a \mp \dfrac y b = 0,\; \left(\dfrac x a - \dfrac y b\right) \left(\dfrac x a + \dfrac y b\right)=\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2}=0$
 * 초점이 $F(0, k), F'(0, -k)$, 거리 차 $2b$일 때 쌍곡선의 방정식은 $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = -1\; (k^2=a^2+b^2)$
   * 평행이동에 의하여 $\dfrac{(x-m)^2}{a^2} - \dfrac{(y-n)^2}{b^2} = -1$, 주축은 $y$축과 평행
   * 일반형 $Ax^2+By^2+Fx+Gy+C=0\; (AB<0)$
@@ -2414,7 +2420,7 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 
 ### 원추곡선
 : 대수적으로 표현한 이차곡선을 기하적인 명칭으로 변형  
-![Alt text](/pictures/mathematics/원뿔곡선2.gif) ![Alt text](/pictures/mathematics/원뿔곡선3.png)    
+![Alt text](/pictures/mathematics/원뿔곡선2.gif) ![Alt text](/pictures/mathematics/원뿔곡선3.png){: width="40%" height="40%"}    
 원뿔을 평면으로 잘랐을 때 생기는 곡선. 
 
 * $\alpha = \angle(A, L)$을 원뿔의 반 꼭지각이라 둔다  
@@ -2431,20 +2437,20 @@ $E[Y]=p$일 것이고, $Y^2=Y$ 이므로 $V(Y)=E[Y^2]-E[Y]^2=p(1-p)$이다.
 
 ### 이심률
 원추곡선(이차곡선)의 특성을 나타내는 값으로, 아래 종특이 있다.
-1. 점 $P$가 있을 때, 한 정적선 $l$에 내린 수선의 발 $D$와 한 정점 $F$에서 $\dfrac{\bar{PF}}{\bar{PD}} = \epsilon$
+1. 점 $P$가 있을 때, 한 정적선 $l$에 내린 수선의 발 $D$와 한 정점 $F$에서 $\dfrac{\overline{PF}}{\overline{PD}} = \epsilon$
 1. 두 원추곡선의 이심률이 같다 $\Leftrightarrow$ 두 원추곡선이 서로 닮는다
 2. 원추곡선(이차곡선)이 원에서 벗어나는 정도를 나타냄
     * `원`: 0, `타원`: (0, 1), `포물선`: 1, `쌍곡선`: (1, $\infty$), `직선`: $\infty$
 3. 원뿔에서, $\epsilon=\dfrac{\sin\beta}{\sin\alpha}$  
   ![Alt text](/pictures/mathematics/이심률2.png)    
 4. 이차곡선을 $Ax^2+Bxy+Cy^2+Dx+Ey+F=0$으로 일반화하였을 때, `이심률`은 다음과 같다.
-    * $e=\sqrt{\frac{2\sqrt{(A-C)^2 + B^2}}{\eta (A+C) + \sqrt{(A-C)^2 + B^2}}}$
-    * $\eta sign\left(-det\left(\begin{bmatrix}A & B/2 & D/2\\B/2 & C & E/2\\D/2&E/2&F\end{bmatrix}\right)\right)$  
+    * $\epsilon=\sqrt{\frac{2\sqrt{(A-C)^2 + B^2}}{\eta (A+C) + \sqrt{(A-C)^2 + B^2}}}$
+    * $\eta sign\left(-det\left(\begin{bmatrix}A & B/2 & D/2\\\\B/2 & C & E/2\\\\D/2&E/2&F\end{bmatrix}\right)\right)$  
     * ㅎㄷㄷ
     
 1.번이 3.번이 됨을 보이자면, 정적선 $l: x=-p,\; F(p, 0)$로 두면  
-$\bar{PF} = \sqrt{(x-p)^2+y^2},\; \bar{PD} = x+p$이므로  
-$\bar{PF}^2 = (x-p)^2+y^2 = \epsilon^2 \bar{PD}^2 = \epsilon^2(x+p)^2$  
+$\overline{PF} = \sqrt{(x-p)^2+y^2},\; \overline{PD} = x+p$이므로  
+$\overline{PF}^2 = (x-p)^2+y^2 = \epsilon^2 \overline{PD}^2 = \epsilon^2(x+p)^2$  
 $(1-\epsilon^2)x^2+y^2+Dx+F=0$ 꼴이 되기 때문에 각 케이스별로 이차곡선의 일반항 조건을 생각해보면 증명된다.
 
 축이 $x, y$축과 평행하지 않은, 임의의 회전변환을 거친 임의의 이차곡선의 일반항 $Ax^2+Bxy+Cy^2+Dx+Ey+F=0$이 어떤 곡선인지의 판별을
@@ -2462,6 +2468,8 @@ $(1-\epsilon^2)x^2+y^2+Dx+F=0$ 꼴이 되기 때문에 각 케이스별로 이�
   * $AC > 0$ 이면 `타원(원)`, $AC=0$이면 `포물선`, $AC < 0$ 이면 `쌍곡선`이다.
 * $B\neq 0$인 경우.. 회전변환이 들어간 상태이며 3가지 방법이 있다.
  
+<br/>
+
 1. 멍청한 방법: 곡선을 $\theta$ 만큼 `회전변환`시킨다. [참조](https://wiki.mathnt.net/index.php?title=%EC%9D%B4%EC%B0%A8%EA%B3%A1%EC%84%A0%EA%B3%BC_%ED%9A%8C%EC%A0%84%EB%B3%80%ED%99%98)
     * $x \to X\cos(\theta)−Y\sin(\theta),\; y\to X\sin(\theta)+Y\cos(\theta)$을 대입하여 $A'X^2+B'XY+C'Y^2+D'X+E'Y+F'=0$을 얻는다
     * $B'=−a\sin(2\theta)+b\cos(2\theta)+c\sin(2\theta)$ 가 되는데, $\cot(2\theta)=\dfrac{a−c}{b}$가 되도록 $\theta$를 바꿔서 $B'$을 조진다.
@@ -2475,15 +2483,16 @@ $(1-\epsilon^2)x^2+y^2+Dx+F=0$ 꼴이 되기 때문에 각 케이스별로 이�
       * 즉, $Qx = \lambda x$를 만족하는 `고윳값` $\lambda_1, \lambda_2$를 구하고, 각각의 `단위고유벡터`를 구하여 합쳐 $P$를 만든다.
       * 이때 $P^T Q P=\begin{bmatrix} \lambda_1 & 0 \\\\ 0 & \lambda_2 \end{bmatrix}$ 가 성립한다.  
     * $det(P) = 1$이므로, 선형변환 $P$는 `회전변환`이 된다. $x=Px'$
-    * $x=Px'$를 원래 식에 대입하면, $x'^T (P^TQP) x' + (KP)x' + F = 0$, 즉 $S(x', y')=\lambda_1 x'^2 + \labmda_2 y'^2+ D'x'+E'y'+F=0$ 인 
+    * $x=Px'$를 원래 식에 대입하면, $x'^T (P^TQP) x' + (KP)x' + F = 0$,
+      즉 $S(x', y')=\lambda_1 x'^2 + \lambda_2 y'^2+ D'x'+E'y'+F=0$ 인 
       혼합항의 계수 $B'=0$인 식을 구할 수 있다.
     * $B'=0$이므로, $\lambda_1 \lambda_2$ 의 부호에 따라 이차곡선의 형태를 결정할 수 있으며, $\lambda_1 \lambda_2$는 $AC-(B/2)^2$와 같다!
       * $det(Q−\lambda I)=0$ 조건으로부터, $\lambda−(A+C)\lambda+\dfrac{4AC−B^2}{4}=0$ 이며 근과 계수의 관계에 따라 둘이 같음. 
 
 3. 얍삽한 방법: 2번의 결실을 날먹한다.
-    * $B^2−4AC < 0$ \Rightarrow `타원`
-    * $B^2−4AC = 0$ \Rightarrow `포물선`
-    * $B^2−4AC > 0$ \Rightarrow `쌍곡선`
+    * $B^2−4AC < 0 \Rightarrow$ `타원`
+    * $B^2−4AC = 0 \Rightarrow$ `포물선`
+    * $B^2−4AC > 0 \Rightarrow$ `쌍곡선`
     * 해----피    
 
 
@@ -2494,39 +2503,45 @@ $(1-\epsilon^2)x^2+y^2+Dx+F=0$ 꼴이 되기 때문에 각 케이스별로 이�
 ### 당들렝의 구
 ![Alt text](/pictures/mathematics/당들렝.gif)  
 이차곡선의 기하학적 표현인 원추곡선을 증명하기 위해서 당들렝이 원뿔에 구를 넣어서 노오력한 결과  
-자세한 증명은 여기를 보십시오 - http://mathseodang.com/220696726122  
+자세한 증명은 여기를 보십시오 - [http://mathseodang.com/220696726122](http://mathseodang.com/220696726122)  
 기타 모든 그림이나 gif들도 위 블로그에서 따왔습니다.
+
+<br/>
 
 #### 포물선
 ![Alt text](/pictures/mathematics/당들렝_포물선1.gif) ![Alt text](/pictures/mathematics/당들렝_포물선2.gif)  
-$\bar{PF}=\bar{PR}$(구면 접선의 길이)$=\bar{QT}$(원뿔대 모선의 길이)$=\bar{MX}(\alpha=\beta)=\bar{PH}$
+$\overline{PF}=\overline{PR}$(구면 접선의 길이)$=\overline{QT}$(원뿔대 모선의 길이)$=\overline{MX}(\alpha=\beta)=\overline{PH}$
+
+<br/>
 
 #### 타원
 ![Alt text](/pictures/mathematics/당들렝_타원1.gif) ![Alt text](/pictures/mathematics/당들렝_타원2.jpg)  
-$\bar{PF}=\bar{PR}, \bar{PF'}=\bar{PR'},\, \therefore \bar{PF}+\bar{PF'}=\bar{RR'}$ : 원뿔대의 길이로 항상 일정  
-$\bar{PF}=\bar{PR}=\bar{QT},\; \bar{MX}=\bar{PH},\; \bar{TL}=\bar{XK}$,  
-$\sin\alpha=\dfrac{\bar{TL}}{\bar{QT}}=\dfrac{\bar{TL}}{\bar{PF}},\; \sin\beta=\dfrac{\bar{XK}}{\bar{MX}}=\dfrac{\bar{XK}}{\bar{PH}}$  
-$\therefore \epsilon=\dfrac{\bar{PF}}{\bar{PH}} = \dfrac{\sin\beta}{\sin\alpha}$ 
+$\overline{PF}=\overline{PR}, \overline{PF'}=\overline{PR'},\, \therefore \overline{PF}+\overline{PF'}=\overline{RR'}$ : 원뿔대의 길이로 항상 일정  
+$\overline{PF}=\overline{PR}=\overline{QT},\; \overline{MX}=\overline{PH},\; \overline{TL}=\overline{XK}$,  
+$\sin\alpha=\dfrac{\overline{TL}}{\overline{QT}}=\dfrac{\overline{TL}}{\overline{PF}},\; \sin\beta=\dfrac{\overline{XK}}{\overline{MX}}=\dfrac{\overline{XK}}{\overline{PH}}$  
+$\therefore \epsilon=\dfrac{\overline{PF}}{\overline{PH}} = \dfrac{\sin\beta}{\sin\alpha}$ 
+
+<br/>
 
 #### 쌍곡선
-![Alt text](/pictures/mathematics/당들렝_쌍곡선1.gif){: width="50%" height="50%"} ![Alt text](/pictures/mathematics/당들렝_쌍곡선2.jpg)  
-$\bar{PF}=\bar{PR},\; \bar{PF'}=\bar{PR'},\; \therefore \bar{PF}-\bar{PF'}=\bar{RR'}$ : 원뿔대의 길이로 항상 일정  
-타원과 같은 방법으로 (+ $\bar{QL}=\bar{MK}$),
-$\sin\alpha=\dfrac{\bar{QL}}{\bar{QT}}=\dfrac{\bar{QL}}{\bar{PF}},\; \sin\beta=\dfrac{\bar{MK}}{\bar{MX}}=\dfrac{\bar{MK}}{\bar{PH}},\; \epsilon=\dfrac{\bar{PF}}{\bar{PH}} = \dfrac{\sin\beta}{\sin\alpha}$ 
+![Alt text](/pictures/mathematics/당들렝_쌍곡선1.gif){: width="60%" height="60%"} ![Alt text](/pictures/mathematics/당들렝_쌍곡선2.jpg){: width="60%" height="60%"}  
+$\overline{PF}=\overline{PR},\; \overline{PF'}=\overline{PR'},\; \therefore \overline{PF}-\overline{PF'}=\overline{RR'}$ : 원뿔대의 길이로 항상 일정  
+타원과 같은 방법으로 (+ $\overline{QL}=\overline{MK}$),
+$\sin\alpha=\dfrac{\overline{QL}}{\overline{QT}}=\dfrac{\overline{QL}}{\overline{PF}},\; \sin\beta=\dfrac{\overline{MK}}{\overline{MX}}=\dfrac{\overline{MK}}{\overline{PH}},\; \epsilon=\dfrac{\overline{PF}}{\overline{PH}} = \dfrac{\sin\beta}{\sin\alpha}$ 
 
 <br/>
 
 ### 극좌표계와 이심률
 같은 블로그 [참조](http://mathseodang.com/220621141953)  
 
-위에서 언급했듯이 준선의 방정식 $x=-p$, 초점을 $(p, 0)$으로 두고 정리하면, $x^2+y^2=e^2(x+p)^2$가 된다.  
-극좌표계로 변환하면($r=\sqrt{x^2+y^2},\, x=r\cos\theta$), $r^2=e^2(r\cos\theta+p)^2,\; r=\dfrac{pe}{1-e\cos\theta}=\dfrac{l}{1-e\cos\theta}$ 가 된다($l=pe$).  
-반대로 준선을 $x=p$, 초점을 $(-p, 0)$으로 두면, $r=\dfrac{pe}{1+e\cos\theta}=\dfrac{l}{1+e\cos\theta}$가 된다.
+위에서 언급했듯이 준선의 방정식 $x=-p$, 초점을 $(p, 0)$으로 두고 정리하면, $x^2+y^2=\epsilon^2(x+p)^2$가 된다.  
+극좌표계로 변환하면($r=\sqrt{x^2+y^2},\, x=r\cos\theta$), $r^2=\epsilon^2(r\cos\theta+p)^2,\; r=\dfrac{pe}{1-\epsilon\cos\theta}=\dfrac{l}{1-\epsilon\cos\theta}$ 가 된다($l=p\epsilon$).  
+반대로 준선을 $x=p$, 초점을 $(-p, 0)$으로 두면, $r=\dfrac{p\epsilon}{1+\epsilon\cos\theta}=\dfrac{l}{1+\epsilon\cos\theta}$가 된다.
 
-정리하면, $r=\dfrac{pe}{1\pm e\cos\theta}=\dfrac{l}{1\pm e\cos\theta}$이며,  
-타원의 경우 장축의 길이 $2a=\dfrac{pe}{1-e}+\dfrac{pe}{1+e}=\dfrac{2pe}{1-e^2}$에서 $pe=l=a(1-e^2)$가 되어 $r=\dfrac{a(1-e^2)}{1\pm e\cos\theta}$가 된다.  
-$e\to 0$일 때, $p\to \infty$ 이며, $r=a$가 된다.
-  * $x^2+y^2=e^2(x+p)^2$ 에서 $e\to 0$이면 반지름이 항상 0이 되지 않나 싶은데 $p\to\infty$ 로 발산하면서 장축 $2a$는 유지된다.
+정리하면, $r=\dfrac{p\epsilon}{1\pm \epsilon\cos\theta}=\dfrac{l}{1\pm \epsilon\cos\theta}$이며,  
+타원의 경우 장축의 길이 $2a=\dfrac{p\epsilon}{1-\epsilon}+\dfrac{p\epsilon}{1+\epsilon}=\dfrac{2p\epsilon}{1-\epsilon^2}$에서 $p\epsilon=l=a(1-\epsilon^2)$가 되어 $r=\dfrac{a(1-\epsilon^2)}{1\pm \epsilon\cos\theta}$가 된다.  
+$\epsilon\to 0$일 때, $p\to \infty$ 이며, $r=a$가 된다.
+  * $x^2+y^2=\epsilon^2(x+p)^2$ 에서 $\epsilon\to 0$이면 반지름이 항상 0이 되지 않나 싶은데 $p\to\infty$ 로 발산하면서 장축 $2a$는 유지된다.
 
 <br/>
 

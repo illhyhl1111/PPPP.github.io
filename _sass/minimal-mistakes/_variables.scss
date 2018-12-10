@@ -13,7 +13,7 @@ $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
 /* system typefaces */
-$serif: 나눔고딕, NanumGothic, 'Nanum Gothic', Nanumbarungothic Georgia, Times, serif;
+$serif: 나눔고딕, NanumGothic, 'Nanum Gothic', Nanumbarungothic, Georgia, Times, serif;
 $sans-serif: 나눔고딕, NanumGothic, 'Nanum Gothic', Nanumbarungothic, -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
