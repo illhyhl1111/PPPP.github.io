@@ -2549,7 +2549,7 @@ $e\to 0$일 때, $p\to \infty$ 이며, $r=a$가 된다.
 
 {% include blocks.html context1=context1 context2=context2 topic="기벡_이차곡선" %}
 
-{% commnet %}
+{% comment %}
 
 ### 일차변환
 * f:(x, y) \longarrow (x', y'), \begin{cases} x'=ax+by \\\\ y'=cx+dy \end{cases} \Leftrightarrow 
