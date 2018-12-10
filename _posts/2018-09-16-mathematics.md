@@ -2550,6 +2550,27 @@ e\to 0일 때, p\to \infty 이며, r=a가 된다. x^2+y^2=e^2(x+p)^2 에서 e\to
 
 {% include blocks.html context1=context1 context2=context2 topic="기벡_이차곡선" %}
 
+### 일차변환
+* f:(x, y) \longarrow (x', y'), \begin{cases} x'=ax+by \\\\ y'=cx+dy \end{cases} \Leftrightarrow 
+  \begin{pmatrix} x' \\\\ y' \end{pmatrix} = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix} \begin{pmatrix} x \\\\ y \end{pmatrix}
+  * 일차변환 f의 행렬 A=\begin{pmatrix} a & b \\\\ c & d \end{pmatrix}
+* 닮음변환 \begin{pmatrix} k & 0 \\\\ 0 & k \end{pmatrix}, 회전변환 \begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix}
+* 일차변환의 합성: f \leftrightarrow A, g \leftrightarrow B \Rightarrow g \circ f \leftrightarrow BA
+* 일차변환의 역변환:  f \leftrightarrow A \Rightarrow f^{-1} \leftrightarrow A^{-1}
+* A^{-1}이 존재할 때 A는 평면 위의 모든 점을 일대일 대응시킴. 존재하지 않는다면 원점을 지나는 직선으로 옮기거나(A\neq O), 원점으로 옮김(A=O)
+* A로 옮긴 도형의 넓이는 det(A)배가 됨.
+
+{% capture context1 %}
+{% endcapture %}
+
+{% capture context2 %}
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="기백_일차변환" %}
+
+
+
+
 {% endcomment %}
 
 # 미적분학
