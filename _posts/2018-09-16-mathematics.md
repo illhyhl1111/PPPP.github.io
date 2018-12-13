@@ -680,6 +680,9 @@ $$ </p>
   $$ </p> <br/>
 
   수식놀음이다.
+  
+* 벡터로 쉽게 증명가능하다. \mathbf{c}=\mathbf{a}-\mathbf{b}로 두면  
+  * c^2=\mathbf{c} \cdot \mathbf{c}=(\mathbf{a}-\mathbf{b})\cdot(\mathbf{a}-\mathbf{b})=a^2+b^2-2ab\cos\theta
 
 <br/>
 
@@ -2683,7 +2686,7 @@ S(\hat{e_1}, \hat{e_1}) = S(\hat{e_2}, \hat{e_2}) = 0과 같이, x나 y방향의
 행렬식의 정의가 인터넷에 나와있는건 좀 뭔가 좀 그런데  
 위 아이디어에 따라서, 행렬 A의 행렬식을 다음과 같이 생각해보자.  
 
-**n차 정사각행렬 A의 행렬식은, 벡터 공간의 기저를 A로 변환시켰을 때 변환된 기저가 이루는 영역을 의미한다.**
+> n차 정사각행렬 A의 행렬식은, 벡터 공간의 기저를 A로 변환시켰을 때 변환된 기저가 이루는 영역을 의미한다. 
 
 3차원을 예로 들어보자. A에 의해 변환된 기저 \hat{e'_1}, \hat{e'_2}, \hat{e'_3}는 평행사변형 박스를 이룰 것인데,  
 이 박스의 부피가 곧 행렬식을 의미한다는 것이다.  
@@ -2698,6 +2701,8 @@ S(A\bar{e_1}, A\bar{e_2}, A\bar{e_3}) = S(a_{11}\bar{e_1}+a_{21}\bar{e_2}+a_{31}
 a_{11}S(\bar{e_1}, a_{22}\bar{e_2}+a_{32}\bar{e_3}, a_{23}\bar{e_2}+a_{33}\bar{e_3}) = a_{11}(a_{22}a_{33}-a_{32}a_{23})S(\bar{e_1}, \bar{e_2}, \bar{e_3}).  
 뭔가 익숙한 냄새가 난다. 뒤에 항에 대해서도 해 보면 최종 넓이가 det(A)이 됨을 확인할 수 있다.  
 와와 
+* [Wedge product](http://mathworld.wolfram.com/WedgeProduct.html)에서 비슷한 그런게 있는듯하다.  
+  Volume element를 dV=dx_1\wedge dx_2\wedge \cdots \wedge dx_n 으로 나타내고 어쩌고 하는듯하다.
 
 <br/>
 
@@ -2799,7 +2804,7 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 topic="기백_일차변환" %}
+{% include blocks.html context1=context1 context2=context2 topic="기벡_일차변환" %}
 
 ### 공간도형과 정리
 공간도형에 관한 정리는 4가지 섹션으로 구분되어 있다.
@@ -2874,6 +2879,14 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
     * 한 직선에 수직인 두 평면은 서로 평행하다
     * 한 평면에 수직인 두 평면의 교선은 처음 평면에 수직
 
+<br/>
+    
+### 정사영
+![Alt text](/pictures/mathematics/정사영.png)  
+정사영같은 경우에는, 두 평면에서 이면각의 변과 평행한 선은 줄어들지 않고, 이면각의 변과 수직인 부분만 \cos\theta만큼 줄어든다.  
+증명까진 필요없을거같고, 그냥 이면각의 변과 평행, 수직한 기저를 가지는 기존 좌표계 \beta에서  
+수직한 기저에서의 값만 \cos\theta배로 줄이는 active transform이 가해져서 \alpha로 간다라고 보면 될듯?   
+
 {% endcapture %}
 
 {% capture context2 %}
@@ -2935,7 +2948,95 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 
 {% endcapture %}
 
-{% include blocks.html context1=context1 context2=context2 topic="공간도형_정리" %}
+{% include blocks.html context1=context1 context2=context2 topic="기벡_공간도형" %}
+
+### 벡터
+> 이 항목은 교육과정을 족갑니다.  
+> > 솔직히 공대생이라면 여기 교육과정 내용은 까먹는게 더 힘들기 때문에
+
+* `벡터`는 `벡터공간`의 원소이다. 
+* `벡터공간`이란
+  * 일단 집합이고,
+  * 스칼라 배가 잘 정의되며
+  * '+' 연산에 대하여 가환군을 이루는 집합이다.
+* 대표적으로 공간을 구성하는 벡터공간이 있으나, 함수들로 이루어진 벡터공간이라던가(함수->벡터) 행렬로 이루어진 벡터공간이라던가(행렬->벡터) 범위가 무지하게 높은듯하다.
+
+{% capture context1 %}
+### 수학적 정의
+[위키](https://en.wikipedia.org/wiki/Vector_space), [나무위키](https://namu.wiki/w/%EB%B2%A1%ED%84%B0) 참조.  
+`군`이나 `가환군`에 대한 설명은 [실수 체계](/posts/mathematics/#실수-체계) 참조  
+
+> 체`(field) F에 대해, V가 F의 `F-가군(module)`이라면, F를 V의 `스칼라`라고 하고 집합 V를 F위의 `벡터 공간`이라 한다.
+
+* `체`란 아래 성질을 만족하는 집합이다.
+  * 덧셈에 대하여 가환군을 이룸 (덧셈에 대한 역원이 존재하므로 뺄셈이 항상 가능)
+  * 곱셈에 대하여 가환군을 이룸 (0 제외) (곱셈에 대한 역원이 존재하므로 나눗셈이 항상 가능)
+  * 덧셈과 곱셈에 대하여 분배법칙 성립 
+  * 그니까 쉽게 말해서 유리수 실수 복소수같은놈들. 어디서 실수체 같은 말을 들어봤다면 이 체(field)를 뜻한다.
+
+* V가 F의 `F-module`인 것이란, V가 F에 대하여 아래 성질을 만족하는 것을 뜻한다.
+  * (V, +)는 가환군이다.
+  * 함수 f:F \cross V \longrightarrow V, f(a, v)=a\cdot v가 존재하고, 분배법칙과 교환법칙이 성립한다. 즉 a, b\in F, u, v\in V에 대하여,
+    * a\cdot(u+v)=a\cdot u+b\cdot v
+    * (a+b)\cdot v=a\cdot v+b\cdot v
+    * (ab)\cdot v=a\cdot(b\cdot v)
+    * 1\cdot v = v
+  * 쉽게 말해서, 가환군을 이루면서 실수같은 수 집합과 관계가 잘 정의되는 집합.
+    
+요약하자면, 벡터 공간이란 같은 집합 내에서도 연산이 잘 정의되고, 스칼라에 대해서도 연산이 잘 정의되는 집합이다.  
+표기의 경우 \vec{v}와 같은 표기는 벡터가 방향을 나타내는 개념이 실제로 아니기 때문에(coordinate space에 대해서만 방향을 나타냄) 굵은 문자로 \mathbf{v}로 표기한다.
+
+### 연산
+암튼 벡터공간의 종류는 다양하지만(행렬을 생각해 보자. 저거 다 만족한다), 가장 대표적이고 간단한 케이스인 `coordinate space`을 예시로 들어서 설명한다.
+  
+* coordinate space: (a_1, a_2, \cdots, a_n)을 원소로 하는 집합. a_i\in F
+* 벡터 표기: \mathbf{A}=a_1\mathbf{e}_1+a_2\mathbf{e}_2+\cdots+a_n\mathbf{e}_n=(a_1, a_2, \cdots, a_n)
+
+1. 덧셈: \mathbf{A}+\mathbf{B}=(a_1+b_1, a_2+b_2, \cdots)
+2. scalar multiplication: kA=(ka_1, ka_2, \cdots)
+3. dot product: \mathbf{A}\cdot\mathbf{B}=a_1b_1+a_2b_2+\cdots
+4. cross product: 벡터 공간이 \mathbb{R}^3일 때 한정. \mathbf{A}\cross\mathbf{B}=(a2_b3-a_3b_2, a_3b_1-a_1b_3, a_1b_2-a_2b_1)
+    * 일반적인 벡터 공간에서 대응되는 개념은 [wedge product](http://mathworld.wolfram.com/WedgeProduct.html) 인데... 아직 제대로 정리가 안되서 보류.
+    * 아닌가.. 텐서에 대해서는 cross product가 (\mathbf{u}\cross\mathbf{v})_i=\epsilon _{ijk}u_j v_k(아인슈타인 표기법 사용)이라는거같기도 하고.. 역시 보류.
+5. [del operator](https://namu.wiki/w/%EB%8D%B8(%EC%97%B0%EC%82%B0%EC%9E%90)): \nabla, 미분에 대응되는 연산자인데 사실상 벡터와 같이 취급된다.
+    * Gradient: \nabla f
+    * Divergence: \nabla \cdot \mathbf{F}
+    * Curl: \nabla \cross \mathbf{F}
+
+{% endcapture %}
+
+{% capture context2 %}
+### 텐서
+[괜찮은 유튜브](https://www.youtube.com/watch?v=f5liqUk0ZTw)  
+텐서도 일단 보류. 아씨 모르겠다 난스레기야  
+텐서는 씨 물리학부에선 제대로 알려주지도 않고 갑툭튀하다가 존재감없이 사라짐.  
+누구는 0-rank tensor가 스칼라고 1이 벡터고 2가 matrix고 3-rank 이상까지 커버하는게 텐서다 라고는 하는데 내가 아는건 그게 전부는 아니다라는거 정도까지..
+ 
+### cross product의 기하학적 성질
+드디어 좀 고등수학다운걸 합니다. 와와  
+음 그러니까, \mathbf{a}\cdot\mathbf{b}=a_1b_1+a_2b_2(2차원에서) 으로 정의된건 알겠는데  
+왜 그게 기하학적으로 a를 b로 정사영시킨 것이 되느냐, 그러니까 왜 ab\cos\theta가 되느냐. 를 다뤄보자.  
+
+우선 \mathbf{a}=(a\cos\alpha, a\sin\alpha), \mathbf{b}=(b\cos\beta, b\sin\beta)로 두자.  
+그럼 \mathbf{a}\cdot\mathbf{b}=ab\cos\alpha\cos\beta+ab\sin\alpha\sin\beta이고,
+\cos(\alpha-\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta에 의해 \mathbf{a}\cdot\mathbf{b}=ab\cos(\alpha-\beta)=ab\cos\theta가 된다. 끝
+  
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="기벡_백터" %}
+
+### 벡터방정식
+* 직선의 벡터방정식: 
+  * \mathbf{a}를 포함하고 \mathbf{b}에 평행: \mathbf{x}=\mathbf{a}+t\mathbf{b} -> \dfrac{x-a_1}{b_1}=\dfrac{x-a_2}{b_2}=\dfrac{x-a_3}{b_3}
+  * \mathbf{a}, \mathbf{b}를 포함: \mathbf{x}=(1-t)\mathbf{a}+t\mathbf{b} -> \dfrac{x-a_1}{b_1-a_1}=\dfrac{x-a_2}{b_2-a_2}=\dfrac{x-a_3}{b_3-a_3}
+  * \mathbf{a}를 포함하고 \mathbf{b}에 수직: (\mathbf{x}-\mathbf{a})\cdot \mathbf{b}=0
+* 평면의 벡터방정식:
+  * \mathbf{a}를 포함하고 \mathbf{h}에 수직: \mathbf{h}{\mathbf{x}-\mathbf{a})=0 -> h_1(x-a_1)+h_2(x-a_2)+h_3(x-a_3)=0
+  * \mathbf{a}, \mathbf{b}, \mathbf{c}를 포함: \mathbf{x}=\mathbf{a}+s(\mathbf{b}-\mathbf{a})+t(\mathbf{c}-\mathbf{a}) -> h_1x+h_2y+h_3z+d=0 
+* 구의 벡터방정식:
+  * (\mathbf{x}-\mathbf{a})\cdot(\mathbf{x}-\mathbf{a})=r^2 (\|\mathbf{x}-\mathbf{a}\|)=r -> (x-a_1)^2+(x-a_2)^2+(x-a_3)^2=r^2
+* 영역:
+  \overline{OA}, \overeline{OB}를 변으로 하는 평행사변형: \mathbf{p}=m\mathbf{a}+n\mathbf{b} (m,\,n\in[0, 1]) 
 
 {% endcomment %}
 
