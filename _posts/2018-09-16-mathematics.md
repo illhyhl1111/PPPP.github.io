@@ -2604,7 +2604,7 @@ $\epsilon\to 0$일 때, $p\to \infty$ 이며, $r=a$가 된다.
 {% capture context2 %}
 ### 회전변환행렬의 증명 + 좌표축의 회전이동
 ![Alt text](/pictures/mathematics/회전이동.png){: width="65%" height="65%"}  
-앗 증명하려고 했는데 그림이 너무 잘 되있었다. [ㄳ](http://suhak.tistory.com/387)
+앗 증명하려고 했는데 그림이 너무 잘 되있었다. [ㄳ](http://suhak.tistory.com/387)  
 $\begin{pmatrix} x' \\\\ y'\end{pmatrix} = \begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix} \begin{pmatrix} x \\\\ y\end{pmatrix}$
 
 그런김에 다른 얘기나 해보자  
@@ -2620,7 +2620,7 @@ $\begin{pmatrix} X \\\\ Y\end{pmatrix} = \begin{pmatrix} \cos\theta & \sin\theta
 `Passive transformation` 이란, 점이 아닌 좌표계의 기저를 $T$로 변환하는 것을 뜻한다. 즉 $\hat{e'_i}=T\hat{e_i}$.
   
 Passive transformation 이후, 점의 벡터 $v_x\hat{e_x}+ v_y\hat{e_y}+ v_z\hat{e_z}$는 새로운 기저 $v'_x\hat{e'_x}+ v'_y\hat{e'_y}+ v'_z\hat{e'_z}$로 표현된다.  
-$\therefore v_x\hat{e_x}+ v_y\hat{e_y}+ v_z\hat{e_z} = v'_x\hat{e'_x}+ v'_y\hat{e'_y}+ v'_z\hat{e'_z} = v'_x T\hat{e_x}+ v'_y T\hat{e_y}+ v'_z T\hat{e_z}$  
+$v_x\hat{e_x}+ v_y\hat{e_y}+ v_z\hat{e_z} = v'_x\hat{e'_x}+ v'_y\hat{e'_y}+ v'_z\hat{e'_z} = v'_x T\hat{e_x}+ v'_y T\hat{e_y}+ v'_z T\hat{e_z}$  
 (주의, $\hat{e_x}$은 벡터, $v'_x$는 계수이고 $T$는 행렬이다.)  
 즉, $(v_x, v_y, v_z)^T = T(v'_x, v'_y, v'_z)^T, \mathbf{v}'= T^{-1}(v_x, v_y, v_z)^T = T^{-1}\mathbf{v}$ 이 된다.
   
@@ -2679,7 +2679,7 @@ $\hat{e_1}$은 $\hat{e'_1}=a\hat{e_1} + c\hat{e_2}$로, $\hat{e_2}$은 $\hat{e'_
 즉 $S' = \dfrac{S}{\|ad-bc\|}$, 변환된 단위(좌표계)에서의 넓이는 변환에 사용된 passive transform에 사용된 행렬의 행렬식을 나눈 값과 같다.  
 그런데 우리가 처음 생각한 문제는, 어떤 영역을 $A$로 active trasnform시켰을 때 영역의 변화이다.
   
-> 어떤 영역을 $A$로 active trasnform시키는 것은, $A^{-1}$로 passive transform시키는 것과 동일하고, $det(A^{-1})=\dfrac{1}{det(A)},\, S'= \dfrac{S}{1/det(A^{-1})}=S \cross det(A)$.
+> 어떤 영역을 $A$로 active trasnform시키는 것은, $A^{-1}$로 passive transform시키는 것과 동일하고, $det(A^{-1})=\dfrac{1}{det(A)},\, S'= \dfrac{S}{1/det(A^{-1})}=S \times det(A)$.
   
 됬다.
 
@@ -2705,7 +2705,8 @@ $\hat{e_1}$은 $\hat{e'_1}=a\hat{e_1} + c\hat{e_2}$로, $\hat{e_2}$은 $\hat{e'_
 
 $A=\begin{pmatrix}a_{11}&a_{12}&a_{13}\\\\a_{21}&a_{22}&a_{23}\\\\a_{31}&a_{32}&a_{33}\end{pmatrix}, A\bar{e_i}=\begin{pmatrix}a_{1i}\\\\a_{2i}\\\\a_{3i}\end{pmatrix}$,  
 $S(A\bar{e_1}, A\bar{e_2}, A\bar{e_3}) = S(a_{11}\bar{e_1}+a_{21}\bar{e_2}+a_{31}\bar{e_3}, a_{12}\bar{e_1}+a_{22}\bar{e_2}+a_{32}\bar{e_3}, a_{13}\bar{e_1}+a_{23}\bar{e_2}+a_{33}\bar{e_3})$  
-$= a_{11}S(\bar{e_1}, a_{12}\bar{e_1}+a_{22}\bar{e_2}+a_{32}\bar{e_3}, a_{13}\bar{e_1}+a_{23}\bar{e_2}+a_{33}\bar{e_3}) \\\\ \quad + a_{21}S(\bar{e_2}$, 어쩌고저쩌고$) + a_{31}S(\bar{e_3}$, 어쩌고저쩌고)  
+$\;= a_{11}S(\bar{e_1}, a_{12}\bar{e_1}+a_{22}\bar{e_2}+a_{32}\bar{e_3}, a_{13}\bar{e_1}+a_{23}\bar{e_2}+a_{33}\bar{e_3})$  
+$\quad + a_{21}S(\bar{e_2}$, 어쩌고저쩌고$) + a_{31}S(\bar{e_3}$, 어쩌고저쩌고)  
 첫번째 항만 생각해보자. $S$의 첫번째 벡터가 $\bar{e_1}$이니까 넓이 구하는데 있어서 $\bar{e_1}$항은 아무런 의미가 없으니 빼보면  
 $a_{11}S(\bar{e_1}, a_{22}\bar{e_2}+a_{32}\bar{e_3}, a_{23}\bar{e_2}+a_{33}\bar{e_3}) = a_{11}(a_{22}a_{33}-a_{32}a_{23})S(\bar{e_1}, \bar{e_2}, \bar{e_3})$.  
 뭔가 익숙한 냄새가 난다. 뒤에 항에 대해서도 해 보면 최종 넓이가 $det(A)$이 됨을 확인할 수 있다.  
