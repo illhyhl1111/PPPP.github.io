@@ -2574,14 +2574,14 @@ $\epsilon\to 0$일 때, $p\to \infty$ 이며, $r=a$가 된다.
 {% include blocks.html context1=context1 context2=context2 topic="기벡_이차곡선" %}
 
 ### 일차변환
-* $f:(x, y) \longarrow (x', y'),\; \begin{cases} x'=ax+by \\\\ y'=cx+dy \end{cases} \Leftrightarrow 
+* $f:(x, y) \longrightarrow (x', y'),\; \begin{cases} x'=ax+by \\\\ y'=cx+dy \end{cases} \Leftrightarrow 
   \begin{pmatrix} x' \\\\ y' \end{pmatrix} = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix} \begin{pmatrix} x \\\\ y \end{pmatrix}$
   * 일차변환 $f$의 행렬 $A=\begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$
-* `닮음변환` $\begin{pmatrix} k & 0 \\\\ 0 & k \end{pmatrix}, `회전변환` \begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix}$
+* `닮음변환` $\begin{pmatrix} k & 0 \\\\ 0 & k \end{pmatrix}$, `회전변환` $\begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix}$
 * 일차변환의 합성: $f \leftrightarrow A, g \leftrightarrow B \Rightarrow g \circ f \leftrightarrow BA$
 * 일차변환의 역변환: $f \leftrightarrow A \Rightarrow f^{-1} \leftrightarrow A^{-1}$
 * $A^{-1}$이 존재할 때 A는 평면 위의 모든 점을 일대일 대응시킴. 존재하지 않는다면 원점을 지나는 직선으로 옮기거나($A\neq O$), 원점으로 옮김($A=O$)
-* $A$로 옮긴 도형의 넓이는 `$det(A)$`배가 됨.
+* $A$로 옮긴 도형의 넓이는 `det(A)`배가 됨.
 
 {% capture context1 %}  
 ### 일차변환과 행렬
@@ -2591,7 +2591,7 @@ $\epsilon\to 0$일 때, $p\to \infty$ 이며, $r=a$가 된다.
 그런의미에서 일차변환은 행렬의 성질을 죄다 만족한다.  
 항등변환? ㅇㅋ $I=\begin{pmatrix} k & 0 \\\\ 0 & k\end{pmatrix}$  
 닮음변환? ㅇㅋ $kI$  
-합성? ㅇㅋ $g(=B) \circ f(=A) = BA$
+합성? ㅇㅋ $g(=B) \circ f(=A) = BA$  
 역변환? ㅇㅋ $A^{-1}$  
 ^^
 
@@ -2603,7 +2603,7 @@ $\epsilon\to 0$일 때, $p\to \infty$ 이며, $r=a$가 된다.
 
 {% capture context2 %}
 ### 회전변환행렬의 증명 + 좌표축의 회전이동
-![Alt text](/pictures/mathematics/회전이동.png){: width="65%" height="65%"}
+![Alt text](/pictures/mathematics/회전이동.png){: width="65%" height="65%"}  
 앗 증명하려고 했는데 그림이 너무 잘 되있었다. [ㄳ](http://suhak.tistory.com/387)
 $\begin{pmatrix} x' \\\\ y'\end{pmatrix} = \begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix} \begin{pmatrix} x \\\\ y\end{pmatrix}$
 
@@ -2612,15 +2612,18 @@ $\begin{pmatrix} x' \\\\ y'\end{pmatrix} = \begin{pmatrix} \cos\theta & -\sin\th
 $\begin{pmatrix} X \\\\ Y\end{pmatrix} = \begin{pmatrix} \cos\theta & \sin\theta \\\\ -\sin\theta & \cos\theta \end{pmatrix} \begin{pmatrix} x \\\\ y\end{pmatrix}$ 로 기존 변환 $A$의 역변환인 $A^{-1}$이 취해진다.  
 직관적이긴 하지만, 증명 가능한가?
 
-지금까지 정의한, 같은 좌표계에서 점의 위치를 옮기는 변환을 `active transformation`, 반대로 점을 그대로 둔 채 좌표계를 옮기는 변환을 `passive transformation` 이라고 한다.  
-원래 점의 좌표 $\mathbf{v}=(v_x, v_y, v_z)^T$, active transformation $T$, 그리고 기저 $\hat{e_x}, \hat{e_y}, \hat{e_z}$가 있다고 생각해보자.
+지금까지 정의한, 같은 좌표계에서 점의 위치를 옮기는 변환을 `active transformation`,  
+반대로 점을 그대로 둔 채 좌표계를 옮기는 변환을 `passive transformation` 이라고 한다.
+  
+원래 점의 좌표 $\mathbf{v}=(v_x, v_y, v_z)^T$, active transformation $T$, 그리고 기저 $\hat{e_x}, \hat{e_y}, \hat{e_z}$가 있다고 생각해보자.  
 `Active transformation` 이란, 점의 좌표를 $T$로 변환하는 것을 뜻한다. 즉 $\mathbf{v}'=T\mathbf{v}=T(v_x, v_y, v_z)^T$.   
 `Passive transformation` 이란, 점이 아닌 좌표계의 기저를 $T$로 변환하는 것을 뜻한다. 즉 $\hat{e'_i}=T\hat{e_i}$.
   
-Passive transformation 이후, 점의 벡터 $v_x\hat{e_x}+ v_y\hat{e_y}+ v_z\hat{e_z}$는 새로운 기저로 표현된다. 즉 $v'_x\hat{e'_x}+ v'_y\hat{e'_y}+ v'_z\hat{e'_z}$
-$\therefore v_x\hat{e_x}+ v_y\hat{e_y}+ v_z\hat{e_z} = v'_x\hat{e'_x}+ v'_y\hat{e'_y}+ v'_z\hat{e'_z} = v'_x T\hat{e_x}+ v'_y T\hat{e_y}+ v'_z T\hat{e_z}$
+Passive transformation 이후, 점의 벡터 $v_x\hat{e_x}+ v_y\hat{e_y}+ v_z\hat{e_z}$는 새로운 기저 $v'_x\hat{e'_x}+ v'_y\hat{e'_y}+ v'_z\hat{e'_z}$로 표현된다.  
+$\therefore v_x\hat{e_x}+ v_y\hat{e_y}+ v_z\hat{e_z} = v'_x\hat{e'_x}+ v'_y\hat{e'_y}+ v'_z\hat{e'_z} = v'_x T\hat{e_x}+ v'_y T\hat{e_y}+ v'_z T\hat{e_z}$  
 (주의, $\hat{e_x}$은 벡터, $v'_x$는 계수이고 $T$는 행렬이다.)  
-즉, $(v_x, v_y, v_z)^T = T(v'_x, v'_y, v'_z)^T, \mathbf{v}'= T^{-1}(v_x, v_y, v_z)^T = T^{-1}\mathbf{v}$ 이 된다.  
+즉, $(v_x, v_y, v_z)^T = T(v'_x, v'_y, v'_z)^T, \mathbf{v}'= T^{-1}(v_x, v_y, v_z)^T = T^{-1}\mathbf{v}$ 이 된다.
+  
 위의 active transformation 에서의 변환관계와 비교해 보면, $T$ 대신 $T^{-1}$가 들어가 있음을 알 수 있으며,  
 따라서 일차변환 $T$로 좌표변환(passive transformation)을 하였을 때 점의 좌표변화는 $T^{-1}$로 직접 변환(active transformation)한 것과 동치임이 증명된다. 와와  
 
@@ -2633,8 +2636,8 @@ $\therefore v_x\hat{e_x}+ v_y\hat{e_y}+ v_z\hat{e_z} = v'_x\hat{e'_x}+ v'_y\hat{
 ![Alt text](/pictures/mathematics/일차변환_영역.JPG)  
 $S(u+w, v) = S(u, v) + S(w, v)$가 된다. 마찬가지로 $S(u, v+w) = S(u, v) + S(u, w), S(au, v)=aS(u, v)$도 성립한다.
 
-일단 $u=\hat{e_1}=(1, 0),], v=\hat{e_2}=(0, 1)$과 같은, 단위정사각형을 생각해 보자.  
-그렇다면 $u, v$를 일차변환한 값 $u'=(a, c)=a\hat{e_1} + c\hat{e_2},\, v'=(b, d)=b\hat{e_1}+d\hat{e_2}$에 대한 넓이 $S(u', v')$은  
+일단 $u=\hat{e_1}=(1, 0),\, v=\hat{e_2}=(0, 1)$과 같은, 단위정사각형을 생각해 보자.  
+그렇다면 $u, v$를 일차변환한 값 $u'=(a, c)=a\hat{e_1} + c\hat{e_2},\, v'=(b, d)=b\hat{e_1}+d\hat{e_2}$를 평행사변형의 변으로 하는 넓이 $S(u', v')$은  
 $S(u', v')=S(a\hat{e_1} + c\hat{e_2}, b\hat{e_1}+d\hat{e_2})$가 되는데...  
 $S(\hat{e_1}, \hat{e_1}) = S(\hat{e_2}, \hat{e_2}) = 0$과 같이, $x$나 $y$방향의 벡터 2개에 대한 넓이는 0이니까, 이를 소거해서 정리하면  
 $\|S(u', v')\|=adS(\hat{e_1}, \hat{e_2}) +  bcS(\hat{e_2}, \hat{e_1})= \|(ad-bc)S(\hat{e_1}, \hat{e_2})\|=\|ad-bc\|$가 된다.  
@@ -2646,13 +2649,17 @@ $\|S(u', v')\|=adS(\hat{e_1}, \hat{e_2}) +  bcS(\hat{e_2}, \hat{e_1})= \|(ad-bc)
 -------------------------------------
 
 여기까지가 인터넷을 좀 뒤져 보면 나와 있는 내용들이다.  
-음 근데 솔직히 막 마음에 들진 않았다. 일단 기본이 원점을 한 꼭짓점으로 두는 평행사변형에 기반한 증명이라, 원점을 벗어난 부분에 대해서는 평행이동이 계속 들어가야 한다던가, 아무튼 막 명쾌하진 않았다.  
+음 근데 솔직히 막 마음에 들진 않았다.  
+일단 기본이 원점을 한 꼭짓점으로 두는 평행사변형에 기반한 증명이라, 원점을 벗어난 부분에 대해서는 평행이동이 계속 들어가야 한다던가,  
+아무튼 막 명쾌하진 않았다.  
 그래서 나름 머리를 굴렸고, 내 기준 어느 정도 괜찮은 해답을 얻은 것 같다.
 
 일단 넓이나 부피, 아니 더 일반적으로 어떤 `물리량`이란 어떻게 정의되는가.  
-예를 들어 기체 상수 $R$이라는, 어떤 불변인 상수가 $J\cdot mol^{-1}\cdot K^{-1}$ 단위로 나타내지면 8.314472가 되고, $L\cdot atm\cdot mol^{-1}\cdot K^{-1}$ 단위로 나타내지면 0.008205784가 되듯이,  
-기체 상수의 물리량은 $1J,\, 1mol^{-1},\, 1K^{-1}$을 하나씩 곱한 것 보다 8.314472배가 크고, $1L,\, 1atm,\, 1mol^{-1},\, 1K^{-1}$을 하나씩 곱한 것의 0.00820어쩌고배가 된다는 것을 의미한다.
-이렇듯 어떤 물리량을 정의하기 위해선 `단위`라는게 필요하고, 어떤 물리량은 그 단위를 구성하는 각 `차원`의 `기저`를 모두 곱한 것의 몇 배가 되는지를 뜻한다.  
+예를 들어 기체 상수 $R$이라는, 어떤 불변인 상수가 $J\cdot mol^{-1}\cdot K^{-1}$ 단위로 나타내지면 $8.314472$가 되고,  
+$L\cdot atm\cdot mol^{-1}\cdot K^{-1}$ 단위로 나타내지면 $0.008205784$가 되듯이,  
+기체 상수의 물리량은 $1J,\, 1mol^{-1},\, 1K^{-1}$을 하나씩 곱한 것 보다 $8.314472$배가 크고, $1L,\, 1atm,\, 1mol^{-1},\, 1K^{-1}$을 하나씩 곱한 것의 $0.00820$어쩌고배가 된다는 것을 의미한다.  
+
+> 이렇듯 어떤 물리량을 정의하기 위해선 `단위`라는게 필요하고, 어떤 물리량은 그 단위를 구성하는 각 `차원`의 `기저`를 모두 곱한 것의 몇 배가 되는지를 뜻한다.  
 
 이러한 관점에서, 머리 아프게 넓이를 구성하는 점 자체를 active transform 시키지 말고, 반대로 단위 변환에 해당되는, 기저를 변환시키는 passive transform 관점에서 생각해보자.  
 아이디어는 이거다 - Active transform $A$ 대신 passive transform $A^{-1}$을 사용하면, 단위 영역의 크기가 $\dfrac{1}{\|ad-bc\|}$가 되니까, 영역의 크기는 $\|ad-bc\|$배가 되지 않겠는가?  
@@ -2660,17 +2667,19 @@ $\|S(u', v')\|=adS(\hat{e_1}, \hat{e_2}) +  bcS(\hat{e_2}, \hat{e_1})= \|(ad-bc)
   
 ![Alt text](/pictures/mathematics/일차변환_영역2.JPG)  
 우선 넓이라는 것은, 좌표계를 구성하는 차원들의 기저 $\hat{e_1}=(1, 0),\, \hat{e_2}=(0, 1)$가 이루는 영역의 몇배인지를 나타내는 값이다.  
--> 넓이 = $S\times\text{Area}(\hat{e_1}, \hat{e_2}) = S[\hat{e_1} \hat{e_2}]$로 표기하자. (대괄호 안의 값은 단위계이고, 단위계는 각 기저의 곱으로 표기된다.)  
+  * 넓이 = $S\times\text{Area}(\hat{e_1}, \hat{e_2}) = S[\hat{e_1} \hat{e_2}]$로 표기하자. (대괄호 안의 값은 단위계이고, 단위계는 각 기저의 곱으로 표기된다.)
+  
 기저를 일차변환 $A$로 변환시키면 변환된 좌표계는 $\hat{e'_1}, \hat{e'_2}$를 기저로 가지게 되는데,  
-$\hat{e_1}은 \hat{e'_1}=a\hat{e_1} + c\hat{e_2}$로, $\hat{e_2}은 \hat{e'_2}=b\hat{e_1} + d\hat{e_2}$로 변환되고,  
-변환된 단위계에서 넓이 1을 나타내는 회색 영역은, 원래 단위계에서는 위에서 구했듯이 $\|ad-bc\|$이라는 넓이 값을 가지게 된다. -> 회색 넓이 = $1[\hat{e'_1} \hat{e'_2}] = \|ad-bc\|[\hat{e_1} \hat{e_2}]$
+$\hat{e_1}$은 $\hat{e'_1}=a\hat{e_1} + c\hat{e_2}$로, $\hat{e_2}$은 $\hat{e'_2}=b\hat{e_1} + d\hat{e_2}$로 변환되고,  
+변환된 단위계에서 넓이 1을 나타내는 회색 영역은, 원래 단위계에서는 위에서 구했듯이 $\|ad-bc\|$이라는 넓이 값을 가지게 된다. 
+  * 회색 넓이 = $1[\hat{e'_1} \hat{e'_2}] = \|ad-bc\|[\hat{e_1} \hat{e_2}]$
   
 자 이제 임의의 파란색 영역의 넓이를 생각해 보자.  
 임의의(파란색) 넓이 = $S[\hat{e_1} \hat{e_2}] = S[\hat{e_1} \hat{e_2}] \times \dfrac{1[\hat{e'_1} \hat{e'_2}]}{\|ad-bc\|[\hat{e_1} \hat{e_2}]} = \dfrac{S}{\|ad-bc\|}[\hat{e'_1} \hat{e'_2}] = S'[\hat{e'_1} \hat{e'_2}]$  
 즉 $S' = \dfrac{S}{\|ad-bc\|}$, 변환된 단위(좌표계)에서의 넓이는 변환에 사용된 passive transform에 사용된 행렬의 행렬식을 나눈 값과 같다.  
 그런데 우리가 처음 생각한 문제는, 어떤 영역을 $A$로 active trasnform시켰을 때 영역의 변화이다.
   
-> 어떤 영역을 $A$로 active trasnform시키는 것은, $A^{-1}$로 passive transform시키는 것과 동일하고, $det(A^{-1})=\dfrac{1}{det(A)}, S'= \dfrac{S}{1/det(A^{-1})}=S det(A)$.
+> 어떤 영역을 $A$로 active trasnform시키는 것은, $A^{-1}$로 passive transform시키는 것과 동일하고, $det(A^{-1})=\dfrac{1}{det(A)},\, S'= \dfrac{S}{1/det(A^{-1})}=S \cross det(A)$.
   
 됬다.
 
@@ -2694,9 +2703,9 @@ $\hat{e_1}은 \hat{e'_1}=a\hat{e_1} + c\hat{e_2}$로, $\hat{e_2}은 \hat{e'_2}=b
 2차원에서 두 벡터가 이루는 평행사변형의 넓이 $S(u+w, v)=S(u, v)+S(w, v)$에서 봤듯이,  
 3차원에서도 이 선형성이 성립한다는 합리적 의심 하에(어차피 행렬이 곧 일차변환이고, 일차가 선형이니까) 한번 전개해 보자.  
 
-$A=\start{pmatrix}a_{11}&a_{12}&a_{13}\\\\a_{21}&a_{22}&a_{23}\\\\a_{31}&a_{32}&a_{33}\end{pmatrix}, A\bar{e_i}=\start{pmatrix}a_{1i}\\\\a_{2i}\\\\a_{3i}\end{pmatrix}$,  
+$A=\begin{pmatrix}a_{11}&a_{12}&a_{13}\\\\a_{21}&a_{22}&a_{23}\\\\a_{31}&a_{32}&a_{33}\end{pmatrix}, A\bar{e_i}=\begin{pmatrix}a_{1i}\\\\a_{2i}\\\\a_{3i}\end{pmatrix}$,  
 $S(A\bar{e_1}, A\bar{e_2}, A\bar{e_3}) = S(a_{11}\bar{e_1}+a_{21}\bar{e_2}+a_{31}\bar{e_3}, a_{12}\bar{e_1}+a_{22}\bar{e_2}+a_{32}\bar{e_3}, a_{13}\bar{e_1}+a_{23}\bar{e_2}+a_{33}\bar{e_3})$  
-$= a_{11}S(\bar{e_1}, a_{12}\bar{e_1}+a_{22}\bar{e_2}+a_{32}\bar{e_3}, a_{13}\bar{e_1}+a_{23}\bar{e_2}+a_{33}\bar{e_3}) + a_{21}S(\bar{e_2}$, 어쩌고저쩌고$) + a_{31}S(\bar{e_3}$, 어쩌고저쩌고)  
+$= a_{11}S(\bar{e_1}, a_{12}\bar{e_1}+a_{22}\bar{e_2}+a_{32}\bar{e_3}, a_{13}\bar{e_1}+a_{23}\bar{e_2}+a_{33}\bar{e_3}) \\\\ \quad + a_{21}S(\bar{e_2}$, 어쩌고저쩌고$) + a_{31}S(\bar{e_3}$, 어쩌고저쩌고)  
 첫번째 항만 생각해보자. $S$의 첫번째 벡터가 $\bar{e_1}$이니까 넓이 구하는데 있어서 $\bar{e_1}$항은 아무런 의미가 없으니 빼보면  
 $a_{11}S(\bar{e_1}, a_{22}\bar{e_2}+a_{32}\bar{e_3}, a_{23}\bar{e_2}+a_{33}\bar{e_3}) = a_{11}(a_{22}a_{33}-a_{32}a_{23})S(\bar{e_1}, \bar{e_2}, \bar{e_3})$.  
 뭔가 익숙한 냄새가 난다. 뒤에 항에 대해서도 해 보면 최종 넓이가 $det(A)$이 됨을 확인할 수 있다.  
@@ -2729,30 +2738,33 @@ $\begin{bmatrix}x'\\\\y'\\\\z'\end{bmatrix}=\begin{bmatrix}t_x\\\\t_y\\\\t_z\end
 
 ##### 선형 변환
 우선, `선형성`이란 $f(ax+y)=af(x)+f(y)$를 의미한다.  
-그렇기 때문에 `선형 변환`은 원점을 보존해야 하며($f(O) = O \because f(O)=f(O+O)=2f(O)$), 원점을 어딘가 밖으로 날려버리는 평행이동은 당연히 제외된다.
+그렇기 때문에 `선형 변환`은 원점을 보존해야 하며($f(O) = O \because f(O)=f(O+O)=2f(O)$),  
+원점을 어딘가 밖으로 날려버리는 평행이동은 당연히 제외된다.  
 앗 그런데 `선형 변환`(일차변환)은 `행렬`이다. 어디보자. $A(aX+Y)=aAX+AY$. 굿.  
 그러니까 $X'=AX$. 좋다.   
 
-그러면, 선형 변환엔 어떤 것들이 있는가
+그러면, 선형 변환엔 어떤 것들이 있는가  
 ![Alt text](/pictures/mathematics/선형변환.png)  
 스케일이 같은 2차원 변환에 대해선 그림과 같으며, 스케일은 $\begin{bmatrix}x'\\\\y'\\\\z'\end{bmatrix}=\begin{bmatrix}s_x&0&0\\\\0&s_y&0\\\\0&0&s_z\end{bmatrix} \begin{bmatrix}x\\\\y\\\\z\end{bmatrix}$과 같이 각 축에 대해 바꿀 수 있다.
 얘들을 잘 곱하면, 임의의 행렬을 만들 수 있다. 
 
 --------------------------------------------------   
 
-이제 두 식을 합쳐보면, $X'=AX+T$ 로 임의의 affine transform을 2개의 행렬($A,\, T$)로 나타낼 수 있다.
-하지만 하나의 변환에 2개의 행렬이 필요하다니. 기분이 나쁘다.
+이제 두 식을 합쳐보면, $X'=AX+T$ 로 임의의 affine transform을 2개의 행렬($A,\, T$)로 나타낼 수 있다.  
+하지만 하나의 변환에 2개의 행렬이 필요하다니. 기분이 나쁘다.  
 이 affine transform을 하나의 행렬로 깔끔하게 결합하기 위해서, `homogeneous coordinate`를 도입해야 할 필요가 있다.
+
+<br/>
 
 #### Homogeneous Coordinates
 $[x, y, z] = [x, y, z, 1] = [wx, wy, wz, w]$ 로 표현하는 것. 일반적으론 좌표계에 한 차원을 더 붙이는 것(ex: $[x_1, x_2, \cdots, x_n] \to [x_1, x_2, \cdots, x_n, 1]$)  
-영상학적으로는 아래와 같은 해석이 가능하다.
-![Alt text](/pictures/mathematics/homogeneous_coord_1.png){: width="45%" height="45%"} ![Alt text](/pictures/mathematics/homogeneous_coord_2.png){: width="45%" height="45%"}  
+영상학적으로는 아래와 같은 해석이 가능하다.  
+![Alt text](/pictures/mathematics/homogeneous_coord_1.png){: width="45%" height="45%"} ![Alt text](/pictures/mathematics/homogeneous_coord_2.png){: width="45%" height="45%"}    
 즉, $w$는 거리이자 동시에 스케일이다(거리가 $w$로 늘어나면 영상의 스케일이 $w$만큼 커진다).  
 
-하지만 그런건 잘 모르겠고, affine transformation 을 위한 표현을 살펴보자면
-$X=[x, y, z, 1]$로 둔다면, $X'=\begin{bmatrix}a_{11}&a_{12}&a_{13}&t_x\\\\a_{21}&a_{22}&a_{23}&t_y\\\\a_{31}&a_{32}&a_{33}&t_z\\\\0&0&0&1\end{bmatrix}X =MX$ 로 
-$T$와 $A$가 하나의 행렬 $M=\begin{pmatrix}A&T \\\\ 0&1\end{pmatrix}$으로 합쳐진다! 와
+하지만 그런건 잘 모르겠고, affine transformation의 표현을 살펴보자.  
+$X=[x, y, z, 1]$으로 둔다면, $X'=\begin{bmatrix}a_{11}&a_{12}&a_{13}&t_x\\\\a_{21}&a_{22}&a_{23}&t_y\\\\a_{31}&a_{32}&a_{33}&t_z\\\\0&0&0&1\end{bmatrix}X =MX$ 로 
+$T$와 $A$가 하나의 행렬 $M=\begin{pmatrix}A&T \\\\ 0&1\end{pmatrix}$으로 합쳐진다!
 
 #### 문제 해결?
 그래서, 처음 문제인 $\vec{X_{eye}} \to \vec{X_{elbow}}$ 를 어케 구하느냐?  
@@ -2761,6 +2773,8 @@ $\vec{X_{elbow}} = M_{eye2elbow}^{-1}\vec{X_{eye}}$가 된다! (다시 말하지
 
 와! 근데 그래서 회전행렬 $A_{eye2elbow}$ 가 대체 뭐죠?  
 와!~~~~~~~
+
+<br/>
 
 #### 3d rotation matrix 구하기..
 일단 원점이 떨어져 있는 문제는 평행이동 벡터(translation vector)를 구해서 해결했으니, 일단 원점이 같은 상황을 생각하자.  
@@ -2771,8 +2785,12 @@ $x$축 하나만 생각해서, 바뀐 $x'$축의 위치를 구면좌표계처럼
 안타깝게도 $x'$축을 결정한 뒤로는 $y'$축과 $z'$축을 어떻게 배열할 것인지의 문제가 또 남는다. 즉 3차원 좌표축 회전은 자유도가 3인 문제이다.
 
 오일러는 `euler angle`이라는 걸 언제 또 만들어서, 이러한 좌표축 회전을 표기하려 했는데,  
-아이디어는 일단 $x'=x, y'=y, z'=z$인 상황에서, $z$축을 중심으로 한번 회전($\alpha, \psi$)시키고, 회전된 $x$축($x'$축)을 기준으로 한번 회전($\beta, \theta$)시키고,
-다시 회전된 $z$축($z'$축)을 기준으로 순서대로 회전($\gamma, \phi$)시키면, 임의의 좌표축 회전을 나타낼 수 있다는 것이다.  
+아이디어는 일단 $x'=x, y'=y, z'=z$인 상황에서, 
+* $z$축을 중심으로 한번 회전($\alpha, \psi$)시키고, 
+* 회전된 $x$축($x'$축)을 기준으로 한번 회전($\beta, \theta$)시키고,
+* 다시 회전된 $z$축($z'$축)을 기준으로 순서대로 회전($\gamma, \phi$)시키면, 
+
+임의의 좌표축 회전을 나타낼 수 있다는 것이다.  
 이를 변형한 것이 `RPY` 표기법인데, X축 회전을 `Roll`, Y축 회전을 `Pitch`, Z축 회전을 `Yaw` 로 두고 순서대로(R->P->Y) 회전시켜서 표현하는 것이다. (YPR처럼 순서가 바뀌면 각도 바뀐다!)
  
 아무튼 눈 좌표계로부터 팔꿈치 좌표계까지의 회전행렬을 구하고 싶다?
@@ -2782,7 +2800,8 @@ $x$축 하나만 생각해서, 바뀐 $x'$축의 위치를 구면좌표계처럼
 3. $X_R = A_R^{-1} X_0, X_RP=A_P^{-1} X_R, X_RPY=A_Y^{-1} X_RP$,  
    즉 $X_RPY=A_Y^{-1} A_P^{-1} A_R^{-1} X_0$ 가 된다...
 
-하지만 이러한 표기법은 짐벌 락 등 문제점들이 있다. 짐벌 락은 얘가 뭐가 문젠지는 저어도 자세히모름  
+하지만 이러한 표기법은 짐벌 락 등 문제점들이 있다.  
+짐벌 락은 얘가 뭐가 문젠지는 저어도 자세히는 모름  
 아무튼 사실 RPY 각도를 구하는것도 말이 쉽지 썩 와닿지는 않는다. 구글에 검색해 보면 3차원 회전행렬(rotation matrix)을 구하는 갖가지 방법이 나오지만 토나온다.  
 여기선 3차원 행렬을 구하는 방법 대신, 또 다른 표기법인 `quaternion`에 대해서 마지막으로 살펴보자.
 
@@ -2791,7 +2810,7 @@ $x$축 하나만 생각해서, 바뀐 $x'$축의 위치를 구면좌표계처럼
 `Quaternion`, 그러니까 `사원수`는.. 일단 복소수를 확장한 대수적인 그런 개념이다... 그러니까 음....
 ![Alt text](/pictures/mathematics/복소평면.png)  
 복소평면을 보면, 실수항을 기저로 하나($x$축), 복소수항을 기저로 하나($y$축) 그렇게 그리듯이  
-![Alt text](/pictures/mathematics/quaternion.png)  
+![Alt text](/pictures/mathematics/quaternion.png){: width="50%" height="50%"}  
 얜 그런 $r$(실수), $i$같은 기저가 $r, i, j, k$ 4개임. 엌ㅋㅋ  
 그러니까 기본적으로 $i^2=-1$처럼 $j^2=-1,\, k^2=-1$이고, 동시에 $i, j, k$ 끼리도 직교하기 때문에 $ij=k$ 같은 성질도 만족함.  
 
@@ -2854,23 +2873,23 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 1. 꼬인 위치에 있는 두 직선($a, b$)이 이루는 각
     * 점 $O$를 지나고 $a, b$와 평행한 $a', b'$를 그을 때, $a', b'$가 이루는 각
 2. 직선과 평면의 수직
-    * 직선 $l$이 평면 $\alpha$와 점 $O$에서 만나고, $O$를 지나는 $\alpha$ 위의 모든 직선과 수직일 때 $l\prep\alpha$
+    * 직선 $l$이 평면 $\alpha$와 점 $O$에서 만나고, $O$를 지나는 $\alpha$ 위의 모든 직선과 수직일 때 $l\perp\alpha$
     * $l$을 $\alpha$의 수선, $O$를 수선의 발이라고 함
 3. 직선과 평면이 이루는 각
     * 직선 $a$가 평면 $\alpha$와 점 $O$에서 만나고, $a$위의 임의의 점 $A$에서 내린 수선의 발 $B$에서 $a$와 $\alpha$가 이루는 각도는 $\angle AOB$이다.
 4. 두 평면이 이루는 각
     * 두 평면의 교선을 공유하는 두 반평면이 이루는 도형을 이면각, 두 평면의 교선을 이면각의 변이라 한다. 
     * 각 면에서, 이면각의 변 위의 한 점 $O$를 지나고 이면각의 변과 수직한 직선 $OA, OB$를 그을 때, 이면각의 크기 = $\angle AOB$
-    * $\angle AOB=90$도 일 때 $\alpha \prep \beta$
+    * $\angle AOB=90$도 일 때 $\alpha \perp \beta$
 
 
 ### 직선과 평면의 수직에 관한 정리
-1. 평면 $\alpha$ 위의 평행하지 않은 두 직선 $a, b$에 모두 수직인 직선 $l$은 $l\prep \alpha$이다.
+1. 평면 $\alpha$ 위의 평행하지 않은 두 직선 $a, b$에 모두 수직인 직선 $l$은 $l\perp \alpha$이다.
 2. 삼수선의 정리
     * $P$를 평면 $\alpha$밖의 점, $a$를 평면 $\alpha$ 위의 직선이라 할 때
-    * $P$에서 $\alpha$에 내린 수선의 발을 $M$, $M$에서 $a$에 내린 수선의 발을 $N$이라 하면 $\overline{PN}\prep a$ 
-    * $P$에서 $\alpha, a$에 내린 수선의 발을 $M, N$이라 하면 $\overline{MN}\prep a$
-    * $P$에서 $a$에 내린 수선의 발을 $N$, $\alpha$ 위에서 $a$에 수직이고 $N$을 지나는 직선을 $b$라 하면 $P$에서 $b$에 내린 수선 $\overline{PM}\prep \alpha$
+    * $P$에서 $\alpha$에 내린 수선의 발을 $M$, $M$에서 $a$에 내린 수선의 발을 $N$이라 하면 $\overline{PN}\perp a$ 
+    * $P$에서 $\alpha, a$에 내린 수선의 발을 $M, N$이라 하면 $\overline{MN}\perp a$
+    * $P$에서 $a$에 내린 수선의 발을 $N$, $\alpha$ 위에서 $a$에 수직이고 $N$을 지나는 직선을 $b$라 하면 $P$에서 $b$에 내린 수선 $\overline{PM}\perp \alpha$
 3. 기타
     * 직선 $l$이 평면 $\alpha$에 수직일 때, $l$을 포함하는 모든 평면은 $\alpha$에 수직
     * 한 점 $P$를 지나고 평면 $\alpha$에 수직인 직선은 단 하나
@@ -2882,7 +2901,7 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 <br/>
     
 ### 정사영
-![Alt text](/pictures/mathematics/정사영.png)  
+![Alt text](/pictures/mathematics/정사영.png){: width="60%" height="60%"}  
 정사영같은 경우에는, 두 평면에서 이면각의 변과 평행한 선은 줄어들지 않고, 이면각의 변과 수직인 부분만 $\cos\theta$만큼 줄어든다.  
 증명까진 필요없을거같고, 그냥 이면각의 변과 평행, 수직한 기저를 가지는 기존 좌표계 $\beta$에서  
 수직한 기저에서의 값만 $\cos\theta$배로 줄이는 active transform이 가해져서 $\alpha$로 간다라고 보면 될듯?   
@@ -2912,8 +2931,7 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 
 #### 정의
 23개의 정의가 있는데,  
-`점`, `선`, `선의 끝`(점), `직선`, `면`, `면의 모서리`(선), `평면`, `평면각`, `직선각`, `직각`과 `수선`, `둔각`, `예각`, `경계`, `도형`, `원`, `원의 중심`, `지름`, `반원`,  
-`직선 도형`과 다변형(`다각형`), `정삼각형`과 `이등변 삼각형`, `직각삼각형`, `둔각삼각형`, `예각삼각형`, `정사각형`, `직사각형`, `평행사변형`, `평행선`  
+점, 선, 선의 끝(점), 직선, 면, 면의 모서리(선), 평면, 평면각, 직선각, 직각과 수선, 둔각, 예각, 경계, 도형, 원, 원의 중심, 지름, 반원, 직선 도형과 다변형(다각형), 정삼각형과 이등변 삼각형, 직각삼각형, 둔각삼각형, 예각삼각형, 정사각형, 직사각형, 평행사변형, 평행선  
 을 정의한다. 자세한 정의는 링크 ㄱㄱ  
 
 #### 공리
@@ -2934,16 +2952,19 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 5. 두 직선과 한 직선이 만날 때, 두 직선을 한없이 늘린다면 같은 쪽에 있는 내각을 더해서 직각 둘(180도)보다 작은 쪽에서 만난다.  
    (한 직선 밖의 한 점을 지나면서 평행을 이루는 직선은 오직 하나이다) 
 
-여기서, 진짜 트집잡고 싶어도 잡을게 없는 다른 공준에 비하여 좀 추한 5번 공준을, 공준이 아닌 증명 가능한 정리로 둬서 증명해볼 수 있지 않을까 싶은 생각이 들어서  
-다들 달려들었지만 결국 실패하고 아예 유클리드 기하학이 아닌 새로운 공리계를 이루는 타원기하학(오직 하나->없음)과 쌍곡선 기하학(오직 하나->개많음)과 같은 비유클리드 기하학을 찾았다는 것은  
+
+여기서, 진짜 트집잡고 싶어도 잡을게 없는 다른 공준에 비하여 좀 추한 5번 공준을,  
+공준이 아닌 증명 가능한 정리로 둬서 증명해볼 수 있지 않을까 싶은 생각이 들어서 달려들었지만 결국 실패하고  
+아예 유클리드 기하학이 아닌 새로운 공리계를 이루는 타원기하학(오직 하나->없음)과 쌍곡선 기하학(오직 하나->개많음)과 같은 비유클리드 기하학을 찾았다는 것은 
 너무 유명한 일례라서 굳이 넣어야되나 싶긴 했는데 그래도 예의상 넣어줌.  
 애초에, 공준의 정의 자체가 부정될 가능성을 생각했지만 일단 이 이론체계에서는 성립한다고 가정을 해놓은 '전제' 라는 것을 다시 한번 상기하자.
 
 
 정리는.. 너무 많아서 패스할건데 대충 인상적인 것들만 뽑아보자면  
-20 - 어떤 삼각형이든 두 변의 합은 나머지 한 변보다 크다.  
-32 - 어떤 삼각형이든 한 변으로 만들어지는 외각은 맞은 편 두 내각의 합과 같고 삼각형 세 내각의 합은 180이다.  
-47 - 직각삼각형에서 직각과 마주 보는 변을 가지고 정사각형을 만들면, 넓이는 나머지 다른 변으로 만든 정사각형 넓이를 더한 것과 같다(피타고라스 정리)  
+* 20 - 어떤 삼각형이든 두 변의 합은 나머지 한 변보다 크다.  
+* 32 - 어떤 삼각형이든 한 변으로 만들어지는 외각은 맞은 편 두 내각의 합과 같고 삼각형 세 내각의 합은 180이다.  
+* 47 - 직각삼각형에서 직각과 마주 보는 변을 가지고 정사각형을 만들면, 넓이는 나머지 다른 변으로 만든 정사각형 넓이를 더한 것과 같다(피타고라스 정리)
+  
 등 뽑고나니까 다 삼각형이네 작성자 삼각형성애자로 밝혀져 충격
 
 {% endcapture %}
@@ -2976,7 +2997,7 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 
 * $V$가 $F$의 `F-module`인 것이란, $V$가 $F$에 대하여 아래 성질을 만족하는 것을 뜻한다.
   * $(V, +)$는 가환군이다.
-  * 함수 $f:F \cross V \longrightarrow V,\; f(a, v)=a\cdot v$가 존재하고, 분배법칙과 교환법칙이 성립한다. 즉 $a, b\in F, u, v\in V$에 대하여,
+  * 함수 $f:F \times V \longrightarrow V,\; f(a, v)=a\cdot v$가 존재하고, 분배법칙과 교환법칙이 성립한다. 즉 $a, b\in F, u, v\in V$에 대하여,
     * $a\cdot(u+v)=a\cdot u+b\cdot v$
     * $(a+b)\cdot v=a\cdot v+b\cdot v$
     * $(ab)\cdot v=a\cdot(b\cdot v)$
@@ -2992,16 +3013,17 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 * coordinate space: $(a_1, a_2, \cdots, a_n)$을 원소로 하는 집합. $a_i\in F$
 * 벡터 표기: $\mathbf{A}=a_1\mathbf{e}_1+a_2\mathbf{e}_2+\cdots+a_n\mathbf{e}_n=(a_1, a_2, \cdots, a_n)$
 
+연산을 살펴보자면
 1. 덧셈: $\mathbf{A}+\mathbf{B}=(a_1+b_1, a_2+b_2, \cdots)$
 2. scalar multiplication: $kA=(ka_1, ka_2, \cdots)$
 3. `dot product`: $\mathbf{A}\cdot\mathbf{B}=a_1b_1+a_2b_2+\cdots$
-4. `cross product`: 벡터 공간이 $\mathbb{R}^3$일 때 한정. $\mathbf{A}\cross\mathbf{B}=(a2_b3-a_3b_2, a_3b_1-a_1b_3, a_1b_2-a_2b_1)$
+4. `cross product`: 벡터 공간이 $\mathbb{R}^3$일 때 한정. $\mathbf{A}\times\mathbf{B}=(a2_b3-a_3b_2, a_3b_1-a_1b_3, a_1b_2-a_2b_1)$
     * 일반적인 벡터 공간에서 대응되는 개념은 [wedge product](http://mathworld.wolfram.com/WedgeProduct.html) 인데... 아직 제대로 정리가 안되서 보류.
-    * 아닌가.. 텐서에 대해서는 cross product가 $(\mathbf{u}\cross\mathbf{v})_i=\epsilon _{ijk}u_j v_k$(아인슈타인 표기법 사용)이라는거같기도 하고.. 역시 보류.
+    * 아닌가.. 텐서에 대해서는 cross product가 $(\mathbf{u}\times\mathbf{v})_i=\epsilon _{ijk}u_j v_k$(아인슈타인 표기법 사용)이라는거같기도 하고.. 역시 보류.
 5. [del operator](https://namu.wiki/w/%EB%8D%B8(%EC%97%B0%EC%82%B0%EC%9E%90)): $\nabla$, 미분에 대응되는 연산자인데 사실상 벡터와 같이 취급된다.
     * `Gradient`: $\nabla f$
     * `Divergence`: $\nabla \cdot \mathbf{F}$
-    * `Curl`: $\nabla \cross \mathbf{F}$
+    * `Curl`: $\nabla \times \mathbf{F}$
 
 {% endcapture %}
 
@@ -3012,6 +3034,8 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 텐서는 씨 물리학부에선 제대로 알려주지도 않고 갑툭튀하다가 존재감없이 사라짐.  
 누구는 0-rank tensor가 스칼라고 1이 벡터고 2가 matrix고 3-rank 이상까지 커버하는게 텐서다 라고는 하는데 내가 아는건 그게 전부는 아니다라는거 정도까지..
  
+<br/>
+
 ### cross product의 기하학적 성질
 드디어 좀 고등수학다운걸 합니다. 와와  
 음 그러니까, $\mathbf{a}\cdot\mathbf{b}=a_1b_1+a_2b_2$(2차원에서) 으로 정의된건 알겠는데  
@@ -3035,7 +3059,7 @@ $\cos(\alpha-\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$에 의해 $\mathbf{
 * 구의 벡터방정식:
   * $(\mathbf{x}-\mathbf{a})\cdot(\mathbf{x}-\mathbf{a})=r^2\, (\|\mathbf{x}-\mathbf{a}\|=r) \;\to\; (x-a_1)^2+(x-a_2)^2+(x-a_3)^2=r^2$
 * 영역:
-  $\overline{OA}, \overeline{OB}$를 변으로 하는 평행사변형: $\mathbf{p}=m\mathbf{a}+n\mathbf{b}\; (m,\,n\in[0, 1])$ 
+  $\overline{OA}, \overline{OB}$를 변으로 하는 평행사변형: $\mathbf{p}=m\mathbf{a}+n\mathbf{b}\; (m,\,n\in[0, 1])$ 
 
 # 미적분학
 TBD
