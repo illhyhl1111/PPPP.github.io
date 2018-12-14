@@ -3029,9 +3029,8 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 * 직선의 벡터방정식: 
   * \mathbf{a}를 포함하고 \mathbf{b}에 평행: \mathbf{x}=\mathbf{a}+t\mathbf{b} -> \dfrac{x-a_1}{b_1}=\dfrac{x-a_2}{b_2}=\dfrac{x-a_3}{b_3}
   * \mathbf{a}, \mathbf{b}를 포함: \mathbf{x}=(1-t)\mathbf{a}+t\mathbf{b} -> \dfrac{x-a_1}{b_1-a_1}=\dfrac{x-a_2}{b_2-a_2}=\dfrac{x-a_3}{b_3-a_3}
-  * \mathbf{a}를 포함하고 \mathbf{b}에 수직: (\mathbf{x}-\mathbf{a})\cdot \mathbf{b}=0
 * 평면의 벡터방정식:
-  * \mathbf{a}를 포함하고 \mathbf{h}에 수직: \mathbf{h}{\mathbf{x}-\mathbf{a})=0 -> h_1(x-a_1)+h_2(x-a_2)+h_3(x-a_3)=0
+  * \mathbf{a}를 포함하고 \mathbf{h}에 수직: \mathbf{h}\cdot(\mathbf{x}-\mathbf{a})=0 -> h_1(x-a_1)+h_2(x-a_2)+h_3(x-a_3)=0
   * \mathbf{a}, \mathbf{b}, \mathbf{c}를 포함: \mathbf{x}=\mathbf{a}+s(\mathbf{b}-\mathbf{a})+t(\mathbf{c}-\mathbf{a}) -> h_1x+h_2y+h_3z+d=0 
 * 구의 벡터방정식:
   * (\mathbf{x}-\mathbf{a})\cdot(\mathbf{x}-\mathbf{a})=r^2 (\|\mathbf{x}-\mathbf{a}\|)=r -> (x-a_1)^2+(x-a_2)^2+(x-a_3)^2=r^2
