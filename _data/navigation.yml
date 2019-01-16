@@ -31,5 +31,8 @@ sidebar-math:
 
   - title: "미적분학"
     url: "/posts/mathematics/#미적분학"
+    
+  - title: "선형대수"
+    url: "/posts/mathematics/#선형대수"
 
   - title: "TO BE DONE.."

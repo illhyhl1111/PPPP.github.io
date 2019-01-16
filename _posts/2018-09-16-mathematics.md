@@ -3065,4 +3065,148 @@ $\cos(\alpha-\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$에 의해 $\mathbf{
 # 미적분학
 TBD
 
+# 선형대수
+미적분학 먼저 하려고 생각했었는데 쓰다보니 선형대수를 먼저 공부해야 할 것 같은 기분이 든다  
+그럼 먼저 하지 뭐  
+
+주 레퍼런스로  
+유튜브의 3Bule1Brown 채널의 [Essence of linear algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) 시리즈를 먼저 맛뵈기로 요약하고  
+그 다음엔 [선형대수와 군 - 학부 대수학 강의 1](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59727710) 책 순서대로 읽으면서 쭉 따라갈 예정  
+넹기분굿
+
+## Essence of linear algebra
+위에도 한번 쓴거같은데 이 채널 좋음 한번 보십쇼  
+암튼 이 채널은 총 12개의 10분따리 정도의 영상으로 구성되어 있는데, 선형대수에서 전반적으로 중요한 개념을 잘 설명해 준다고 생각했고  
+본격적으로 선대를 파고들기 전에 예고편 보듯이 보면 꽤 도움이 될 것 같음
+
+{% comment %}
+### 1. Vectors, what even are they?
+> The fundamental, root-of-it-all building block for linear algebra is the vector,
+> so it's worth making sure that we're all on the same page about what exactly a vector is.
+
+* **일단은** 시작점이 좌표계의 원점인, 길이와 방향이 정의된 화살표로 생각을 하자.
+* 선형대수의 모든 문제는 기본적으로 2가지 연산을 중심으로 돌아간다.
+  * vector addition: \vec{v} + \vec{w}
+  * multiplication by number: c \cdot \vec{v} 
+
+{% capture context1 %}
+### 물리학, CS에서 vector와의 관계
+* 물리학에서의 vector: length + direction
+* CS(computer science)에서의 vector: 수의 배열. == list
+* 수학에서의 vector: 일반적인 개념으로, 서로 덧셈이 되면서 숫자와 곱셈이 되는 어떤 것
+
+더 일반적인 vector의 정의는 12강에서 다룰 예정이지만 이미 [고등학교 수학 - 벡터](/posts/mathematics/#벡터) 에서 해버렸구나  
+
+![Alt text](/pictures/mathematics/선대_1.JPG)  
+아무튼 일단 벡터를 시작점이 원점인 화살표로 생각하면, 물리학에서의 vector와 CS에서의 vector가 1:1 대응이 됨을 확인할 수 있다.  
+(물론 각 좌표축마다 임의의, 일정한 길이를 1로 정의해야 한다)
+
+<br/>
+
+### 덧셈 연산
+![Alt text](/pictures/mathematics/선대_1_2.JPG)  
+![Alt text](/pictures/mathematics/선대_1_3.JPG)  
+벡터간의 덧셈 \vec{v} + \vec{w}은 위와 같이, \vec{w}의 tail을 \vec{v}의 head으로 놓았을 때 \vec{w}의 head 위치를 덧셈 결과로 둔다.
+
+왜 이런 방식을 채용했는가에 대해선 2가지 해석이 가능한데
+  
+![Alt text](/pictures/mathematics/선대_1_4.JPG)  
+그냥 일반적인 숫자를 더하는 방식을 그대로 확장했다는 관점과
+
+![Alt text](/pictures/mathematics/선대_1_5.JPG)  
+벡터를 수의 배열로 놓아서 각 원소를 더했을 때 결과가 그렇다는 관점이 가능하다.
+
+<br/>
+
+### (숫자와의)곱셈 연산
+![Alt text](/pictures/mathematics/선대_1_7.JPG)   
+벡터를 어떤 숫자와 곱하는 것은, 그 숫자만큼 화살표를 `scaling`한다는 것이고  
+수의 배열로 생각해 보면, 각 element를 해당 숫자만큼 그대로 곱하는 것이 된다.  
+
+![Alt text](/pictures/mathematics/선대_1_6.JPG)  
+물리나 선형 대수에서 쓰이는 `스칼라(scalar)`의 어원이 여기서 나왔다고 한다. 벡터를 스케일링(scaling) 해주는 애니까 스칼라(scalar)
+
+{% endcapture %}
+
+{% capture context2 %}
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="선대_유튜브1" %}
+
+### 2. Linear combinations, span, and basis vectors
+
+{% capture context1 %}
+### 기저벡터(basis vector)
+![Alt text](/pictures/mathematics/선대_2_1.JPG)  
+xy-좌표계를 기준으로 생각하면, \hat{i}, \hat{j} 라는 굉장히 특별한 2개의 벡터가 정의되어야 한다.  
+\hat{i}(unit vector of x direction)은 x축 방향, 길이 1을 가지는 놈이고, \hat{j}(unit vector of y direction)은 y축 방향, 길이 1을 가지는 놈이다. 
+
+1강에서 vector와 list가 1:1 대응이 된다고 했는데, 다음과 같이 해석해보자  
+[3, -2]라는 벡터는 3과 -2라는 두개의 scalar 로 이루어 진 것이고, 3은 \hat{i}를, -2는 \hat{j}를 scaling 한다.  
+아무튼 [3, -2] = 3\hat{i} + (-2)\hat{j}와 같이, 벡터의 덧셈 + 숫자와 벡터의 곱셈 2가지 개념을 사용하여 list와 arrow의 개념을 엮을 수 있다.
+  
+`기저벡터(basis vectors)`는, 각 벡터를 [-5, 2]와 같이 표현할 때 -5나 2라는 scalar가 실제로 scaling하는 대상을 똣하는데,  
+보통 \hat{i}, \hat{j}이 쓰인다.  
+
+<br/>
+
+### 기저벡터와 선형 결합
+![Alt text](/pictures/mathematics/선대_2_4.JPG)   
+![Alt text](/pictures/mathematics/선대_2_5.JPG)   
+우선, `선형 결합`이란 위 그림과 같은 연산을 뜻한다.  
+왜 `선형` 결합이라는 말을 쓰는가에 대해선 여러 해석이 가능하지만,  
+다른 scalar 를 모두 다 고정한 상태에서 특정 scalar 하나만 자유롭게 변화시키면, 그 자취가 직선이라는 해석이 가장 마음에 든다고 한다.  
+아무튼 임의의 벡터는, \hat{i}와 \hat{j}의 선형결합, 즉 a\hat{i}+b\hat{j}로 유일하게 표현할 수 있다. 
+
+![Alt text](/pictures/mathematics/선대_2_2.JPG)  
+![Alt text](/pictures/mathematics/선대_2_6.JPG)  
+나중에 더 자세히 다루겠지만, 기저벡터로 **보통** \hat{i}, \hat{j}이 쓰이는 것이지  
+어떤 벡터를 기저벡토로 두더라도, 임의의 벡터를 기저벡터들의 선형결합으로 표현이 가능하다.  
+
+![Alt text](/pictures/mathematics/선대_2_3.JPG)  
+물론 기저벡터가 변하면, 같은 벡터를 list of scalars로 표현할 때 숫자가 달라진다.
+
+즉, 
+> 1 - 기저벡터로 임의의 벡터를 사용할 수 있다. 
+> 2 - 일부 상황(linearly dependent)을 제외하면, 임의의 벡터는 기저벡터의 선형결합으로 1:1 대응이 된다. \vec{x} = a\vec{v} + b\vec{w}
+> 3 - 기저벡터 \vec{v}, \vec{w} 아래에서 \vec{x} = [a, b]와 같이 표기할 수 있다.
+ 
+<br/>
+ 
+### span, linearly dependent
+![Alt text](/pictures/mathematics/선대_2_7.JPG)  
+그 일부 상황이란, 위와 같이 두 기저 벡터가 같은 선 상에 놓여있어서 두 기저벡터의 선형결합으로는 선 하나밖에 표현이 안되는 경우,    
+혹은 아예 두 기저벡터가 모두 영벡터라 영벡터밖에 표현이 안되는 경우이다.
+
+여기서 기저벡터 \vec{v}와 \vec{w}`span`은, \vec{v}와 \vec{w}의 일차 결합으로 표현할 수 있는 가능한 모든 벡터의 집합을 뜻한다.  
+즉 일반적으로 임의의 두 기저벡터의 span은 2차원 평면이 되지만,  
+두 기저벡터가 하나의 선에 놓여 있을 경우 span은 그 선이 되며, 아예 원점만이 될 수 있다.  
+
+![Alt text](/pictures/mathematics/선대_2_8.JPG)  
+3차원에서도 비슷한 일이 일어나는데,  
+보통 \vec{v}와 \vec{w}로 평면의 span이 구성된 상황에서 새로운 \vec{u}을 기저 벡터로 더하면 span은 3차원 공간으로 확장되는데,   
+\vec{u}을 기저 벡터로 더했음에도 불구하고 \vec{u}가 기존 span에 포함된 놈이라 span이 2차원 평면에서 전혀 확장되지 못하는 경우가 있다.   
+
+이렇듯 기저벡터 \vec{u} 하나를 더 추가했는데도 불구하고  
+그 기저벡터가 이전의 기저벡터들이 이루는 span에 이미 포함이 되어 있어 span이 전혀 확장되지 않는 상황을 `linearly dependent`한 상황이라고 하며,  
+\vec{u}가 나머지 기저벡터들(\vec{v}, \vec{w})의 span 안에 있다는 것은 곧 이들의 선형 결합(a\vec{v} + b\vec{w})으로 \vec{u}를 표현할 수 있음을 의미한다.
+
+물론 기저벡터 \vec{u} 하나를 더 추가해서 span이 확장되었다는 말은  
+곧 \vec{u}는 기존 span에 포함되지 않는 놈이라는 뜻이며, \vec{u} \neq a\vec{v} + b\vec{w} 가 된다.  
+이를 `linearly independent` 하다고 한다.
+
+위에서 기저벡터로 임의의 벡터를 사용할 수 있다고 했는데 실제로 그렇게 하지는 않고, 
+어떤 `벡터공간(vector space)`의 `기저(basis)`는 그 벡터 공간을 span 하는 linearly independent 한 벡터의 집합으로 정의한다. 
+
+
+{% endcapture %}
+
+{% capture context2 %}
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="선대_유튜브2" %}
+
+
+{% endcomment %}
+
 # TO BE DONE!
