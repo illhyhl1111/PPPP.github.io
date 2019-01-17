@@ -274,7 +274,7 @@ $$ </p>
 
 ![Alt text](/pictures/mathematics/27755D4256A82ED122.png)
 * $\triangle ABC$ 의 변 $\overline{BC}$의 중점을 $M$이라 둘 때,
-$\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
+$\overline{AB}^2 + \overline{AC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 {% endcapture %}
 
 {% capture context2 %}
@@ -308,14 +308,14 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 <br/>
 
 ### 점과 직선 사이의 거리
-* 점$(x_1, y_1)$과 직선 $ax+by+c=0$ 사이의 거리 $d=\frac{\left\|ax_1+by_1+c\right\|}{\sqrt(a^2+b^2)}$
+* 점$(x_1, y_1)$과 직선 $ax+by+c=0$ 사이의 거리 $d=\frac{\left\|ax_1+by_1+c\right\|}{\sqrt{a^2+b^2}}$
 {% endcapture %}
 
 {% capture context2 %}
 ### 서로 수직인 두 직선
 * $y=ax+b, y=a'x+b'$이 수직이라면, <br/>
   $\tan(\theta_1)=a, \tan(\theta_2)=\tan(\theta_1+\frac{\pi}{2})=-\frac{1}{\tan(\theta_1)}=a'$ <br/>
-  $ \therefore a'=-\frac{1}{a}, aa'=1 $
+  $ \therefore a'=-\frac{1}{a}, aa'=-1 $
 
 <br/>
 
@@ -368,9 +368,9 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
   * $y$에 $mx+n$을 집어넣고 판별식을 구하면 <br/>
     $\frac{D}{4}=m^2 n^2 -(m^2+1)(n^2-r^2)=0, \therefore r^2 m^2-n^2+r^2=0$
   * 접하는 점의 좌표가 $(x_1, y_1)$이므로 <br/>
-    $n=y-mx_1, x_1^2+y_1^2=r^2$
-  * 열심히 대입하면 $y_1^2 m^2 + 2x_1 y_1 m + x_1^2=(y_1 m + x_1)^2 = 0, m=-\frac{x_1}{y}$ <br/>
-  * 그래서 접선의 방정식은 $y-y_1=-\frac{x}{y_1}(x-x_1), x_1x + y_1 y=r^2$가 된당  <br/>
+    $n=y_1-mx_1, x_1^2+y_1^2=r^2$
+  * 열심히 대입하면 $y_1^2 m^2 + 2x_1 y_1 m + x_1^2=(y_1 m + x_1)^2 = 0, m=-\frac{x_1}{y_1}$ <br/>
+  * 그래서 접선의 방정식은 $y-y_1=-\frac{x_1}{y_1}(x-x_1), x_1x + y_1 y=r^2$가 된당  <br/>
 
 * 원의 방정식이 $(x-a)^2+(y-b)^2=r^2$로 바뀐다고 하면 $(a, b)$만큼 평행이동시키면 <br/>
   접선의 방정식은 $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ <br/>
@@ -391,7 +391,7 @@ $\overline{AB}^2 + \overline{BC}^2 = 2(\overline{AM}^2 + \overline{BM}^2)$
 ### 평행이동
 * $x$축으로 $a$, $y$축으로 $b$만큼 평행이동시킬 때, $T: (x, y) \rightarrow (x+a, y+b)$로 표기하고
 * 점 $P(x, y) \rightarrow Q(x+a, y+b)$
-* 도형의 방정식 $f(x-a, y-b)=0 \rightarrow f(x-a, y-b)=0$
+* 도형의 방정식 $f(x, y)=0 \rightarrow f(x-a, y-b)=0$
 
 <br/>
 
@@ -522,7 +522,7 @@ $X$의 각 원소에서 $Y$의 원소로의 대응을 $X$에서 $Y$로 가는 �
 
 {% capture context1 %}
 ### 판별식을 이용한 최대, 최소
-* $y=ax^2+bx+c$에서 $y$의 범위는 $0=ax^2+bx+(c-y)$에서 $D>=0$를 사용해도 됨
+* $y=ax^2+bx+c$에서 $y$의 범위는 $0=ax^2+bx+(c-y)$에서 $D \geq 0$를 사용해도 됨
 
 <br/>
 
@@ -540,7 +540,7 @@ $n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것�
 * 각 항 앞에 가중치를 더한 부등식이다.
 * 가중 산술-기하 평균 부등식은
 <p> $$ \frac{\alpha_1 x_1 + \cdots + \alpha_n x_n}{\alpha} \geq \sqrt[\alpha]{x_1^{\alpha_1} \cdots x_n^{\alpha_n}} \\
-       (x_i>0, \alpha_i>0) $$ </p>
+       (x_i>0, \alpha_i>0, \alpha = \alpha_1 + \cdots + \alpha_n) $$ </p>
 
 <br/>
 
@@ -562,21 +562,24 @@ $n=2$일 때 증명은 너무 쉽다고 심지어 그림으로 농락하는것�
   ![Alt text](/pictures/mathematics/볼록.png)
   <p> $$ \forall x_1, x_2 \in X, \forall t \in [0, 1]: f(tx_1+(1-t)x_2) \leq tf(x_1)+(1-t)f(x_2) $$ </p>
 * 등호를 빼면 strictly convex function 이다.
+* 방향을 따져서 아래로 볼록이라고 하고 위로 오목이라고도 한다.
 
 ----------------
 
-* 머암튼 $f:(a,b) \longrightarrow R$가 연속인 볼록 함수라면, 젠센 부등식은
+* 머암튼 $f:(a,b) \longrightarrow R$가 연속인 (아래로) 볼록 함수라면, 젠센 부등식은
   <p> $$ \forall x_i \in (a, b), p_i > 0, \sum_{i=1}^{n} {p_i} = 1 \; 일 \, 때 \; f\left(\sum_{i=1}^{n} {p_i x_i}\right) \leq \sum_{i=1}^{n} {p_i f(x_i)} $$
+* 대충 말로 풀면 '평균의 함숫값보다 함숫값의 평균이 더 크다'
+* 볼록 방향 바뀌면 부등호 방향도 바뀜
 * 증명은 [수학적 귀납법](http://suhak.tistory.com/221)으로.
 
 <br/>
 
 ### (가중) 산술기화조화 증명
 * 산술-기화-조화 평균 부등식도 사실 귀납법으로 증명이 된다. 하지만 가중치까지 넣어서 바로 젠센부등식으로 증명해보면
-  * 위로 볼록한 만만한 함수 $f(x)=-\ln(x)$ 로 두고
+  * 아래로 볼록한 만만한 함수 $f(x)=-\ln(x)$ 로 두고
 <p> $$
   \begin{align*}
-    \alpha_1 + \alpha_2 + \cdots + \alpha_n = \alpha, & w_i = \frac{\alpha_i}{\alpha} \\
+    \alpha_1 + \alpha_2 + \cdots + \alpha_n = \alpha,\; & w_i = \frac{\alpha_i}{\alpha} \\
     f(w_1 x_1 + \cdots + w_n x_n) & \leq w_1 f(x_1) + \cdots + w_n f(x_n) \\
     \ln(w_1 x_1 + \cdots + w_n x_n) & \geq w_1 \ln(x_1) + \cdots + w_n \ln(x_n) = \ln(x_1^{w_1} \cdots x_n^{w_n}) \\
     \therefore w_1 x_1 + w_2 x_2 + \cdots + w_n x_n & \geq x_1^{w_1} x_2^{w_2} \cdots x_n^{w_n} \\
@@ -595,7 +598,7 @@ $$ </p>
 * [별별 증명법](https://m.blog.naver.com/yh6613/220458975310)이 다 있다.
 * 귀찮은 기념으로 간단하게만 설명하면
   * $let \; A=\sqrt{a_1^2+a_2^2+\cdots+a_n^2}, \; B=\sqrt{b_1^2+b_2^2+\cdots+b_n^2}$
-  * 산술 기화평균 부둥식에 따라 <br/>
+  * 산술 기화평균 부등식에 따라 <br/>
     $\sqrt{\dfrac{a_i^2}{A^2} \dfrac{b_i^2}{B^2}} \leq \dfrac{1}{2}\left(\dfrac{a_i^2}{A^2}+\dfrac{b_i^2}{B^2}\right)$
   * 이걸 $i=1$ 부터 $n$에 대한 부등식을 모두 더하면 우변은 1이 되고, 결국 $\sum\limits_{i=1}^{n} {\sqrt{a_i^2 b_i^2}} \leq AB$로 증명된다. <br/>
 
@@ -607,7 +610,7 @@ $$ </p>
 {% include blocks.html context1=context1 context2=context2 topic="고등수학_최대와_최소" %}
 
 ### 삼각함수의 정의
-* 호도(radian)법: $l=r\theta, \; S=\frac{1}{2}r^2\theta=\frac{1}{2}rl, \; 1\,rad = \frac{180\degree}{\pi}$
+* 호도(radian)법: $l=r\theta, \; S=\frac{1}{2}r^2\theta=\frac{1}{2}rl, \; 1\,rad = \frac{180\circ}{\pi}$
 * 이 때 $P(x,y)$와 $\theta=\angle xOP$에 대하여, $\sin\theta=\frac{y}{r}, \; \cos\theta=\frac{x}{r}, \; \tan\theta=\frac{y}{x}$이라 정의함
 
 {% capture context1 %}
@@ -638,7 +641,7 @@ $$ </p>
 
 ### 삼각함수 잡다한 공식(1)
 * $\tan\theta = \dfrac{sin\theta}{\cos\theta}$
-* $\tan^2\theta + 1 = \frac{1}{\cos^2 \theta}$
+* $1 + \tan^2\theta = \frac{1}{\cos^2 \theta}$
 * $\sin(\pi-\theta)=\sin\theta, \cos(\pi-\theta)=-\cos\theta, \tan(\pi-\theta)=-\tan\theta$
 * $\sin(\frac{\pi}{2}-\theta)=\cos\theta, \cos(\frac{\pi}{2}-\theta)=\sin\theta, \tan(\frac{\pi}{2}-\theta)=\frac{1}{\tan\theta}$
 
@@ -647,7 +650,7 @@ $$ </p>
 * 사인법칙 $\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}=2R$
 * 제1 코사인법칙 $a=b\cos C + c\cos B$
 * 제2 코사인법칙 $a^2=b^2+c^2-2bc\cos A$
-* $\vartriangle ABC$의 넓이 $S=\frac{1}{2}bc \sin A = \sqrt{s(s-a)(s-b)(s-c)} (2s=a+b+c)$
+* $\vartriangle ABC$의 넓이 $S=\frac{1}{2}bc \sin A = \sqrt{s(s-a)(s-b)(s-c)} \quad (2s=a+b+c)$
 
 {% capture context1 %}
 증명법은 아래에
@@ -686,8 +689,8 @@ $$ </p>
 
   수식놀음이다.
   
-* 벡터로 쉽게 증명가능하다. \mathbf{c}=\mathbf{a}-\mathbf{b}로 두면  
-  * c^2=\mathbf{c} \cdot \mathbf{c}=(\mathbf{a}-\mathbf{b})\cdot(\mathbf{a}-\mathbf{b})=a^2+b^2-2ab\cos\theta
+* 벡터로 쉽게 증명가능하다. $\mathbf{c}=\mathbf{a}-\mathbf{b}$로 두면  
+  * $c^2=\mathbf{c} \cdot \mathbf{c}=(\mathbf{a}-\mathbf{b})\cdot(\mathbf{a}-\mathbf{b})=a^2+b^2-2ab\cos\theta$
 
 <br/>
 
@@ -695,7 +698,7 @@ $$ </p>
 이걸 증명해야하나 싶긴한데
 * $S=\frac{1}{2}bc \sin A$
 * $\sin^2 A = 1-\cos^2 A = (1+\cos A)(1-\cos A)이고 \cos A=\frac{b^2+c^2-a^2}{2bc}$이다.
-* 쑤셔넣고 정리하면 $\sin A=\frac{2}{bc}\sqrt{s(s-a)(s-b)(s-c)} (2s=a+b+c)$라서 증명된다.
+* 쑤셔넣고 정리하면 $\sin A=\frac{2}{bc}\sqrt{s(s-a)(s-b)(s-c)} \; (2s=a+b+c)$라서 증명된다.
 
 {% endcapture %}
 
@@ -706,7 +709,7 @@ $$ </p>
 ## 수학 1
 
 ### 행렬
-* $A=(a_ij)=\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{pmatrix}$
+* $A=(a_{ij})=\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{pmatrix}$
 * $A \times B = \begin{pmatrix} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22} \\\\ a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}\end{pmatrix}$
 * $A^{-1}=\dfrac{1}{a_{11} a_{22}-a_{12} a_{21}}{\begin{pmatrix} a_{22} & -a_{12} \\\\ -a_{21} & a_{11} \end{pmatrix} }$
 
@@ -847,13 +850,13 @@ $g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
 
 ### 일반적 역행렬
 <p> $$ \begin{align} A^{-1} &= \frac{1}{\left|A\right|} adj(A) \\
-\text{where }adj(A) &= [\bar{A_ij}]^t, \; \bar{A_ij} = (-1)^{i+j}\left|M_{ij}\right| \end{align}$$ </p>
+\text{where }adj(A) &= [\bar{A_{ij}}]^t, \; \bar{A_{ij}} = (-1)^{i+j}\left|M_{ij}\right| \end{align}$$ </p>
 
 어... 난감하다 <br/>
 하나씩 보자
 
 * $adj(A)$
-  * Adjoint Matrix로써 위 정의 $adj(A) = [\bar{A_ij}]^t$ 를 따른다.
+  * Adjoint Matrix로써 위 정의 $adj(A) = [\bar{A_{ij}}]^t$ 를 따른다.
 
 * $M_{ij}$
   * Minor matrix
@@ -888,7 +891,7 @@ $g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
   * $0$이 아닌 실수 $a$에 대하여 $a^0=1$, $a^{-n}=\dfrac{1}{a^n}$
 
 2. 유리수 범위로 확장
-  * $a>0$에 대하여 $a^{\frac{m}{n}}=\sqrt[n]{m}$
+  * $a>0$에 대하여 $a^{\frac{m}{n}}=\sqrt[n]{a^m}$
 
 3. 실수 범위로 확장
   * $a>0, b>0$에 대하여 $a^x a^y=a^{x+y}, \dfrac{a^x}{a^y} = a^{x-y}, (a^x)^y=a^{xy}, (ab)^x=a^x b^x$
@@ -898,9 +901,9 @@ $g \circ f$를 $G \times F$로 나타낼 수 있다는 것. <br/>
 ### 로그의 성질
 $a>0$, $a\neq 1$, $x>0$, $y>0$일 때
 * $\log_a{1}=0, \log_a{a}=1$
-* $\log_a{xy}=\log_a{x}+log_a{y}, \log_a{\dfrac{x}{y}}=\log_a{x}-\log_a{y}$
+* $\log_a{xy}=\log_a{x}+\log_a{y}, \; \log_a{\dfrac{x}{y}}=\log_a{x}-\log_a{y}$
 * $\log_a{x^n}=n\log_a{x}$
-* $\log_a{b}=\dfrac{\log_c{b}}{\log_c{a}}, \log_a{b}=\dfrac{1}{\log_b{a}}$
+* $\log_a{b}=\dfrac{\log_c{b}}{\log_c{a}}, \; \log_a{b}=\dfrac{1}{\log_b{a}}$
 
 <br/>
 
@@ -912,13 +915,13 @@ $a>0$, $a\neq 1$, $x>0$, $y>0$일 때
 {% capture context2 %}
 
 ### 로그 성질 증명
-$\log_a{xy}=\log_a{x}+log_a{y}$
+$\log_a{xy}=\log_a{x}+\log_a{y}$
 * $\log_a{x}=m,\; \log_a{y}=n$이라 하면, $x=a^m,\; y=a^n,\; xy=a^{m+n}$에서 $\log_a{x}+\log_a{y}=m+n=\log_a{xy}$
 
 <br/>
 
 $\log_a{b}=\dfrac{\log_c{b}}{\log_c{a}}$
-* $\log_a{b}=x$라 하면 $b=a^x, \; \log_c{b}=log_c{a^x}=x\log_c{a}, \; \log_a{b}=x=\dfrac{\log_c{b}}{\log_c{a}}$
+* $\log_a{b}=x$라 하면 $b=a^x, \; \log_c{b}=\log_c{a^x}=x\log_c{a}, \; \log_a{b}=x=\dfrac{\log_c{b}}{\log_c{a}}$
 
 <br/>
 
@@ -941,7 +944,7 @@ $\forall a, b \in G$에 대하여, $\phi(a \circ b) = \phi(a) * \phi(b)$ 를 만
 
 참고로 [Isomorphism](https://ko.wikipedia.org/wiki/%EB%8F%99%ED%98%95_%EC%82%AC%EC%83%81)(동형 사상)이란, <br/>
 서로 구조가 같은 두 대상 사이에, 모든 구조를 보존하는 사상이라고 한다. <br/>
-그러니까 어떤 구조 $X$를 함수 $f:X \longrightarrow Y$ 에 넣어서 $Y$가 됬어도, $Y$ 안에 $X$의 모든 정보가 담겨있다는 것이며 <br/>
+그러니까 어떤 구조 $X$를 함수 $f:X \longrightarrow Y$ 에 넣어서 $Y$가 됐어도, $Y$ 안에 $X$의 모든 정보가 담겨있다는 것이며 <br/>
 달리 말하자면 $f^{-1}:Y \longrightarrow X$가 존재하며 $f$는 일대일 대응이다.
 
 -------------------
@@ -985,11 +988,19 @@ $y=\exp(x)$의 그 역함수는 바로바로 $y=\ln(y)$가 된다. <br/>
   * 일단 임의의 자연수 $n$에 대하여 $f\left(\frac{1}{n}\right)$이 유일함을 보일 수 있다 (아래의 $\exp(\frac{1}{3}) = \sqrt[3]{e}$ 부분과 같이)
   * 그럼 임의의 실수 $x$에 대해 위 조건을 만족하는 $f(x)=\alpha, \; \beta=\alpha+\epsilon(\neq 0)$ 2개의 값이 존재한다고 가정하자
   * 그럼 임의의 자연수 n에 대하여, <br/>
-    $f\left(x-\frac{1}{n}\right)=\alpha \div f\left(\frac{1}{n}\right) < f(x) = \beta = \alpha+\epsilon < f\left(x+\frac{1}{n}\right) = \alpha * f\left(\frac{1}{n}\right)$
+    $f\left(x-\frac{1}{n}\right)=\alpha \div f\left(\frac{1}{n}\right) < f(x) = \beta = \alpha+\epsilon < f\left(x+\frac{1}{n}\right) = \alpha \times f\left(\frac{1}{n}\right)$
   * 근데 $\epsilon > 0$이라고 가정하면, <br/>
     $\alpha+\epsilon < \alpha * f\left(\frac{1}{n}\right), \; 1+\frac{\epsilon}{\alpha} < f\left(\frac{1}{n}\right)$ <br/>
     여기서 식은 임의의 자연수 $n$에 대해서 성립해야 하므로, $n$를 미친놈마냥 크게 두면 그딴 $\epsilon$은 존재하지 않음
   * $\epsilon < 0$일때도 마찬가지로 하면 된다. 아무튼 모순임.
+- 보충:
+  * 우선 $f(1) = c > 0$라고 하자.
+  $y = x$ 대입하면 $f(x+x)=f(x) \cdot f(x) = f(x) * f(x)$.
+  수학적 귀납법으로 자연수 $n$에 대해 $f(nx) = f(x) * f(x) * \cdots * f(x)$.
+  $x = \frac{1}{n}$ 넣으면 $f(1)=f(\frac{1}{n})^n$이고 따라서 $f\left(\frac{1}{n}\right) = \sqrt[n]{c}$.
+  * $c > 1$일 때 $f(\frac{1}{n}) \geq 1$이고 따라서 $f\left(x+\frac{1}{n}\right) = f(x) \cdot f\left(\frac{1}{n}\right) > f(x)$.
+  그래서 $f\left(x-\frac{1}{n}\right) < f(x) < f\left(x+\frac{1}{n}\right)$.
+  * $c < 1$일 때는 부등호 반대로 하면 되고, $c=1$이면 $f \equiv 1$임을 적당히 잘 보일 수 있음
 
 ----------------------
 
@@ -1018,9 +1029,9 @@ $\exp(\sqrt{2})$ 역시 어떤 양의 실수 곱셈식으로 매핑될 것이며
 {% include blocks.html context1=context1 context2=context2 topic="수학1_지수_로그" %}
 
 ### 수열
-* 등차수열 $a_n=a+(n-1)d, S_n=\dfrac{n\{2a+(n-1)d\}}{2}$
-* 등비수열 $a_n=ar^{n-1}, S_n=\dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1} (a\neq 1)$
-* $\sum\limits_{k=1}^{n} {k^2} = \dfrac{n(n+1)(2n+1)}{6}, \quad \sum\limits_{k=1}^{n} {k^3} = \left\\{\dfrac{n(n+1)}{2}\right\\}^2$
+* 등차수열 $a_n=a+(n-1)d, \; S_n=\dfrac{n(2a+(n-1)d)}{2}$
+* 등비수열 $a_n=ar^{n-1}, \; S_n=\dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1} \; (r \neq 1)$
+* $\sum\limits_{k=1}^{n} {k^2} = \dfrac{n(n+1)(2n+1)}{6}, \quad \sum\limits_{k=1}^{n} {k^3} = \left(\dfrac{n(n+1)}{2}\right)^2$
 * $\sum\limits_{k=1}^{n} {\dfrac{1}{k(k+1)}} = \sum\limits_{k=1}^{n} {\dfrac{1}{k} - \dfrac{1}{k+1}} = 1-\dfrac{1}{n+1}$
 * $\sum\limits_{k=1}^{n} {\dfrac{1}{\sqrt{k} + \sqrt{k-1}}} = \sum\limits_{k=1}^{n} {\sqrt{k} - \sqrt{k-1}} = \sqrt{n}$
 
@@ -1030,16 +1041,16 @@ $\exp(\sqrt{2})$ 역시 어떤 양의 실수 곱셈식으로 매핑될 것이며
 
 {% capture context2 %}
 ### 등차수열의 합
-* $S_n = a + (a+d) + (a+2d) + \cdots + \\{a+(n-1)d\\}$
-* $S_n = \\{a+(n-1)d\\} + \\{a+(n-2)d\\} + \\{a+(n-3)d\\} + \cdots + a$
-* $2S_n = \\{2a+(n-1)d\\} \times n, S_n = \frac{n\\{2a+(n-1)d\\}}{2}$
+* $S_n = a + (a+d) + (a+2d) + \cdots + (a+(n-1)d)$
+* $S_n = (a+(n-1)) + (a+(n-2)d) + (a+(n-3)d) + \cdots + a$
+* $2S_n = (2a+(n-1)d) \times n, \; S_n = \frac{n(2a+(n-1)d)}{2}$
 
 <br/>
 
 ### 등비수열의 합
 * $S_n = a+ar+ar^2+\cdots\+ar^{n-1}$
 * $rS_n= ar+ar^2+ar^3+\cdots\+ar^{n}$
-* $(1-r)S_n=a-ar^n = a(1-r^n), \; S_n = \dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1} (r\neq 1)$
+* $(1-r)S_n=a-ar^n = a(1-r^n), \; S_n = \dfrac{a(1-r^n)}{1-r}=\dfrac{a(r^n-1)}{r-1} \; (r\neq 1)$
 
 <br/>
 
@@ -1092,7 +1103,7 @@ $\dfrac{1}{a_n a_{n+1}} = \dfrac{1}{a_{n+1}-a_{n}}\left(\dfrac{1}{a_n} - \dfrac{
   * $a_n = a_1 \prod\limits_{k=1}^{n-1} {f(k)}$
 
 3. $a_{n+1} = pa_n + q \; (p\neq 0, p\neq 1, q\neq 0)$
-  * $a_{n+1}-\alpha = p(a_n - \alpha)$ 꼴로 변형$(\alpha=\frac{q}{p+1})$하면
+  * $a_{n+1}-\alpha = p(a_n - \alpha)$ 꼴로 변형 $(\alpha=\frac{q}{1-p})$하면
   * $a_n=(a_1-\alpha)p^{n-1}+\alpha$
 
 {% endcapture %}
@@ -1122,7 +1133,7 @@ $\dfrac{1}{a_n a_{n+1}} = \dfrac{1}{a_{n+1}-a_{n}}\left(\dfrac{1}{a_n} - \dfrac{
 그럼 이제 서로 동치인건 알겠으니, <br/>
 자연수의 정렬성과 (모든 $0$이 아닌 자연수는 어떤 자연수 $+1$이다) 라는 사실이 먼저 증명되는가, <br/>
 수학적 귀납법이 먼저 증명되는가 라는 문제가 있는데 <br/>
-자연수 체계를 묘사하는 5개의 공리을 모아놓은 [페아노 공리계](https://ko.wikipedia.org/wiki/%ED%8E%98%EC%95%84%EB%85%B8_%EA%B3%B5%EB%A6%AC%EA%B3%84) 에서는
+자연수 체계를 묘사하는 5개의 공리를 모아놓은 [페아노 공리계](https://ko.wikipedia.org/wiki/%ED%8E%98%EC%95%84%EB%85%B8_%EA%B3%B5%EB%A6%AC%EA%B3%84) 에서는
 아무래도 자연수의 정렬성을 먼저 공리로 두고 귀납법을 증명하는거 같긴 한데 <br/>
 솔직히 잘 모르겠다 뭐래는건지
 
@@ -1240,7 +1251,7 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 
 ### 무한급수와 수열의 극한 사이의 관계 증명
 <p> $$ \left(\lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {b_n} = \alpha \right) \; \wedge \; \left(\forall n \in \mathbb{N}, \; a_n \leq c_n \leq b_n \right) \Rightarrow \lim\limits_{n \to \infty} {c_n} = \alpha $$ </p>
-* $ a_n = S_n - S_n-1 (n \geq 2), \lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {S_n - S_{n-1}} = S-S = 0 $
+* $ a_n = S_n - S_{n-1} (n \geq 2), \lim\limits_{n \to \infty} {a_n} = \lim\limits_{n \to \infty} {S_n - S_{n-1}} = S-S = 0 $
 * 대우로, $\lim\limits_{n \to \infty} {a_n} \neq 0$ 이면 무한급수 $\sum\limits_{n=1}^{\infty} {a_n}$은 발산함.
 
 {% endcapture %}
@@ -1314,8 +1325,9 @@ $\lim\limits_{n \to \infty} {a_n} = \alpha, \; \lim\limits_{n \to \infty} {b_n} 
 <p> $$\begin{align}
    a\sin\theta+b\cos\theta &= \sqrt{a^2+b^2}\left(\dfrac{b}{\sqrt{a^2+b^2}}\sin\theta+\dfrac{b}{\sqrt{a^2+b^2}}\cos\theta \right) \\
                            &= \sqrt{a^2+b^2}(\sin\beta\sin\theta+\cos\beta\cos\theta) \\
-                           &= \sqrt{a^2+b^2}\sin(\theta-\alpha)
-\end{align}$$</p> 
+                           &= \sqrt{a^2+b^2}\cos(\theta-\beta)
+\end{align}$$</p>
+* 아님 그냥 간단하게 $\sin(\theta+\alpha) = \sin\left(\theta+\frac{\pi}{2}-\beta\right) = cos(\theta - \beta)$
 
 <br/>
 
@@ -1440,7 +1452,7 @@ $f:\; \mathbb{R}^n \to \mathbb{R}$가 $A \subset \mathbb{R}^n$에서 연속이�
 <br/>
 
 ### 자연상수 e
-고등학교에서는 교육과정 순서때문에 $e$를 $\lim\limits_{x\to 0} {1+x}^{\frac{1}{x}}$로 정의하지만,  
+고등학교에서는 교육과정 순서때문에 $e$를 $\lim\limits_{x\to 0} (1+x)^{\frac{1}{x}}$로 정의하지만,  
 아무래도 갑툭튀 하는 감이 없지않아 있다.   
 
 엄밀한 증명 순서는 자연로그 $\ln{x}=\int_{1}^{x} {\frac{1}{t}dt}$를 먼저 정의한 이후 $\ln{x}=1$을 만족하는 $x$값을 $e$라고 정의하는게 가장 명확한 정의라고 한다.
@@ -1458,7 +1470,7 @@ $f:\; \mathbb{R}^n \to \mathbb{R}$가 $A \subset \mathbb{R}^n$에서 연속이�
 
 $e$는 매우 많은 성질을 가지고 있다. 몇가지만 나열해보자면
 1. [초월수](https://ko.wikipedia.org/wiki/%EC%B4%88%EC%9B%94%EC%88%98)이다. 모든 실수 초월수는 무리수라서 역시 무리수이다. [증명](https://ko.wikipedia.org/wiki/E_(%EC%83%81%EC%88%98)#%EB%AC%B4%EB%A6%AC%EC%88%98)
-2. $x=0$에서 지수함수 $f(x)=a^x$의 기울기가 0이 되는 $a$이며, 동시에 $ce^x$는 $\frac{df(x)}{dx}=f(x)$ 인 유일한 함수이다.
+2. $x=0$에서 지수함수 $f(x)=a^x$의 기울기가 1이 되는 $a$이며, 동시에 $ce^x$는 $\frac{df(x)}{dx}=f(x)$ 인 유일한 함수이다.
 3. 테일러 급수에 의해 $e=\sum\limits_{n=0}^{\infty} {\dfrac{1}{n!}}$
 4. 복소수 범위로 확장된 지수함수 $a^{i\theta}$에서, $a^{i\pi}=-1$ 로 매칭시키는 상수이다. 나중에 오일러 공식 할때 다룰 예정
 5. 확률이 $1/n%$인 뽑기를 $n$번 뽑았을 때, 한번도 안 뽑힐 확률은 $n \to \infty$일 때 $1/e$로 수렴한다.  
@@ -1481,8 +1493,8 @@ $e$는 매우 많은 성질을 가지고 있다. 몇가지만 나열해보자면
 ### 미분
 * $x=a$에서 연속인 함수 $f(x)$의 미분계수
   $f'(a) = \lim\limits_{\Delta x\to 0} {\dfrac{\Delta y}{\Delta x}} = \lim\limits_{\Delta x\to 0} {\dfrac{f(a+\Delta x)-f(a)}{\Delta x}}$  
-* 도함수 $f'(x)=\dfrac{d}{dx}f(x) = \lim\limits_{\Delta x\to 0} {\dfrac{f(x+\Delta x)-f(x)}{h}} 
-= \lim\limits_{h\to 0} {\dfrac{f(x+h)-f(x)}{h}} = \lim\limits_{\Delta t\to x} {\dfrac{f(t)-f(x)}{t-x}}$  
+* 도함수 $f'(x)=\dfrac{d}{dx}f(x) = \lim\limits_{\Delta x\to 0} {\dfrac{f(x+\Delta x)-f(x)}{\Delta x}} 
+= \lim\limits_{h\to 0} {\dfrac{f(x+h)-f(x)}{h}} = \lim\limits_{t\to x} {\dfrac{f(t)-f(x)}{t-x}}$  
 
 {% capture context1 %}
 ### 평균변화율
@@ -1496,11 +1508,11 @@ $e$는 매우 많은 성질을 가지고 있다. 몇가지만 나열해보자면
 * 함수 $f(x)$의 $a\to a+\Delta x$의 평균변화율의 $\Delta x\to 0$ 일 때의 극한값
 * $f'(a) = \lim\limits_{\Delta x\to 0} {\frac{f(a+\Delta x)-f(a)}{\Delta x}}$이 존재 할 때(우극한 = 좌극한)    
   $f(x)$는 $x=a$에서 미분가능하다고 하며, 이 값을 $y=f(x)$의 미분계수라고 한다.  
-* $f(x)$가 어떤 구간에 속하는 $x$에서 모두 미분 가능할 때, $f(x)$는 그 구간에서 미분가능하다고 한다.
+* $f(x)$가 어떤 구간에 속하는 $x$에서 모두 미분가능할 때, $f(x)$는 그 구간에서 미분가능하다고 한다.
 
 <br/>
 
-* 미분가능성한 함수는 연속인 함수의 충분조건이다.  
+* 미분가능한 함수는 연속인 함수의 충분조건이다.  
   * $f(x)$가 $x=a$에서 미분가능 $\Rightarrow f(x)$는 $x=a$에서 연속
 
 ![Alt text](/pictures/mathematics/미분가능성.JPG)  
@@ -1523,8 +1535,8 @@ $e$는 매우 많은 성질을 가지고 있다. 몇가지만 나열해보자면
 1. $f(x)=x^n \Rightarrow f'(x)=nx^{n-1}$
 2. $f(x)=c \Rightarrow f'(x)=0$
 3. ${cf(x)}'=cf'(x)$
-4. ${f(x)\pm g(x)}'=f'(x)\pm g'(x)$
-5. ${f(x)g(x)}'=f'(x)g(x) + f(x)g'(x)$
+4. $\{f(x)\pm g(x)\}'=f'(x)\pm g'(x)$
+5. $\{f(x)g(x)\}'=f'(x)g(x) + f(x)g'(x)$
 
 {% endcapture %}
 
@@ -1544,7 +1556,7 @@ $e$는 매우 많은 성질을 가지고 있다. 몇가지만 나열해보자면
     * $\dfrac{d^n y}{dx^n}= \dfrac{d^n f(x)}{dx^n}= \dfrac{d^n }{dx^n}f(x)$
     
 2. 라그랑주(Lagrange) 표기법
-    * $f^{(1)} = f', \; f^{(2)} = f'', \; f^{(3)}=f''', \quad f^{(n)} = f\, \overset{n}{\overbrace{''\cdots'}}$
+    * $f^{(1)} = f', \; f^{(2)} = f'', \; f^{(3)}=f''', \quad f^{(n)} = f\, \overset{n}{\overbrace{' '\cdots'}}$
     
 3. 뉴턴(Newton) 표기법
     * $\overset{1}{\dot{y}}=\dot{y}, \; \overset{2}{\dot{y}}=\ddot{y}, \; \overset{3}{\dot{y}}=\dddot{y}, \quad \overset{n}{\dot{y}}$
@@ -1565,7 +1577,7 @@ $e$는 매우 많은 성질을 가지고 있다. 몇가지만 나열해보자면
   
 differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a\mathbb{x}+\mathbb{y})=aL(\mathbb{x})+L(\mathbb{y}))$ 근사 함수 $L(\mathbb{x})=\mathbb{Ax}$를 구하는 것이고,
 이 때 $\mathbb{x}=\mathbb{a}$에서 differential(미분)의 계수는 각 방향으로의 기울기값이 되며, 그렇기 때문에 기울기 == 미분'계수'가 된다  
-* $dy=\frac{\partial y}{\partial x_1}dx_1+\frac{\partial y}{\partial x_1}dx_1+ \cdots + \frac{\partial y}{\partial x_n}dx_n$ 에서 $dx_i$의 계수: $x_i$방향으로의 기울기
+* $dy=\frac{\partial y}{\partial x_1}dx_1 + \frac{\partial y}{\partial x_2}dx_2+ \cdots + \frac{\partial y}{\partial x_n}dx_n$ 에서 $dx_i$의 계수: $x_i$방향으로의 기울기
 
 <br/>
 
