@@ -3081,7 +3081,7 @@ TBD
 
 ## Essence of linear algebra
 위에도 한번 쓴거같은데 이 채널 좋음 한번 보십쇼  
-암튼 이 채널은 총 12개의 10분따리 정도의 영상으로 구성되어 있는데, 선형대수에서 전반적으로 중요한 개념을 잘 설명해 준다고 생각했고  
+암튼 이 채널은 총 14개의 10분따리 정도의 영상으로 구성되어 있는데, 선형대수에서 전반적으로 중요한 개념을 잘 설명해 준다고 생각했고  
 본격적으로 선대를 파고들기 전에 예고편 보듯이 보면 꽤 도움이 될 것 같음
 
 {% comment %}
@@ -3100,7 +3100,7 @@ TBD
 * CS(computer science)에서의 vector: 수의 배열. == list
 * 수학에서의 vector: 일반적인 개념으로, 서로 덧셈이 되면서 숫자와 곱셈이 되는 어떤 것
 
-더 일반적인 vector의 정의는 12강에서 다룰 예정이지만 이미 [고등학교 수학 - 벡터](/posts/mathematics/#벡터) 에서 해버렸구나  
+더 일반적인 vector의 정의는 14강에서 다룰 예정이지만 이미 [고등학교 수학 - 벡터](/posts/mathematics/#벡터) 에서 해버렸구나  
 
 ![Alt text](/pictures/mathematics/선대_1.JPG)  
 아무튼 일단 벡터를 시작점이 원점인 화살표로 생각하면, 물리학에서의 vector와 CS에서의 vector가 1:1 대응이 됨을 확인할 수 있다.  
@@ -3139,6 +3139,14 @@ TBD
 {% include blocks.html context1=context1 context2=context2 topic="선대_유튜브1" %}
 
 ### 2. Linear combinations, span, and basis vectors
+* `기저벡터` - 벡터 공간의 임의의 벡터에게 선형결합으로서 유일한 표현을 부여하는 벡터들
+  * 그 벡터 공간을 선형생성하는 선형독립인 벡터
+  * 기저벡터가 \vec{v}, \vec{w} 일 때 \vec{a} = [x, y] = x \cdot \vec{v} + y \cdot \vec{w} 를 뜻함 
+* `선형결합` - a\vec{v} + b\vec{w} + c\vec{u} + \cdots
+* `span` - 기저벡터의 선형결합으로 구성되는 벡터들의 집합(공간)
+* `linearly dependent` -  c_1 a_1 + c_2 a_2 + \cdots + c_n a_n = 0 의 자명하지 않은(\forall c_i = 0) 해가 존재 
+  * 혹은, a_i = c_1 a_1 + c_2 a_2 + \cdots + c_{i-1} a_{i-1} + c_{i+1} a_{i+1} + \cdots + c_n a_n
+  * 어떤 기저벡터 하나가 나머지 기저벡터들이 이루는 span에 이미 포함이 되어 있어 span이 전혀 확장되지 않음
 
 {% capture context1 %}
 ### 기저벡터(basis vector)
@@ -3203,7 +3211,6 @@ xy-좌표계를 기준으로 생각하면, \hat{i}, \hat{j} 라는 굉장히 특
 위에서 기저벡터로 임의의 벡터를 사용할 수 있다고 했는데 실제로 그렇게 하지는 않고, 
 어떤 `벡터공간(vector space)`의 `기저(basis)`는 그 벡터 공간을 span 하는 linearly independent 한 벡터의 집합으로 정의한다. 
 
-
 {% endcapture %}
 
 {% capture context2 %}
@@ -3211,6 +3218,199 @@ xy-좌표계를 기준으로 생각하면, \hat{i}, \hat{j} 라는 굉장히 특
 
 {% include blocks.html context1=context1 context2=context2 topic="선대_유튜브2" %}
 
+### 3. Linear transformations and matrices 
+* `선형변환`: 
+  * 변환: 입력 벡터를 출력 벡터로 변환시키는 함수
+  * '선형' 변환: 직선을 유지하는 변환
+  * 벡터 공간에 대한 선형 변환은, 모든 기저 벡터의 선형변환된 값만으로도 표현할 수 있다.
+  * \hat{i} \to [a, c], \hat{j} \to [b, d]
+* `행렬`: 기저벡터의 선형변환값을 한군데에 합쳐봤습니다
+  * \hat{i} \to [a, c], \hat{j} \to [b, d] \Rightarrow \begin{bmatrix} a & b \\\\ c & d \end{bmatrix}
+  *  하나의 행렬은 하나의 선형변환과 같다
+
+{% capture context1 %}
+### 선형 변환(Linear transformation)
+* `transformation` 이라는 말은 `function`과도 같다. 입력 벡터를 받아서 출력 벡터를 반환한다.
+  * 굳이 transformation 이라는 말을 쓰는 이유는, 입력 벡터가 transformation 출력 벡터로 움직이는 것과 같기 때문
+  * 아래와 같이, 벡터 공간에 대한 선형 변환은 전체 grid의 변환과 같다
+
+![Alt text](/pictures/mathematics/선대_3_1.JPG){: width="44%" height="44%"} -> ![Alt text](/pictures/mathematics/선대_3_2.JPG){: width="44%" height="44%"}  
+-> ![Alt text](/pictures/mathematics/선대_3_3.JPG){: width="44%" height="44%"}
+
+* 아래처럼, 임의의 transformation 은 어떤 것이든 될 수 있으며, 복잡하다  
+[Alt text](/pictures/mathematics/선대_3_4.JPG)
+
+* 하지만 `선형(linear)` 조건이 붙는다면 윗윗 마름모꼴 격자와 같은 단순한 형태로 변하게 된다
+  * 조건 1: 모든 직선은 변형 이후에도 직선의 형태를 유지해야 한다
+    * 종특: 격자선이 모두 평행하며, 간격이 일정하게 유지된다!
+  * 조건 2: 원점은 제 자리에 고정되어야 한다
+   
+* 이러한 선형 변환의 특성은 다음과 같은 중요한 성질을 가지게 한다.  
+> 임의의 선형 변환을 표현하는데에는, 원래 좌표계의 기저(\hat{i}, \hat{j})가 변환되는 위치만 있으면 충분하다! 
+
+![Alt text](/pictures/mathematics/선대_3_5.JPG){: width="44%" height="44%"} -> ![Alt text](/pictures/mathematics/선대_3_6.JPG){: width="44%" height="44%"}
+
+  * 즉, 임의의 벡터(==점) \vec{v}=x\hat{i}+y\hat{j} 의 선형변환은 \vec{v}'=x\hat{i}'+y\hat{j}' 와 같다.
+
+<br/>
+
+### 행렬(matrix)
+* 위에서 언급했듯이, 임의의 선형 변환은 변환된 기저의 위치만으로 표현 가능하다.
+  * 즉, 2개의 기저벡터를 가지는 2차원 벡터 공간에서는 \hat{i}' = [a, c], \hat{j}' = [b, d] 만 알면 충분하다
+* 변환된 기저벡터를 \hat{i}' = [a, c], \hat{j}' = [b, d] 처럼 일일이 표기하긴 귀찮으니, 하나로 합쳐보자,
+  * \hat{i}' = [a, c], \hat{j}' = [b, d] \to \begin{bmatrix} a & b \\\\ c & d \end{bmatrix}  
+    ![Alt text](/pictures/mathematics/선대_3_7.JPG)
+  * 이것이 `행렬(matrix)` 의 탄생이다.
+> 즉 행렬은 선형 변환의 가장 간단한 표현 방법 정도로 볼 수 있다. 물론 행렬과 선형변환은 일대일 대응된다.
+ 
+* 선형변환 파트에서 설명했듯이, 임의의 벡터 [x, y]의 선형변환은 x\hat{i}'+y\hat{j} 과 같으므로, 이를 행렬로 표현해 보면 아래와 같다
+  ![Alt text](/pictures/mathematics/선대_3_8.JPG)
+  * 즉 벡터의 선형변환을, '선형변환(행렬) * 벡터 = 변환된 벡터' 과 같이 표현한 것
+
+* linearly dependent한 2개의 벡터가 결합된 행렬의 경우, 아래처럼 격자가 선 하나로 압축된다.
+  ![Alt text](/pictures/mathematics/선대_3_9.JPG)
+  
+{% endcapture %}
+
+{% capture context2 %}
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="선대_유튜브3" %}
+
+### 4. Matrix multiplication as composition
+* 행렬 곱셈은 두 일차변환의 결합과 같다
+* ![Alt text](/pictures/mathematics/선대_4_3.JPG)
+
+
+{% capture context1 %}
+### composition
+* 두개 이상의 선형변환을 결합하는 것
+  * ex) 90도 회전 -> sheer
+  * 이러한 선형변환의 composition 결과도, 마찬가지로 하나의 선형변환이다.  
+  ![Alt text](/pictures/mathematics/선대_4_1.JPG)
+* 선형변환의 결합 순서에 따라, composition 결과가 다르다.  
+  
+<br/>  
+  
+### Matrix multiplication     
+* 이러한 행렬의 composition 은, 두 행렬의 product 로 나타낸다.
+  * 먼저 적용되는 변환이 오른쪽에  
+  ![Alt text](/pictures/mathematics/선대_4_2.JPG)
+* 이러한 행렬의 곱셈 결과로 나오는 composition matrix 도, 결국 \hat{i}와 \hat{j}의 최종 변환 결과로 구할 수 있다.
+* 먼저 \hat{i}의 변환 결과를 구해보자면  
+![Alt text](/pictures/mathematics/선대_4_3.JPG)
+  * 먼저, M_1을 거쳐가면 \hat{i}는 M_1의 첫번째 열인 [e, g]으로 변환된다.
+  * 그 이후 M_2를 거치면, 행렬 M_2와 벡터 [e, g]의 곱인 [ae+bg, ce+dg]로 최종 변환된다.
+  * 즉 M_2 M_1의 \hat{i}'(첫번째 열)은 \hat{i} \to [e, g] \to [ae+bd, cd+dg]가 된다.  
+* \hat{j} 에 대해서도 변환하여 최종 결과를 구해보면, 다음과 같다.  
+![Alt text](/pictures/mathematics/선대_4_4.JPG)   
+
+{% endcapture %}
+
+{% capture context2 %}
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="선대_유튜브4" %}
+
+### 6. The determinant 
+* `행렬식(determinant)`: 벡터 공간상의 `넓이(area)`가 어떤 비율로 변하는가? 를 표현
+* 변환 이후 영역의 차원이 낮아지면 0이 되며, 공간이 뒤집어지면 음수가 된다. 
+
+{% capture context1 %}
+### 행렬곱과 영역 변화
+[고등학교 수학 - 일차변환](/posts/mathematics/#일차변환) 참조  
+
+* matrix multiplication 이후, 기존의 grid line이 얼마나 넓어지고 축소되었는지를 표현하고 싶다.
+  * 한 축마다 숫자 하나씩 말고, 다 모아놓고 하나의 숫자만으로 표현하고 싶다.
+  * 이를 위해, 벡터 공간상의 `넓이(area)`가 얼마의 비율로 변하는지를 표현하자
+  * 이것이 `행렬식(determinant)` 의 개념이 된다.
+
+![Alt text](/pictures/mathematics/선대_6_1.JPG)   
+
+* 3.에서 얘기한 선형 변환의 특성상, 모든 grid line의 간격은 일정하고 평행하다
+  * 때문에 grid와 평행한 변을 가지는 사각형에 대해선 모두 같은 변환 비율을 가진다.
+  * 미분 적분 개념으로, gird square에서 넓이비가 일정함이 성립하면 사각형이 아닌 꼴에 대해서도 성립한다. 잘게잘게 쪼개서 사각형으로 만들면 되니까
+  
+* 아무튼 그래서 determinant가 0이면, 이는 곧 해당 transformation의 span이 기존 벡터 공간보다 최소 한 차원 이상 낮다는 것을 뜻한다.
+  * -> 행렬의 column vector가 서로 linearly dependent 하다 
+
+![Alt text](/pictures/mathematics/선대_6_2.JPG){: width="44%" height="44%"} -> ![Alt text](/pictures/mathematics/선대_6_3.JPG){: width="44%" height="44%"}   
+
+* determinant는 음의 값을 가질 수도 있는데, 
+  * 이는 벡터공간이 점점 축소되다가(<1), 차원이 하나 낮아지고(=0), 그 뒤로 공간이 뒤집어지는(<0) 연속적인 과정을 생각해보면 좋다.
+  * 즉, 결론적으로 좌표축의 `orientation`이 변했음을 의미한다 (invert the orientation of space).
+  * 종이의 앞면을 보고 있는데, 변환 이후 뒷면으로 뒤집어졌다 정도로 생각할수도 있다. 
+  * 아무튼 determinant의 절댓값은, 스케일링된 비율을 뜻한다.
+  
+{% endcapture %}
+
+{% capture context2 %}
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="선대_유튜브6" %}
+
+### 7. Inverse matrices, column space and null space
+* `Linear system of equations`: A, \vec{v}가 주어졌을 때 \vec{x} 찾기
+  * 즉 A로 변환했을 때 \vec{v}가 되는 것 찾기
+* `역행렬(inverse matrix)`: \vec{v}를 \vec{x}로 보내는 행렬.
+  * \vec{x}=A^{-1}\vec{v} 로 바로 구할 수 있다
+* `column space` of A: A의 column, 즉 변환된 기저들이 이루는 벡터공간 == span of A 
+* `rank`: column space의 차원
+  * `full rank`: rank == # of column
+* `null space`, `kernel` of A: A를 통해 원점으로 변환되는 점들의 집합. A\vec{x}=\vec{0} 의 모든 해집합
+
+{% capture context1 %}
+### Linear system of equations
+![Alt text](/pictures/mathematics/선대_7_1.JPG)  
+* 서로 다른 변수간의 선형 결합만이 허용된 방정식을 모아놓은 것 
+* 쉽게쉽게 matrix - vector 의 곱셈 연산으로 변형이 가능하다. A\vec{x} = \vec{v}
+
+![Alt text](/pictures/mathematics/선대_7_2.JPG)  
+* 이것은, 선형변환 A와 목표 지점 \vec{v}가 주어졌을 때, 변환 이후 \vec{v}가 되는 \vec{x}를 구하는 것과 같다.
+
+<br/>
+
+### Inverse matrices
+* 먼저 변환 이후에도 span이 유지되는, 즉 det(A) \neq 0인 경우를 생각해 보자
+* 이 경우 \vec{x}는 유일하게 존재하며, 동시에 역으로 \vec{v}를 \vec{x}로 보내는 변환도 유일하다
+  * 이를 `역행렬(inverse matrix)` 이라고 하며, A^{-1}으로 표기
+* 역행렬은 \vec{v}를 다시 원래 \vec{x}로 되돌리는 것이므로, A^{-1}A = I가 된다.
+
+* A\vec{x} = \vec{v} 였으므로, 양변에 역행렬을 곱하여 \vec{x} = A^{-1}\vec{v} 의 꼴을 만들어 \vec{x}를 구할 수 있다. 
+* 이는 Linear system of equations 에서 방정식이 변수 개수와 동일한 경우, (거의 모든 상황에 대하여) 하나의 유일한 해를 구할 수 있음을 뜻한다.
+
+* 하지만 det(A)=0 인 경우, 이미 한 차원 이상 낮아진 벡터 공간을 원래대로 뒤집을 수 있는 선형변환따위 존재하지 않는다.
+  * 선형'변환'은 어쨌든 함수인데, 직선을 평면으로 만들려고 하면 직선의 점 하나를 평면의 여러 점으로 매핑해야 가능한데, 출력이 여러 개인 이상 이미 함수는 아닌 것  
+    ![Alt text](/pictures/mathematics/선대_7_3.JPG)  
+* 이 경우, Linear system of equations 의 solution 은 \vec{v}가 A의 span 안에 존재하는 경우만 가능하다.
+  * 그렇게 된다면 해도 여러개가 된다.
+
+<br/>
+
+### rank
+* 3 by 3 행렬에서 det(A)=0 인 경우를 생각해보자. 
+  * 이 경우 span이 평면일수도, 직선일수도, 아에 원점일수도 있는데 싸잡아서 det(A)=0 인 케이스이다 라고 말하는건 좀 구체적이지 못한게 아니냐 싶다.
+* 행렬 A가 만드는 span이란 곧 A로 인해 변형된 기저의 span을 뜻하며, 이는 곧 A의 column들이 만드는 span을 뜻한다.
+  * 이를 A의 `column space`라고 하며, 곧 임의의 \vec{v}에 대한 A의 모든 가능한 output A\vec{v}와 같다.
+* 아무튼 그래서 도입된 `rank`: 선형변환 A의 span의 차원을 뜻한다.
+  * span이 선이면 rank 1, 평면이면 rank 2, 3차원 공간이면 rank 3, ...
+  * A의 column space의 차원과 같다.
+* A의 column 갯수와 차원의 갯수가 일치하는 경우, `full rank`를 가졌다고 한다.
+
+<br/>
+
+### null space
+![Alt text](/pictures/mathematics/선대_7_5.JPG){: width="44%" height="44%"} -> ![Alt text](/pictures/mathematics/선대_7_6.JPG){: width="44%" height="44%"}
+* A의 column space가 full rank를 가지지 못한 경우, 원점으로 변환되는 점이 무한히 많다.
+* 이를 행렬 A의 `null space`, 혹은 `kernel` 이라고 부른다.
+  * A\vec{x}=\vec{0} 의 모든 해집합 정도로 생각하면 됨
+
+{% endcapture %}
+
+{% capture context2 %}
+{% endcapture %}
+
+{% include blocks.html context1=context1 context2=context2 topic="선대_유튜브7" %}
 
 {% endcomment %}
 
