@@ -1598,7 +1598,7 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
   * $f(x,\,y)=x^2+y^2-4=0 \Rightarrow f'(x,\,y)=2x+2y\frac{dy}{dx}=0, \; \frac{dy}{dx}=-\frac{x}{y}$
 * $y=f^{-1}(x)$의 도함수 $\frac{dy}{dx}=\dfrac{1}{\frac{dx}{dy}}$ 
 * $(\sin x)'=\cos x,\; (\cos x)'=-\sin x,\; (\tan x)'=\sec^2 x,\; (\sec x)'=\sec x\tan x,$   
-  $(\cot x)'=-\csc^2 x,\; \csc x =-\csc x\cot x$
+  $(\cot x)'=-\csc^2 x,\; (\csc x)'=-\csc x\cot x$
 * $(\log_a x)'=\frac{1}{x\ln{a}},\; (a^x)'=a^x \ln{a}$
 
 {% capture context1 %}
@@ -1614,7 +1614,8 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
   * $y=\dfrac{1}{g(x)}, \Delta y=\dfrac{1}{g(x+\Delta x)}-\dfrac{1}{g(x)}= \dfrac{g(x)-g(x+\Delta x)}{g(x+\Delta x)g(x)}$
   * $\left\\{\dfrac{1}{g(x)}\right\\}'=\lim\limits_{\Delta x\to 0} {\dfrac{\Delta y}{\Delta x}}
     =-\lim\limits_{\Delta x\to 0} {\dfrac{g(x+\Delta x)-g(x)}{\Delta x}}\cdot \lim\limits_{\Delta x\to 0} {\dfrac{1}{g(x+\Delta x)g(x)}}=-\dfrac{g'(x)}{g^2(x)}$
-  * $\left\\{\dfrac{f(x)}{g(x)}\right\\}'=\dfrac{f'(x)}{g(x)}+\dfrac{f(x)}{g'(x)}=\dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
+  * $\left\\{\dfrac{f(x)}{g(x)}\right\\}'
+    =f'(x) \left(\dfrac{1}{g(x)}\right) + f(x) \left(\dfrac{1}{g(x)}\right)'=\dfrac{f'(x)g(x)-f(x)g'(x)}{\\{g(x)\\}^2}$
 
 
 * $y=f(u),\; u=g(x)$의 도함수 $\frac{dy}{dx}=\frac{dy}{du}\cdot \frac{du}{dx}$
@@ -1630,7 +1631,7 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 
 * $(\sin x)'=\cos x$
   * $(\sin x)'=\lim\limits_{h\to 0} {\frac{\sin(x+h)-\sin x}{h}}=\lim\limits_{h\to 0} {\frac{2\cos(x+h/2)\sin(h/2)}{h}}$  
-    $=\lim\limits_{h\to 0} cos(x+h/2)\cdot {\frac{\sin(h/2)}{h/2}}=\cos x \cdot 1=\cos x$
+    $=\lim\limits_{h\to 0} \cos(x+h/2)\cdot {\frac{\sin(h/2)}{h/2}}=\cos x \cdot 1=\cos x$
 
     
 * $(\log_a x)'=\dfrac{1}{x\ln{a}}$
@@ -1642,6 +1643,7 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 * $(a^x)'=a^x \ln{a}$
   * $(a^x)'=\lim\limits_{h\to 0} {\frac{a^{x+h}-a^x}{h}}=a^x\lim\limits_{h\to 0}{\frac{a^h-1}{h}}$
   * $a^h=t+1,\; h=\log_a(t+1),\; \lim\limits_{h\to 0}{\frac{a^h-1}{h}}=\lim\limits_{t\to 0}{\frac{t}{\log_a(t+1)}}=\lim\limits_{t\to 0}{\frac{1}{\log_a(t+1)^{1/t}}}=\ln{a}$
+  * 또는, (a^x)' = (e^{x \ln a})' = e^{x \ln a} \ln a = a^x \ln a
 
 {% endcapture %}
 
@@ -1652,8 +1654,8 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 * 함수의 접선의 방정식 $y-f(a)=f'(a)(x-a)$, 접선에 수직인 방정식 $y-f(a)=-\frac{1}{f'(a)}(x-a)$
 * 평균값의 정리: $[a, b]$에서 연속이고 $(a, b)$에서 미분가능한 $f(x)$에서 $\frac{f(b)-f(a)}{b-a}=f'(c)$인 $c$가 $[a, b]$ 안에 존재
 * 증가(감소): $f'(a)>0$이면 $f(x)$는 $x=a$에서 증가상태에 있고, 구간 내 모든 $x$에 대하여 $f'(x)>0$이면 $f(x)$는 증가함수이다.
-* $f'(a)=0$일 때, $f(x)$는 $f''(a)<0$이면 $x=a$에서 극댓값, $f''(a)>0$이면 $x=a$에서 극솟값을 가진다.
-* 어떤 구간에서 $f''(x)>0$이면 $f(x)$는 아래로 볼록하고, $f''(x)<0$이면 위로 볼록하며, 곡선이 오목에서 볼록으로 바뀌는 지점을 변곡점이라 한다.  
+* $f'(a)=0$일 때, $f(x)$는 $f' '(a)<0$이면 $x=a$에서 극댓값, $f' '(a)>0$이면 $x=a$에서 극솟값을 가진다.
+* 어떤 구간에서 $f' '(x)>0$이면 $f(x)$는 아래로 볼록하고, $f' '(x)<0$이면 위로 볼록하며, 곡선이 오목에서 볼록으로 바뀌는 지점을 변곡점이라 한다.  
 
 {% capture context1 %}
 ### 평균값의 정리
@@ -1670,7 +1672,9 @@ differential은 $f(\mathbb{x})$의 $\mathbb{x}=\mathbb{a}$ 에서의 선형$(L(a
 * $g(x)= f(x)-\left\\{f(a)+\frac{f(b)-f(a)}{b-a}(x-a) \right\\}$로 두면, $g(x)$는 연속, 미분가능하며 $g(a)=g(b)=0$이다.
 * 롤의 정리에 의해
  <p> $$
- \exists c\in (a, b):\; g'(c)=0 \\ f'(c)=\left. \frac{d}{dx}\left( g(x)+\frac{f(b)-f(a)}{b-a}(x-a)\right)\right\|_{x=c} =\frac{f(b)-f(a)}{b-a}
+ \exists c\in (a, b):\; g'(c)=0 \\ f'(c)
+ =\left. \frac{d}{dx}\left( g(x)+\frac{f(b)-f(a)}{b-a}(x-a)\right)\right|_{x=c}
+ =\frac{f(b)-f(a)}{b-a}
  $$ </p>
 
 {% endcapture %}
@@ -1694,7 +1698,7 @@ $x_0$는 극점 $\Rightarrow f'(x_0)=0$
 * 어떠한 미분가능한 함수 $f$의 모든 극점(local extremum)은 stationary point이다 라는 정리.  
 * 여기서 stationary point이란 $f$의 도함수가 0인 지점을 뜻한다.
   * 다변수 함수에 대해서, stationary point는 모든 편미분 계수가 0인 지점
-* 대우: $f$가 $x_0\in (a, b)$에서 미분가능하다면, $f'(x_0)\neq 0 \Rightarrow x_0$는 극점이다.
+* 대우: $f$가 $x_0\in (a, b)$에서 미분가능하다면, $f'(x_0)\neq 0 \Rightarrow x_0$는 극점이 아니다.
  
 <br/> 
 
@@ -1728,15 +1732,15 @@ $x_0$는 극점 $\Rightarrow f'(x_0)=0$
 <br/>
 
 ### 부정적분의 계산
-1. $\displaystyle\int kdx=kx+C$
-2. $\displaystyle\int x^n dx=\dfrac{1}{n+1}x^{n+1}+C (r\in\mathbb{R},\; n\neq 1)$
-    * $\displaystyle\int x^{-1} dx=\ln \|x\|+C$ 
-3. $\displaystyle\int kf(x)dx=k\displaystyle\int f(x)dx$
-4. $\displaystyle\int \left(f(x)\pm g(x)\right)dx = \displaystyle\int f(x)dx \pm \displaystyle\int g(x)dx$
-5. $\displaystyle\int \sin x dx=-\cos x+C,\; \displaystyle\int \cos xdx=\sin x+C$  
+* $\displaystyle\int kdx=kx+C$
+* $\displaystyle\int x^n dx=\dfrac{1}{n+1}x^{n+1}+C \; (r\in\mathbb{R},\; n\neq 1)$
+  * $\displaystyle\int x^{-1} dx=\ln \|x\|+C$ 
+* $\displaystyle\int kf(x)dx=k\displaystyle\int f(x)dx$
+* $\displaystyle\int \left(f(x)\pm g(x)\right)dx = \displaystyle\int f(x)dx \pm \displaystyle\int g(x)dx$
+* $\displaystyle\int \sin x dx=-\cos x+C,\; \displaystyle\int \cos xdx=\sin x+C$  
    $\displaystyle\int \sec^2 xdx=\tan x+C,\; \displaystyle\int \csc^2 xdx=-\cot x+C$  
    $\displaystyle\int \sec x\tan xdx=\sec x+C,\; \displaystyle\int \csc x\cot xdx=-\csc x+C$
-6. $\displaystyle\int a^x dx=\dfrac{a^x}{\ln a}+C$
+* $\displaystyle\int a^x dx=\dfrac{a^x}{\ln a}+C$
 {% endcapture %}
 
 {% capture context2 %}
@@ -1764,7 +1768,7 @@ $y=\displaystyle\int f(t)dt$라고 두자
 chain rule에 의하여, $\dfrac{dy}{dx}=\dfrac{dy}{dt}\cdot \dfrac{dt}{dx}=f(t)\dfrac{dt}{dx}=f(g(x))g'(x)$  
 $\therefore, y=\displaystyle\int f(t)dt =\displaystyle\int \left(f(t)\dfrac{dt}{dx}\right)= \displaystyle\int f(g(x))g'(x)dx$
   
-위 예시던, 미분의 chain rule에서던, 기타등등  
+위 예시든, 미분의 chain rule에서든, 기타등등  
 $dx,\, dy$와 같은 미분소(differential)가 곱해지고 cancel out되고 등등 실제 변수마냥 취급되는 것을 확인할 수 있다.  
 미분소가 항상 분자/분모 형태로 묶여 나오던 미분파트와는 다르게, 적분에서는 미분소가 $\int dx$로 묶여 나오면서 $dx$라는 term이 따로 노는 형태가 처음 등장하는데,    
 이때 $\left(\dfrac{dy}{dx}\right)dx$가 어떻게 $dy$가 되는지, 그러니까 $dx$를 왜 실제 변수처럼 취급하여 cancel out할 수 있는지,  
@@ -1824,10 +1828,10 @@ $\Delta x=\dfrac{b-a}{n}$으로 두면, $[a, b]$ 구간에서 $f(x)$ 그래프�
 
 <br/>
 
-* $g(a)=\alpha, g(b)=\beta \Rightarrow \displaystyle\int_a^b f(g(x))g'(x)dx=\displaystyle\int_{\alpha}^{\beta} f(t)dt$
+* $g(a)=\alpha, \; g(b)=\beta \Rightarrow \displaystyle\int_a^b f(g(x))g'(x)dx=\displaystyle\int_{\alpha}^{\beta} f(t)dt$
 * $\displaystyle\int_a^b f'(x)g(x)dx=\left[f(x)g(x)\right]_a^b-\displaystyle\int_a^b f(x)g'(x)dx$
-* $f(-x)=f(x) \Rightarrow \displaystyle\int_a^a f(x)dx=2\displaystyle\int_0^a f(x)dx$
-* $f(-x)=-f(x) \Rightarrow \displaystyle\int_a^a f(x)dx=0$
+* $f(-x)=f(x) \Rightarrow \displaystyle\int_{-a}^a f(x)dx=2\displaystyle\int_0^a f(x)dx$
+* $f(-x)=-f(x) \Rightarrow \displaystyle\int_{-a}^a f(x)dx=0$
 * $\dfrac{d}{dx} \displaystyle\int_{h(x)}^{g(x)} f(t)dt=f(g(x))g'(x)-f(h(x))h'(x)$
 
 {% endcapture %}
@@ -1856,7 +1860,7 @@ F'(x)&=\lim_{h\to 0} {\frac{F(x+h)-F(x)}{h}} \\
 \end{align*}$$ </p> 
  
 이때, [적분의 평균값 정리](https://ko.wikipedia.org/wiki/%ED%8F%89%EA%B7%A0%EA%B0%92_%EC%A0%95%EB%A6%AC#%EC%A0%81%EB%B6%84_%ED%8F%89%EA%B7%A0%EA%B0%92_%EC%A0%95%EB%A6%AC)에 의해   
-$c\in [x,x+h]:\; \dfrac{1}{h} \displaystyle\int_{x}^{x+h}f(t)\,dt=f(c)$  
+$\exists c\in [x,x+h]:\; \dfrac{1}{h} \displaystyle\int_{x}^{x+h}f(t)\,dt=f(c)$  
 함수 $f$는 주어진 구간에서 연속이므로, [샌드위치 정리](https://en.wikipedia.org/wiki/Squeeze_theorem)에 의해 $h$가 작아짐에 따라 $x+h$는 $x$에 다가가고, 그러므로 $c$도 $x$에 다가간다.  
 $\therefore \lim\limits_{h\to 0}f(c)=f(x)$
   
@@ -1875,9 +1879,9 @@ F'(x)&=\lim_{h\to 0}{\frac{1}{h}} \int_{x}^{x+h}f(t)\,dt\\
 
 pf)  
 함수 $G$를 $G(x)=\displaystyle\int_{a}^{x}f(t)\,dt$ 으로 정의하면, 제1 기본정리에 의해 $G(x)$의 도함수는 $f(x)$가 되기 때문에 $G(x)=\displaystyle\int f(x)dx +C'$ 이다.  
-또 함수 $F$는 $f$의 임의의 부정적분이랬으니 $F(x)=\displaystyle\int f(x)dx+C''$이며,  
+또 함수 $F$는 $f$의 임의의 부정적분이랬으니 $F(x)=\displaystyle\int f(x)dx+C' '$이며,  
 정리하면 $F(x)=G(x)+C$ 가 된다.
-  
+
 $F$와, (제1 기본정리에 의해) $G$는 $[a,b]$에서 연속이므로,
 <p> $$\begin{align*}
 F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right] \\
@@ -1912,25 +1916,25 @@ F(b)-F(a)&=\left[G(b)+C\right]-\left[G(a)+C\right] \\
     * $\Gamma$의 norm을 $\displaystyle\max_i \|x_i-x_{i-1}\|$, 그러니까 모든 subinterval의 가장 큰 길이를 norm으로 정의한다.
 2. 각 구간에서, 함수값을 어느 것으로 선택할지 내맘대로 고른다.
     * $\min(x_{i-1}, x_i) \leq \xi_i \leq \max(x_{i-1}, x_i)$
-    * $\xi$ 를 태그(tag)라고 부른다.
+    * $\xi_i$ 를 태그(tag)라고 부른다.
 
 <br/>
 
 ![Alt text](/pictures/mathematics/리만적분.jpg)  
 이렇게, 구간 $[a, b]$에서 함수의 넓이를 나타낸 급수는 다음과 같다  
-<p> $$ \sum_{i=1}^n {f(\xi)|x_i-x_{i-1}|} $$ </p>
+<p> $$ \sum_{i=1}^n {f(\xi_i)|x_i-x_{i-1}|} $$ </p>
 
 얘를 리만합(Riemann sum) 이라고 한다.  
 
 <br/>
 
 이때 파티션의 최대 길이인 $\Gamma$의 norm을 0으로 보낼 때, 즉 모든 subinterval의 길이를 0으로 보낼 때,  
-$\lim\limits_{\|\Gamma\|\to 0} {\sum\limits_{i=1}^n {f(\xi)\|x_i-x_{i-1}\|}}$가 어떠한 값으로 만약 수렴한다면? 이를 $\displaystyle\int_a^b f(x)dx$라고 정의한다.
+$\lim\limits_{||\Gamma||\to 0} {\sum\limits_{i=1}^n {f(\xi_i)\|x_i-x_{i-1}\|}}$가 어떠한 값으로 만약 수렴한다면? 이를 $\displaystyle\int_a^b f(x)dx$라고 정의한다.
   
-<p> $$ \int_a^b f(x)dx = \lim\limits_{\|\Gamma\|\to 0} {\sum_{i=1}^n {f(\xi)|x_i-x_{i-1}|}} $$ </p>
+<p> $$ \int_a^b f(x)dx = \lim\limits_{||\Gamma||\to 0} {\sum_{i=1}^n {f(\xi_i)|x_i-x_{i-1}|}} $$ </p>
 
 더 정확히는, 임의의 $\Gamma$, $\xi$ 및 $\epsilon$에 대하여,  
-$\|\Gamma\| < \delta(\epsilon)$ 일 때 $\|$리만합$-I\|<\epsilon$인 $\delta(\epsilon)$이 존재한다면 리만 적분값 $I$가 정의된다.  
+$||\Gamma|| < \delta(\epsilon)$ 일 때 $|$리만합$-I|<\epsilon$인 $\delta(\epsilon)$이 존재한다면 리만 적분값 $I$가 정의된다.  
 
 <br/>
 
@@ -1942,7 +1946,7 @@ $\|\Gamma\| < \delta(\epsilon)$ 일 때 $\|$리만합$-I\|<\epsilon$인 $\delta(
 상적분과 하적분 값이 $I$로 같으면 적분값이 정의된다.
 
 파티션 나누는거에 따라서 값이 달라지면 오또케요 라고 생각할 수 있는데  
-$\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 값으로 수렴한다는게 증명된단다. 암튼 그렇다고 함.  
+$||\Gamma||\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 값으로 수렴한다는게 증명된단다. 암튼 그렇다고 함.  
 고로 우리는 머리굴릴 필요 없이 가장 편한 균등분할로 나누면 된다.  
 
 
@@ -1994,7 +1998,7 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 * 중복을 허용할 경우, $_n\Pi_r=n^r$
 
 
-* 원소에 같은 것이 있는 경우, 같은 것이 각각 $p, q, r, \cdots, s(p+q+r+\cdots+s=n)$개가 있을 경우,
+* 원소에 같은 것이 있는 경우, 같은 것이 각각 $p, q, r, \cdots, s \; (p+q+r+\cdots+s=n)$개가 있을 경우,
   * 원소 전체를 뽑는 경우엔 $\dfrac{n!}{p!\times q!\times r!\times \cdots \times s!}$
   * ![Alt text](/pictures/mathematics/최단경로.JPG) 
   * $A\to B$로 가는 최단경로의 갯수에 매칭된다.
@@ -2036,7 +2040,7 @@ $\|\Gamma\|\to 0$으로만 보낸다면 파티션이랑은 관련없이 같은 �
 <br/>
 
 ### 이항정리
-* $(a+b)^n$ 에서 $a^k b^{n-k}$의 계수는 $n$개의 곱셈항 중 $a$를 $r$번 선택하는 갯수 $_n\mathrm{C}_k$와 같다.  
+* $(a+b)^n$ 에서 $a^k b^{n-k}$의 계수는 $n$개의 곱셈항 중 $a$를 $k$번 선택하는 갯수 $_n\mathrm{C}_k$와 같다.  
 * $(x+1)^n = \sum\limits_{k=0}^{n} {_n\mathrm{C}_k x^k}$ 로부터
 <p> $$ \begin{align*}
        x=1 &\Rightarrow \sum\limits_{k=0}^{n} {_n\mathrm{C}_k} =\, _n\mathrm{C}_0+_n\mathrm{C}_1+_n\mathrm{C}_2 \cdots + _n\mathrm{C}_n= 2^n \\
@@ -2055,7 +2059,7 @@ $(x+y)^n=\sum\limits_{k=0}^{n} \displaystyle{n\choose k}x^k y^{n-k}$가 된다.
 
 
 $k\in \mathbb{N}$ 을 확장시켜, 복소수 값을 가지는 $\alpha\in \mathbb{C}$로 확장시킬 수 있다.  
-<p> $$ (x+y)^\alpha=\sum\limits_{k=0}^{\infty} {\alpha\choose k}x^{\alpha-k} y^{k} = x^{\alpha} + \alpha x^{\alpha-1} + \dfrac{\alpha(\alpha-1)}{2}x^{\alpha-2}y^2 + cdots$$ </p>  
+<p> $$ (x+y)^\alpha=\sum\limits_{k=0}^{\infty} {\alpha\choose k}x^{\alpha-k} y^{k} = x^{\alpha} + \alpha x^{\alpha-1} + \dfrac{\alpha(\alpha-1)}{2}x^{\alpha-2}y^2 + \cdots$$ </p>  
 
 $\|x\|>\|y\|$일 때, $\displaystyle{\alpha\choose k} = \dfrac{\alpha(\alpha-1)(\alpha-2)\cdots(\alpha-k+1)}{k!}$가 성립한다고 하는데 아니면 왜 아닌지는 잘 몰겠다.  
 몰라 
@@ -2177,7 +2181,7 @@ Analytic 함수에 대한 설명은.. 나중에 언젠간..
     * 통계적 확률은 $\lim\limits_{N\to\infty} \dfrac{a}{N}=p$ 로 정의.
     * $N\to\infty$ 가 불가능하므로, 충분히 큰 $N$을 잡는 것으로 타협한다.
 4. 베이즈 확률
-    * $N\to\infty$ 가 안되서 통계적 확률을 믿을 수 없기 때문에 생김
+    * $N\to\infty$ 가 안 돼서 통계적 확률을 믿을 수 없기 때문에 생김
     * degree of belief 을 도입해서, belief가 강하다면 상대도수 $\dfrac{a}{N}$가 어떤 값을 가지더라도  
       빼애애액 $N$이 충분히 안크잖아 내가 믿는 값이 맞음 애애애애앵앵  
       하지만 그래도 참고 정도는 해 주지 흥  
@@ -2246,7 +2250,7 @@ $X\sim \mathrm{N}(m, \sigma^2) = \dfrac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-m)^2}
 
 {% capture context2 %}
 ### 이항분포 평균, 분산 계산
-$\mathrm{P}(X=r)=\,_n\mathrm{C}_r p^r q^{n-r} (q=1-p)$
+$\mathrm{P}(X=r)=\,_n\mathrm{C}_r p^r q^{n-r} \; (q=1-p)$
 * 평균 $m=np$
   * $(q+pt)^n =\sum\limits_{r=0}^n { \displaystyle{n\choose r} p^r t^r q^{n-r}}$
   * $t$에 대하여 미분하면, $np(q+pt)^{n-1} = \sum\limits_{r=0}^n {r\displaystyle{n \choose r}p^r t^{r-1} q^{n-r}}$
@@ -2343,8 +2347,8 @@ $\mathrm{P}(-1.96\leq Z\leq 1.96)=0.95$이므로, $\mathrm{P}\left(-1.96\leq \df
 ### 복원추출의 표본분산
 * $\mu=\bar{X}=\dfrac{1}{n}\sum\limits_{i=1}^n x_i$  
 * $V(\bar{X}) = E((\bar{X}-m)^2)= E\left[\left(\dfrac{1}{n}\sum\limits_{i=1}^n x_i -\mu\right)^2\right]=\dfrac{1}{n^2} E\left[\left(\sum\limits_{i=1}^n (x_i -\mu)\right)^2\right]$
-* 전개하면, $V(\bar{X}) =\dfrac{1}{n^2}E[(x_1-\mu)^2+\cdots+(x_n-\mu)^2+(x_1-\mu)(x_2-\mu)+(x_1-\mu)(x_3-\mu)+\cdots]$
-* 각 표본은 서로 독립이므로, $E[(x_i-\mu)(x_j-\mu)]=E[x_i-\mu]E[x_j-\mu]=0, E[(x_i-\mu)^2]=\sigma^2$
+* 전개하면, $V(\bar{X}) =\dfrac{1}{n^2}E[(x_1-\mu)^2+\cdots+(x_n-\mu)^2+2(x_1-\mu)(x_2-\mu)+2(x_1-\mu)(x_3-\mu)+\cdots]$
+* 각 표본은 서로 독립이므로, $E[(x_i-\mu)(x_j-\mu)]=E[x_i-\mu]E[x_j-\mu]=0, \; E[(x_i-\mu)^2]=\sigma^2$
 * $\therefore V(\bar{X}) =\dfrac{1}{n^2}\cdot n\sigma^2 = \dfrac{\sigma^2}{n}$
 
 <br/>
@@ -2561,7 +2565,7 @@ $\sin\alpha=\dfrac{\overline{QL}}{\overline{QT}}=\dfrac{\overline{QL}}{\overline
 같은 블로그 [참조](http://mathseodang.com/220621141953)  
 
 위에서 언급했듯이 준선의 방정식 $x=-p$, 초점을 $(p, 0)$으로 두고 정리하면, $x^2+y^2=\epsilon^2(x+p)^2$가 된다.  
-극좌표계로 변환하면($r=\sqrt{x^2+y^2},\, x=r\cos\theta$), $r^2=\epsilon^2(r\cos\theta+p)^2,\; r=\dfrac{pe}{1-\epsilon\cos\theta}=\dfrac{l}{1-\epsilon\cos\theta}$ 가 된다($l=p\epsilon$).  
+극좌표계로 변환하면($r=\sqrt{x^2+y^2},\, x=r\cos\theta$), $r^2=\epsilon^2(r\cos\theta+p)^2,\; r=\dfrac{p\epsilon}{1-\epsilon\cos\theta}=\dfrac{l}{1-\epsilon\cos\theta}$ 가 된다($l=p\epsilon$).  
 반대로 준선을 $x=p$, 초점을 $(-p, 0)$으로 두면, $r=\dfrac{p\epsilon}{1+\epsilon\cos\theta}=\dfrac{l}{1+\epsilon\cos\theta}$가 된다.
 
 정리하면, $r=\dfrac{p\epsilon}{1\pm \epsilon\cos\theta}=\dfrac{l}{1\pm \epsilon\cos\theta}$이며,  
@@ -2606,7 +2610,7 @@ $\epsilon\to 0$일 때, $p\to \infty$ 이며, $r=a$가 된다.
 한줄요약하자면 - 행렬과 일차변환은 같다(일대일 대응)
 
 그런의미에서 일차변환은 행렬의 성질을 죄다 만족한다.  
-항등변환? ㅇㅋ $I=\begin{pmatrix} k & 0 \\\\ 0 & k\end{pmatrix}$  
+항등변환? ㅇㅋ $I=\begin{pmatrix} 1 & 0 \\\\ 0 & 1\end{pmatrix}$  
 닮음변환? ㅇㅋ $kI$  
 합성? ㅇㅋ $g(=B) \circ f(=A) = BA$  
 역변환? ㅇㅋ $A^{-1}$  
@@ -2621,7 +2625,7 @@ $\epsilon\to 0$일 때, $p\to \infty$ 이며, $r=a$가 된다.
 {% capture context2 %}
 ### 회전변환행렬의 증명 + 좌표축의 회전이동
 ![Alt text](/pictures/mathematics/회전이동.png){: width="65%" height="65%"}  
-앗 증명하려고 했는데 그림이 너무 잘 되있었다. [ㄳ](http://suhak.tistory.com/387)  
+앗 증명하려고 했는데 그림이 너무 잘 돼 있었다. [ㄳ](http://suhak.tistory.com/387)  
 $\begin{pmatrix} x' \\\\ y'\end{pmatrix} = \begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix} \begin{pmatrix} x \\\\ y\end{pmatrix}$
 
 그런김에 다른 얘기나 해보자  
@@ -2756,7 +2760,7 @@ $\begin{bmatrix}x'\\\\y'\\\\z'\end{bmatrix}=\begin{bmatrix}t_x\\\\t_y\\\\t_z\end
 
 ##### 선형 변환
 우선, `선형성`이란 $f(ax+y)=af(x)+f(y)$를 의미한다.  
-그렇기 때문에 `선형 변환`은 원점을 보존해야 하며($f(O) = O \because f(O)=f(O+O)=2f(O)$),  
+그렇기 때문에 `선형 변환`은 원점을 보존해야 하며($f(O) = O \; \because f(O)=f(O+O)=2f(O)$),  
 원점을 어딘가 밖으로 날려버리는 평행이동은 당연히 제외된다.  
 앗 그런데 `선형 변환`(일차변환)은 `행렬`이다. 어디보자. $A(aX+Y)=aAX+AY$. 굿.  
 그러니까 $X'=AX$. 좋다.   
@@ -3005,7 +3009,7 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 [위키](https://en.wikipedia.org/wiki/Vector_space), [나무위키](https://namu.wiki/w/%EB%B2%A1%ED%84%B0) 참조.  
 `군`이나 `가환군`에 대한 설명은 [실수 체계](/posts/mathematics/#실수-체계) 참조  
 
-> `체(field)` $F$에 대해, $V$가 $F$의 `$F$-가군(module)`이라면, $F$를 $V$의 `스칼라`라고 하고 집합 $V$를 $F$위의 `벡터 공간`이라 한다.
+> `체(field)` $F$에 대해, $V$가 $F$의 `F-가군(module)`이라면, $F$를 $V$의 `스칼라`라고 하고 집합 $V$를 $F$위의 `벡터 공간`이라 한다.
 
 * `체`란 아래 성질을 만족하는 집합이다.
   * 덧셈에 대하여 가환군을 이룸 (덧셈에 대한 역원이 존재하므로 뺄셈이 항상 가능)
@@ -3018,7 +3022,7 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
   * 함수 $f:F \times V \longrightarrow V,\; f(a, v)=a\cdot v$가 존재하고, 분배법칙과 교환법칙이 성립한다. 즉 $a, b\in F, u, v\in V$에 대하여,
     * $a\cdot(u+v)=a\cdot u+b\cdot v$
     * $(a+b)\cdot v=a\cdot v+b\cdot v$
-    * $(ab)\cdot v=a\cdot(b\cdot v)$
+    * $(a \cdot b)\cdot v=a\cdot(b\cdot v)$
     * $1\cdot v = v$
   * 쉽게 말해서, 가환군을 이루면서 실수같은 수 집합과 관계가 잘 정의되는 집합.
     
@@ -3035,7 +3039,7 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
 1. 덧셈: $\mathbf{A}+\mathbf{B}=(a_1+b_1, a_2+b_2, \cdots)$
 2. scalar multiplication: $kA=(ka_1, ka_2, \cdots)$
 3. `dot product`: $\mathbf{A}\cdot\mathbf{B}=a_1b_1+a_2b_2+\cdots$
-4. `cross product`: 벡터 공간이 $\mathbb{R}^3$일 때 한정. $\mathbf{A}\times\mathbf{B}=(a2_b3-a_3b_2, a_3b_1-a_1b_3, a_1b_2-a_2b_1)$
+4. `cross product`: 벡터 공간이 $\mathbb{R}^3$일 때 한정. $\mathbf{A}\times\mathbf{B}=(a_2b_3-a_3b_2, a_3b_1-a_1b_3, a_1b_2-a_2b_1)$
     * 일반적인 벡터 공간에서 대응되는 개념은 [wedge product](http://mathworld.wolfram.com/WedgeProduct.html) 인데... 아직 제대로 정리가 안되서 보류.
     * 아닌가.. 텐서에 대해서는 cross product가 $(\mathbf{u}\times\mathbf{v})_i=\epsilon _{ijk}u_j v_k$(아인슈타인 표기법 사용)이라는거같기도 하고.. 역시 보류.
 5. [del operator](https://namu.wiki/w/%EB%8D%B8(%EC%97%B0%EC%82%B0%EC%9E%90)): $\nabla$, 미분에 대응되는 연산자인데 사실상 벡터와 같이 취급된다.
@@ -3075,7 +3079,7 @@ $\cos(\alpha-\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$에 의해 $\mathbf{
   * $\mathbf{a}$를 포함하고 $\mathbf{h}$에 수직: $\mathbf{h}\cdot(\mathbf{x}-\mathbf{a})=0 \;\to\; h_1(x-a_1)+h_2(x-a_2)+h_3(x-a_3)=0$
   * $\mathbf{a}, \mathbf{b}, \mathbf{c}$를 포함: $\mathbf{x}=\mathbf{a}+s(\mathbf{b}-\mathbf{a})+t(\mathbf{c}-\mathbf{a}) \;\to\; h_1x+h_2y+h_3z+d=0$ 
 * 구의 벡터방정식:
-  * $(\mathbf{x}-\mathbf{a})\cdot(\mathbf{x}-\mathbf{a})=r^2\, (\|\mathbf{x}-\mathbf{a}\|=r) \;\to\; (x-a_1)^2+(x-a_2)^2+(x-a_3)^2=r^2$
+  * $(\mathbf{x}-\mathbf{a})\cdot(\mathbf{x}-\mathbf{a})=r^2 \; (\|\mathbf{x}-\mathbf{a}\|=r) \;\to\; (x-a_1)^2+(x-a_2)^2+(x-a_3)^2=r^2$
 * 영역:
   $\overline{OA}, \overline{OB}$를 변으로 하는 평행사변형: $\mathbf{p}=m\mathbf{a}+n\mathbf{b}\; (m,\,n\in[0, 1])$ 
 
