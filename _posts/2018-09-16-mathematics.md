@@ -3042,7 +3042,7 @@ quaternion 과 3d rotation과의 연관관계는 [이 영상](https://www.youtub
  
 <br/>
 
-### cross product의 기하학적 성질
+### dot product의 기하학적 성질
 드디어 좀 고등수학다운걸 합니다. 와와  
 음 그러니까, $\mathbf{a}\cdot\mathbf{b}=a_1b_1+a_2b_2$(2차원에서) 으로 정의된건 알겠는데  
 왜 그게 기하학적으로 $a$를 $b$로 정사영시킨 것이 되느냐, 그러니까 왜 $ab\cos\theta$가 되느냐. 를 다뤄보자.  
@@ -3411,6 +3411,15 @@ xy-좌표계를 기준으로 생각하면, \hat{i}, \hat{j} 라는 굉장히 특
 {% endcapture %}
 
 {% include blocks.html context1=context1 context2=context2 topic="선대_유튜브7" %}
+
+2->1차원으로 가는 어떠한 선형 변환이던, 이를 나타내는 unique한 1 by 2 matrix가 있으며, 곧 2차원 벡터와 같다
+2->1차원으로 가는 변환을 어떤 2차원 벡터 v에 대한 정사영으로 두자
+v unit vector u에 대하여 e_i, e_j의 정사영 결과는 e_i에 u를 내린 값, e_j에 u를 내린 값과 같으며, 결국 [u_x, u_y]와 같다.
+벡터 x의 u에 대한 정사영 결과(선형변환)는 기저의 변환결과로 만든 행렬 [L(e_i), L(e_j)]에 x를 곱하는 것과 같으며, [u_x, u_y] cross [x, y]^T 와 같다  
+이는 u_x x + u_y y와 같다
+
+결론적으로, 벡터 v의 길이 곱하기 벡터 v에 대한 x의 정사영 == 벡터 u에 대한 x의 정사영 곱하기 |v| == |v| x [L(e_i), L(e_j)] x [x y]^T == [v_x, v_y] x [x, y]^T == 벡터 x와 v의 cross product
+[a, b] \cdot [c, d] = [a, b] 곱하기 [c, d]^T, 이때 [a, b]는 duality에 의해 기저 e_i, e_j를 [a, b] 벡터로 projection 하는 일차변환 * scale   
 
 {% endcomment %}
 
